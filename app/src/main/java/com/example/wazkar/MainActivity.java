@@ -1,5 +1,12 @@
 package com.example.wazkar;
 
+import android.app.Notification;
+import android.media.RingtoneManager;
+import android.net.Uri;
+import android.os.Bundle;
+import android.util.Log;
+import android.view.MenuItem;
+
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.NotificationCompat;
 import androidx.core.app.NotificationManagerCompat;
@@ -7,29 +14,24 @@ import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentStatePagerAdapter;
 import androidx.viewpager.widget.ViewPager;
-import android.app.Notification;
-import android.media.RingtoneManager;
-import android.net.Uri;
-import android.os.Bundle;
-import android.util.Log;
-import android.view.MenuItem;
-import com.example.wazkar.Fragments.Counter;
-import com.example.wazkar.Fragments.Fortyy;
-import com.example.wazkar.Fragments.Home;
+
+import com.example.wazkar.Fragments.CounterFragment;
+import com.example.wazkar.Fragments.FortyyFragment;
+import com.example.wazkar.Fragments.AzkarFragment;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
+
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
 
 public class MainActivity extends AppCompatActivity {
-    private ViewPager viewPager;
-
     //Fragments
-    Home homeFragment;
-    Counter counterFragment;
-   Fortyy fortyyFragment;
+    AzkarFragment homeFragment;
+    CounterFragment counterFragment;
+    FortyyFragment fortyyFragment;
     MenuItem prevMenuItem;
     String CHANNEL_ID;
+    private ViewPager viewPager;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -37,33 +39,30 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         //Initializing viewPager
-        viewPager =  findViewById(R.id.viewpager);
+        viewPager = findViewById(R.id.viewpager);
 
         //Initializing the bottomNavigationView
-        final BottomNavigationView    bottomNavigationView = findViewById(R.id.navigation);
+        final BottomNavigationView bottomNavigationView = findViewById(R.id.navigation);
 
         bottomNavigationView.setOnNavigationItemSelectedListener(
                 new BottomNavigationView.OnNavigationItemSelectedListener() {
                     @Override
-                    public boolean onNavigationItemSelected( MenuItem item  ) {
+                    public boolean onNavigationItemSelected(MenuItem item) {
                         switch (item.getItemId()) {
                             case R.id.forty:
                                 viewPager.setCurrentItem(0);
                                 break;
 
-                            case R.id.counter:
-                                viewPager.setCurrentItem(1);
-                                break;
                             case R.id.navigation_home:
                                 viewPager.setCurrentItem(2);
                                 break;
 
-                            default :  viewPager.setCurrentItem(1);
+                            default:
+                                viewPager.setCurrentItem(1);
                         }
                         return false;
                     }
                 });
-
 
 
         // Counter in viewpager
@@ -77,12 +76,10 @@ public class MainActivity extends AppCompatActivity {
             public void onPageSelected(int position) {
                 if (prevMenuItem != null) {
                     prevMenuItem.setChecked(false);
-                }
-                else
-                {
+                } else {
                     bottomNavigationView.getMenu().getItem(0).setChecked(false);
                 }
-                Log.d("page",""+position);
+                Log.d("page", "" + position);
                 bottomNavigationView.getMenu().getItem(position).setChecked(true);
                 prevMenuItem = bottomNavigationView.getMenu().getItem(position);
 
@@ -96,18 +93,10 @@ public class MainActivity extends AppCompatActivity {
         setupViewPager(viewPager);
 
 
-
-
-
-
-
-
-
-
         // TODO notification
 
 
-        NotificationCompat.Builder builder=new NotificationCompat.Builder(this,CHANNEL_ID);
+        NotificationCompat.Builder builder = new NotificationCompat.Builder(this, CHANNEL_ID);
         builder.setSmallIcon(R.drawable.splash)
                 .setContentTitle("Wazkar وذكر");
 
@@ -698,30 +687,44 @@ public class MainActivity extends AppCompatActivity {
         int idx = new Random().nextInt(nof.length);
         String randomm = (nof[idx]);
 
-        builder.setContentText( randomm);
+        builder.setContentText(randomm);
         builder.setAutoCancel(true);
         builder.setStyle(new NotificationCompat.BigTextStyle());
-        Uri uri= RingtoneManager.getDefaultUri(RingtoneManager.TYPE_NOTIFICATION);
-builder.setSmallIcon(R.drawable.splash);
+        Uri uri = RingtoneManager.getDefaultUri(RingtoneManager.TYPE_NOTIFICATION);
+        builder.setSmallIcon(R.drawable.splash);
         builder.setSound(uri);
 
 
-        Notification notification=builder.build();
-        NotificationManagerCompat.from(this).notify(0,notification);
-
-
-
-
-
+        Notification notification = builder.build();
+        NotificationManagerCompat.from(this).notify(0, notification);
 
 
     }
+
+    // viewpager with bottom navigation
+    private void setupViewPager(ViewPager viewPager) {
+        ViewPagerAdapter adapter = new ViewPagerAdapter(getSupportFragmentManager());
+        homeFragment = new AzkarFragment();
+        counterFragment = new CounterFragment();
+        fortyyFragment = new FortyyFragment();
+
+        adapter.addFragment(fortyyFragment);
+        adapter.addFragment(counterFragment);
+        adapter.addFragment(homeFragment);
+
+        viewPager.setAdapter(adapter);
+    }
+
+    /*
+    // // TODO: 4/18/20  make it as separate file
+     */
     private class ViewPagerAdapter extends FragmentStatePagerAdapter {
         private final List<Fragment> mFragmentList = new ArrayList<>();
 
         public ViewPagerAdapter(FragmentManager manager) {
             super(manager);
         }
+
         @Override
         public Fragment getItem(int position) {
             return mFragmentList.get(position);
@@ -737,25 +740,7 @@ builder.setSmallIcon(R.drawable.splash);
         }
 
 
-
-
     }
-    // viewpager with bottom navigation
-    private void setupViewPager(ViewPager viewPager) {
-        ViewPagerAdapter adapter = new ViewPagerAdapter(getSupportFragmentManager());
-        homeFragment=new Home();
-        counterFragment=new Counter();
-        fortyyFragment=new Fortyy();
-
-        adapter.addFragment(fortyyFragment);
-        adapter.addFragment(counterFragment);
-        adapter.addFragment(homeFragment);
-
-        viewPager.setAdapter(adapter);
-    }
-
-
-
 
 
 }

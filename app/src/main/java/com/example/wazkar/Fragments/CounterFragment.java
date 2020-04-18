@@ -16,13 +16,12 @@ import android.widget.TextView;
 import com.example.wazkar.R;
 
 
-
-public class Counter extends Fragment {
+public class CounterFragment extends Fragment {
     TextView textView;
     Button reset;
     private int counter = 0;
 
-    public Counter() {
+    public CounterFragment() {
         // Required empty public constructor
     }
 

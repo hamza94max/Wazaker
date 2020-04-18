@@ -16,8 +16,7 @@ import java.util.List;
 public class FortyAdapter extends RecyclerView.Adapter<FortyAdapter.Myviewholder> {
 
     List<Model_Forty> fortyList;
-    Context context ;
-    FortyAdapter fortyAdapter ;
+    Context context;
 
     public FortyAdapter(List<Model_Forty> fortyList, Context context) {
         this.fortyList = fortyList;
@@ -25,40 +24,30 @@ public class FortyAdapter extends RecyclerView.Adapter<FortyAdapter.Myviewholder
     }
 
     @Override
-    public Myviewholder onCreateViewHolder( ViewGroup parent, int viewType) {
-
-
+    public Myviewholder onCreateViewHolder(ViewGroup parent, int viewType) {
         LayoutInflater layoutInflater = LayoutInflater.from(context);
-      View view =  layoutInflater.inflate(R.layout.forty_items,parent,false);
-
-
+        View view = layoutInflater.inflate(R.layout.forty_items, parent, false);
         return new Myviewholder(view);
     }
 
     @Override
-    public void onBindViewHolder( Myviewholder holder, int position) {
-
-       holder.button.setText(fortyList.get(position).getNamehad());
-
-
+    public void onBindViewHolder(Myviewholder holder, int position) {
+        holder.button.setText(fortyList.get(position).getNamehad());
     }
-
 
     @Override
     public int getItemCount() {
         return fortyList.size();
     }
 
-    public static class Myviewholder extends RecyclerView.ViewHolder {
 
-        Button button ;
+    static class Myviewholder extends RecyclerView.ViewHolder {
+        Button button;
 
-        public Myviewholder( View itemView) {
+        public Myviewholder(View itemView) {
             super(itemView);
 
-
-            button =itemView.findViewById(R.id.buttonforty);
-
+            button = itemView.findViewById(R.id.buttonforty);
 
 
         }

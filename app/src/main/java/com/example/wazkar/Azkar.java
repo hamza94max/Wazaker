@@ -1,50 +1,34 @@
 package com.example.wazkar;
 
-import android.app.Activity;
-
+import android.annotation.SuppressLint;
+import android.os.Bundle;
+import android.view.View;
+import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.viewpager.widget.ViewPager;
 
-        import android.annotation.SuppressLint;
+import com.badoualy.stepperindicator.StepperIndicator;
+import com.example.wazkar.Adapters.SlidePagerAdapter;
 
-        import android.os.Bundle;
-        import android.view.View;
-
-        import android.widget.TextView;
-        import android.widget.Toolbar;
-
-        import com.badoualy.stepperindicator.StepperIndicator;
-        import com.example.wazkar.Adapters.SlidePagerAdapter;
-
-
-
-
-        import at.markushi.ui.CircleButton;
+import at.markushi.ui.CircleButton;
 
 import static com.example.wazkar.Adapters.RecAdapter.btnid;
 
 
 public class Azkar extends AppCompatActivity {
 
-
-
     CircleButton buttonplus;
-    TextView textViewplus ;
+    TextView textViewplus;
     String[] mor;
     int[] mor2;
 
 
-// TODO azkar
+    // TODO azkar
     {
         //TODO MORNING
         if (btnid.equals("أذكار الصباح ")) {
-
-
-
-
-
-
+            //// TODO: 4/18/20 Try to use Model(ZekerItem for ex ) it hold zeker text , and count of times for ex ZekerItem("abc" , 3) this help you to add more features
             mor = new String[]{" أعوذ بالله من الشيطان الرجيم" + "\n" +
                     " {اللّهُ لاَ إِلَـهَ إِلاَّ هُوَ الْحَيُّ الْقَيُّومُ لاَ تَأْخُذُهُ سِنَةٌ وَلاَ نَوْمٌ" +
                     " لَّهُ مَا فِي السَّمَاوَاتِ وَمَا فِي الأَرْضِ مَن ذَا الَّذِي يَشْفَعُ عِنْدَهُ إِلاَّ بِإِذْنِهِ يَعْلَمُ مَا بَيْنَ أَيْدِيهِمْ" +
@@ -52,7 +36,7 @@ public class Azkar extends AppCompatActivity {
                     " وَسِعَ كُرْسِيُّهُ السَّمَاوَاتِ وَالأَرْضَ وَلاَ يَؤُودُهُ حِفْظُهُمَا وَهُوَ الْعَلِيُّ الْعَظِيمُ}\n" + "\n" + "\n" + " [آية الكرسي – البقرة 255]" + "\n" +
                     "من قالها حين يصبح أجير من الجن حتى يمسى ومن قالها حين يمسى أجير من الجن حتى يصبح" +
 
-                    "\n" + "\n" ,
+                    "\n" + "\n",
 
 
                     "بسم الله الرحمن الرحيم" + "\n" + "\n" +
@@ -172,8 +156,6 @@ public class Azkar extends AppCompatActivity {
 
 
             };
-
-
 
 
         }
@@ -382,12 +364,6 @@ public class Azkar extends AppCompatActivity {
             };
 
 
-
-
-
-
-
-
         }
 
         //TODO AFTER PRAY
@@ -433,7 +409,7 @@ public class Azkar extends AppCompatActivity {
                     , "لا إلهَ إلاّ اللّهُ وحْـدَهُ لا شريكَ لهُ، لهُ المُلكُ ولهُ الحَمْد، يُحيـي وَيُمـيتُ وهُوَ على كُلّ شيءٍ قدير" + "\n" + "\n" + "\n" +
                     "عَشْر مَرّات بَعْدَ المَغْرِب وَالصّـبْح"
 
-                    ,  "اللَّهُمَّ أَجِرْنِي مِنْ النَّار"
+                    , "اللَّهُمَّ أَجِرْنِي مِنْ النَّار"
 
                     ,
                     "اللَّهُمَّ أَعِنِّي عَلَى ذِكْرِكَ وَشُكْرِكَ وَحُسْنِ عِبَادَتِكَ"
@@ -1114,29 +1090,28 @@ public class Azkar extends AppCompatActivity {
         }
 
         //TODO الرُّقية الشرعية
-        else
-        {
+        else {
 
 
             mor = new String[]{
 
-                    "الرُّقية الشرعية من القرآن الكريم"+"\n" +"\n" +
+                    "الرُّقية الشرعية من القرآن الكريم" + "\n" + "\n" +
 
                             " بِسْمِ اللَّهِ الرَّحْمَنِ الرَّحِيمِ ﴿1﴾ الْحَمْدُ لِلَّهِ رَبِّ الْعَالَمِينَ ﴿2﴾ الرَّحْمَنِ الرَّحِيمِ " +
                             "﴿3﴾ مَالِكِ يَوْمِ الدِّينِ ﴿4﴾ إِيَّاكَ نَعْبُدُ وَإِيَّاكَ نَسْتَعِينُ ﴿5﴾ اهْدِنَا الصِّرَاطَ الْمُسْتَقِيمَ " +
-                            "﴿6﴾ صِرَاطَ الَّذِينَ أَنْعَمْتَ عَلَيْهِمْ غَيْرِ الْمَغْضُوبِ عَلَيْهِمْ وَلَا الضَّالِّينَ ﴿7﴾" +"\n" +"\n" +
+                            "﴿6﴾ صِرَاطَ الَّذِينَ أَنْعَمْتَ عَلَيْهِمْ غَيْرِ الْمَغْضُوبِ عَلَيْهِمْ وَلَا الضَّالِّينَ ﴿7﴾" + "\n" + "\n" +
                             "[الفاتحة: 1-7]"
 
                     ,
                     " الم ﴿1﴾ ذَلِكَ الْكِتَابُ لَا رَيْبَ فِيهِ هُدًى لِلْمُتَّقِينَ ﴿2﴾" +
                             " الَّذِينَ يُؤْمِنُونَ بِالْغَيْبِ وَيُقِيمُونَ الصَّلَاةَ وَمِمَّا رَزَقْنَاهُمْ يُنْفِقُونَ ﴿3﴾" +
                             " وَالَّذِينَ يُؤْمِنُونَ بِمَا أُنْزِلَ إِلَيْكَ وَمَا أُنْزِلَ مِنْ قَبْلِكَ وَبِالْآَخِرَةِ هُمْ يُوقِنُونَ ﴿4﴾ " +
-                            "أُولَئِكَ عَلَى هُدًى مِنْ رَبِّهِمْ وَأُولَئِكَ هُمُ الْمُفْلِحُونَ ﴿5﴾" +"\n" +"\n" +
+                            "أُولَئِكَ عَلَى هُدًى مِنْ رَبِّهِمْ وَأُولَئِكَ هُمُ الْمُفْلِحُونَ ﴿5﴾" + "\n" + "\n" +
                             " [البقرة: 1-5]"
                     ,
                     " اللّهُ لاَ إِلَـهَ إِلاَّ هُوَ الْحَيُّ الْقَيُّومُ لاَ تَأْخُذُهُ سِنَةٌ وَلاَ نَوْمٌ لَّهُ مَا فِي السَّمَاوَاتِ وَمَا فِي الأَرْضِ مَن ذَا الَّذِي يَشْفَعُ عِنْدَهُ إِلاَّ بِإِذْنِه" +
                             "ِ يَعْلَمُ مَا بَيْنَ أَيْدِيهِمْ وَمَا خَلْفَهُمْ وَلاَ يُحِيطُونَ بِشَيْءٍ مِّنْ عِلْمِهِ إِلاَّ بِمَا شَاء" +
-                            " وَسِعَ كُرْسِيُّهُ السَّمَاوَاتِ وَالأَرْضَ وَلاَ يَؤُودُهُ حِفْظُهُمَا وَهُوَ الْعَلِيُّ الْعَظِيمُ" +"\n" +"\n" +
+                            " وَسِعَ كُرْسِيُّهُ السَّمَاوَاتِ وَالأَرْضَ وَلاَ يَؤُودُهُ حِفْظُهُمَا وَهُوَ الْعَلِيُّ الْعَظِيمُ" + "\n" + "\n" +
                             "[آية الكرسى - البقرة 255]"
                     ,
 
@@ -1148,7 +1123,7 @@ public class Azkar extends AppCompatActivity {
                             " كَسَبَتْ وَعَلَيْهَا مَا اكْتَسَبَتْ رَبَّنَا لَا تُؤَاخِذْنَا إِنْ نَسِينَا أَوْ أَخْطَأْنَا رَبَّنَا وَلَا تَحْمِلْ عَلَيْنَا " +
                             "إِصْرًا كَمَا حَمَلْتَهُ عَلَى الَّذِينَ مِنْ قَبْلِنَا رَبَّنَا وَلَا تُحَمِّلْنَا مَا لَا طَاقَةَ لَنَا بِهِ" +
                             " وَاعْفُ عَنَّا وَاغْفِرْ لَنَا وَارْحَمْنَا" +
-                            " أَنْتَ مَوْلَانَا فَانْصُرْنَا عَلَى الْقَوْمِ الْكَافِرِينَ ﴿286﴾" +"\n" +"\n" +
+                            " أَنْتَ مَوْلَانَا فَانْصُرْنَا عَلَى الْقَوْمِ الْكَافِرِينَ ﴿286﴾" + "\n" + "\n" +
                             " [البقرة: 284-286]"
 
                     ,
@@ -1156,38 +1131,25 @@ public class Azkar extends AppCompatActivity {
                     " قُلْ يَا أَيُّهَا الْكَافِرُونَ ﴿1﴾ لَا أَعْبُدُ مَا تَعْبُدُونَ ﴿2﴾ " +
                             "وَلَا أَنْتُمْ عَابِدُونَ مَا أَعْبُدُ ﴿3﴾ وَلَا أَنَا عَابِدٌ مَا عَبَدْتُمْ " +
                             "﴿4﴾ وَلَا أَنْتُمْ عَابِدُونَ مَا أَعْبُدُ ﴿5﴾" +
-                            " لَكُمْ دِينُكُمْ وَلِيَ دِينِ ﴿6﴾" +"\n" +"\n" +
+                            " لَكُمْ دِينُكُمْ وَلِيَ دِينِ ﴿6﴾" + "\n" + "\n" +
                             " [الكافرون]"
 
                     ,
-                    " قُلْ هُوَ اللَّهُ أَحَدٌ ﴿1﴾ اللَّهُ الصَّمَدُ ﴿2﴾ لَمْ يَلِدْ وَلَمْ يُولَدْ ﴿3﴾ وَلَمْ يَكُنْ لَهُ كُفُوًا أَحَدٌ ﴿4﴾" +"\n" +"\n" +
+                    " قُلْ هُوَ اللَّهُ أَحَدٌ ﴿1﴾ اللَّهُ الصَّمَدُ ﴿2﴾ لَمْ يَلِدْ وَلَمْ يُولَدْ ﴿3﴾ وَلَمْ يَكُنْ لَهُ كُفُوًا أَحَدٌ ﴿4﴾" + "\n" + "\n" +
                             " [الإخلاص]"
 
 
                     ,
                     " قُلْ أَعُوذُ بِرَبِّ الْفَلَقِ ﴿1﴾ مِنْ شَرِّ مَا خَلَقَ ﴿2﴾ وَمِنْ شَرِّ غَاسِقٍ إِذَا وَقَبَ ﴿3﴾ " +
                             "وَمِنْ شَرِّ النَّفَّاثَاتِ فِي الْعُقَدِ ﴿4﴾" +
-                            " وَمِنْ شَرِّ حَاسِدٍ إِذَا حَسَدَ ﴿5﴾" +"\n" +"\n" +
+                            " وَمِنْ شَرِّ حَاسِدٍ إِذَا حَسَدَ ﴿5﴾" + "\n" + "\n" +
                             "[الفلق]"
 
                     ,
                     " قُلْ أَعُوذُ بِرَبِّ النَّاسِ ﴿1﴾ مَلِكِ النَّاسِ ﴿2﴾ إِلَهِ النَّاسِ ﴿3﴾ مِنْ شَرِّ الْوَسْوَاسِ الْخَنَّاسِ ﴿4﴾" +
                             " الَّذِي يُوَسْوِسُ فِي صُدُورِ النَّاسِ ﴿5﴾" +
-                            " مِنَ الْجِنَّةِ وَالنَّاسِ ﴿6﴾" +"\n" +"\n" +
+                            " مِنَ الْجِنَّةِ وَالنَّاسِ ﴿6﴾" + "\n" + "\n" +
                             "[الناس]"
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
             };
@@ -1203,8 +1165,8 @@ public class Azkar extends AppCompatActivity {
 
 
         // view pager inside recycleview
-        final ViewPager viewPager=findViewById(R.id.pager);
-        SlidePagerAdapter azadapter=new SlidePagerAdapter(this,mor);
+        final ViewPager viewPager = findViewById(R.id.pager);
+        SlidePagerAdapter azadapter = new SlidePagerAdapter(this, mor);
         viewPager.setAdapter(azadapter);
 
 
@@ -1213,14 +1175,10 @@ public class Azkar extends AppCompatActivity {
         indicator.setViewPager(viewPager);
 
 
-
-
         viewPager.addOnPageChangeListener(new ViewPager.OnPageChangeListener() {
 
             @Override
             public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {
-
-
 
 
             }
@@ -1235,7 +1193,7 @@ public class Azkar extends AppCompatActivity {
             public void onPageScrollStateChanged(int state) {
 
 
-                String s =String.valueOf((mor2[viewPager.getCurrentItem()]));
+                String s = String.valueOf((mor2[viewPager.getCurrentItem()]));
 
                 textViewplus.setText(s);
 
@@ -1247,7 +1205,7 @@ public class Azkar extends AppCompatActivity {
 
 
                         mor2[viewPager.getCurrentItem()]++;
-                        String s =String.valueOf((mor2[viewPager.getCurrentItem()]));
+                        String s = String.valueOf((mor2[viewPager.getCurrentItem()]));
                         textViewplus.setText(s);
 
 
@@ -1257,13 +1215,9 @@ public class Azkar extends AppCompatActivity {
         });
 
 
-
-
         // counter
-        buttonplus =findViewById(R.id.btnp);
-        textViewplus=findViewById(R.id.textViewplus);
-
-
+        buttonplus = findViewById(R.id.btnp);
+        textViewplus = findViewById(R.id.textViewplus);
 
 
         buttonplus.setOnClickListener(new View.OnClickListener() {
@@ -1272,7 +1226,7 @@ public class Azkar extends AppCompatActivity {
             public void onClick(View v) {
                 mor2[viewPager.getCurrentItem()]++;
 
-                String s =String.valueOf((mor2[viewPager.getCurrentItem()]));
+                String s = String.valueOf((mor2[viewPager.getCurrentItem()]));
 
                 textViewplus.setText(s);
             }

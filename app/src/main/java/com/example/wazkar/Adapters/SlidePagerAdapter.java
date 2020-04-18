@@ -20,7 +20,6 @@ public class SlidePagerAdapter extends PagerAdapter {
         this.context = context;
         this.mor = mor;
 
-
     }
 
     @Override

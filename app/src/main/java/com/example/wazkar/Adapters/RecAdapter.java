@@ -7,13 +7,12 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.RelativeLayout;
-import android.widget.Toast;
 
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.wazkar.Azkar;
 import com.example.wazkar.R;
-import com.example.wazkar.Models.items;
+import com.example.wazkar.Models.ListItem;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -36,9 +35,9 @@ public class RecAdapter extends RecyclerView.Adapter<RecAdapter.ViewHolder>  {
 
         }}
     private Context context;
-    private List<com.example.wazkar.Models.items> items;
+    private List<ListItem> items;
 
-    public RecAdapter(ArrayList<items>items, Context context) {
+    public RecAdapter(ArrayList<ListItem> items, Context context) {
         this.context = context;
         this.items = items;
 
@@ -74,7 +73,7 @@ public class RecAdapter extends RecyclerView.Adapter<RecAdapter.ViewHolder>  {
     @Override
     public void onBindViewHolder(final ViewHolder holder, final int position) {
 
-        items p = items.get(position);
+        ListItem p = items.get(position);
         holder.button.setText(p.getName());
        
     }

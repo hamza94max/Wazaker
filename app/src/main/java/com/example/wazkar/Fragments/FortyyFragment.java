@@ -1,51 +1,42 @@
 package com.example.wazkar.Fragments;
 
-import android.content.Context;
-import android.net.Uri;
 import android.os.Bundle;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
 
 import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import android.view.LayoutInflater;
-import android.view.View;
-import android.view.ViewGroup;
-import android.widget.AdapterView;
-import android.widget.Button;
-
 import com.example.wazkar.Adapters.FortyAdapter;
-import com.example.wazkar.Adapters.RecAdapter;
 import com.example.wazkar.Models.Model_Forty;
-import com.example.wazkar.Models.items;
 import com.example.wazkar.R;
 
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * use Fragment as Suffix to Indicate its type :  Forrty --> FortyyFragment
+ */
+public class FortyyFragment extends Fragment {
+    RecyclerView recyclerforty;
+    List<Model_Forty> fortyList;
+    FortyAdapter fortyAdapter;
 
-public class Fortyy extends Fragment {
-View view ;
-RecyclerView recyclerforty;
-List <Model_Forty> fortyList;
-FortyAdapter fortyAdapter ;
-
-
-
-
-
-
-    public Fortyy() {
+    public FortyyFragment() {
         // Required empty public constructor
     }
-
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        loadData();
 
+    }
 
-        fortyList= new ArrayList<>();
+    private void loadData() {
+        fortyList = new ArrayList<>();
         fortyList.add(new Model_Forty("الحديث الأول "));
         fortyList.add(new Model_Forty("الحديث الثاني "));
         fortyList.add(new Model_Forty("الحديث الثالث "));
@@ -88,25 +79,20 @@ FortyAdapter fortyAdapter ;
         fortyList.add(new Model_Forty("الحديث الأربعون "));
         fortyList.add(new Model_Forty("الحديث الحادي و الأربعون "));
         fortyList.add(new Model_Forty("الحديث الثاني و الأربعون "));
-
-
-
-
     }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        View view= inflater.inflate(R.layout.fragment_fortyy, container, false);
-        recyclerforty=view.findViewById(R.id.recff);
+        View view = inflater.inflate(R.layout.fragment_fortyy, container, false);
+        recyclerforty = view.findViewById(R.id.recff);
 
-        fortyAdapter =new FortyAdapter(fortyList,getContext());
+        fortyAdapter = new FortyAdapter(fortyList, getContext());
 
         recyclerforty.setAdapter(fortyAdapter);
         recyclerforty.setLayoutManager(new LinearLayoutManager(getActivity()));
         recyclerforty.setHasFixedSize(true);
-
 
         return view;
 

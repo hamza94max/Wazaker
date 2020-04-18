@@ -1,10 +1,10 @@
 package com.example.wazkar.Models;
 
-public class items {
+public class ListItem {
 
     String name ;
 
-    public items(String name) {
+    public ListItem(String name) {
         this.name = name;
     }
 

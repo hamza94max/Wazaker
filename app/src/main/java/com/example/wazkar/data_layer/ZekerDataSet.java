@@ -1,58 +1,19 @@
-package com.example.wazkar;
+package com.example.wazkar.data_layer;
 
-import android.app.Activity;
+// TODO: 4/18/20 Try to use Model(ZekerItem for ex ) it hold zeker text , and count of times for ex ZekerItem("abc" , 3) this help you to add more features
+public class ZekerDataSet {
 
-
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.viewpager.widget.ViewPager;
-
-        import android.annotation.SuppressLint;
-
-        import android.os.Bundle;
-        import android.view.View;
-
-        import android.widget.TextView;
-        import android.widget.Toolbar;
-
-        import com.badoualy.stepperindicator.StepperIndicator;
-        import com.example.wazkar.Adapters.SlidePagerAdapter;
-
-
-
-
-        import at.markushi.ui.CircleButton;
-
-import static com.example.wazkar.Adapters.RecAdapter.btnid;
-
-
-public class Azkar extends AppCompatActivity {
-
-
-
-    CircleButton buttonplus;
-    TextView textViewplus ;
-    String[] mor;
-    int[] mor2;
-
-
-// TODO azkar
-    {
+    public static String[] getZekerList(int index) {
         //TODO MORNING
-        if (btnid.equals("أذكار الصباح ")) {
-
-
-
-
-
-
-            mor = new String[]{" أعوذ بالله من الشيطان الرجيم" + "\n" +
+        if (index == 0) {
+            return new String[]{" أعوذ بالله من الشيطان الرجيم" + "\n" +
                     " {اللّهُ لاَ إِلَـهَ إِلاَّ هُوَ الْحَيُّ الْقَيُّومُ لاَ تَأْخُذُهُ سِنَةٌ وَلاَ نَوْمٌ" +
                     " لَّهُ مَا فِي السَّمَاوَاتِ وَمَا فِي الأَرْضِ مَن ذَا الَّذِي يَشْفَعُ عِنْدَهُ إِلاَّ بِإِذْنِهِ يَعْلَمُ مَا بَيْنَ أَيْدِيهِمْ" +
                     " وَمَا خَلْفَهُمْ وَلاَ يُحِيطُونَ بِشَيْءٍ مِّنْ عِلْمِهِ إِلاَّ بِمَا شَاء" +
                     " وَسِعَ كُرْسِيُّهُ السَّمَاوَاتِ وَالأَرْضَ وَلاَ يَؤُودُهُ حِفْظُهُمَا وَهُوَ الْعَلِيُّ الْعَظِيمُ}\n" + "\n" + "\n" + " [آية الكرسي – البقرة 255]" + "\n" +
                     "من قالها حين يصبح أجير من الجن حتى يمسى ومن قالها حين يمسى أجير من الجن حتى يصبح" +
 
-                    "\n" + "\n" ,
+                    "\n" + "\n",
 
 
                     "بسم الله الرحمن الرحيم" + "\n" + "\n" +
@@ -174,14 +135,10 @@ public class Azkar extends AppCompatActivity {
             };
 
 
-
-
         }
         //TODO EVENING AZKAR
-        else if (btnid.equals("أذكار المساء")) {
-
-
-            mor = new String[]{" أعوذ بالله من الشيطان الرجيم" + "\n" +
+        else if (index == 1) {
+            return new String[]{" أعوذ بالله من الشيطان الرجيم" + "\n" +
                     " {اللّهُ لاَ إِلَـهَ إِلاَّ هُوَ الْحَيُّ الْقَيُّومُ لاَ تَأْخُذُهُ سِنَةٌ وَلاَ نَوْمٌ" +
                     " لَّهُ مَا فِي السَّمَاوَاتِ وَمَا فِي الأَرْضِ مَن ذَا الَّذِي يَشْفَعُ عِنْدَهُ إِلاَّ بِإِذْنِهِ يَعْلَمُ مَا بَيْنَ أَيْدِيهِمْ" +
                     " وَمَا خَلْفَهُمْ وَلاَ يُحِيطُونَ بِشَيْءٍ مِّنْ عِلْمِهِ إِلاَّ بِمَا شَاء" +
@@ -356,8 +313,8 @@ public class Azkar extends AppCompatActivity {
             };
         }
         //TODO AZKAR MASJED
-        else if (btnid.equals("أذكار المسجد")) {
-            mor = new String[]{
+        else if (index == 2) {
+            return new String[]{
 
                     "دُعَاءُ الذَّهَابِ إلَى المَسْجِدِ" + "\n" + "\n" +
 
@@ -382,17 +339,11 @@ public class Azkar extends AppCompatActivity {
             };
 
 
-
-
-
-
-
-
         }
 
         //TODO AFTER PRAY
-        else if (btnid.equals("أذكار بعد الصلاه ")) {
-            mor = new String[]{
+        else if (index == 3) {
+            return new String[]{
                     "أَسْـتَغْفِرُ الله، أَسْـتَغْفِرُ الله، أَسْـتَغْفِرُ الله" + "\n" +
                             "اللّهُـمَّ أَنْـتَ السَّلامُ ، وَمِـنْكَ السَّلام ، تَبارَكْتَ يا ذا الجَـلالِ وَالإِكْـرام"
 
@@ -433,7 +384,7 @@ public class Azkar extends AppCompatActivity {
                     , "لا إلهَ إلاّ اللّهُ وحْـدَهُ لا شريكَ لهُ، لهُ المُلكُ ولهُ الحَمْد، يُحيـي وَيُمـيتُ وهُوَ على كُلّ شيءٍ قدير" + "\n" + "\n" + "\n" +
                     "عَشْر مَرّات بَعْدَ المَغْرِب وَالصّـبْح"
 
-                    ,  "اللَّهُمَّ أَجِرْنِي مِنْ النَّار"
+                    , "اللَّهُمَّ أَجِرْنِي مِنْ النَّار"
 
                     ,
                     "اللَّهُمَّ أَعِنِّي عَلَى ذِكْرِكَ وَشُكْرِكَ وَحُسْنِ عِبَادَتِكَ"
@@ -443,8 +394,8 @@ public class Azkar extends AppCompatActivity {
         }
 
         // TODO AFTER AZAN
-        else if (btnid.equals("أذكار الأذان ")) {
-            mor = new String[]{
+        else if (index == 5) {
+            return new String[]{
 
                     "ما يقال عند سماع الأذان" + "\n" +
                             "يَقُولُ مِثْلَ مَا يَقُولُ الـمُؤَذِّنُ إلاَّ فِي حَيَّ عَلَى الصَّلاةِ وَحَيَّ عَلَى الفَلاَح  فَيَقُولُ: لاَ حَوْلَ وَلا قُوَّةَ إلاَّ باللَّهِ"
@@ -481,8 +432,8 @@ public class Azkar extends AppCompatActivity {
 
         //TODO WADOOA
 
-        else if (btnid.equals("أذكار الوضوء")) {
-            mor = new String[]{
+        else if (index == 6) {
+            return new String[]{
                     "الذكر قبل الوضوء :" + "\n" +
                             " بِسْمِ ٱللّٰه"
 
@@ -496,8 +447,8 @@ public class Azkar extends AppCompatActivity {
             };
         }
         //TODO QURAN DOAA
-        else if (btnid.equals("الأدعيـة القرآنية")) {
-            mor = new String[]{
+        else if (index == 7) {
+            return new String[]{
 
                     "رَبَّنَا آتِنَا فِي الدُّنْيَا حَسَنَةً وَفِي الآخِرَةِ حَسَنَةً وَقِنَا عَذَابَ النَّارِ" + "\n" + "\n" +
 
@@ -635,8 +586,8 @@ public class Azkar extends AppCompatActivity {
                             "[المؤمنون - 118]"};
         }
         //TODO NABAYA DOAA
-        else if (btnid.equals("أدعيه النبويه ")) {
-            mor = new String[]{
+        else if (index == 8) {
+            return new String[]{
 
                     "سيد الاستغفار" + "\n" +
                             "اللَّهُمَّ أنَْتَ رَبيِّ لَا إلِهََ إلَِّا أنَتَ، خَلَقْتنَيِ وَأنََا عَبدُْكَ،" +
@@ -817,8 +768,8 @@ public class Azkar extends AppCompatActivity {
                             "رواه البخاري (3370) ومسلم (908) عن كعب بن عُجرة"};
         }
         //TODO EATING AZKAR
-        else if (btnid.equals("أذكار الطعام")) {
-            mor = new String[]{
+        else if (index == 9) {
+            return new String[]{
 
                     "الذكر عند الطعام والشراب" + "\n" +
                             "بِسْمِ اللهِ" + "\n" +
@@ -841,8 +792,8 @@ public class Azkar extends AppCompatActivity {
             };
         }
         //TODO HOUSE AZKAR
-        else if (btnid.equals("أذكار المنزل")) {
-            mor = new String[]{
+        else if (index == 10) {
+            return new String[]{
                     "أذكار الدخول إلى المنزل" + "\n" + "\n" +
                             "بِسْـمِ اللهِ وَلَجْنـا، وَبِسْـمِ اللهِ خَـرَجْنـا، وَعَلـى رَبِّنـا تَوَكّلْـنا"
 
@@ -853,8 +804,8 @@ public class Azkar extends AppCompatActivity {
         }
 
         //TODO SLEEPING AZKAR
-        else if (btnid.equals("أذكار النوم")) {
-            mor = new String[]{
+        else if (index == 11) {
+            return new String[]{
                     "\n" +
                             "بِاسْمِكَ رَبِّـي وَضَعْـتُ جَنْـبي ، وَبِكَ أَرْفَعُـه، فَإِن أَمْسَـكْتَ نَفْسـي فارْحَـمْها ،" +
                             " وَإِنْ أَرْسَلْتَـها فاحْفَظْـها بِمـا تَحْفَـظُ بِه عِبـادَكَ الصّـالِحـين"
@@ -901,8 +852,8 @@ public class Azkar extends AppCompatActivity {
         }
 
         //TODO WAKING AZKAR
-        else if (btnid.equals("أذكار الاستيقاظ من النوم")) {
-            mor = new String[]{
+        else if (index == 12) {
+            return new String[]{
 
                     "\n" +
                             "الحَمْـدُ لِلّهِ الّذي أَحْـيانا بَعْـدَ ما أَماتَـنا وَإليه النُّـشور"
@@ -919,8 +870,8 @@ public class Azkar extends AppCompatActivity {
                             " إلاّ باللّهِ العليّ العظيم. رَبِّ اغْفرْ لي"};
         }
         //TODO دعاء ختم القران الكريم
-        else if (btnid.equals("دعاء ختم القران الكريم")) {
-            mor = new String[]{
+        else if (index == 13) {
+            return new String[]{
 
                     "اللَّهُمَّ ارْحَمْنِي بالقُرْءَانِ وَاجْعَلهُ لِي إِمَاماً وَنُوراً وَهُدًى وَرَحْمَةً " +
                             "\n" + "\n" + "\n" +
@@ -970,8 +921,8 @@ public class Azkar extends AppCompatActivity {
 
 
         //TODO فضل الدعاء
-        else if (btnid.equals("فضل الدعاء")) {
-            mor = new String[]{
+        else if (index == 14) {
+            return new String[]{
 
                     "معنى الدعاء" + "\n" + "\n" +
                             "الدعاء هو أن يطلبَ الداعي ما ينفعُه وما يكشف ضُرَّه؛ وحقيقته إظهار الافتقار إلى الله، والتبرؤ من الحول والقوة، " +
@@ -1055,11 +1006,9 @@ public class Azkar extends AppCompatActivity {
         }
         //TODO فضل الأذكار
 
+        else if (index == 15) {
 
-        else if (btnid.equals("فضل الأذكار")) {
-
-            mor = new String[]{
-
+            return new String[]{
 
                     "إنَّ من أفضل الأعمال الصالحة اليسيرة التي تقرب المسلم إلى ربه جل وعلا الذكرُ" + "\n" + "\n" +
 
@@ -1114,29 +1063,26 @@ public class Azkar extends AppCompatActivity {
         }
 
         //TODO الرُّقية الشرعية
-        else
-        {
+        else {
+            return new String[]{
 
-
-            mor = new String[]{
-
-                    "الرُّقية الشرعية من القرآن الكريم"+"\n" +"\n" +
+                    "الرُّقية الشرعية من القرآن الكريم" + "\n" + "\n" +
 
                             " بِسْمِ اللَّهِ الرَّحْمَنِ الرَّحِيمِ ﴿1﴾ الْحَمْدُ لِلَّهِ رَبِّ الْعَالَمِينَ ﴿2﴾ الرَّحْمَنِ الرَّحِيمِ " +
                             "﴿3﴾ مَالِكِ يَوْمِ الدِّينِ ﴿4﴾ إِيَّاكَ نَعْبُدُ وَإِيَّاكَ نَسْتَعِينُ ﴿5﴾ اهْدِنَا الصِّرَاطَ الْمُسْتَقِيمَ " +
-                            "﴿6﴾ صِرَاطَ الَّذِينَ أَنْعَمْتَ عَلَيْهِمْ غَيْرِ الْمَغْضُوبِ عَلَيْهِمْ وَلَا الضَّالِّينَ ﴿7﴾" +"\n" +"\n" +
+                            "﴿6﴾ صِرَاطَ الَّذِينَ أَنْعَمْتَ عَلَيْهِمْ غَيْرِ الْمَغْضُوبِ عَلَيْهِمْ وَلَا الضَّالِّينَ ﴿7﴾" + "\n" + "\n" +
                             "[الفاتحة: 1-7]"
 
                     ,
                     " الم ﴿1﴾ ذَلِكَ الْكِتَابُ لَا رَيْبَ فِيهِ هُدًى لِلْمُتَّقِينَ ﴿2﴾" +
                             " الَّذِينَ يُؤْمِنُونَ بِالْغَيْبِ وَيُقِيمُونَ الصَّلَاةَ وَمِمَّا رَزَقْنَاهُمْ يُنْفِقُونَ ﴿3﴾" +
                             " وَالَّذِينَ يُؤْمِنُونَ بِمَا أُنْزِلَ إِلَيْكَ وَمَا أُنْزِلَ مِنْ قَبْلِكَ وَبِالْآَخِرَةِ هُمْ يُوقِنُونَ ﴿4﴾ " +
-                            "أُولَئِكَ عَلَى هُدًى مِنْ رَبِّهِمْ وَأُولَئِكَ هُمُ الْمُفْلِحُونَ ﴿5﴾" +"\n" +"\n" +
+                            "أُولَئِكَ عَلَى هُدًى مِنْ رَبِّهِمْ وَأُولَئِكَ هُمُ الْمُفْلِحُونَ ﴿5﴾" + "\n" + "\n" +
                             " [البقرة: 1-5]"
                     ,
                     " اللّهُ لاَ إِلَـهَ إِلاَّ هُوَ الْحَيُّ الْقَيُّومُ لاَ تَأْخُذُهُ سِنَةٌ وَلاَ نَوْمٌ لَّهُ مَا فِي السَّمَاوَاتِ وَمَا فِي الأَرْضِ مَن ذَا الَّذِي يَشْفَعُ عِنْدَهُ إِلاَّ بِإِذْنِه" +
                             "ِ يَعْلَمُ مَا بَيْنَ أَيْدِيهِمْ وَمَا خَلْفَهُمْ وَلاَ يُحِيطُونَ بِشَيْءٍ مِّنْ عِلْمِهِ إِلاَّ بِمَا شَاء" +
-                            " وَسِعَ كُرْسِيُّهُ السَّمَاوَاتِ وَالأَرْضَ وَلاَ يَؤُودُهُ حِفْظُهُمَا وَهُوَ الْعَلِيُّ الْعَظِيمُ" +"\n" +"\n" +
+                            " وَسِعَ كُرْسِيُّهُ السَّمَاوَاتِ وَالأَرْضَ وَلاَ يَؤُودُهُ حِفْظُهُمَا وَهُوَ الْعَلِيُّ الْعَظِيمُ" + "\n" + "\n" +
                             "[آية الكرسى - البقرة 255]"
                     ,
 
@@ -1148,7 +1094,7 @@ public class Azkar extends AppCompatActivity {
                             " كَسَبَتْ وَعَلَيْهَا مَا اكْتَسَبَتْ رَبَّنَا لَا تُؤَاخِذْنَا إِنْ نَسِينَا أَوْ أَخْطَأْنَا رَبَّنَا وَلَا تَحْمِلْ عَلَيْنَا " +
                             "إِصْرًا كَمَا حَمَلْتَهُ عَلَى الَّذِينَ مِنْ قَبْلِنَا رَبَّنَا وَلَا تُحَمِّلْنَا مَا لَا طَاقَةَ لَنَا بِهِ" +
                             " وَاعْفُ عَنَّا وَاغْفِرْ لَنَا وَارْحَمْنَا" +
-                            " أَنْتَ مَوْلَانَا فَانْصُرْنَا عَلَى الْقَوْمِ الْكَافِرِينَ ﴿286﴾" +"\n" +"\n" +
+                            " أَنْتَ مَوْلَانَا فَانْصُرْنَا عَلَى الْقَوْمِ الْكَافِرِينَ ﴿286﴾" + "\n" + "\n" +
                             " [البقرة: 284-286]"
 
                     ,
@@ -1156,139 +1102,29 @@ public class Azkar extends AppCompatActivity {
                     " قُلْ يَا أَيُّهَا الْكَافِرُونَ ﴿1﴾ لَا أَعْبُدُ مَا تَعْبُدُونَ ﴿2﴾ " +
                             "وَلَا أَنْتُمْ عَابِدُونَ مَا أَعْبُدُ ﴿3﴾ وَلَا أَنَا عَابِدٌ مَا عَبَدْتُمْ " +
                             "﴿4﴾ وَلَا أَنْتُمْ عَابِدُونَ مَا أَعْبُدُ ﴿5﴾" +
-                            " لَكُمْ دِينُكُمْ وَلِيَ دِينِ ﴿6﴾" +"\n" +"\n" +
+                            " لَكُمْ دِينُكُمْ وَلِيَ دِينِ ﴿6﴾" + "\n" + "\n" +
                             " [الكافرون]"
 
                     ,
-                    " قُلْ هُوَ اللَّهُ أَحَدٌ ﴿1﴾ اللَّهُ الصَّمَدُ ﴿2﴾ لَمْ يَلِدْ وَلَمْ يُولَدْ ﴿3﴾ وَلَمْ يَكُنْ لَهُ كُفُوًا أَحَدٌ ﴿4﴾" +"\n" +"\n" +
+                    " قُلْ هُوَ اللَّهُ أَحَدٌ ﴿1﴾ اللَّهُ الصَّمَدُ ﴿2﴾ لَمْ يَلِدْ وَلَمْ يُولَدْ ﴿3﴾ وَلَمْ يَكُنْ لَهُ كُفُوًا أَحَدٌ ﴿4﴾" + "\n" + "\n" +
                             " [الإخلاص]"
 
 
                     ,
                     " قُلْ أَعُوذُ بِرَبِّ الْفَلَقِ ﴿1﴾ مِنْ شَرِّ مَا خَلَقَ ﴿2﴾ وَمِنْ شَرِّ غَاسِقٍ إِذَا وَقَبَ ﴿3﴾ " +
                             "وَمِنْ شَرِّ النَّفَّاثَاتِ فِي الْعُقَدِ ﴿4﴾" +
-                            " وَمِنْ شَرِّ حَاسِدٍ إِذَا حَسَدَ ﴿5﴾" +"\n" +"\n" +
+                            " وَمِنْ شَرِّ حَاسِدٍ إِذَا حَسَدَ ﴿5﴾" + "\n" + "\n" +
                             "[الفلق]"
 
                     ,
                     " قُلْ أَعُوذُ بِرَبِّ النَّاسِ ﴿1﴾ مَلِكِ النَّاسِ ﴿2﴾ إِلَهِ النَّاسِ ﴿3﴾ مِنْ شَرِّ الْوَسْوَاسِ الْخَنَّاسِ ﴿4﴾" +
                             " الَّذِي يُوَسْوِسُ فِي صُدُورِ النَّاسِ ﴿5﴾" +
-                            " مِنَ الْجِنَّةِ وَالنَّاسِ ﴿6﴾" +"\n" +"\n" +
+                            " مِنَ الْجِنَّةِ وَالنَّاسِ ﴿6﴾" + "\n" + "\n" +
                             "[الناس]"
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
             };
 
         }
     }
-
-
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_azkar);
-
-
-        // view pager inside recycleview
-        final ViewPager viewPager=findViewById(R.id.pager);
-        SlidePagerAdapter azadapter=new SlidePagerAdapter(this,mor);
-        viewPager.setAdapter(azadapter);
-
-
-        // Ui
-        StepperIndicator indicator = findViewById(R.id.STEPP);
-        indicator.setViewPager(viewPager);
-
-
-
-
-        viewPager.addOnPageChangeListener(new ViewPager.OnPageChangeListener() {
-
-            @Override
-            public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {
-
-
-
-
-            }
-
-            @Override
-            public void onPageSelected(int position) {
-
-
-            }
-
-            @Override
-            public void onPageScrollStateChanged(int state) {
-
-
-                String s =String.valueOf((mor2[viewPager.getCurrentItem()]));
-
-                textViewplus.setText(s);
-
-
-                buttonplus.setOnClickListener(new View.OnClickListener() {
-                    @SuppressLint("SetTextI18n")
-                    @Override
-                    public void onClick(View v) {
-
-
-                        mor2[viewPager.getCurrentItem()]++;
-                        String s =String.valueOf((mor2[viewPager.getCurrentItem()]));
-                        textViewplus.setText(s);
-
-
-                    }
-                });
-            }
-        });
-
-
-
-
-        // counter
-        buttonplus =findViewById(R.id.btnp);
-        textViewplus=findViewById(R.id.textViewplus);
-
-
-
-
-        buttonplus.setOnClickListener(new View.OnClickListener() {
-            @SuppressLint("SetTextI18n")
-            @Override
-            public void onClick(View v) {
-                mor2[viewPager.getCurrentItem()]++;
-
-                String s =String.valueOf((mor2[viewPager.getCurrentItem()]));
-
-                textViewplus.setText(s);
-            }
-        });
-    }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-

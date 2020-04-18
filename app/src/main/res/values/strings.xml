@@ -1,6 +1,8 @@
 <resources>
     <string name="app_name">Wazkar</string>
-
-    <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="arba3en">الاربعين النوويه</string>
+    <string name="counter">العداد</string>
+    <string name="azkar">الأذكار</string>
+    <string name="reset">إعادة</string>
 </resources>

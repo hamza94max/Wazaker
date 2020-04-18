@@ -10,6 +10,7 @@ import androidx.viewpager.widget.ViewPager;
 
 import com.badoualy.stepperindicator.StepperIndicator;
 import com.example.wazkar.Adapters.SlidePagerAdapter;
+import com.example.wazkar.data_layer.ZekerDataSet;
 
 import at.markushi.ui.CircleButton;
 
@@ -25,7 +26,8 @@ public class AzkarActivity extends AppCompatActivity {
     int[] zekerCounts;
 
     private void loadData(int index) {
-
+        zekerItems = ZekerDataSet.getZekerList(index);
+        zekerCounts = new int[zekerItems.length];
     }
 
     @Override
@@ -63,41 +65,34 @@ public class AzkarActivity extends AppCompatActivity {
 
             @Override
             public void onPageScrollStateChanged(int state) {
-
-
-           /*     String s = String.valueOf((zekerCounts[viewPager.getCurrentItem()]));
-
+                String s = String.valueOf((zekerCounts[viewPager.getCurrentItem()]));
                 textViewplus.setText(s);
-
                 buttonplus.setOnClickListener(new View.OnClickListener() {
                     @SuppressLint("SetTextI18n")
                     @Override
                     public void onClick(View v) {
-
-
-                        zekerCounts[viewPager.getCurrentItem()]++;
-                        String s = String.valueOf((zekerCounts[viewPager.getCurrentItem()]));
-                        textViewplus.setText(s);
-
-
+                        updateScreen(viewPager);
                     }
-                });*/
+                });
             }
         });
 
         // counter
         buttonplus = findViewById(R.id.btnp);
         textViewplus = findViewById(R.id.textViewplus);
-/*
         buttonplus.setOnClickListener(new View.OnClickListener() {
             @SuppressLint("SetTextI18n")
             @Override
             public void onClick(View v) {
-                zekerCounts[viewPager.getCurrentItem()]++;
-                String s = String.valueOf((zekerCounts[viewPager.getCurrentItem()]));
-                textViewplus.setText(s);
+                updateScreen(viewPager);
             }
-        });*/
+        });
+    }
+
+    private void updateScreen(ViewPager viewPager) {
+        zekerCounts[viewPager.getCurrentItem()]++;
+        String s = String.valueOf((zekerCounts[viewPager.getCurrentItem()]));
+        textViewplus.setText(s);
     }
 }
 

@@ -1006,11 +1006,9 @@ public class ZekerDataSet {
         }
         //TODO فضل الأذكار
 
-
         else if (index == 15) {
 
             return new String[]{
-
 
                     "إنَّ من أفضل الأعمال الصالحة اليسيرة التي تقرب المسلم إلى ربه جل وعلا الذكرُ" + "\n" + "\n" +
 

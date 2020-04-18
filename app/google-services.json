@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "592028049386",
+    "firebase_url": "https://wazkar-5717f.firebaseio.com",
+    "project_id": "wazkar-5717f",
+    "storage_bucket": "wazkar-5717f.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:592028049386:android:f22e04ce6d11407ed55c93",
+        "android_client_info": {
+          "package_name": "com.example.wazkar"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "592028049386-6jqsp4211vvj7l4dean860mpch8ne9t1.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.wazkar",
+            "certificate_hash": "ead44fb81f7849b2f4077690fe4b11fadef94dde"
+          }
+        },
+        {
+          "client_id": "592028049386-ebe1fchb843iklrr2p5ggqms0k5e33kg.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCdB1qm7IQPw3zTiot_Nny-LwYoOaRlkYU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "592028049386-ebe1fchb843iklrr2p5ggqms0k5e33kg.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -37,7 +37,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         //Initializing viewPager
-        viewPager =  findViewById(R.id.pager);
+        viewPager =  findViewById(R.id.viewpager);
 
         //Initializing the bottomNavigationView
         final BottomNavigationView    bottomNavigationView = findViewById(R.id.navigation);

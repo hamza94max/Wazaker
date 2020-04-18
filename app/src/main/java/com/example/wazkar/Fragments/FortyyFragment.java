@@ -90,10 +90,9 @@ public class FortyyFragment extends Fragment {
         View view = inflater.inflate(R.layout.fragment_fortyy, container, false);
         recyclerforty = view.findViewById(R.id.rvHadith);
 
-        fortyAdapter = new FortyAdapter(fortyList, getContext());
+        fortyAdapter = new FortyAdapter(fortyList);
 
         recyclerforty.setAdapter(fortyAdapter);
-        recyclerforty.setLayoutManager(new LinearLayoutManager(getActivity()));
         recyclerforty.setHasFixedSize(true);
 //        recyclerforty.addItemDecoration(new DividerItemDecoration(getContext() , DividerItemDecoration.VERTICAL));
 

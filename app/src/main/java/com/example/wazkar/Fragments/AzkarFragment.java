@@ -1,17 +1,17 @@
 package com.example.wazkar.Fragments;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
-import android.widget.Toast;
 
 import androidx.fragment.app.Fragment;
-import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.wazkar.Adapters.AzkarAdapter;
+import com.example.wazkar.AzkarActivity;
 import com.example.wazkar.Models.ListItem;
 import com.example.wazkar.R;
 
@@ -42,7 +42,10 @@ public class AzkarFragment extends Fragment {
         rec.setHasFixedSize(true);
 
         azkarAdapter.setListner(e -> {
-            Toast.makeText(getContext(), "", Toast.LENGTH_SHORT).show();
+            int index = (int) e;
+            Intent zeker = new Intent(getActivity(), AzkarActivity.class);
+            zeker.putExtra("index", index);
+            startActivity(zeker);
         });
 
         return v;

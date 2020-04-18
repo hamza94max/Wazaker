@@ -17,7 +17,7 @@ import androidx.viewpager.widget.ViewPager;
 
 import com.example.wazkar.Fragments.CounterFragment;
 import com.example.wazkar.Fragments.FortyyFragment;
-import com.example.wazkar.Fragments.HomeFragment;
+import com.example.wazkar.Fragments.AzkarFragment;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 import java.util.ArrayList;
@@ -26,7 +26,7 @@ import java.util.Random;
 
 public class MainActivity extends AppCompatActivity {
     //Fragments
-    HomeFragment homeFragment;
+    AzkarFragment homeFragment;
     CounterFragment counterFragment;
     FortyyFragment fortyyFragment;
     MenuItem prevMenuItem;
@@ -704,7 +704,7 @@ public class MainActivity extends AppCompatActivity {
     // viewpager with bottom navigation
     private void setupViewPager(ViewPager viewPager) {
         ViewPagerAdapter adapter = new ViewPagerAdapter(getSupportFragmentManager());
-        homeFragment = new HomeFragment();
+        homeFragment = new AzkarFragment();
         counterFragment = new CounterFragment();
         fortyyFragment = new FortyyFragment();
 

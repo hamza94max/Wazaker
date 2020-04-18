@@ -13,7 +13,7 @@ import com.example.wazkar.Adapters.SlidePagerAdapter;
 
 import at.markushi.ui.CircleButton;
 
-import static com.example.wazkar.Adapters.RecAdapter.btnid;
+import static com.example.wazkar.Adapters.AzkarAdapter.btnid;
 
 
 public class Azkar extends AppCompatActivity {

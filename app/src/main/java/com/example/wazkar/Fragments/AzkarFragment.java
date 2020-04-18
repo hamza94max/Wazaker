@@ -5,12 +5,13 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
+import android.widget.Toast;
 
 import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.example.wazkar.Adapters.RecAdapter;
+import com.example.wazkar.Adapters.AzkarAdapter;
 import com.example.wazkar.Models.ListItem;
 import com.example.wazkar.R;
 
@@ -18,15 +19,15 @@ import java.util.ArrayList;
 import java.util.List;
 
 
-public class HomeFragment extends Fragment {
+public class AzkarFragment extends Fragment {
 
     public AdapterView.OnItemClickListener onItemClickListener;
     private RecyclerView rec;
-    private RecAdapter RecAdapter;
+    private AzkarAdapter azkarAdapter;
     private List<ListItem> items;
 
 
-    public HomeFragment() {
+    public AzkarFragment() {
         // Required empty public constructor
     }
 
@@ -34,16 +35,15 @@ public class HomeFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
         View v = inflater.inflate(R.layout.fragment_home, container, false);
-        rec = v.findViewById(R.id.rec);
-
-
-        RecAdapter = new RecAdapter((ArrayList<ListItem>) items, getContext());
-        rec.setAdapter(RecAdapter);
-        rec.setLayoutManager(new LinearLayoutManager(getActivity()));
+        rec = v.findViewById(R.id.rvAzkar);
+        azkarAdapter = new AzkarAdapter((ArrayList<ListItem>) items, getContext());
+        rec.setAdapter(azkarAdapter);
         rec.setHasFixedSize(true);
 
+        azkarAdapter.setListner(e -> {
+            Toast.makeText(getContext(), "", Toast.LENGTH_SHORT).show();
+        });
 
         return v;
     }
@@ -51,10 +51,11 @@ public class HomeFragment extends Fragment {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        loadData();
+    }
 
-
+    private void loadData() {
         items = new ArrayList<>();
-        // TODO recycle view
         items.add(new ListItem("أذكار الصباح "));
         items.add(new ListItem("أذكار المساء"));
         items.add(new ListItem("أذكار المسجد"));
@@ -72,8 +73,6 @@ public class HomeFragment extends Fragment {
         items.add(new ListItem("فضل الدعاء"));
         items.add(new ListItem("فضل الأذكار"));
         items.add(new ListItem("الرقيه الشرعيه"));
-
-
     }
 
 

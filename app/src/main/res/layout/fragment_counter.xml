@@ -40,7 +40,7 @@
             android:layout_height="wrap_content"
             android:background="@drawable/buttonshape"
 
-            android:text="reset /إعادة "
+            android:text="@string/reset"
             android:textColor="#090000"
             android:textSize="30sp"
 

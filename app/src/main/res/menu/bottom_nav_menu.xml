@@ -10,7 +10,7 @@
 
     <item
         android:id="@+id/counter"
-        android:icon="@drawable/for_clear_all_black_24dp"
+        android:icon="@drawable/ic_counter"
         android:title="@string/counter" />
 
     <item

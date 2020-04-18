@@ -16,20 +16,20 @@ import at.markushi.ui.CircleButton;
 import static com.example.wazkar.Adapters.AzkarAdapter.btnid;
 
 
-public class Azkar extends AppCompatActivity {
+//// TODO: 4/18/20 Also naming rule use class, file name to indicate its rule, function
+public class AzkarActivity extends AppCompatActivity {
 
     CircleButton buttonplus;
     TextView textViewplus;
-    String[] mor;
-    int[] mor2;
+    String[] zekerItems;
+    int[] zekerCounts;
 
+    private void loadData(int index) {
 
-    // TODO azkar
-    {
         //TODO MORNING
-        if (btnid.equals("أذكار الصباح ")) {
+        if (index == 0) {
             //// TODO: 4/18/20 Try to use Model(ZekerItem for ex ) it hold zeker text , and count of times for ex ZekerItem("abc" , 3) this help you to add more features
-            mor = new String[]{" أعوذ بالله من الشيطان الرجيم" + "\n" +
+            zekerItems = new String[]{" أعوذ بالله من الشيطان الرجيم" + "\n" +
                     " {اللّهُ لاَ إِلَـهَ إِلاَّ هُوَ الْحَيُّ الْقَيُّومُ لاَ تَأْخُذُهُ سِنَةٌ وَلاَ نَوْمٌ" +
                     " لَّهُ مَا فِي السَّمَاوَاتِ وَمَا فِي الأَرْضِ مَن ذَا الَّذِي يَشْفَعُ عِنْدَهُ إِلاَّ بِإِذْنِهِ يَعْلَمُ مَا بَيْنَ أَيْدِيهِمْ" +
                     " وَمَا خَلْفَهُمْ وَلاَ يُحِيطُونَ بِشَيْءٍ مِّنْ عِلْمِهِ إِلاَّ بِمَا شَاء" +
@@ -160,10 +160,10 @@ public class Azkar extends AppCompatActivity {
 
         }
         //TODO EVENING AZKAR
-        else if (btnid.equals("أذكار المساء")) {
+        else if (index == 1) {
 
 
-            mor = new String[]{" أعوذ بالله من الشيطان الرجيم" + "\n" +
+            zekerItems = new String[]{" أعوذ بالله من الشيطان الرجيم" + "\n" +
                     " {اللّهُ لاَ إِلَـهَ إِلاَّ هُوَ الْحَيُّ الْقَيُّومُ لاَ تَأْخُذُهُ سِنَةٌ وَلاَ نَوْمٌ" +
                     " لَّهُ مَا فِي السَّمَاوَاتِ وَمَا فِي الأَرْضِ مَن ذَا الَّذِي يَشْفَعُ عِنْدَهُ إِلاَّ بِإِذْنِهِ يَعْلَمُ مَا بَيْنَ أَيْدِيهِمْ" +
                     " وَمَا خَلْفَهُمْ وَلاَ يُحِيطُونَ بِشَيْءٍ مِّنْ عِلْمِهِ إِلاَّ بِمَا شَاء" +
@@ -339,7 +339,7 @@ public class Azkar extends AppCompatActivity {
         }
         //TODO AZKAR MASJED
         else if (btnid.equals("أذكار المسجد")) {
-            mor = new String[]{
+            zekerItems = new String[]{
 
                     "دُعَاءُ الذَّهَابِ إلَى المَسْجِدِ" + "\n" + "\n" +
 
@@ -368,7 +368,7 @@ public class Azkar extends AppCompatActivity {
 
         //TODO AFTER PRAY
         else if (btnid.equals("أذكار بعد الصلاه ")) {
-            mor = new String[]{
+            zekerItems = new String[]{
                     "أَسْـتَغْفِرُ الله، أَسْـتَغْفِرُ الله، أَسْـتَغْفِرُ الله" + "\n" +
                             "اللّهُـمَّ أَنْـتَ السَّلامُ ، وَمِـنْكَ السَّلام ، تَبارَكْتَ يا ذا الجَـلالِ وَالإِكْـرام"
 
@@ -420,7 +420,7 @@ public class Azkar extends AppCompatActivity {
 
         // TODO AFTER AZAN
         else if (btnid.equals("أذكار الأذان ")) {
-            mor = new String[]{
+            zekerItems = new String[]{
 
                     "ما يقال عند سماع الأذان" + "\n" +
                             "يَقُولُ مِثْلَ مَا يَقُولُ الـمُؤَذِّنُ إلاَّ فِي حَيَّ عَلَى الصَّلاةِ وَحَيَّ عَلَى الفَلاَح  فَيَقُولُ: لاَ حَوْلَ وَلا قُوَّةَ إلاَّ باللَّهِ"
@@ -458,7 +458,7 @@ public class Azkar extends AppCompatActivity {
         //TODO WADOOA
 
         else if (btnid.equals("أذكار الوضوء")) {
-            mor = new String[]{
+            zekerItems = new String[]{
                     "الذكر قبل الوضوء :" + "\n" +
                             " بِسْمِ ٱللّٰه"
 
@@ -473,7 +473,7 @@ public class Azkar extends AppCompatActivity {
         }
         //TODO QURAN DOAA
         else if (btnid.equals("الأدعيـة القرآنية")) {
-            mor = new String[]{
+            zekerItems = new String[]{
 
                     "رَبَّنَا آتِنَا فِي الدُّنْيَا حَسَنَةً وَفِي الآخِرَةِ حَسَنَةً وَقِنَا عَذَابَ النَّارِ" + "\n" + "\n" +
 
@@ -612,7 +612,7 @@ public class Azkar extends AppCompatActivity {
         }
         //TODO NABAYA DOAA
         else if (btnid.equals("أدعيه النبويه ")) {
-            mor = new String[]{
+            zekerItems = new String[]{
 
                     "سيد الاستغفار" + "\n" +
                             "اللَّهُمَّ أنَْتَ رَبيِّ لَا إلِهََ إلَِّا أنَتَ، خَلَقْتنَيِ وَأنََا عَبدُْكَ،" +
@@ -794,7 +794,7 @@ public class Azkar extends AppCompatActivity {
         }
         //TODO EATING AZKAR
         else if (btnid.equals("أذكار الطعام")) {
-            mor = new String[]{
+            zekerItems = new String[]{
 
                     "الذكر عند الطعام والشراب" + "\n" +
                             "بِسْمِ اللهِ" + "\n" +
@@ -818,7 +818,7 @@ public class Azkar extends AppCompatActivity {
         }
         //TODO HOUSE AZKAR
         else if (btnid.equals("أذكار المنزل")) {
-            mor = new String[]{
+            zekerItems = new String[]{
                     "أذكار الدخول إلى المنزل" + "\n" + "\n" +
                             "بِسْـمِ اللهِ وَلَجْنـا، وَبِسْـمِ اللهِ خَـرَجْنـا، وَعَلـى رَبِّنـا تَوَكّلْـنا"
 
@@ -830,7 +830,7 @@ public class Azkar extends AppCompatActivity {
 
         //TODO SLEEPING AZKAR
         else if (btnid.equals("أذكار النوم")) {
-            mor = new String[]{
+            zekerItems = new String[]{
                     "\n" +
                             "بِاسْمِكَ رَبِّـي وَضَعْـتُ جَنْـبي ، وَبِكَ أَرْفَعُـه، فَإِن أَمْسَـكْتَ نَفْسـي فارْحَـمْها ،" +
                             " وَإِنْ أَرْسَلْتَـها فاحْفَظْـها بِمـا تَحْفَـظُ بِه عِبـادَكَ الصّـالِحـين"
@@ -878,7 +878,7 @@ public class Azkar extends AppCompatActivity {
 
         //TODO WAKING AZKAR
         else if (btnid.equals("أذكار الاستيقاظ من النوم")) {
-            mor = new String[]{
+            zekerItems = new String[]{
 
                     "\n" +
                             "الحَمْـدُ لِلّهِ الّذي أَحْـيانا بَعْـدَ ما أَماتَـنا وَإليه النُّـشور"
@@ -896,7 +896,7 @@ public class Azkar extends AppCompatActivity {
         }
         //TODO دعاء ختم القران الكريم
         else if (btnid.equals("دعاء ختم القران الكريم")) {
-            mor = new String[]{
+            zekerItems = new String[]{
 
                     "اللَّهُمَّ ارْحَمْنِي بالقُرْءَانِ وَاجْعَلهُ لِي إِمَاماً وَنُوراً وَهُدًى وَرَحْمَةً " +
                             "\n" + "\n" + "\n" +
@@ -947,7 +947,7 @@ public class Azkar extends AppCompatActivity {
 
         //TODO فضل الدعاء
         else if (btnid.equals("فضل الدعاء")) {
-            mor = new String[]{
+            zekerItems = new String[]{
 
                     "معنى الدعاء" + "\n" + "\n" +
                             "الدعاء هو أن يطلبَ الداعي ما ينفعُه وما يكشف ضُرَّه؛ وحقيقته إظهار الافتقار إلى الله، والتبرؤ من الحول والقوة، " +
@@ -1034,7 +1034,7 @@ public class Azkar extends AppCompatActivity {
 
         else if (btnid.equals("فضل الأذكار")) {
 
-            mor = new String[]{
+            zekerItems = new String[]{
 
 
                     "إنَّ من أفضل الأعمال الصالحة اليسيرة التي تقرب المسلم إلى ربه جل وعلا الذكرُ" + "\n" + "\n" +
@@ -1093,7 +1093,7 @@ public class Azkar extends AppCompatActivity {
         else {
 
 
-            mor = new String[]{
+            zekerItems = new String[]{
 
                     "الرُّقية الشرعية من القرآن الكريم" + "\n" + "\n" +
 
@@ -1157,16 +1157,17 @@ public class Azkar extends AppCompatActivity {
         }
     }
 
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_azkar);
 
+        int index = getIntent().getIntExtra("index", 0);
+        loadData(index);
 
         // view pager inside recycleview
         final ViewPager viewPager = findViewById(R.id.pager);
-        SlidePagerAdapter azadapter = new SlidePagerAdapter(this, mor);
+        SlidePagerAdapter azadapter = new SlidePagerAdapter(this, zekerItems);
         viewPager.setAdapter(azadapter);
 
 
@@ -1193,10 +1194,9 @@ public class Azkar extends AppCompatActivity {
             public void onPageScrollStateChanged(int state) {
 
 
-                String s = String.valueOf((mor2[viewPager.getCurrentItem()]));
+                String s = String.valueOf((zekerCounts[viewPager.getCurrentItem()]));
 
                 textViewplus.setText(s);
-
 
                 buttonplus.setOnClickListener(new View.OnClickListener() {
                     @SuppressLint("SetTextI18n")
@@ -1204,8 +1204,8 @@ public class Azkar extends AppCompatActivity {
                     public void onClick(View v) {
 
 
-                        mor2[viewPager.getCurrentItem()]++;
-                        String s = String.valueOf((mor2[viewPager.getCurrentItem()]));
+                        zekerCounts[viewPager.getCurrentItem()]++;
+                        String s = String.valueOf((zekerCounts[viewPager.getCurrentItem()]));
                         textViewplus.setText(s);
 
 
@@ -1214,19 +1214,17 @@ public class Azkar extends AppCompatActivity {
             }
         });
 
-
         // counter
         buttonplus = findViewById(R.id.btnp);
         textViewplus = findViewById(R.id.textViewplus);
-
 
         buttonplus.setOnClickListener(new View.OnClickListener() {
             @SuppressLint("SetTextI18n")
             @Override
             public void onClick(View v) {
-                mor2[viewPager.getCurrentItem()]++;
+                zekerCounts[viewPager.getCurrentItem()]++;
 
-                String s = String.valueOf((mor2[viewPager.getCurrentItem()]));
+                String s = String.valueOf((zekerCounts[viewPager.getCurrentItem()]));
 
                 textViewplus.setText(s);
             }

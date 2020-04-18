@@ -35,8 +35,6 @@ public class SlidePagerAdapter extends PagerAdapter {
 
 
 
-
-
     @SuppressLint("ResourceAsColor")
     @Override
     public Object instantiateItem(ViewGroup container, int position) {

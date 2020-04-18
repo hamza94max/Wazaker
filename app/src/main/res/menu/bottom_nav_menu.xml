@@ -5,16 +5,16 @@
     <item
         android:id="@+id/forty"
         android:icon="@drawable/for_clear_all_black_24dp"
-        android:title="الاربعين النوويه" />
+        android:title="@string/arba3en" />
 
 
     <item
         android:id="@+id/counter"
-
-        android:title="العداد" />
+        android:icon="@drawable/for_clear_all_black_24dp"
+        android:title="@string/counter" />
 
     <item
         android:id="@+id/navigation_home"
-
-        android:title="الأذكار" />
+        android:icon="@drawable/ic_azkar"
+        android:title="@string/azkar" />
 </menu>

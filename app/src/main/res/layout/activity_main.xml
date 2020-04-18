@@ -16,9 +16,10 @@
         android:layout_alignParentBottom="true"
         android:layoutDirection="ltr"
         android:textDirection="rtl"
-
-        app:itemTextColor="@color/colorPrimary"
-        app:menu="@menu/menuu" />
+        app:itemBackground="@drawable/item_bg"
+        app:itemIconTint="@drawable/item_text_bg"
+        app:itemTextColor="@drawable/item_text_bg"
+        app:menu="@menu/bottom_nav_menu" />
 
 
     <androidx.viewpager.widget.ViewPager

@@ -15,7 +15,6 @@ public class SlidePagerAdapter extends PagerAdapter {
     private String[] mor;
 
 
-
     public SlidePagerAdapter(Context context, String[] mor) {
         this.context = context;
         this.mor = mor;
@@ -42,7 +41,7 @@ public class SlidePagerAdapter extends PagerAdapter {
         TextView textView=new TextView(context);
         textView.setText(mor[position]);
         textView.setTextSize(19);
-        textView.setTextColor(Color.WHITE);
+        textView.setTextColor(Color.BLACK);
         container.addView(textView,0);
 
 

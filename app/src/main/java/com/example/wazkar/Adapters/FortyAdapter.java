@@ -1,6 +1,5 @@
 package com.example.wazkar.Adapters;
 
-import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -17,19 +16,16 @@ import java.util.List;
 public class FortyAdapter extends RecyclerView.Adapter<FortyAdapter.Myviewholder> {
 
     List<FortyItem> fortyList;
-    Context context;
 
     ItemListner listner;
 
-    public FortyAdapter(List<FortyItem> fortyList, Context context) {
+    public FortyAdapter(List<FortyItem> fortyList) {
         this.fortyList = fortyList;
-        this.context = context;
     }
-
 
     @Override
     public Myviewholder onCreateViewHolder(ViewGroup parent, int viewType) {
-        LayoutInflater layoutInflater = LayoutInflater.from(context);
+        LayoutInflater layoutInflater = LayoutInflater.from(parent.getContext());
         View view = layoutInflater.inflate(R.layout.simple_cell, parent, false);
         return new Myviewholder(view);
     }

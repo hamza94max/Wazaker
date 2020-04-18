@@ -28,7 +28,7 @@ public class AzkarActivity extends AppCompatActivity {
 
         //TODO MORNING
         if (index == 0) {
-            //// TODO: 4/18/20 Try to use Model(ZekerItem for ex ) it hold zeker text , and count of times for ex ZekerItem("abc" , 3) this help you to add more features
+            // TODO: 4/18/20 Try to use Model(ZekerItem for ex ) it hold zeker text , and count of times for ex ZekerItem("abc" , 3) this help you to add more features
             zekerItems = new String[]{" أعوذ بالله من الشيطان الرجيم" + "\n" +
                     " {اللّهُ لاَ إِلَـهَ إِلاَّ هُوَ الْحَيُّ الْقَيُّومُ لاَ تَأْخُذُهُ سِنَةٌ وَلاَ نَوْمٌ" +
                     " لَّهُ مَا فِي السَّمَاوَاتِ وَمَا فِي الأَرْضِ مَن ذَا الَّذِي يَشْفَعُ عِنْدَهُ إِلاَّ بِإِذْنِهِ يَعْلَمُ مَا بَيْنَ أَيْدِيهِمْ" +
@@ -1194,7 +1194,7 @@ public class AzkarActivity extends AppCompatActivity {
             public void onPageScrollStateChanged(int state) {
 
 
-                String s = String.valueOf((zekerCounts[viewPager.getCurrentItem()]));
+           /*     String s = String.valueOf((zekerCounts[viewPager.getCurrentItem()]));
 
                 textViewplus.setText(s);
 
@@ -1210,25 +1210,23 @@ public class AzkarActivity extends AppCompatActivity {
 
 
                     }
-                });
+                });*/
             }
         });
 
         // counter
         buttonplus = findViewById(R.id.btnp);
         textViewplus = findViewById(R.id.textViewplus);
-
+/*
         buttonplus.setOnClickListener(new View.OnClickListener() {
             @SuppressLint("SetTextI18n")
             @Override
             public void onClick(View v) {
                 zekerCounts[viewPager.getCurrentItem()]++;
-
                 String s = String.valueOf((zekerCounts[viewPager.getCurrentItem()]));
-
                 textViewplus.setText(s);
             }
-        });
+        });*/
     }
 }
 

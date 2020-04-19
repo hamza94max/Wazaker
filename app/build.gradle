@@ -1,5 +1,5 @@
 apply plugin: 'com.android.application'
-apply plugin: 'com.google.gms.google-services'
+// apply plugin: 'com.google.gms.google-services'
 
 android {
     compileSdkVersion 29
@@ -46,8 +46,10 @@ dependencies {
     implementation 'androidx.legacy:legacy-support-v4:1.0.0'
 
 
-    //noinspection GradleDependency
+ /*   //noinspection GradleDependency
     implementation 'com.google.firebase:firebase-messaging:17.3.4'
+ */
+
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'androidx.test:runner:1.2.0'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'

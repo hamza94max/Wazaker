@@ -22,21 +22,21 @@ public class NotificationReceiver extends BroadcastReceiver {
     @Override
     public void onReceive(Context context, Intent intent1) {
 
+        Intent intent = new Intent(context, MainActivity.class);
+        PendingIntent pendingIntent = PendingIntent.getActivity(context, 1, intent, PendingIntent.FLAG_UPDATE_CURRENT);
+
 
         NotificationCompat.Builder builder = new NotificationCompat.Builder(context, context.getString(R.string.notifiaction_id));
-        builder.setSmallIcon(R.drawable.splash)
+        builder.setSmallIcon(R.mipmap.ic_launcher)
                 .setContentTitle(context.getString(R.string.notification_title))
                 .setAutoCancel(true);
 
-
-        Intent intent =new Intent(context, MainActivity.class);
-        PendingIntent pendingIntent =PendingIntent.getActivity(context,1,intent,PendingIntent.FLAG_UPDATE_CURRENT);
         builder.setContentText(NotificationDataset.getNof());
-        builder.setAutoCancel(true);
         builder.setStyle(new NotificationCompat.BigTextStyle());
+
         Uri uri = RingtoneManager.getDefaultUri(RingtoneManager.TYPE_NOTIFICATION);
-        builder.setSmallIcon(R.drawable.loo);
         builder.setSound(uri);
+
         builder.setPriority(NotificationCompat.PRIORITY_DEFAULT);
 
 

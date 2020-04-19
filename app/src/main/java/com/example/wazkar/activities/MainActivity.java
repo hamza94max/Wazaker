@@ -107,7 +107,7 @@ public class MainActivity extends AppCompatActivity {
 
 
     }
-        
+
 
     // viewpager with bottom navigation
     private void setupViewPager(ViewPager viewPager) {

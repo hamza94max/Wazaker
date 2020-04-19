@@ -6,7 +6,7 @@
     <string name="azkar">الأذكار</string>
     <string name="reset">إعادة</string>
     <string name="notification_title">Wazkar وذكر</string>
-
+    <string name="notifiaction_id">Wazkar</string>
 
 
 </resources>

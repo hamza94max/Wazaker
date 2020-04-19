@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:layoutDirection="ltr"
     android:id="@+id/relativeLayout"
-    tools:context=".MainActivity">
+    tools:context=".activities.MainActivity">
 
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
@@ -25,7 +25,6 @@
 
     <androidx.viewpager.widget.ViewPager
         android:id="@+id/viewpager"
-        android:padding="5dp"
         android:layoutDirection="rtl"
         android:keepScreenOn="true"
         android:layout_width="match_parent"

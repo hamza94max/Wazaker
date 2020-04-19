@@ -1,51 +1,37 @@
-package com.example.wazkar;
+package com.example.wazkar.activities;
 
 import android.app.AlarmManager;
-import android.app.NotificationChannel;
-import android.app.NotificationManager;
 import android.app.PendingIntent;
 import android.content.Intent;
-import android.media.RingtoneManager;
-import android.net.Uri;
-import android.os.Build;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.MenuItem;
-import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.app.NotificationCompat;
-import androidx.core.app.NotificationManagerCompat;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentStatePagerAdapter;
 import androidx.viewpager.widget.ViewPager;
 
+import com.example.wazkar.Fragments.AzkarFragment;
 import com.example.wazkar.Fragments.CounterFragment;
 import com.example.wazkar.Fragments.FortyyFragment;
-import com.example.wazkar.Fragments.AzkarFragment;
-import com.example.wazkar.data_layer.NotificationDataset;
+import com.example.wazkar.R;
 import com.example.wazkar.recevier.NotificationReceiver;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.List;
-import java.util.Random;
 
 public class MainActivity extends AppCompatActivity {
-
-    private NotificationManagerCompat notificationManager;
-
-    NotificationDataset notificationDataset ;
-
 
     //Fragments
     AzkarFragment homeFragment;
     CounterFragment counterFragment;
     FortyyFragment fortyyFragment;
     MenuItem prevMenuItem;
-    String CHANNEL_ID="Channel_1";
+    String CHANNEL_ID = "Channel_1";
     private ViewPager viewPager;
 
     @Override
@@ -108,34 +94,19 @@ public class MainActivity extends AppCompatActivity {
         setupViewPager(viewPager);
 
 
-            // TODO notification
-
-            notificationManager=NotificationManagerCompat.from(this);
-            NotificationCompat.Builder builder = new NotificationCompat.Builder(this, CHANNEL_ID);
-            builder.setSmallIcon(R.drawable.splash)
-                    .setContentTitle("Wazkar وذكر").setAutoCancel(true);
-        Intent intent =new Intent(this, NotificationReceiver.class);
-        PendingIntent pendingIntent =PendingIntent.getBroadcast(this,1,intent,PendingIntent.FLAG_UPDATE_CURRENT);
-
-
-
-
-
-
-
+        Intent intent = new Intent(this, NotificationReceiver.class);
+        PendingIntent pendingIntent = PendingIntent.getBroadcast(this, 1, intent, PendingIntent.FLAG_UPDATE_CURRENT);
 
 
         AlarmManager alarmManager = (AlarmManager) getSystemService(ALARM_SERVICE);
 
         if (alarmManager != null) {
-            Calendar calendar =Calendar.getInstance();
-            alarmManager.setRepeating(AlarmManager.RTC_WAKEUP,calendar.getTimeInMillis(),AlarmManager.INTERVAL_HALF_DAY,   pendingIntent);
+            Calendar calendar = Calendar.getInstance();
+            alarmManager.setRepeating(AlarmManager.RTC_WAKEUP, calendar.getTimeInMillis(), AlarmManager.INTERVAL_HALF_DAY, pendingIntent);
         }
 
 
-        }
-
-
+    }
 
 
     // viewpager with bottom navigation

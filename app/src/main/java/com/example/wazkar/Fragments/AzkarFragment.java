@@ -5,13 +5,12 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.AdapterView;
 
 import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.wazkar.Adapters.AzkarAdapter;
-import com.example.wazkar.AzkarActivity;
+import com.example.wazkar.activities.AzkarActivity;
 import com.example.wazkar.Models.ListItem;
 import com.example.wazkar.R;
 

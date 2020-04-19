@@ -5,20 +5,14 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Toast;
 
 import androidx.fragment.app.Fragment;
-import androidx.recyclerview.widget.DividerItemDecoration;
-import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.wazkar.Adapters.FortyAdapter;
-import com.example.wazkar.AzkarActivity;
-import com.example.wazkar.FortyActivity;
+import com.example.wazkar.activities.FortyActivity;
 import com.example.wazkar.Models.FortyItem;
-import com.example.wazkar.Models.ListItem;
 import com.example.wazkar.R;
-import com.example.wazkar.listeners.ItemListner;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -29,7 +23,6 @@ import java.util.List;
 public class FortyyFragment extends Fragment {
 
     private List<FortyItem> fortyList;
-
 
 
     public FortyyFragment() {

@@ -13,9 +13,9 @@
     <TextView
         android:id="@+id/tvTitle"
         android:layout_width="215dp"
-        android:layout_height="60dp"
+        android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
-        android:background="@drawable/buttonshape"
+        android:background="@drawable/forty_bg"
         android:fontFamily="casual"
         android:gravity="center"
         android:textColor="#FCF8F8"

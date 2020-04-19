@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:layoutDirection="ltr"
     android:id="@+id/relativeLayout"
-    tools:context=".MainActivity">
+    tools:context=".activities.MainActivity">
 
 
     <com.google.android.material.bottomnavigation.BottomNavigationView

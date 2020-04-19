@@ -1,4 +1,4 @@
-package com.example.wazkar;
+package com.example.wazkar.activities;
 
 import android.annotation.SuppressLint;
 import android.os.Bundle;
@@ -10,6 +10,7 @@ import androidx.viewpager.widget.ViewPager;
 
 import com.badoualy.stepperindicator.StepperIndicator;
 import com.example.wazkar.Adapters.SlidePagerAdapter;
+import com.example.wazkar.R;
 import com.example.wazkar.data_layer.ZekerDataSet;
 
 import at.markushi.ui.CircleButton;

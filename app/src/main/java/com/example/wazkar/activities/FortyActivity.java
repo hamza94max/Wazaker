@@ -1,4 +1,4 @@
-package com.example.wazkar;
+package com.example.wazkar.activities;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.viewpager.widget.ViewPager;
@@ -10,6 +10,7 @@ import com.badoualy.stepperindicator.StepperIndicator;
 import com.example.wazkar.Adapters.FortyAdapter;
 import com.example.wazkar.Adapters.SlideFortypagerAdapter;
 import com.example.wazkar.Adapters.SlidePagerAdapter;
+import com.example.wazkar.R;
 import com.example.wazkar.data_layer.FortyDataSet;
 import com.example.wazkar.data_layer.ZekerDataSet;
 

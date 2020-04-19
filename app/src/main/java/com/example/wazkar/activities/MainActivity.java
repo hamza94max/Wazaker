@@ -1,4 +1,4 @@
-package com.example.wazkar;
+package com.example.wazkar.activities;
 
 import android.app.AlarmManager;
 import android.app.NotificationChannel;
@@ -24,6 +24,7 @@ import androidx.viewpager.widget.ViewPager;
 import com.example.wazkar.Fragments.CounterFragment;
 import com.example.wazkar.Fragments.FortyyFragment;
 import com.example.wazkar.Fragments.AzkarFragment;
+import com.example.wazkar.R;
 import com.example.wazkar.data_layer.NotificationDataset;
 import com.example.wazkar.recevier.NotificationReceiver;
 import com.google.android.material.bottomnavigation.BottomNavigationView;

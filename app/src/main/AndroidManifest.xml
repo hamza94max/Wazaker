@@ -3,7 +3,7 @@
     package="com.example.wazkar">
 
     <application
-        android:name=".Notification"
+        android:name=".App"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:roundIcon="@mipmap/ic_launcher_round"
@@ -12,18 +12,21 @@
         <receiver
             android:name=".recevier.NotificationReceiver"
             android:enabled="true"
-            android:exported="true"></receiver>
+            android:exported="false" />
 
-        <activity android:name=".FortyActivity" />
-        <activity android:name=".SplashScreen">
+        <activity android:name=".activities.FortyActivity" />
+
+        <activity android:name=".activities.SplashScreen">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
+                <action android:name="android.intent.action.VIEW" />
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".MainActivity" />
-        <activity android:name=".AzkarActivity" />
+        <activity
+            android:name=".activities.MainActivity"
+            android:launchMode="singleTop" />
+        <activity android:name=".activities.AzkarActivity" />
     </application>
 
 </manifest>

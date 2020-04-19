@@ -25,7 +25,6 @@
 
     <androidx.viewpager.widget.ViewPager
         android:id="@+id/viewpager"
-        android:padding="5dp"
         android:layoutDirection="rtl"
         android:keepScreenOn="true"
         android:layout_width="match_parent"

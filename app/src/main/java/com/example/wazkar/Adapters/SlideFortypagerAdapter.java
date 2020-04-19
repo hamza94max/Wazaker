@@ -7,31 +7,28 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
+import androidx.annotation.NonNull;
 import androidx.viewpager.widget.PagerAdapter;
 
-public class SlidePagerAdapter extends PagerAdapter {
-
+public class SlideFortypagerAdapter extends PagerAdapter {
     private Context context;
-    private String[] mor;
+    private String[] ff;
 
-
-    public SlidePagerAdapter(Context context, String[] mor) {
+    public SlideFortypagerAdapter(Context context, String[] ff) {
         this.context = context;
-        this.mor = mor;
-
+        this.ff = ff;
     }
 
     @Override
     public int getCount() {
-        return mor.length;
+        return ff.length;
     }
 
 
     @Override
-    public boolean isViewFromObject(View view, Object object) {
+    public boolean isViewFromObject(@NonNull View view, @NonNull Object object) {
         return view==object;
     }
-
 
 
     @SuppressLint("ResourceAsColor")
@@ -39,10 +36,9 @@ public class SlidePagerAdapter extends PagerAdapter {
     public Object instantiateItem(ViewGroup container, int position) {
 
         TextView textView=new TextView(context);
-        textView.setText(mor[position]);
+        textView.setText(ff[position]);
         textView.setTextSize(21);
-
-    textView.setTextColor(Color.WHITE);
+        textView.setTextColor(Color.WHITE);
         container.addView(textView,0);
 
 
@@ -53,5 +49,4 @@ public class SlidePagerAdapter extends PagerAdapter {
     public void destroyItem( ViewGroup container, int position,  Object object) {
         container.removeView((View)object);
     }
-
 }

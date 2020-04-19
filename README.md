@@ -22,11 +22,6 @@ and Awesome Daily Notification every day ,The FourtyNawawi Ahaadeeth
 </div>
 
 
-<img src = "https://user-images.githubusercontent.com/13488900/79699438-ead54100-828f-11ea-95ed-85a4ebf4753a.png" width = 50%>
-<img src = "https://user-images.githubusercontent.com/13488900/79699447-f58fd600-828f-11ea-8cd0-b33583ecba54.png" width = 50%>
-
-
-
 
 
 # Contributors 

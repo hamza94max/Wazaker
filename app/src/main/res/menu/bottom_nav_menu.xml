@@ -4,6 +4,7 @@
     >
     <item
         android:id="@+id/forty"
+        
         android:icon="@drawable/for_clear_all_black_24dp"
         android:title="@string/arba3en" />
 

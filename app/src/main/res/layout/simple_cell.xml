@@ -12,18 +12,21 @@
 
     <TextView
         android:id="@+id/tvTitle"
-        android:layout_width="0dp"
+        android:layout_width="215dp"
         android:layout_height="60dp"
+        android:layout_marginTop="20dp"
         android:background="@drawable/buttonshape"
+        android:fontFamily="casual"
         android:gravity="center"
-        android:textColor="@color/white"
-        app:layout_constraintVertical_bias="0.023"
-        android:textSize="25sp"
+        android:textColor="#FCF8F8"
+        android:textSize="21sp"
+        android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHeight_percent="0.05"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.023"
         tools:ignore="MissingConstraints"
         tools:text="azkar" />
 

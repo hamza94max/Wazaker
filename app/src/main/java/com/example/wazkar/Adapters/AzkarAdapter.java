@@ -17,15 +17,17 @@ import java.util.List;
 
 public class AzkarAdapter extends RecyclerView.Adapter<AzkarAdapter.ViewHolder> {
 
-    public  static String btnid ;
 
-    ItemListner listner;
+
+    private ItemListner listner;
+    private List<ListItem> items;
+
 
     public AzkarAdapter(ArrayList<ListItem> items, Context context) {
         this.items = items;
     }
 
-    private List<ListItem> items;
+
 
     public void setListner(ItemListner listner) {
         this.listner = listner;
@@ -48,6 +50,7 @@ public class AzkarAdapter extends RecyclerView.Adapter<AzkarAdapter.ViewHolder> 
 
     @Override
     public int getItemCount() {
+
         return items.size();
     }
 

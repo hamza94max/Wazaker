@@ -14,7 +14,6 @@ import com.example.wazkar.data_layer.ZekerDataSet;
 
 import at.markushi.ui.CircleButton;
 
-import static com.example.wazkar.Adapters.AzkarAdapter.btnid;
 
 
 //// TODO: 4/18/20 Also naming rule use class, file name to indicate its rule, function

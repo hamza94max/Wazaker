@@ -1,5 +1,6 @@
 package com.example.wazkar.Fragments;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -12,8 +13,12 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.wazkar.Adapters.FortyAdapter;
+import com.example.wazkar.AzkarActivity;
+import com.example.wazkar.FortyActivity;
 import com.example.wazkar.Models.FortyItem;
+import com.example.wazkar.Models.ListItem;
 import com.example.wazkar.R;
+import com.example.wazkar.listeners.ItemListner;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -22,9 +27,9 @@ import java.util.List;
  * use Fragment as Suffix to Indicate its type :  Forrty --> FortyyFragment
  */
 public class FortyyFragment extends Fragment {
-    RecyclerView recyclerforty;
-    List<FortyItem> fortyList;
-    FortyAdapter fortyAdapter;
+
+    private List<FortyItem> fortyList;
+
 
 
     public FortyyFragment() {
@@ -88,17 +93,19 @@ public class FortyyFragment extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_fortyy, container, false);
-        recyclerforty = view.findViewById(R.id.rvHadith);
+       RecyclerView recyclerforty = view.findViewById(R.id.rvHadith);
 
-        fortyAdapter = new FortyAdapter(fortyList);
+        FortyAdapter fortyAdapter = new FortyAdapter( (ArrayList<FortyItem>) fortyList, getContext());
 
         recyclerforty.setAdapter(fortyAdapter);
         recyclerforty.setHasFixedSize(true);
-//        recyclerforty.addItemDecoration(new DividerItemDecoration(getContext() , DividerItemDecoration.VERTICAL));
+    // recyclerforty.addItemDecoration(new DividerItemDecoration(getContext() , DividerItemDecoration.VERTICAL));
 
-        fortyAdapter.setListner(item -> {
-            FortyItem item1 = (FortyItem) item;
-            Toast.makeText(getContext(), item1.getName(), Toast.LENGTH_SHORT).show();
+        fortyAdapter.setListner(itemf -> {
+            int index = (int) itemf;
+            Intent forty = new Intent(getActivity(), FortyActivity.class);
+            forty.putExtra("index", index);
+            startActivity(forty);
         });
 
         return view;

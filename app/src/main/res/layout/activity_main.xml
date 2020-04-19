@@ -13,9 +13,10 @@
         android:id="@+id/navigation"
         android:layout_width="match_parent"
         android:layout_height="60dp"
-        android:background="@drawable/bn_bg"
+        android:background="#6fc1a5"
         android:layoutDirection="ltr"
         android:textDirection="rtl"
+
         app:itemBackground="@drawable/item_bg"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -24,7 +25,7 @@
 
     <androidx.viewpager.widget.ViewPager
         android:id="@+id/viewpager"
-        android:padding="15dp"
+        android:padding="5dp"
         android:layoutDirection="rtl"
         android:keepScreenOn="true"
         android:layout_width="match_parent"

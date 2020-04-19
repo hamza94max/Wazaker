@@ -5,4 +5,8 @@
     <string name="counter">العداد</string>
     <string name="azkar">الأذكار</string>
     <string name="reset">إعادة</string>
+    <string name="notification_title">Wazkar وذكر</string>
+
+
+
 </resources>

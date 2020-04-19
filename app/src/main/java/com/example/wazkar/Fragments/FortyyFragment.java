@@ -25,7 +25,6 @@ public class FortyyFragment extends Fragment {
     private List<FortyItem> fortyList;
 
 
-
     public FortyyFragment() {
         // Required empty public constructor
     }

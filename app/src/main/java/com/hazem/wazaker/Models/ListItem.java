@@ -1,4 +1,4 @@
-package com.example.wazkar.Models;
+package com.hazem.wazaker.Models;
 
 public class ListItem {
 

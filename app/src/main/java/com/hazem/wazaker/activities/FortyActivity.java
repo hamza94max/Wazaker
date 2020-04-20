@@ -1,18 +1,14 @@
-package com.example.wazkar.activities;
+package com.hazem.wazaker.activities;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.viewpager.widget.ViewPager;
 
-import android.content.Context;
 import android.os.Bundle;
 
 import com.badoualy.stepperindicator.StepperIndicator;
-import com.example.wazkar.Adapters.FortyAdapter;
-import com.example.wazkar.Adapters.SlideFortypagerAdapter;
-import com.example.wazkar.Adapters.SlidePagerAdapter;
-import com.example.wazkar.R;
-import com.example.wazkar.data_layer.FortyDataSet;
-import com.example.wazkar.data_layer.ZekerDataSet;
+import com.hazem.wazaker.Adapters.SlideFortypagerAdapter;
+import com.hazem.wazkar.R;
+import com.hazem.wazaker.data_layer.FortyDataSet;
 
 public class FortyActivity extends AppCompatActivity {
     String[] fortyItems;

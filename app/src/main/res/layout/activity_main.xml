@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:layoutDirection="ltr"
     android:id="@+id/relativeLayout"
-    tools:context=".activities.MainActivity">
+    tools:context="com.hazem.wazaker.activities.MainActivity">
 
 
     <com.google.android.material.bottomnavigation.BottomNavigationView

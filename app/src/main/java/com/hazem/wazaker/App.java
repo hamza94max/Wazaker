@@ -1,9 +1,11 @@
-package com.example.wazkar;
+package com.hazem.wazaker;
 
 import android.app.Application;
 import android.app.NotificationChannel;
 import android.app.NotificationManager;
 import android.os.Build;
+
+import com.hazem.wazkar.R;
 
 public class App extends Application {
 

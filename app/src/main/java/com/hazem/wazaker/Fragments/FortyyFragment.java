@@ -1,4 +1,4 @@
-package com.example.wazkar.Fragments;
+package com.hazem.wazaker.Fragments;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -9,10 +9,10 @@ import android.view.ViewGroup;
 import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.example.wazkar.Adapters.FortyAdapter;
-import com.example.wazkar.activities.FortyActivity;
-import com.example.wazkar.Models.FortyItem;
-import com.example.wazkar.R;
+import com.hazem.wazaker.Adapters.FortyAdapter;
+import com.hazem.wazaker.activities.FortyActivity;
+import com.hazem.wazaker.Models.FortyItem;
+import com.hazem.wazkar.R;
 
 import java.util.ArrayList;
 import java.util.List;

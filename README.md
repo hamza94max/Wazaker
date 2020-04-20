@@ -1,4 +1,6 @@
 # Wazkar
+[![HitCount](http://hits.dwyl.com/hamza94max/Wazkar.svg)](http://hits.dwyl.com/hamza94max/Wazkar)
+
 Android  application to help Muslims read the azkar morning and evening
 and Awesome Daily Notification every day ,The FourtyNawawi Ahaadeeth
 

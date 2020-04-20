@@ -1,4 +1,4 @@
-package com.example.wazkar.Adapters;
+package com.hazem.wazaker.Adapters;
 
 import android.content.Context;
 import android.view.LayoutInflater;
@@ -8,9 +8,9 @@ import android.widget.TextView;
 
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.example.wazkar.R;
-import com.example.wazkar.Models.ListItem;
-import com.example.wazkar.listeners.ItemListner;
+import com.hazem.wazkar.R;
+import com.hazem.wazaker.Models.ListItem;
+import com.hazem.wazaker.listeners.ItemListner;
 
 import java.util.ArrayList;
 import java.util.List;

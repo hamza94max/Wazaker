@@ -1,7 +1,5 @@
-package com.example.wazkar.Fragments;
+package com.hazem.wazaker.Fragments;
 
-import android.content.Context;
-import android.net.Uri;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
@@ -13,7 +11,7 @@ import android.widget.Button;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
-import com.example.wazkar.R;
+import com.hazem.wazkar.R;
 
 
 public class CounterFragment extends Fragment {

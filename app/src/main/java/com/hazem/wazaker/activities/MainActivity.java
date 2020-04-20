@@ -1,4 +1,4 @@
-package com.example.wazkar.activities;
+package com.hazem.wazaker.activities;
 
 import android.app.AlarmManager;
 import android.app.PendingIntent;
@@ -13,11 +13,11 @@ import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentStatePagerAdapter;
 import androidx.viewpager.widget.ViewPager;
 
-import com.example.wazkar.Fragments.AzkarFragment;
-import com.example.wazkar.Fragments.CounterFragment;
-import com.example.wazkar.Fragments.FortyyFragment;
-import com.example.wazkar.R;
-import com.example.wazkar.recevier.NotificationReceiver;
+import com.hazem.wazaker.Fragments.AzkarFragment;
+import com.hazem.wazaker.Fragments.CounterFragment;
+import com.hazem.wazaker.Fragments.FortyyFragment;
+import com.hazem.wazkar.R;
+import com.hazem.wazaker.recevier.NotificationReceiver;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 import java.util.ArrayList;

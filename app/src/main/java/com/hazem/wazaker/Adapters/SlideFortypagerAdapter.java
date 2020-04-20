@@ -1,4 +1,4 @@
-package com.example.wazkar.Adapters;
+package com.hazem.wazaker.Adapters;
 
 import android.annotation.SuppressLint;
 import android.content.Context;

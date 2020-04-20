@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:layoutDirection="ltr"
-    tools:context=".Fragments.AzkarFragment">
+    tools:context="com.hazem.wazaker.Fragments.AzkarFragment">
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rvAzkar"

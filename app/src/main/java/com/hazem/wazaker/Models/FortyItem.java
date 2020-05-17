@@ -3,7 +3,6 @@ package com.hazem.wazaker.Models;
 public class FortyItem {
 
     String name;
-    String content;
 
     public FortyItem(String name) {
         this.name = name;

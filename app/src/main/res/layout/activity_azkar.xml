@@ -6,6 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/back1"
+    android:layoutDirection="ltr"
     tools:context="com.hazem.wazaker.activities.AzkarActivity">
 
 
@@ -28,7 +29,6 @@
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:keepScreenOn="true"
-        android:layoutDirection="rtl"
         android:padding="15dp"
         app:layout_constraintBottom_toTopOf="@id/btnp"
         app:layout_constraintStart_toStartOf="parent"
@@ -40,14 +40,14 @@
         android:id="@+id/btnp"
         android:layout_width="65dp"
         android:layout_height="65dp"
-
         android:layout_marginStart="8dp"
-        android:layout_marginEnd="130dp"
+        android:layout_marginEnd="50dp"
         android:layout_marginBottom="28dp"
         android:background="@drawable/circular_button"
         android:src="@drawable/ss"
-        android:verticalScrollbarPosition="defaultPosition"
+        android:layoutDirection="ltr"
         app:cb_color="#2F76AF"
+
         app:cb_pressedRingWidth="7dip"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -61,11 +61,10 @@
         android:id="@+id/textViewplus"
         android:layout_width="61dp"
         android:layout_height="0dp"
-
         android:layout_marginStart="8dp"
         android:layout_marginEnd="8dp"
         android:text="0"
-
+        android:layoutDirection="ltr"
         android:textColor="#fff"
         android:textSize="43sp"
         app:layout_constraintBottom_toBottomOf="@+id/btnp"
@@ -73,6 +72,25 @@
         app:layout_constraintHorizontal_bias="0.906"
         app:layout_constraintStart_toStartOf="@+id/pager"
         tools:ignore="RtlCompat" />
+
+
+    <Button
+        android:id="@+id/copybtn"
+        android:layout_width="40dp"
+        android:layout_height="45dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        android:layoutDirection="ltr"
+        android:background="@drawable/copy_24dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.171"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.952"
+        tools:ignore="MissingConstraints" />
+
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

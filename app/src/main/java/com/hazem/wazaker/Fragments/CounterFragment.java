@@ -1,5 +1,6 @@
 package com.hazem.wazaker.Fragments;
 
+import android.graphics.Color;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
@@ -12,6 +13,8 @@ import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import com.hazem.wazkar.R;
+
+import java.util.Random;
 
 
 public class CounterFragment extends Fragment {
@@ -48,6 +51,18 @@ public class CounterFragment extends Fragment {
             public void onClick(View v) {
                 counter++;
                 textView.setText(Integer.toString(counter));
+
+                int currentColor = Color.WHITE;//this is activity level variable
+
+
+                if(counter%33 == 0){
+                    currentColor = getRandomColor();//implement getRandomColor() method
+                    textView.setTextColor(currentColor);
+                }
+
+
+
+
             }
         });
 
@@ -62,6 +77,7 @@ public class CounterFragment extends Fragment {
 
                 counter = 0;
                 textView.setText(Integer.toString(counter));
+                textView.setTextColor(Color.WHITE);
 
 
 
@@ -74,7 +90,15 @@ public class CounterFragment extends Fragment {
 
 
 
+private int getRandomColor(){
 
+    Random randomcolor = new Random(); // creating Random object
+    int[] colors ={Color.WHITE,R.color.green,Color.BLACK};
+    int color = randomcolor.nextInt(colors.length);
+
+    return colors[color];
+
+}
 
 
 }

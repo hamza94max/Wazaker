@@ -12,7 +12,7 @@ import androidx.viewpager.widget.PagerAdapter;
 
 public class SlideFortypagerAdapter extends PagerAdapter {
     private Context context;
-    private String[] ff;
+    public String[] ff;
 
     public SlideFortypagerAdapter(Context context, String[] ff) {
         this.context = context;

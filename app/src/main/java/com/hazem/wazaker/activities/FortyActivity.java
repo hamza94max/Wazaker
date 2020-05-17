@@ -3,10 +3,17 @@ package com.hazem.wazaker.activities;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.viewpager.widget.ViewPager;
 
+import android.content.ClipData;
+import android.content.ClipboardManager;
+import android.content.Context;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
+import android.widget.Toast;
 
 import com.badoualy.stepperindicator.StepperIndicator;
 import com.hazem.wazaker.Adapters.SlideFortypagerAdapter;
+import com.hazem.wazaker.Fragments.FortyyFragment;
 import com.hazem.wazkar.R;
 import com.hazem.wazaker.data_layer.FortyDataSet;
 
@@ -38,6 +45,27 @@ public class FortyActivity extends AppCompatActivity {
         // Ui
         StepperIndicator indicator = findViewById(R.id.STEPP);
         indicator.setViewPager(viewPager);
+
+        Button copybtn =findViewById(R.id.copybtn);
+        copybtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                ClipboardManager clipboard = (ClipboardManager) getSystemService(Context.CLIPBOARD_SERVICE);
+                ClipData clip = (ClipData) ClipData.newPlainText("Text",fortyItems [viewPager.getCurrentItem()] );
+                clipboard.setPrimaryClip(clip);
+
+
+                Toast.makeText(FortyActivity.this, "تم النسخ", Toast.LENGTH_SHORT).show();
+            }
+        });
+
+
+
+
+
+
+
+
 
 
     }

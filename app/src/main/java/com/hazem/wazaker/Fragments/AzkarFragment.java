@@ -63,14 +63,15 @@ public class AzkarFragment extends Fragment {
         items.add(new ListItem("أذكار الأذان "));
         items.add(new ListItem("أذكار الوضوء"));
         items.add(new ListItem("الأدعيـة القرآنية"));
-        items.add(new ListItem("أدعيه النبويه "));
+        items.add(new ListItem("الأدعيه النبويه "));
         items.add(new ListItem("أذكار الطعام"));
         items.add(new ListItem("أذكار المنزل"));
         items.add(new ListItem("أذكار النوم"));
-        items.add(new ListItem("أذكار الاستيقاظ من النوم"));
-        items.add(new ListItem("دعاء ختم القران الكريم"));
+        items.add(new ListItem("أذكار الإستيقاظ من النوم"));
+        items.add(new ListItem("أذكار عظيمة"));
+        items.add(new ListItem("دعاء ختم القرآن الكريم"));
         items.add(new ListItem("فضل الدعاء"));
-        items.add(new ListItem("فضل تلاوه القران الكريم"));
+        items.add(new ListItem("فضل تلاوه القرآن الكريم"));
         items.add(new ListItem("فضل الأذكار"));
         items.add(new ListItem("الرقيه الشرعيه"));
     }

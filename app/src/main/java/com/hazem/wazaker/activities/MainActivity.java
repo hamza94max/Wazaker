@@ -13,6 +13,7 @@ import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentStatePagerAdapter;
 import androidx.viewpager.widget.ViewPager;
 
+import com.hazem.wazaker.Adapters.ViewPagerAdapter;
 import com.hazem.wazaker.Fragments.AzkarFragment;
 import com.hazem.wazaker.Fragments.CounterFragment;
 import com.hazem.wazaker.Fragments.FortyyFragment;
@@ -92,7 +93,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
         setupViewPager(viewPager);
-
+        viewPager.setCurrentItem(2);
 
         Intent intent = new Intent(this, NotificationReceiver.class);
         PendingIntent pendingIntent = PendingIntent.getBroadcast(this, 1, intent, PendingIntent.FLAG_UPDATE_CURRENT);
@@ -123,32 +124,8 @@ public class MainActivity extends AppCompatActivity {
         viewPager.setAdapter(adapter);
     }
 
-    /*
-    // // TODO: 4/18/20  make it as separate file
-     */
-    private class ViewPagerAdapter extends FragmentStatePagerAdapter {
-        private final List<Fragment> mFragmentList = new ArrayList<>();
-
-        public ViewPagerAdapter(FragmentManager manager) {
-            super(manager);
-        }
-
-        @Override
-        public Fragment getItem(int position) {
-            return mFragmentList.get(position);
-        }
-
-        @Override
-        public int getCount() {
-            return mFragmentList.size();
-        }
-
-        public void addFragment(Fragment fragment) {
-            mFragmentList.add(fragment);
-        }
 
 
-    }
 
 
 }

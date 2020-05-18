@@ -19,10 +19,10 @@ public class App extends Application {
     private void createNotificationChannel() {
 
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
-            NotificationChannel Channel1 = new NotificationChannel(getString(R.string.notifiaction_id), "Wazkar وذكر"
+            NotificationChannel Channel1 = new NotificationChannel(getString(R.string.notifiaction_id), "Wazaker وذكر"
                     , NotificationManager.IMPORTANCE_DEFAULT);
 
-            Channel1.setDescription("Wazkar وذكر");
+            Channel1.setDescription("Wazaker وذكر");
             NotificationManager manager = getSystemService(NotificationManager.class);
 
             manager.createNotificationChannel(Channel1);

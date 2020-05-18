@@ -4,6 +4,7 @@ import android.annotation.SuppressLint;
 import android.content.ClipData;
 import android.content.ClipboardManager;
 import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -64,12 +65,23 @@ public class AzkarActivity extends AppCompatActivity {
         copybtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                String zeker = zekerItems.get(viewPager.getCurrentItem()).getZeker();
+               /*
                 ClipboardManager clipboard = (ClipboardManager) getSystemService(Context.CLIPBOARD_SERVICE);
                 ClipData clip =  ClipData.newPlainText("Text", zekerItems.get(viewPager.getCurrentItem()));
                 clipboard.setPrimaryClip(clip);
+               */
 
 
-                Toast.makeText(AzkarActivity.this, "تم النسخ", Toast.LENGTH_SHORT).show();
+                Intent sendIntent = new Intent();
+                sendIntent.setAction(Intent.ACTION_SEND);
+                sendIntent.putExtra(Intent.EXTRA_TEXT, zeker);
+                sendIntent.setType("text/plain");
+
+                Intent shareIntent = Intent.createChooser(sendIntent, null);
+                startActivity(shareIntent);
+
+                //  Toast.makeText(AzkarActivity.this, "تم النسخ", Toast.LENGTH_SHORT).show();
             }
         });
 
@@ -138,10 +150,10 @@ public void autoswap (ViewPager viewPager,int index ){
 
 
         if (x==y ){
-
-
-            Toast.makeText(this, "Allah with you"+"", Toast.LENGTH_SHORT).show();
-        }
+            // get current viewpager, then increament it
+            int next = viewPager.getCurrentItem() + 1;
+            // set it to next one
+            viewPager.setCurrentItem(next, true);        }
 
 
 

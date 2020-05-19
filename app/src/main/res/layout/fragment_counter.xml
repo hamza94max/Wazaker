@@ -6,7 +6,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context="com.hazem.wazaker.Fragments.CounterFragment"
     android:id="@+id/reltivee"
-    android:background="@drawable/back1"
+    android:background="@drawable/designhere1"
 
     >
 

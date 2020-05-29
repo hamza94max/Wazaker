@@ -40,6 +40,8 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+
+
         //Initializing viewPager
         viewPager = findViewById(R.id.viewpager);
 
@@ -103,7 +105,7 @@ public class MainActivity extends AppCompatActivity {
 
         if (alarmManager != null) {
             Calendar calendar = Calendar.getInstance();
-            alarmManager.setRepeating(AlarmManager.RTC_WAKEUP, calendar.getTimeInMillis(), AlarmManager.INTERVAL_HALF_DAY, pendingIntent);
+            alarmManager.setRepeating(AlarmManager.RTC_WAKEUP, calendar.getTimeInMillis(), AlarmManager.INTERVAL_DAY, pendingIntent);
         }
 
 

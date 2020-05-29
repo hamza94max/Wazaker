@@ -565,6 +565,9 @@ public class ZekerDataSet {
 
         //TODO AFTER PRAY
         else if (index == 3) {
+            zekeritemList=new ArrayList<>();
+
+
             zekeritemList.add(new ZekeritemModel(
                     "أَسْـتَغْفِرُ الله، أَسْـتَغْفِرُ الله، أَسْـتَغْفِرُ الله" + "\n" +
                             "اللّهُـمَّ أَنْـتَ السَّلامُ ، وَمِـنْكَ السَّلام ، تَبارَكْتَ يا ذا الجَـلالِ وَالإِكْـرام"

@@ -16,7 +16,7 @@
         android:layout_height="wrap_content"
         android:text="0"
         android:textColor="#fff"
-        android:textSize="115sp"
+        android:textSize="110sp"
         android:layout_centerVertical="true"
         android:layout_centerHorizontal="true"
         app:layout_constraintBottom_toBottomOf="parent"

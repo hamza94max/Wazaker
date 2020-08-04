@@ -1,6 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     package="com.hazem.wazkar">
+
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.INTERNET" />
 
     <application
         android:name="com.hazem.wazaker.App"
@@ -14,9 +20,12 @@
             android:enabled="true"
             android:exported="false" />
 
-        <activity android:name="com.hazem.wazaker.activities.FortyActivity" />
-
-        <activity android:name="com.hazem.wazaker.activities.SplashScreen">
+        <activity android:name="com.hazem.wazaker.Activites.FortyListActivity" />
+        <activity
+            android:name="com.hassanjamil.hqibla.CompassActivity"
+            android:screenOrientation="portrait" />
+        <activity android:name="com.hazem.wazaker.Activites.SplashScreen"
+            android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <action android:name="android.intent.action.VIEW" />
@@ -24,9 +33,17 @@
             </intent-filter>
         </activity>
         <activity
-            android:name="com.hazem.wazaker.activities.MainActivity"
-            android:launchMode="singleTop" />
-        <activity android:name="com.hazem.wazaker.activities.AzkarActivity" />
+            android:name="com.hazem.wazaker.Activites.MainActivity"
+            android:screenOrientation="portrait"
+           />
+        <activity android:name="com.hazem.wazaker.Activites.AzkarListActivity"
+            tools:ignore="InnerclassSeparator" />
+        <activity android:name="com.hazem.wazaker.Activites.Counter" />
+        <activity android:name="com.hazem.wazaker.Activites.FortyActivity" />
+        <activity android:name="com.hazem.wazaker.Activites.ZekerActivity" />
+        <activity android:name="com.hazem.wazaker.Activites.AudioActivity"/>
+        <activity android:name="com.hazem.wazaker.Activites.MorAzkar"/>
+        <activity android:name="com.hazem.wazaker.Activites.NightAzkar"/>
     </application>
 
 </manifest>

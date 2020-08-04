@@ -1,37 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:layoutDirection="ltr"
+    android:background="@drawable/da"
     android:id="@+id/relativeLayout"
-    tools:context="com.hazem.wazaker.activities.MainActivity">
+    tools:context="com.hazem.wazaker.Activites.MainActivity">
 
-
-    <com.google.android.material.bottomnavigation.BottomNavigationView
-        android:id="@+id/navigation"
-        android:layout_width="match_parent"
-        android:layout_height="60dp"
-        android:background="#6fc1a5"
+    <include
+        layout="@layout/maincards"
         android:layoutDirection="ltr"
-        android:textDirection="rtl"
-
-        app:itemBackground="@drawable/item_bg"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:menu="@menu/bottom_nav_menu" />
-
-
-    <androidx.viewpager.widget.ViewPager
-        android:id="@+id/viewpager"
-        android:layoutDirection="rtl"
-        android:keepScreenOn="true"
+        android:layout_marginTop="15dp"
         android:layout_width="match_parent"
-        android:layout_height="0dp"
-        app:layout_constraintBottom_toTopOf="@id/navigation"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:layout_height="match_parent"/>
 
-
-</androidx.constraintlayout.widget.ConstraintLayout>
+</RelativeLayout>

@@ -5,91 +5,19 @@
     android:id="@+id/Azakarxml"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/designhere1"
+    android:background="@drawable/back1"
     android:layoutDirection="ltr"
-    tools:context="com.hazem.wazaker.activities.AzkarActivity">
+    tools:context="com.hazem.wazaker.Activites.AzkarListActivity">
 
 
-    <com.badoualy.stepperindicator.StepperIndicator
-        android:id="@+id/STEPP"
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvAzkar"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:stpi_animDuration="252"
-        app:stpi_circleRadius="4dp"
-        app:stpi_lineMargin="5dp"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
 
-        app:stpi_lineStrokeWidth="2dp"
-        app:stpi_showDoneIcon="false" />
-
-
-    <androidx.viewpager.widget.ViewPager
-        android:id="@+id/pager"
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:keepScreenOn="true"
-        android:padding="15dp"
-        app:layout_constraintBottom_toTopOf="@id/btnp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/STEPP"
-        tools:ignore="UnusedAttribute" />
-
-
-    <at.markushi.ui.CircleButton
-        android:id="@+id/btnp"
-        android:layout_width="65dp"
-        android:layout_height="65dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginEnd="50dp"
-        android:layout_marginBottom="28dp"
-        android:background="@drawable/circular_button"
-        android:src="@drawable/ss"
-        android:layoutDirection="ltr"
-        app:cb_color="#2F76AF"
-
-        app:cb_pressedRingWidth="7dip"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintStart_toStartOf="@+id/pager"
-        tools:ignore="RtlCompat" />
-
-    <TextView
-        android:id="@+id/textViewplus"
-        android:layout_width="61dp"
-        android:layout_height="0dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginEnd="8dp"
-        android:text="0"
-        android:layoutDirection="ltr"
-        android:textColor="#fff"
-        android:textSize="43sp"
-        app:layout_constraintBottom_toBottomOf="@+id/btnp"
-        app:layout_constraintEnd_toStartOf="@+id/btnp"
-        app:layout_constraintHorizontal_bias="0.906"
-        app:layout_constraintStart_toStartOf="@+id/pager"
-        tools:ignore="RtlCompat" />
-
-
-    <Button
-        android:id="@+id/copybtn"
-        android:layout_width="40dp"
-        android:layout_height="45dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginBottom="8dp"
-        android:layoutDirection="ltr"
-        android:background="@drawable/copy_24dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.171"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.952"
-        tools:ignore="MissingConstraints" />
+        />
 
 
 

@@ -12,9 +12,11 @@ import android.net.Uri;
 import androidx.core.app.NotificationCompat;
 import androidx.core.app.NotificationManagerCompat;
 
-import com.hazem.wazaker.activities.MainActivity;
+
+import com.hazem.wazaker.Activites.MainActivity;
+import com.hazem.wazaker.Data_sets.NotificationDataset;
 import com.hazem.wazkar.R;
-import com.hazem.wazaker.data_layer.NotificationDataset;
+
 
 
 public class NotificationReceiver extends BroadcastReceiver {

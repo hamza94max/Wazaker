@@ -1,12 +1,11 @@
 <resources>
     <string name="app_name">وذكر</string>
-    <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="arba3en">الاربعون النوويه</string>
     <string name="counter">العداد</string>
     <string name="azkar">الأذكار</string>
     <string name="reset">إعادة</string>
     <string name="notification_title"> وذكر </string>
-    <string name="notifiaction_id">Wazkar</string>
+    <string name="notifiaction_id">وذكر</string>
 
 
 </resources>

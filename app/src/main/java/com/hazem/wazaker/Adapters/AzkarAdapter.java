@@ -8,8 +8,9 @@ import android.widget.TextView;
 
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.hazem.wazaker.Activites.AzkarListActivity;
+import com.hazem.wazaker.Models.Rec_azkar_items;
 import com.hazem.wazkar.R;
-import com.hazem.wazaker.Models.ListItem;
 import com.hazem.wazaker.listeners.ItemListner;
 
 import java.util.ArrayList;
@@ -20,12 +21,13 @@ public class AzkarAdapter extends RecyclerView.Adapter<AzkarAdapter.ViewHolder> 
 
 
     private ItemListner listner;
-    private List<ListItem> items;
+    private List<Rec_azkar_items> items;
 
 
-    public AzkarAdapter(ArrayList<ListItem> items, Context context) {
+    public AzkarAdapter(List<Rec_azkar_items> items, Context context) {
         this.items = items;
     }
+
 
 
 
@@ -43,7 +45,7 @@ public class AzkarAdapter extends RecyclerView.Adapter<AzkarAdapter.ViewHolder> 
     @Override
     public void onBindViewHolder(final ViewHolder holder, final int position) {
 
-        ListItem p = items.get(position);
+        Rec_azkar_items p = items.get(position);
         holder.title.setText(p.getName());
        
     }

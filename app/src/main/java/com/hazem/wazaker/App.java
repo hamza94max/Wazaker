@@ -8,6 +8,8 @@ import android.os.Build;
 import com.hazem.wazkar.R;
 
 public class App extends Application {
+
+
     @Override
     public void onCreate() {
         super.onCreate();

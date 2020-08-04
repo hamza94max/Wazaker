@@ -20,6 +20,7 @@ allprojects {
         maven { url "https://jitpack.io" }
         mavenCentral()
         mavenLocal()
+        maven { url "http://api.tplmaps.com:8081/artifactory/example-repo-local/" }
 
         google()
         jcenter()

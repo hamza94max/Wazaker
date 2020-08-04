@@ -1,31 +1,31 @@
 package com.hazem.wazaker.Adapters;
 
-import android.content.Context;
+
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
-
 import androidx.recyclerview.widget.RecyclerView;
-
-import com.hazem.wazaker.Models.FortyItem;
+import com.hazem.wazaker.Models.Rec_azkar_items;
 import com.hazem.wazkar.R;
 import com.hazem.wazaker.listeners.ItemListner;
-
+import java.security.AccessControlContext;
 import java.util.ArrayList;
 import java.util.List;
-
-import static android.media.CamcorderProfile.get;
 
 public class FortyAdapter extends RecyclerView.Adapter<FortyAdapter.Myviewholder> {
 
 
     private ItemListner listner;
-    private List<FortyItem> fortyList;
+    private List<Rec_azkar_items> fortyList;
 
-    public FortyAdapter(ArrayList<FortyItem> fortyList, Context context) {
+    public FortyAdapter(ArrayList<Rec_azkar_items> fortyList, AccessControlContext context) {
         this.fortyList=fortyList;
     }
+
+
+
+
     public void setListner(ItemListner listner) {
         this.listner = listner;
     }
@@ -42,7 +42,7 @@ public class FortyAdapter extends RecyclerView.Adapter<FortyAdapter.Myviewholder
 
     @Override
     public void onBindViewHolder(Myviewholder holder, int position) {
-        FortyItem p = fortyList.get(position);
+        Rec_azkar_items p = fortyList.get(position);
         holder.title.setText(p.getName());
     }
 

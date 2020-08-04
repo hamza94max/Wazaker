@@ -4,13 +4,14 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.hazem.wazaker.activities.SplashScreen">
+    tools:context="com.hazem.wazaker.Activites.SplashScreen">
 
     <ImageView
         android:id="@+id/img"
-        android:layout_width="fill_parent"
-        android:layout_height="fill_parent"
+        android:layout_width="276dp"
+        android:layout_height="352dp"
         android:layout_gravity="fill"
+        android:scaleType="centerCrop"
         android:src="@mipmap/ic_launcher_foreground"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

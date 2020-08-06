@@ -10,19 +10,19 @@ https://play.google.com/store/apps/details?id=com.hazem.wazkar&fbclid=IwAR0wDrXd
 # Screenshots 
 <div>
 
-<img src = "file:///D:/Wazker%20app/screen%20shots/Flycricket-Screenshots/android_s5/screen_8.png" width = 40%>
+<img src = "https://user-images.githubusercontent.com/54688005/89568598-d52a5e00-d823-11ea-8a98-049681905725.png" width = 40%>
   <img width ="5%"/> 
   
-<img src = "file:///D:/Wazker%20app/screen%20shots/Flycricket-Screenshots/android_s5/screen_2.png" width = 40%>
+<img src = "https://user-images.githubusercontent.com/54688005/89568716-0014b200-d824-11ea-8fcb-4be7af30880c.pnghttps://user-images.githubusercontent.com/54688005/89568716-0014b200-d824-11ea-8fcb-4be7af30880c.png" width = 40% />
 </div>
 
 <div>
-<img src = "file:///D:/Wazker%20app/screen%20shots/Flycricket-Screenshots/android_s5/screen_3.png" width = 40%>
+<img src = "https://user-images.githubusercontent.com/54688005/89568716-0014b200-d824-11ea-8fcb-4be7af30880c.png" width = 40%>
   <img width ="5%"/> 
   
 
 
-<img src = "file:///D:/Wazker%20app/screen%20shots/Flycricket-Screenshots/android_s5/screen_5.png" width = 40%>
+<img src = "https://user-images.githubusercontent.com/54688005/89568723-030fa280-d824-11ea-8412-d4311a80839a.png" width = 40%>
 </div>
 
 

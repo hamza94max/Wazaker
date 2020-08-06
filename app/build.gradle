@@ -8,8 +8,8 @@ android {
         applicationId "com.hazem.wazkar"
         minSdkVersion 15
         targetSdkVersion 29
-        versionCode 1
-        versionName "1.0"
+        versionCode 3
+        versionName "3.0"
         vectorDrawables.useSupportLibrary = true
         setProperty("archivesBaseName", "hQiblaDirection")
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"

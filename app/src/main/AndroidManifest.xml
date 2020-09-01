@@ -11,7 +11,7 @@
     <application
         android:name="com.hazem.wazaker.App"
         android:allowBackup="true"
-        android:icon="@mipmap/ic_launcher"
+        android:icon="@mipmap/ic_launcher_foreground"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
@@ -41,7 +41,6 @@
         <activity android:name="com.hazem.wazaker.Activites.Counter" />
         <activity android:name="com.hazem.wazaker.Activites.FortyActivity" />
         <activity android:name="com.hazem.wazaker.Activites.ZekerActivity" />
-        <activity android:name="com.hazem.wazaker.Activites.AudioActivity"/>
         <activity android:name="com.hazem.wazaker.Activites.MorAzkar"/>
         <activity android:name="com.hazem.wazaker.Activites.NightAzkar"/>
     </application>

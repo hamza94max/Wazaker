@@ -22,7 +22,7 @@ public class App extends Application {
             NotificationChannel Channel1 = new NotificationChannel(getString(R.string.notifiaction_id), "Wazaker وذكر"
                     , NotificationManager.IMPORTANCE_DEFAULT);
 
-            Channel1.setDescription("Wazaker وذكر");
+            Channel1.setDescription("وذكر");
             NotificationManager manager = getSystemService(NotificationManager.class);
 
             manager.createNotificationChannel(Channel1);

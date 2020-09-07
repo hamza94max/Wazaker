@@ -32,7 +32,7 @@ public class FortyListActivity extends AppCompatActivity {
         fortyList.add(new Rec_azkar_items("الحديث الرابع "+"\n"+"( مراحل الخلق )"));
         fortyList.add(new Rec_azkar_items("الحديث الخامس "+"\n"+"( النهي عن الابتداع في الدين )"));
         fortyList.add(new Rec_azkar_items("الحديث السادس "+"\n"+"( البعد عن مواطن الشبهات )"));
-        fortyList.add(new Rec_azkar_items("الحديث السابع "+"\n"+"( الدين النصيحه )"));
+        fortyList.add(new Rec_azkar_items("الحديث السابع "+"\n"+"( الدين النصيحة )"));
         fortyList.add(new Rec_azkar_items("الحديث الثامن "+"\n"+"( حرمة دم المسلم وماله )"));
         fortyList.add(new Rec_azkar_items("الحديث التاسع "+"\n"+"( النهي عن كثرة السؤال والتشدد )"));
         fortyList.add(new Rec_azkar_items("الحديث العاشر "+"\n"+"( سبب إجابة الدعاء )"));

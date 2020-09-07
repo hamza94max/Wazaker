@@ -32,11 +32,11 @@ import java.util.ArrayList;
 
              Rec_azkar_items = new ArrayList<>();
              Rec_azkar_items.add(new Rec_azkar_items("أذكار المسجد"));
-             Rec_azkar_items.add(new Rec_azkar_items("أذكار بعد الصلاه "));
+             Rec_azkar_items.add(new Rec_azkar_items("أذكار بعد الصلاة "));
              Rec_azkar_items.add(new Rec_azkar_items("أذكار الأذان "));
              Rec_azkar_items.add(new Rec_azkar_items("أذكار الوضوء"));
              Rec_azkar_items.add(new Rec_azkar_items("الأدعيـة القرآنية"));
-             Rec_azkar_items.add(new Rec_azkar_items("الأدعيه النبويه "));
+             Rec_azkar_items.add(new Rec_azkar_items("الأدعية النبوية "));
              Rec_azkar_items.add(new Rec_azkar_items("أذكار الطعام"));
              Rec_azkar_items.add(new Rec_azkar_items("أذكار المنزل"));
              Rec_azkar_items.add(new Rec_azkar_items("أذكار النوم"));
@@ -44,12 +44,11 @@ import java.util.ArrayList;
              Rec_azkar_items.add(new Rec_azkar_items("أذكار عظيمة"));
              Rec_azkar_items.add(new Rec_azkar_items("دعاء ختم القرآن الكريم"));
              Rec_azkar_items.add(new Rec_azkar_items("فضل الدعاء"));
-             Rec_azkar_items.add(new Rec_azkar_items("فضل تلاوه القرآن الكريم"));
+             Rec_azkar_items.add(new Rec_azkar_items("فضل تلاوة القرآن الكريم"));
              Rec_azkar_items.add(new Rec_azkar_items("فضل الأذكار"));
-             Rec_azkar_items.add(new Rec_azkar_items("الرقيه الشرعيه"));
-             Rec_azkar_items.add(new Rec_azkar_items("أدعية للمتوفّى"));
-            setAdapter();
-        }
+             Rec_azkar_items.add(new Rec_azkar_items("الرقية الشرعية"));
+             Rec_azkar_items.add(new Rec_azkar_items("أدعية للمتوفّي"));
+             setAdapter(); }
 
         private void setAdapter(){
             RecyclerView recyclerView = findViewById(R.id.rvAzkar);

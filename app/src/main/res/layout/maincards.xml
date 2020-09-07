@@ -52,6 +52,8 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="أذكار المساء"
+                            android:textSize="15sp"
+
                             android:layout_marginTop="10dp"
                             android:textAlignment="center"
                             android:textStyle="bold" />
@@ -93,6 +95,7 @@
                             android:text="أذكار الصباح"
                             android:layout_marginTop="10dp"
                             android:textAlignment="center"
+                            android:textSize="15sp"
                             android:textStyle="bold" />
                     </LinearLayout>
 
@@ -132,9 +135,11 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="الأربعون النوويه"
+                            android:text="الأربعون النووية"
                             android:layout_marginTop="10dp"
                             android:textAlignment="center"
+                            android:textSize="15sp"
+
                             android:textStyle="bold" />
                     </LinearLayout>
 
@@ -173,7 +178,9 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="الأذكار و الأدعيه"
+                            android:text="الأذكار و الأدعية"
+                            android:textSize="15sp"
+
                             android:layout_marginTop="10dp"
                             android:textAlignment="center"
                             android:textStyle="bold" />
@@ -214,7 +221,9 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginTop="10dp"
-                            android:text="القبله"
+                            android:text="القبلة"
+                            android:textSize="15sp"
+
                             android:textAlignment="center"
                             android:textStyle="bold" />
                     </LinearLayout>
@@ -254,6 +263,8 @@
                             android:layout_height="wrap_content"
                             android:layout_marginTop="10dp"
                             android:text="العداد"
+                            android:textSize="15sp"
+
                             android:textAlignment="center"
                             android:textStyle="bold" />
                     </LinearLayout>
@@ -292,7 +303,8 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginTop="10dp"
-                            android:text="مشاركه التطبيق"
+                            android:textSize="15sp"
+                            android:text="مشاركة التطبيق"
                             android:textAlignment="center"
                             android:textStyle="bold" />
                     </LinearLayout>

@@ -12,9 +12,7 @@ https://play.google.com/store/apps/details?id=com.hazem.wazkar&fbclid=IwAR0wDrXd
 
 <img src = "https://user-images.githubusercontent.com/54688005/89568598-d52a5e00-d823-11ea-8a98-049681905725.png" width = 40%>
   <img width ="5%"/> 
-  
-<img src = "https://user-images.githubusercontent.com/54688005/89569136-921cba80-d824-11ea-9d86-76b85d6dca13.png" width = 40% >
- <img width ="5%"/> 
+
 </div>
 
 <div>

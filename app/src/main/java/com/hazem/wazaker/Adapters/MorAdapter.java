@@ -31,7 +31,7 @@ public class MorAdapter extends RecyclerView.Adapter<MorAdapter.HViewholder> {
     @Override
     public HViewholder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         LayoutInflater layoutInflater = LayoutInflater.from(parent.getContext());
-        View v = layoutInflater.inflate(R.layout.mor_items, parent, false);
+        View v = layoutInflater.inflate(R.layout.morr_items, parent, false);
 
 
         return new HViewholder(v);

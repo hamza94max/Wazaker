@@ -25,6 +25,15 @@
         android:textColor="#070000"
         android:textSize="20sp"
         android:typeface="sans"
+        app:autoSizeTextType="uniform"
+        app:autoSizeMinTextSize="19sp"
+        app:autoSizeMaxTextSize="22sp"
+        app:autoSizeStepGranularity="1sp"
+
+
+
+
+
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHeight_percent="0.02"

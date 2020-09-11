@@ -28,6 +28,15 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.023"
         tools:ignore="MissingConstraints"
-        tools:text="azkar" />
+        tools:text="azkar"
+
+        app:autoSizeTextType="uniform"
+        app:autoSizeMinTextSize="20sp"
+        app:autoSizeMaxTextSize="22sp"
+        app:autoSizeStepGranularity="1sp"
+
+
+
+        />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

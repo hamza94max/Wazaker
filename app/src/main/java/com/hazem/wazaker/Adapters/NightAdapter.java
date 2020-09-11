@@ -34,7 +34,7 @@ public class NightAdapter extends RecyclerView.Adapter<NightAdapter.NViewholder>
     @Override
     public NViewholder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         LayoutInflater layoutInflater = LayoutInflater.from(parent.getContext());
-        View v = layoutInflater.inflate(R.layout.mor_items, parent, false);
+        View v = layoutInflater.inflate(R.layout.morr_items, parent, false);
 
 
         return new NViewholder(v);

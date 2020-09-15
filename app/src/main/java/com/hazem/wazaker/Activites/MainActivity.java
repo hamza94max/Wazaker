@@ -18,6 +18,7 @@ import java.util.Calendar;
 
 
 public class MainActivity extends AppCompatActivity {
+
     RelativeLayout relativeLayout;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -49,14 +50,13 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
-                forty.setOnClickListener(new View.OnClickListener() {
+        forty.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent =new Intent(getBaseContext(), FortyListActivity.class);
                 startActivity(intent);
             }
         });
-
         azkar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -65,9 +65,6 @@ public class MainActivity extends AppCompatActivity {
 
             }
         });
-
-
-
         qbla.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -82,7 +79,6 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
-
         counter.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -91,10 +87,6 @@ public class MainActivity extends AppCompatActivity {
 
             }
         });
-
-
-
-
         share.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -113,24 +105,17 @@ public class MainActivity extends AppCompatActivity {
         });
 
 
-
-
-
         // Notification
         Intent intent = new Intent(this, NotificationReceiver.class);
         PendingIntent pendingIntent = PendingIntent.getBroadcast(this, 1, intent, PendingIntent.FLAG_UPDATE_CURRENT);
-
-
         AlarmManager alarmManager = (AlarmManager) getSystemService(ALARM_SERVICE);
 
         if (alarmManager != null) {
             Calendar calendar = Calendar.getInstance();
             alarmManager.setRepeating(AlarmManager.RTC_WAKEUP, calendar.getTimeInMillis(), AlarmManager.INTERVAL_DAY, pendingIntent);
         }
-
-
     }
-/*
+        /*
         // Dark Mode
     public void sw(View view) {
         if (se.isChecked()) {
@@ -141,6 +126,4 @@ public class MainActivity extends AppCompatActivity {
             relativeLayout.setBackgroundColor(Color.WHITE);
 
 
-    }*/
-
-        }
+    }*/ }

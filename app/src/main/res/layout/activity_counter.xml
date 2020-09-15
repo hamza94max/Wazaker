@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:id="@+id/reltivee"
-    android:background="@drawable/da"
+    android:background="@drawable/bak"
     tools:context="com.hazem.wazaker.Activites.Counter">
 
 
@@ -25,7 +25,10 @@
         android:text="المجموع الكلي: 0 "
         android:textColor="#fff"
         android:textSize="20sp"
-        android:textStyle="bold" />
+        android:textStyle="bold"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="52dp" />
 
     <TextView
         android:id="@+id/countertext"

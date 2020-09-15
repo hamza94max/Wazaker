@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:layoutDirection="ltr"
-    android:background="@drawable/da"
+    android:background="@drawable/bak"
     android:id="@+id/relativeLayout"
     tools:context="com.hazem.wazaker.Activites.MainActivity">
 

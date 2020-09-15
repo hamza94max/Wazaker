@@ -6,10 +6,11 @@ android {
     buildToolsVersion "29.0.2"
     defaultConfig {
         applicationId "com.hazem.wazkar"
-        minSdkVersion 15
+        minSdkVersion 20
+        //noinspection ExpiredTargetSdkVersion
         targetSdkVersion 29
-        versionCode 5
-        versionName "5.0"
+        versionCode 6
+        versionName "6.0"
         vectorDrawables.useSupportLibrary = true
         setProperty("archivesBaseName", "hQiblaDirection")
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
@@ -20,7 +21,7 @@ android {
                 def date = new Date();
                 def formattedDate = date.format('yyyyMMddHHmmss')
                 def apkFileName = archivesBaseName + "-" + formattedDate + ".apk"
-                output.outputFileName = apkFileName // directly assign the new name back to outputFileName
+                output.outputFileName = apkFileName
             }
         }
         release {

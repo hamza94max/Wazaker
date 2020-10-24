@@ -2,7 +2,6 @@ package com.hazem.wazaker.Models;
 
 public class Rec_azkar_items {
 
-
     String name ;
 
     public Rec_azkar_items(String name) {

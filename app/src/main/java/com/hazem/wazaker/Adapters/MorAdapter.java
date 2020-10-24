@@ -65,7 +65,6 @@ public class MorAdapter extends RecyclerView.Adapter<MorAdapter.HViewholder> {
         });
 
 
-
         final ZekeritemModel item = model.get(position);
         final int[] count = {item.getCurrentCount()};
         final Boolean[] ch = {item.getChecked()};

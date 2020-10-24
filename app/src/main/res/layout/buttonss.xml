@@ -18,8 +18,6 @@
         android:layout_marginTop="40dp"
         android:alpha="40"
         android:background="@drawable/buttonshape"
-
-
         android:gravity="center"
         android:text="azkar"
         android:textColor="#070000"
@@ -29,11 +27,6 @@
         app:autoSizeMinTextSize="19sp"
         app:autoSizeMaxTextSize="22sp"
         app:autoSizeStepGranularity="1sp"
-
-
-
-
-
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHeight_percent="0.02"

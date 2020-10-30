@@ -69,7 +69,4 @@ public class ZekeritemModel implements CharSequence {
         return null;
     }
 
-
-
-
 }

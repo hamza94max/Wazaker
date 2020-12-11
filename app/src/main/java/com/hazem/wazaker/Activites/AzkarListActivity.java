@@ -42,6 +42,7 @@ import java.util.ArrayList;
              Rec_azkar_items.add(new Rec_azkar_items("أذكار النوم"));
              Rec_azkar_items.add(new Rec_azkar_items("أذكار الإستيقاظ من النوم"));
              Rec_azkar_items.add(new Rec_azkar_items("أذكار عظيمة"));
+             Rec_azkar_items.add(new Rec_azkar_items("دعاء السفر"));
              Rec_azkar_items.add(new Rec_azkar_items("دعاء ختم القرآن الكريم"));
              Rec_azkar_items.add(new Rec_azkar_items("فضل الدعاء"));
              Rec_azkar_items.add(new Rec_azkar_items("فضل تلاوة القرآن الكريم"));

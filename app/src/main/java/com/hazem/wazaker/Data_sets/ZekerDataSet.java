@@ -788,8 +788,29 @@ public class ZekerDataSet {
 
           }
 
-        //TODO دعاء ختم القران الكريم
+
         else if (index == 11) {
+
+            zekeritemList=new ArrayList<>();
+           zekeritemList.add(new ZekeritemModel(
+                   "( دعاء السفر )"+"\n" +"\n" +
+
+                   "الله أكبر الله أكبر الله أكبر، " +"\n" +
+                   "〈 سُبْحَانَ الَّذِي سَخَّرَ لَنَا هَذَا وَمَا كُنَّا لَهُ مُقْرِنِينَ ⓭ وَإِنَّا إِلَى رَبِّنَا لَمُنقَلِبُونَ ⓮ 〉 " +"\n" +"\n" +
+                   "اللّهمّ إنّا نسألُكَ في سَفَرِنَا هذَا البِرّ والتّقْوَى، ومِن العَمَلِ مَاتَرْضَى، اللّهمّ هَوِّنْ عَلَيْنَا سَفَرِنَا هذَا وَاطْوِ عَنَّا بُعْدَه، اللَّهُمَّ أَنْتَ الصَّاحِبُ فِي السَّفَرِ، وَالْخَلِيفَةُ فِي الأَهْلِ، " +
+                   "اللَّهُمَّ إِنِّي أَعُوذُ بِكَ مِنْ وَعَثَاءِ السَّفَرِ وَكَآبَةِ الْمَنْظَر وَسُوءِ الْمُنْقَلَبِ فِي الْمَالِ وَالأَهْلِ\n" +"\n" +
+                   "وَإِذَا رَجَعَ قَالَهُنَّ وَزَادَ " +"\n" +
+                   "” آيِبُونَ تَائِبُونَ عَابِدُونَ لِرَبِّنَا حَامِدُونَ “ " +"\n" +
+                   "رَوَاهُ مُسْلِمْ"
+           ,1
+           ));
+            return zekeritemList;
+
+        }
+
+
+        //TODO دعاء ختم القران الكريم
+        else if (index == 12) {
             zekeritemList=new ArrayList<>();
 
             zekeritemList.add(new ZekeritemModel(
@@ -852,7 +873,7 @@ public class ZekerDataSet {
 
 
         //TODO فضل الدعاء
-        else if (index == 12) {
+        else if (index == 13) {
             zekeritemList=new ArrayList<>();
 
             zekeritemList.add(new ZekeritemModel(
@@ -956,7 +977,7 @@ public class ZekerDataSet {
         }
 
         // TODO فضل القرأن الكريم
-        else  if (index ==13){
+        else  if (index ==14){
             zekeritemList=new ArrayList<>();
 
             zekeritemList.add(new ZekeritemModel(
@@ -1011,7 +1032,7 @@ public class ZekerDataSet {
 
         //TODO فضل الأذكار
 
-        else if (index == 14) {
+        else if (index == 15) {
             zekeritemList=new ArrayList<>();
 
             zekeritemList.add(new ZekeritemModel(
@@ -1077,7 +1098,7 @@ public class ZekerDataSet {
         }
 
         //TODO الرُّقية الشرعية
-        else if (index==15){
+        else if (index==16){
             zekeritemList=new ArrayList<>();
 
             zekeritemList.add(new ZekeritemModel(

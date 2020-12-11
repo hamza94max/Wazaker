@@ -9,12 +9,14 @@ import android.widget.RelativeLayout;
 import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.cardview.widget.CardView;
+import com.badoualy.stepperindicator.BuildConfig;
 import com.hassanjamil.hqibla.CompassActivity;
 import com.hassanjamil.hqibla.Constants;
 import com.hazem.wazaker.recevier.NotificationReceiver;
-import com.hazem.wazkar.BuildConfig;
 import com.hazem.wazkar.R;
+
 import java.util.Calendar;
+
 
 
 public class MainActivity extends AppCompatActivity {

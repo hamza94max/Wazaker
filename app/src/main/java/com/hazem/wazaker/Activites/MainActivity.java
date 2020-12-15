@@ -1,34 +1,95 @@
 package com.hazem.wazaker.Activites;
 
+import android.Manifest;
+import android.annotation.SuppressLint;
 import android.app.AlarmManager;
 import android.app.PendingIntent;
+import android.content.Context;
 import android.content.Intent;
+import android.content.pm.PackageManager;
+import android.location.Location;
+import android.location.LocationListener;
+import android.location.LocationManager;
 import android.os.Bundle;
+import android.os.Handler;
 import android.view.View;
 import android.widget.RelativeLayout;
+import android.widget.TextView;
 import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.cardview.widget.CardView;
+import androidx.core.app.ActivityCompat;
+import androidx.core.content.ContextCompat;
+
 import com.badoualy.stepperindicator.BuildConfig;
+import com.batoulapps.adhan.CalculationMethod;
+import com.batoulapps.adhan.CalculationParameters;
+import com.batoulapps.adhan.Coordinates;
+import com.batoulapps.adhan.Madhab;
+import com.batoulapps.adhan.PrayerTimes;
+import com.batoulapps.adhan.data.DateComponents;
 import com.hassanjamil.hqibla.CompassActivity;
 import com.hassanjamil.hqibla.Constants;
 import com.hazem.wazaker.recevier.NotificationReceiver;
 import com.hazem.wazkar.R;
 
+import java.text.SimpleDateFormat;
 import java.util.Calendar;
+import java.util.Date;
+import java.util.TimeZone;
 
 
-
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity  implements LocationListener {
 
     RelativeLayout relativeLayout;
+
+
+    // TODO prayers times
+    LocationManager locationManager;
+    String locationText = "";
+    String locationLatitude = "";
+    String locationLongitude = "";
+    private int mInterval = 3000;
+    private Handler mHandler;
+    TextView isha,magrib,asrr,dohr,fajr ;
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+
+        // Salat
+        isha=findViewById(R.id.isha);
+        magrib=findViewById(R.id.maghrib);
+        asrr=findViewById(R.id.asr);
+        dohr=findViewById(R.id.duhur);
+        fajr=findViewById(R.id.fajr);
+
+
+        Handler handler2 = new Handler();
+        handler2.postDelayed(new Runnable() {
+            public void run() {
+                mHandler = new Handler();
+                startRepeatingTask();
+            }
+        }, 2000);
+
+        if (ContextCompat.checkSelfPermission(getApplicationContext()
+                , Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED
+                && ActivityCompat.checkSelfPermission(getApplicationContext(),
+                Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
+
+            ActivityCompat.requestPermissions(this, new String[]{Manifest.permission.ACCESS_FINE_LOCATION,
+                    Manifest.permission.ACCESS_COARSE_LOCATION}, 101);
+        }
+
+
+
         relativeLayout =findViewById(R.id.relativeLayout);
 
+        // TODO Main Cards
         CardView morazkar=findViewById(R.id.morazkar);
         CardView nightazkar =findViewById(R.id.eveazkar);
         CardView forty = findViewById(R.id.forty);
@@ -107,7 +168,7 @@ public class MainActivity extends AppCompatActivity {
         });
 
 
-        // Notification
+        // TODO Notification
         Intent intent = new Intent(this, NotificationReceiver.class);
         PendingIntent pendingIntent = PendingIntent.getBroadcast(this, 1, intent, PendingIntent.FLAG_UPDATE_CURRENT);
         AlarmManager alarmManager = (AlarmManager) getSystemService(ALARM_SERVICE);
@@ -117,6 +178,85 @@ public class MainActivity extends AppCompatActivity {
             alarmManager.setRepeating(AlarmManager.RTC_WAKEUP, calendar.getTimeInMillis(), AlarmManager.INTERVAL_DAY, pendingIntent);
         }
     }
+
+
+// prayers times
+    @Override
+    public void onDestroy() {
+        super.onDestroy();
+        stopRepeatingTask();
+    }
+    Runnable mStatusChecker = new Runnable() {
+        @SuppressLint("SetTextI18n")
+        @Override
+        public void run() {
+            try {
+                getLocation(); //this function can change value of mInterval.
+
+                if (locationText.toString() == "") {
+                    Toast.makeText(getApplicationContext(), "Trying to retrieve Location", Toast.LENGTH_LONG).show();
+                }
+                else {
+
+                    double latitude= Double.parseDouble(locationLatitude);
+                    double longitude=Double.parseDouble(locationLongitude);
+                    Coordinates coordinates = new Coordinates(latitude, longitude);
+                    DateComponents date = DateComponents.from(new Date());
+                    CalculationParameters params = CalculationMethod.EGYPTIAN.getParameters();
+                    params.madhab = Madhab.SHAFI;
+                    params.adjustments.dhuhr = 2;
+                    PrayerTimes prayerTimes = new PrayerTimes(coordinates,date, params);
+                    @SuppressLint("SimpleDateFormat") SimpleDateFormat formatter = new SimpleDateFormat("hh:mm a");
+                    formatter.setTimeZone(TimeZone.getTimeZone("Egypt"));
+                    formatter.format(prayerTimes.fajr);
+                    dohr.setText(  formatter.format(prayerTimes.dhuhr).toString());
+                    asrr.setText( formatter.format(prayerTimes.asr).toString());
+                    fajr.setText(  formatter.format(prayerTimes.fajr).toString());
+                    magrib.setText(  formatter.format(prayerTimes.maghrib).toString());
+                    isha.setText(  formatter.format(prayerTimes.isha).toString());
+
+
+                }
+            } finally {
+
+                mHandler.postDelayed(mStatusChecker, mInterval);
+            }
+        }
+    };
+    void startRepeatingTask() {
+        mStatusChecker.run();
+    }
+    void stopRepeatingTask() {
+        mHandler.removeCallbacks(mStatusChecker);
+    }
+    void getLocation() {
+        try {
+            locationManager = (LocationManager) getSystemService(Context.LOCATION_SERVICE);
+            locationManager.requestLocationUpdates(LocationManager.GPS_PROVIDER, 2000, 5, (LocationListener) this);
+        }
+        catch(SecurityException e) {
+            e.printStackTrace();
+        }
+    }
+    @Override
+    public void onProviderDisabled(String provider) {
+        Toast.makeText(MainActivity.this, "Please Enable GPS", Toast.LENGTH_SHORT).show();
+    }
+    @Override
+    public void onLocationChanged(Location location) {
+        locationText = location.getLatitude() + "," + location.getLongitude();
+        locationLatitude = location.getLatitude() + "";
+        locationLongitude = location.getLongitude() + "";
+    }
+    @Override
+    public void onStatusChanged(String provider, int status, Bundle extras) {
+
+    }
+    @Override
+    public void onProviderEnabled(String provider) {
+
+    }
+
         /*
         // Dark Mode
     public void sw(View view) {

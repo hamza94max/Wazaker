@@ -8,4 +8,14 @@
     <string name="notifiaction_id">وذكر</string>
 
 
+    <string name="menu_prayertimes">أوقات الصلاة</string>
+
+    <string name="city">المدينة</string>
+    <string name="madina">المدينة</string>
+    <string name="fajr">الفجر</string>
+    <string name="dohr">الظهر</string>
+    <string name="asr">العصر</string>
+    <string name="maghrib">المغرب</string>
+    <string name="isha">العشاء</string>
+    <string name="_00_00">00:00</string>
 </resources>

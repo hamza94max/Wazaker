@@ -23,7 +23,9 @@ allprojects {
         mavenCentral()
         mavenLocal()
         maven { url "http://api.tplmaps.com:8081/artifactory/example-repo-local/" }
-
+        maven {
+            url "https://dl.bintray.com/batoulapps/adhan"
+        }
         google()
         jcenter()
     }

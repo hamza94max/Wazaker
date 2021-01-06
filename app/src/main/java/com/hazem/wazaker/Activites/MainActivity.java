@@ -20,7 +20,6 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.cardview.widget.CardView;
 import androidx.core.app.ActivityCompat;
 import androidx.core.content.ContextCompat;
-
 import com.badoualy.stepperindicator.BuildConfig;
 import com.batoulapps.adhan.CalculationMethod;
 import com.batoulapps.adhan.CalculationParameters;
@@ -32,7 +31,6 @@ import com.hassanjamil.hqibla.CompassActivity;
 import com.hassanjamil.hqibla.Constants;
 import com.hazem.wazaker.recevier.NotificationReceiver;
 import com.hazem.wazkar.R;
-
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Date;
@@ -208,7 +206,6 @@ public class MainActivity extends AppCompatActivity  implements LocationListener
                     PrayerTimes prayerTimes = new PrayerTimes(coordinates,date, params);
                     @SuppressLint("SimpleDateFormat") SimpleDateFormat formatter = new SimpleDateFormat("hh:mm a");
                     formatter.setTimeZone(TimeZone.getTimeZone("Egypt"));
-                    formatter.format(prayerTimes.fajr);
                     dohr.setText(  formatter.format(prayerTimes.dhuhr).toString());
                     asrr.setText( formatter.format(prayerTimes.asr).toString());
                     fajr.setText(  formatter.format(prayerTimes.fajr).toString());
@@ -240,7 +237,7 @@ public class MainActivity extends AppCompatActivity  implements LocationListener
     }
     @Override
     public void onProviderDisabled(String provider) {
-        Toast.makeText(MainActivity.this, "Please Enable GPS", Toast.LENGTH_SHORT).show();
+        Toast.makeText(MainActivity.this, "يرجى تشغيل الموقع", Toast.LENGTH_SHORT).show();
     }
     @Override
     public void onLocationChanged(Location location) {

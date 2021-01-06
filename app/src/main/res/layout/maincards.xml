@@ -1,24 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_height="wrap_content"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools">
-
-
-
-
 
             <GridLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_gravity="center_horizontal"
                 android:layout_margin="20dp"
+                android:paddingBottom="15dp"
                 android:alignmentMode="alignMargins"
                 android:columnCount="2"
-                android:rowCount="4"
+                android:rowCount="4" >
 
-                >
+
+
                 <androidx.cardview.widget.CardView
 
 
@@ -55,7 +53,8 @@
                             android:textSize="15sp"
                             android:layout_marginTop="10dp"
                             android:textAlignment="center"
-                            android:textStyle="bold" />
+                            android:textStyle="bold"
+                            android:gravity="center_horizontal" />
                     </LinearLayout>
 
                 </androidx.cardview.widget.CardView>
@@ -99,9 +98,6 @@
                     </LinearLayout>
 
                 </androidx.cardview.widget.CardView>
-
-
-
                 <androidx.cardview.widget.CardView
 
 
@@ -143,7 +139,6 @@
                     </LinearLayout>
 
                 </androidx.cardview.widget.CardView>
-
                 <androidx.cardview.widget.CardView
 
 
@@ -186,7 +181,6 @@
                     </LinearLayout>
 
                 </androidx.cardview.widget.CardView>
-
                 <androidx.cardview.widget.CardView
 
 
@@ -228,7 +222,6 @@
                     </LinearLayout>
 
                 </androidx.cardview.widget.CardView>
-
                 <androidx.cardview.widget.CardView
 
                     android:layout_gravity="fill"
@@ -309,6 +302,8 @@
                     </LinearLayout>
 
                 </androidx.cardview.widget.CardView>
+
+
 
             </GridLayout>
 

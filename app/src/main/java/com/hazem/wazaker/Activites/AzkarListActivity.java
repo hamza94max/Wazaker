@@ -58,6 +58,8 @@ import java.util.ArrayList;
 
             AzkarAdapter adapter = new AzkarAdapter(Rec_azkar_items, AzkarListActivity.this);
             recyclerView.setAdapter(adapter);
+            recyclerView.setHasFixedSize(true);
+
             adapter.setListner(e -> {
                 int index = (int) e;
                 Intent zeker = new Intent(getBaseContext(), ZekerActivity.class);

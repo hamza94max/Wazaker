@@ -1,14 +1,10 @@
 package com.hazem.wazaker.Activites;
 
 import android.Manifest;
-import android.annotation.SuppressLint;
 import android.app.AlarmManager;
 import android.app.PendingIntent;
-import android.content.Context;
 import android.content.Intent;
 import android.content.pm.PackageManager;
-import android.location.Location;
-import android.location.LocationListener;
 import android.location.LocationManager;
 import android.os.Bundle;
 import android.os.Handler;
@@ -16,28 +12,22 @@ import android.view.View;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
+
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.cardview.widget.CardView;
 import androidx.core.app.ActivityCompat;
 import androidx.core.content.ContextCompat;
+
 import com.badoualy.stepperindicator.BuildConfig;
-import com.batoulapps.adhan.CalculationMethod;
-import com.batoulapps.adhan.CalculationParameters;
-import com.batoulapps.adhan.Coordinates;
-import com.batoulapps.adhan.Madhab;
-import com.batoulapps.adhan.PrayerTimes;
-import com.batoulapps.adhan.data.DateComponents;
 import com.hassanjamil.hqibla.CompassActivity;
 import com.hassanjamil.hqibla.Constants;
 import com.hazem.wazaker.recevier.NotificationReceiver;
 import com.hazem.wazkar.R;
-import java.text.SimpleDateFormat;
+
 import java.util.Calendar;
-import java.util.Date;
-import java.util.TimeZone;
 
 
-public class MainActivity extends AppCompatActivity  implements LocationListener {
+public class MainActivity extends AppCompatActivity /*implements LocationListener*/ {
 
     RelativeLayout relativeLayout;
 
@@ -57,15 +47,15 @@ public class MainActivity extends AppCompatActivity  implements LocationListener
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-
+/*
         // Salat
         isha=findViewById(R.id.isha);
         magrib=findViewById(R.id.maghrib);
         asrr=findViewById(R.id.asr);
         dohr=findViewById(R.id.duhur);
         fajr=findViewById(R.id.fajr);
-
-
+*/
+/*
         Handler handler2 = new Handler();
         handler2.postDelayed(new Runnable() {
             public void run() {
@@ -73,7 +63,7 @@ public class MainActivity extends AppCompatActivity  implements LocationListener
                 startRepeatingTask();
             }
         }, 2000);
-
+*/
         if (ContextCompat.checkSelfPermission(getApplicationContext()
                 , Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED
                 && ActivityCompat.checkSelfPermission(getApplicationContext(),
@@ -177,7 +167,7 @@ public class MainActivity extends AppCompatActivity  implements LocationListener
         }
     }
 
-
+/*
 // prayers times
     @Override
     public void onDestroy() {
@@ -253,7 +243,7 @@ public class MainActivity extends AppCompatActivity  implements LocationListener
     public void onProviderEnabled(String provider) {
 
     }
-
+*/
         /*
         // Dark Mode
     public void sw(View view) {

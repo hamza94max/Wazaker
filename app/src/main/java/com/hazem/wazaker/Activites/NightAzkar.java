@@ -1,14 +1,13 @@
 package com.hazem.wazaker.Activites;
 
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.recyclerview.widget.LinearLayoutManager;
-import androidx.recyclerview.widget.RecyclerView;
-
 import android.content.Context;
 import android.os.Bundle;
 import android.widget.Button;
 
-import com.hazem.wazaker.Adapters.MorAdapter;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
+
 import com.hazem.wazaker.Adapters.NightAdapter;
 import com.hazem.wazaker.Models.ZekeritemModel;
 import com.hazem.wazkar.R;
@@ -38,6 +37,7 @@ public class NightAzkar extends AppCompatActivity {
         NightAdapter adapter =new NightAdapter(nightItems,getBaseContext());
         recyclerView.setLayoutManager(layoutManager);
         recyclerView.setAdapter(adapter);
+        recyclerView.setHasFixedSize(true);
     }
 
 

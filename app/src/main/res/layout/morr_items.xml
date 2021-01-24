@@ -7,11 +7,13 @@
         xmlns:app="http://schemas.android.com/apk/res-auto"
         android:orientation="vertical"
         android:id="@+id/cccccc"
+        app:cardCornerRadius="17dp"
         android:layout_width="match_parent"
         android:padding="15dp"
         android:layout_marginTop="15dp"
         android:elevation="12dp"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        tools:ignore="UnusedAttribute">
 
 
       <androidx.constraintlayout.widget.ConstraintLayout

@@ -16,9 +16,9 @@
         app:stpi_animDuration="252"
         app:stpi_circleRadius="3.5dp"
         app:stpi_lineMargin="5dp"
-
         app:stpi_lineStrokeWidth="2.2dp"
         app:stpi_showDoneIcon="false" />
+
     <androidx.viewpager.widget.ViewPager
         android:id="@+id/vpager"
         android:layout_width="match_parent"

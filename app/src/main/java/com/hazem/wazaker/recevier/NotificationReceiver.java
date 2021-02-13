@@ -39,10 +39,7 @@ public class NotificationReceiver extends BroadcastReceiver {
 
         Uri uri = RingtoneManager.getDefaultUri(RingtoneManager.TYPE_NOTIFICATION);
         builder.setSound(uri);
-
         builder.setPriority(NotificationCompat.PRIORITY_DEFAULT);
-
-
         builder.setContentIntent(pendingIntent);
 
         Notification notification = builder.build();

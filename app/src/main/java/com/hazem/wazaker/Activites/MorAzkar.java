@@ -1,13 +1,16 @@
 package com.hazem.wazaker.Activites;
 
+import android.os.Bundle;
+import android.widget.Button;
+
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
-import android.os.Bundle;
-import android.widget.Button;
+
 import com.hazem.wazaker.Adapters.MorAdapter;
 import com.hazem.wazaker.Models.ZekeritemModel;
 import com.hazem.wazkar.R;
+
 import java.util.ArrayList;
 
 
@@ -161,7 +164,7 @@ public class MorAzkar extends AppCompatActivity {
 
 
         morItems.add(new ZekeritemModel(
-                "اللهم إني أصبحت أشهدك، وأشهد حملة عرشك، وملائكتك، وجميع خلقك، أنك أنت الله لا إله إلا أنت، وحدك لا شريك لك، وأن محمداً عبدك ورسولك" + "\n" +
+                "اللّهُـمَّ إِنِّـي أَصْبَـحْتُ أُشْـهِدُك ، وَأُشْـهِدُ حَمَلَـةَ عَـرْشِـك ، وَمَلَائِكَتَكَ ، وَجَمـيعَ خَلْـقِك ، أَنَّـكَ أَنْـتَ اللهُ لا إلهَ إلاّ أَنْـتَ وَحْـدَكَ لا شَريكَ لَـك ، وَأَنَّ ُ مُحَمّـداً عَبْـدُكَ وَرَسـولُـك" + "\n" +
 
 
                         "\n" + "\n" + "من قال حين يصبح او يمسي اربع مرات اعتقه الله من النار- رواه ابو داوود"
@@ -218,8 +221,7 @@ public class MorAzkar extends AppCompatActivity {
 
 
         morItems.add(new ZekeritemModel(
-                "(اللهم إني أعوذ بك من الهم والحزن ، وأعوذ بك من العجز والكسل ، وأعوذ بك من الجبن والبخل ،" +
-                        " وأعوذ بك من غلبة الدين وقهر الرجال)" + "\n" + "\n" +
+                "اللَّهُمَّ إِنِّي أَعُوذُ بِكَ مِنْ الْهَمِّ وَالْحَزَنِ، وَأَعُوذُ بِكَ مِنْ الْعَجْزِ وَالْكَسَلِ، وَأَعُوذُ بِكَ مِنْ الْجُبْنِ وَالْبُخْلِ، وَأَعُوذُ بِكَ مِنْ غَلَبَةِ الدَّيْنِ، وَقَهْرِ الرِّجَالِ"  +"\n" +
                         " (ثلاثا)" + "\n" +
 
                         "إذا قُلْتَهُ أَذْهَبَ اللهُ تعالى هَمَّكَ وقَضَى عنك دَيْنَكَ"

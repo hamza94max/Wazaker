@@ -28,10 +28,7 @@ import java.util.Calendar;
 public class MainActivity extends AppCompatActivity /*implements LocationListener*/ {
 
     RelativeLayout relativeLayout;
-
-
     // TODO prayers times
-
     /*
     LocationManager locationManager;
     String locationText = "";
@@ -64,6 +61,7 @@ public class MainActivity extends AppCompatActivity /*implements LocationListene
             }
         }, 2000);
 */
+
         if (ContextCompat.checkSelfPermission(getApplicationContext()
                 , Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED
                 && ActivityCompat.checkSelfPermission(getApplicationContext(),
@@ -77,31 +75,31 @@ public class MainActivity extends AppCompatActivity /*implements LocationListene
 
         relativeLayout =findViewById(R.id.relativeLayout);
 
-        // TODO Main Cards
-        CardView morazkar=findViewById(R.id.morazkar);
-        CardView nightazkar =findViewById(R.id.eveazkar);
-        CardView forty = findViewById(R.id.forty);
-        CardView azkar = findViewById(R.id.azkar);
-        CardView qbla = findViewById(R.id.qbla);
-        CardView counter = findViewById(R.id.counter);
-        CardView share =findViewById(R.id.setting);
+            // TODO Main Cards
+            CardView moring_azkar = findViewById(R.id.morazkar);
+            CardView night_azkar = findViewById(R.id.eveazkar);
+            CardView Hadith = findViewById(R.id.forty);
+            CardView azkar = findViewById(R.id.azkar);
+            CardView qibla = findViewById(R.id.qbla);
+            CardView counter = findViewById(R.id.counter);
+            CardView share = findViewById(R.id.setting);
 
 
-        morazkar.setOnClickListener(new View.OnClickListener() {
+        moring_azkar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent =new Intent(getBaseContext(),MorAzkar.class);
                 startActivity(intent);
             }
         });
-        nightazkar.setOnClickListener(new View.OnClickListener() {
+        night_azkar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent =new Intent(getBaseContext(),NightAzkar.class);
                 startActivity(intent);
             }
         });
-        forty.setOnClickListener(new View.OnClickListener() {
+        Hadith.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent =new Intent(getBaseContext(), FortyListActivity.class);
@@ -116,7 +114,7 @@ public class MainActivity extends AppCompatActivity /*implements LocationListene
 
             }
         });
-        qbla.setOnClickListener(new View.OnClickListener() {
+        qibla.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(MainActivity.this, CompassActivity.class);

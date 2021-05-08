@@ -12,7 +12,7 @@ import java.util.ArrayList;
 
 
     public class AzkarListActivity extends AppCompatActivity {
-        private ArrayList<com.hazem.wazaker.Models.Rec_azkar_items> Rec_azkar_items;
+        private ArrayList<com.hazem.wazaker.Models.Rec_azkar_items> Azkar_titles;
 
 
         @Override
@@ -30,25 +30,25 @@ import java.util.ArrayList;
 
         private void initData() {
 
-             Rec_azkar_items = new ArrayList<>();
-             Rec_azkar_items.add(new Rec_azkar_items("أذكار المسجد"));
-             Rec_azkar_items.add(new Rec_azkar_items("أذكار بعد الصلاة "));
-             Rec_azkar_items.add(new Rec_azkar_items("أذكار الأذان "));
-             Rec_azkar_items.add(new Rec_azkar_items("أذكار الوضوء"));
-             Rec_azkar_items.add(new Rec_azkar_items("الأدعيـة القرآنية"));
-             Rec_azkar_items.add(new Rec_azkar_items("الأدعية النبوية "));
-             Rec_azkar_items.add(new Rec_azkar_items("أذكار الطعام"));
-             Rec_azkar_items.add(new Rec_azkar_items("أذكار المنزل"));
-             Rec_azkar_items.add(new Rec_azkar_items("أذكار النوم"));
-             Rec_azkar_items.add(new Rec_azkar_items("أذكار الإستيقاظ من النوم"));
-             Rec_azkar_items.add(new Rec_azkar_items("أذكار عظيمة"));
-             Rec_azkar_items.add(new Rec_azkar_items("دعاء السفر"));
-             Rec_azkar_items.add(new Rec_azkar_items("دعاء ختم القرآن الكريم"));
-             Rec_azkar_items.add(new Rec_azkar_items("فضل الدعاء"));
-             Rec_azkar_items.add(new Rec_azkar_items("فضل تلاوة القرآن الكريم"));
-             Rec_azkar_items.add(new Rec_azkar_items("فضل الأذكار"));
-             Rec_azkar_items.add(new Rec_azkar_items("الرقية الشرعية"));
-             Rec_azkar_items.add(new Rec_azkar_items("أدعية للمتوفّي"));
+            Azkar_titles = new ArrayList<>();
+            Azkar_titles.add(new Rec_azkar_items("أذكار المسجد"));
+            Azkar_titles.add(new Rec_azkar_items("أذكار بعد الصلاة "));
+            Azkar_titles.add(new Rec_azkar_items("أذكار الأذان "));
+            Azkar_titles.add(new Rec_azkar_items("أذكار الوضوء"));
+            Azkar_titles.add(new Rec_azkar_items("الأدعيـة القرآنية"));
+            Azkar_titles.add(new Rec_azkar_items("الأدعية النبوية "));
+            Azkar_titles.add(new Rec_azkar_items("أذكار الطعام"));
+            Azkar_titles.add(new Rec_azkar_items("أذكار المنزل"));
+            Azkar_titles.add(new Rec_azkar_items("أذكار النوم"));
+            Azkar_titles.add(new Rec_azkar_items("أذكار الإستيقاظ من النوم"));
+            Azkar_titles.add(new Rec_azkar_items("أذكار عظيمة"));
+            Azkar_titles.add(new Rec_azkar_items("دعاء السفر"));
+            Azkar_titles.add(new Rec_azkar_items("دعاء ختم القرآن الكريم"));
+            Azkar_titles.add(new Rec_azkar_items("فضل الدعاء"));
+            Azkar_titles.add(new Rec_azkar_items("فضل تلاوة القرآن الكريم"));
+            Azkar_titles.add(new Rec_azkar_items("فضل الأذكار"));
+            Azkar_titles.add(new Rec_azkar_items("الرقية الشرعية"));
+            Azkar_titles.add(new Rec_azkar_items("أدعية للمتوفّي"));
              setAdapter(); }
 
         private void setAdapter(){
@@ -56,7 +56,7 @@ import java.util.ArrayList;
             LinearLayoutManager layoutManager = new LinearLayoutManager(this);
             recyclerView.setLayoutManager(layoutManager);
 
-            AzkarAdapter adapter = new AzkarAdapter(Rec_azkar_items, AzkarListActivity.this);
+            AzkarAdapter adapter = new AzkarAdapter(Azkar_titles, AzkarListActivity.this);
             recyclerView.setAdapter(adapter);
             recyclerView.setHasFixedSize(true);
 

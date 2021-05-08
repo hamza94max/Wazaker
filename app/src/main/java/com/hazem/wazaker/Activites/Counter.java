@@ -19,10 +19,10 @@ import java.util.Random;
 
 public class Counter extends AppCompatActivity {
 
-    int counter=0;
-    int sum =0;
-    int summ ;
-    TextView total;
+    int counter = 0;
+    int zekercounts = 0;
+    int TotalCounts ;
+    TextView totalcounts_text;
     RelativeLayout relativeLayout;
 
     //Shared preference
@@ -40,13 +40,13 @@ public class Counter extends AppCompatActivity {
 
 
 
-        TextView textView=findViewById(R.id.countertext);
-        total =findViewById(R.id.total);
-        Button reset=findViewById(R.id.reset);
-        relativeLayout=findViewById(R.id.reltivee);
+        TextView textView = findViewById(R.id.countertext);
+        totalcounts_text = findViewById(R.id.total);
+        Button reset = findViewById(R.id.reset);
+        relativeLayout = findViewById(R.id.reltivee);
 
         load();
-        sum=sharedPreferences.getInt("sum",sum);
+        zekercounts = sharedPreferences.getInt("zekercounts",zekercounts);
 
 
 
@@ -58,15 +58,15 @@ public class Counter extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 counter++;
-                sum++;
+                zekercounts++;
                 textView.setText(Integer.toString(counter));
-                String c= String.valueOf(sum);
-                total.setText("المجموع الكلي : "+c);
+                String Total_counts = String.valueOf(zekercounts);
+                totalcounts_text.setText( "المجموع الكلي : " + Total_counts);
 
 
-                prefs= getSharedPreferences(MY_PREFS_NAME, MODE_PRIVATE);
+                prefs = getSharedPreferences(MY_PREFS_NAME, MODE_PRIVATE);
                 SharedPreferences.Editor editor = prefs.edit();
-                editor.putInt("sum", sum);
+                editor.putInt("zekercounts", zekercounts);
                 editor.apply();
 
 
@@ -80,12 +80,13 @@ public class Counter extends AppCompatActivity {
 
 
         reset.setOnClickListener(new View.OnClickListener() {
+            @SuppressLint("SetTextI18n")
             @Override
             public void onClick(View v) {
                 counter = 0;
                 textView.setText(Integer.toString(counter));
                 textView.setTextColor(Color.WHITE);
-                total.setText("المجموع الكلي : " +sum);
+                totalcounts_text.setText("المجموع الكلي : " +zekercounts);
 
             }
         });
@@ -98,7 +99,7 @@ public class Counter extends AppCompatActivity {
 
     private int getRandomColor() {
         Random randomcolor = new Random(); // creating Random object
-        int[] colors ={Color.WHITE,Color.BLACK,Color.YELLOW};
+        int[] colors = {Color.WHITE,Color.BLACK,Color.YELLOW};
         int color = randomcolor.nextInt(colors.length);
 
         return colors[color];
@@ -112,15 +113,16 @@ public class Counter extends AppCompatActivity {
         return true;
     }
 
+    @SuppressLint("SetTextI18n")
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         int id = item.getItemId();
         switch (id) {
             case R.id.delete:
-                sum=0;
-                summ=0;
-                String s= String.valueOf(sum);
-                total.setText("المجموع الكلي : " +s);
+                zekercounts = 0;
+                TotalCounts = 0;
+                String s = String.valueOf(zekercounts);
+                totalcounts_text.setText("المجموع الكلي : " +s);
                 Toast.makeText(this, "تم مسح المجموع الكلي", Toast.LENGTH_SHORT).show();
                 return true;
 
@@ -128,12 +130,13 @@ public class Counter extends AppCompatActivity {
         return (super.onOptionsItemSelected(item));
     }
 
+    @SuppressLint("SetTextI18n")
     public  void load(){
 
-        sharedPreferences =getSharedPreferences(MY_PREFS_NAME,MODE_PRIVATE);
-        summ =sharedPreferences.getInt("sum",sum);
-        String s= String.valueOf(summ);
-        total.setText("المجموع الكلي : "+s);
+        sharedPreferences = getSharedPreferences(MY_PREFS_NAME,MODE_PRIVATE);
+        TotalCounts = sharedPreferences.getInt("zekercounts",zekercounts);
+        String s = String.valueOf(TotalCounts);
+        totalcounts_text.setText( "المجموع الكلي : " + s);
 
     }
 

@@ -5,7 +5,7 @@ import android.widget.Button;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
-import com.hazem.wazaker.Adapters.MorAdapter;
+import com.hazem.wazaker.Adapters.MoringAzkar_Adapter;
 import com.hazem.wazaker.Models.ZekeritemModel;
 import com.hazem.wazkar.R;
 import java.util.ArrayList;
@@ -31,7 +31,7 @@ public class Morning_Azkar extends AppCompatActivity {
 
         LinearLayoutManager layoutManager = new LinearLayoutManager(this);
         recyclerView.setLayoutManager(layoutManager);
-        MorAdapter adapter = new MorAdapter( morAzkar , getBaseContext());
+        MoringAzkar_Adapter adapter = new MoringAzkar_Adapter( morAzkar , getBaseContext());
         recyclerView.setLayoutManager(layoutManager);
         recyclerView.setAdapter(adapter);
     }

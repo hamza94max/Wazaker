@@ -1,6 +1,5 @@
 package com.hazem.wazaker.Adapters;
 
-import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -8,12 +7,10 @@ import android.widget.TextView;
 
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.hazem.wazaker.Activites.AzkarListActivity;
-import com.hazem.wazaker.Models.Rec_azkar_items;
-import com.hazem.wazkar.R;
+import com.hazem.wazaker.Models.Azkar_model;
 import com.hazem.wazaker.listeners.ItemListner;
+import com.hazem.wazkar.R;
 
-import java.util.ArrayList;
 import java.util.List;
 
 public class AzkarAdapter extends RecyclerView.Adapter<AzkarAdapter.ViewHolder> {
@@ -21,11 +18,11 @@ public class AzkarAdapter extends RecyclerView.Adapter<AzkarAdapter.ViewHolder> 
 
 
     private ItemListner listner;
-    private List<Rec_azkar_items> items;
+    private final List<Azkar_model> azkar_modelList;
 
 
-    public AzkarAdapter(List<Rec_azkar_items> items, Context context) {
-        this.items = items;
+    public AzkarAdapter( List<Azkar_model> items ) {
+        this.azkar_modelList = items;
     }
 
 
@@ -43,17 +40,16 @@ public class AzkarAdapter extends RecyclerView.Adapter<AzkarAdapter.ViewHolder> 
     }
 
     @Override
-    public void onBindViewHolder(final ViewHolder holder, final int position) {
+    public void onBindViewHolder(final ViewHolder holder,  int position) {
 
-        Rec_azkar_items p = items.get(position);
-        holder.title.setText(p.getName());
+        Azkar_model azkarModel = azkar_modelList.get(position);
+        holder.title.setText(azkarModel.getName());
        
     }
 
     @Override
     public int getItemCount() {
-
-        return items.size();
+        return azkar_modelList.size();
     }
 
 

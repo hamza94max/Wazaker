@@ -16,7 +16,7 @@ import com.hazem.wazkar.R;
 import java.util.ArrayList;
 import at.markushi.ui.CircleButton;
 
-public class MorAdapter extends RecyclerView.Adapter<MorAdapter.HViewholder> {
+public class MoringAzkar_Adapter extends RecyclerView.Adapter<MoringAzkar_Adapter.HViewholder> {
 
 
     private ArrayList<ZekeritemModel> model = new ArrayList<>();
@@ -25,7 +25,7 @@ public class MorAdapter extends RecyclerView.Adapter<MorAdapter.HViewholder> {
 
 
 
-    public MorAdapter(ArrayList<ZekeritemModel> models,Context context) {
+    public MoringAzkar_Adapter(ArrayList<ZekeritemModel> models, Context context) {
         this.model = models;
     }
     @Override
@@ -42,18 +42,14 @@ public class MorAdapter extends RecyclerView.Adapter<MorAdapter.HViewholder> {
 
     @SuppressLint("SetTextI18n")
     @Override
-    public void onBindViewHolder(@NonNull MorAdapter.HViewholder holder, int position) {
+    public void onBindViewHolder(@NonNull MoringAzkar_Adapter.HViewholder holder, int position) {
 
         holder.zekertext.setText(model.get(position).getZeker());
         holder.copybtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 String zeker = model.get(position).getZeker();
-               /*
-                ClipboardManager clipboard = (ClipboardManager) getSystemService(Context.CLIPBOARD_SERVICE);
-                ClipData clip =  ClipData.newPlainText("Text", zekerItems.get(viewPager.getCurrentItem()));
-                clipboard.setPrimaryClip(clip);
-               */
+
                 Intent sendIntent = new Intent();
                 sendIntent.setAction(Intent.ACTION_SEND);
                 sendIntent.putExtra(Intent.EXTRA_TEXT, zeker);
@@ -85,8 +81,6 @@ public class MorAdapter extends RecyclerView.Adapter<MorAdapter.HViewholder> {
                 }
             }});}
 
-
-
     @Override
     public int getItemCount() {
         return model.size();
@@ -97,16 +91,14 @@ public class MorAdapter extends RecyclerView.Adapter<MorAdapter.HViewholder> {
       Button copybtn;
       CircleButton plusbtn;
       CheckBox checkBox;
-
-
-
+      
          HViewholder(View itemView) {
             super(itemView);
-            zekertext=itemView.findViewById(R.id.zekertext);
-            copybtn=itemView.findViewById(R.id.copybtn);
-            plusbtn=itemView.findViewById(R.id.pluss);
-            plustext=itemView.findViewById(R.id.plustext);
-            checkBox=itemView.findViewById(R.id.checkk);
+            zekertext = itemView.findViewById(R.id.zekertext);
+            copybtn = itemView.findViewById(R.id.copybtn);
+            plusbtn = itemView.findViewById(R.id.pluss);
+            plustext = itemView.findViewById(R.id.plustext);
+            checkBox = itemView.findViewById(R.id.checkk);
         }
     }
 }

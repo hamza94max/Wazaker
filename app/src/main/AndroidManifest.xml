@@ -43,7 +43,7 @@
         <activity android:name="com.hazem.wazaker.Activites.Counter" />
         <activity android:name="com.hazem.wazaker.Activites.FortyActivity" />
         <activity android:name="com.hazem.wazaker.Activites.ZekerActivity" />
-        <activity android:name="com.hazem.wazaker.Activites.MorAzkar"/>
+        <activity android:name="com.hazem.wazaker.Activites.Morning_Azkar"/>
         <activity android:name="com.hazem.wazaker.Activites.NightAzkar"/>
     </application>
 

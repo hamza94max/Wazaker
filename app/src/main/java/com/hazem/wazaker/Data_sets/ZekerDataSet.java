@@ -8,6 +8,7 @@ import java.util.List;
 
 
 // TODO: 4/18/20 Try to use Model(ZekerItem for ex ) it hold zeker text , and count of times for ex ZekerItem("abc" , 3) this help you to add more features
+// TODO: try to use json file
 public class ZekerDataSet {
 
 

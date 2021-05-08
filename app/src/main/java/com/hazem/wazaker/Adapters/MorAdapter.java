@@ -19,7 +19,7 @@ import at.markushi.ui.CircleButton;
 public class MorAdapter extends RecyclerView.Adapter<MorAdapter.HViewholder> {
 
 
-    private ArrayList<ZekeritemModel> model=new ArrayList<>();
+    private ArrayList<ZekeritemModel> model = new ArrayList<>();
 
 
 

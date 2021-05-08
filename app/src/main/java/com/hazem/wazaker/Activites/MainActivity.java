@@ -88,7 +88,7 @@ public class MainActivity extends AppCompatActivity /*implements LocationListene
         moring_azkar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent =new Intent(getBaseContext(),MorAzkar.class);
+                Intent intent =new Intent(getBaseContext(), Morning_Azkar.class);
                 startActivity(intent);
             }
         });

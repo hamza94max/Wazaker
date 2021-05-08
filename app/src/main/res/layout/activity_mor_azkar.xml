@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:padding="0.5dp"
-    tools:context="com.hazem.wazaker.Activites.MorAzkar">
+    tools:context="com.hazem.wazaker.Activites.Morning_Azkar">
 
 
     <androidx.recyclerview.widget.RecyclerView

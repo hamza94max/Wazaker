@@ -2,32 +2,28 @@ package com.hazem.wazaker.Activites;
 
 import android.os.Bundle;
 import android.widget.Button;
-
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
-
 import com.hazem.wazaker.Adapters.MorAdapter;
 import com.hazem.wazaker.Models.ZekeritemModel;
 import com.hazem.wazkar.R;
-
 import java.util.ArrayList;
 
 
-public class MorAzkar extends AppCompatActivity {
+public class Morning_Azkar extends AppCompatActivity {
 
-    Button copybtn;
-   ArrayList<ZekeritemModel> morItems;
-
+       Button copybtn;
+       ArrayList<ZekeritemModel> morAzkar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_mor_azkar);
 
-        RecyclerView recyclerView=findViewById(R.id.morrec);
+        RecyclerView recyclerView = findViewById(R.id.morrec);
 
-        copybtn=findViewById(R.id.copybtn);
+        copybtn = findViewById(R.id.copybtn);
 
 
         loaddata();
@@ -35,26 +31,15 @@ public class MorAzkar extends AppCompatActivity {
 
         LinearLayoutManager layoutManager = new LinearLayoutManager(this);
         recyclerView.setLayoutManager(layoutManager);
-        MorAdapter adapter =new MorAdapter(morItems,getBaseContext());
+        MorAdapter adapter = new MorAdapter( morAzkar , getBaseContext());
         recyclerView.setLayoutManager(layoutManager);
         recyclerView.setAdapter(adapter);
-
-
-
-
-
-
-
-
-
-
     }
 
-
     private void loaddata(){
-        morItems = new ArrayList<>();
+        morAzkar = new ArrayList<>();
 
-                morItems.add(new ZekeritemModel(
+        morAzkar.add(new ZekeritemModel(
 
 
                 "أَعُوذُ بِالله السَّمِيعِ العَلِيِمِ مِنَ الشّيطَانِ الرّجِيمِ (بِسْمِ اللهِ الرَّحْمـَنِ الرَّحِيمِ , " +
@@ -68,7 +53,7 @@ public class MorAzkar extends AppCompatActivity {
                         " (الفاتحة)",1));
 
 
-                        morItems.add(new ZekeritemModel(
+        morAzkar.add(new ZekeritemModel(
                          "(بِسْمِ اللّهِ الرَّحْمـنِ الرَّحِيمِ , الـم , ذَلِكَ الْكِتَابُ لاَ رَيْبَ فِيهِ هُدًى لِّلْمُتَّقِينَ ," +
                         " الَّذِينَ يُؤْمِنُونَ بِالْغَيْبِ " +
                         "وَيُقِيمُونَ الصَّلاةَ " +
@@ -84,7 +69,7 @@ public class MorAzkar extends AppCompatActivity {
                 , 1));
 
 
-                 morItems.add(new ZekeritemModel(
+        morAzkar.add(new ZekeritemModel(
 
                 " بِسْمِ اللهِ الرَّحْمـَنِ الرَّحِيمِ" + "\n" +
                         " {اللّهُ لاَ إِلَـهَ إِلاَّ هُوَ الْحَيُّ الْقَيُّومُ لاَ تَأْخُذُهُ سِنَةٌ وَلاَ نَوْمٌ" +
@@ -98,7 +83,7 @@ public class MorAzkar extends AppCompatActivity {
                 , 1));
 
 
-        morItems.add(new ZekeritemModel(
+        morAzkar.add(new ZekeritemModel(
                 " ( آمَنَ الرَّسُولُ بِمَا أُنْزِلَ إِلَيْهِ مِنْ رَبِّهِ وَالْمُؤْمِنُونَ ۚ" +
                         " كُلٌّ آمَنَ بِاللَّهِ وَمَلَائِكَتِهِ وَكُتُبِهِ وَرُسُلِهِ لَا نُفَرِّقُ بَيْنَ أَحَدٍ مِنْ رُسُلِهِ " +
                         "ۚ وَقَالُوا سَمِعْنَا وَأَطَعْنَا ۖ غُفْرَانَكَ رَبَّنَا وَإِلَيْكَ الْمَصِيرُ" +
@@ -113,16 +98,16 @@ public class MorAzkar extends AppCompatActivity {
                 , 1));
 
 
-        morItems.add(new ZekeritemModel(
+        morAzkar.add(new ZekeritemModel(
                 "بسم الله الرحمن الرحيم" + "\n" + "\n" +
                         " قُلْ هُوَ اللَّهُ أَحَد(1)اللَّهُ الصَّمَدُ(2)لَمْ يَلِدْ وَلَمْ يُولَدْ (3) وَلَمْ يَكُن لَّهُ كُفُواً أَحَد(4)" + "\n" + "\n" + "\n" + "( ثلاث مرات )" +
                         "\n", 3));
 
-        morItems.add(new ZekeritemModel(
+        morAzkar.add(new ZekeritemModel(
                 "بسم الله الرحمن الرحيم" + "\n" + "\n" + "قُلْ أَعُوذُ بِرَبِّ الْفَلَقِ (1) مِن شَرِّ مَا خَلَقَ (2) وَمِن شَرِّ غَاسِقٍ إِذَا وَقَبَ (3) وَمِن شَرِّ النَّفَّاثَاتِ فِي الْعُقَد (4) وَمِن شَرِّ حَاسِدٍ إِذَا حَسَدَ(5)" +
                         "\n" + "\n" + " ( ثلاث مرات ) ", 3));
 
-        morItems.add(new ZekeritemModel(
+        morAzkar.add(new ZekeritemModel(
 
 
                 "بسم الله الرحمن الرحيم" + "\n" + "\n" +
@@ -135,24 +120,24 @@ public class MorAzkar extends AppCompatActivity {
 
                 , 3));
 
-        morItems.add(new ZekeritemModel(
+        morAzkar.add(new ZekeritemModel(
                 "أصبحنا وأصبح الملك لله ، والحمد لله لا شريك له ، لا إله إلا هو وإليه النشور " + "\n" + "\n" +
                         "(ثلاثا)",3));
 
 
 
-        morItems.add(new ZekeritemModel("أَصْبَـحْـنا عَلَى فِطْرَةِ الإسْلاَمِ" +
+        morAzkar.add(new ZekeritemModel("أَصْبَـحْـنا عَلَى فِطْرَةِ الإسْلاَمِ" +
                         "، وَعَلَى كَلِمَةِ الإِخْلاَصِ، وَعَلَى دِينِ نَبِيِّنَا مُحَمَّدٍ صَلَّى اللهُ عَلَيْهِ وَسَلَّم" +
                         "َ، وَعَلَى مِلَّةِ أَبِينَا إبْرَاهِيمَ حَنِيفاً مُسْلِماً وَمَا كَانَ مِنَ المُشْرِكِينَ"
                         + "\n" + "\n" + " ( ثلاثا )", 3));
 
 
-        morItems.add(new ZekeritemModel(
+        morAzkar.add(new ZekeritemModel(
 
 
                 "اللهم أني أصبحت منك في نعمة وعافية وستر , فأتم علي نعمتك وعافيتك وسترك في الدنيا والآخر" + "\n" +
                         " (ثلاثا)",3));
-        morItems.add(new ZekeritemModel(
+        morAzkar.add(new ZekeritemModel(
 
                         "اللّهُـمَّ ما أَصْبَـَحَ بي مِـنْ نِعْـمَةٍ أَو بِأَحَـدٍ مِـنْ خَلْـقِك، فَمِـنْكَ وَحْـدَكَ لا شريكَ لَـك، فَلَـكَ الْحَمْـدُ وَلَـكَ الشُّكْـر  "
                         + "\n" + " (ثلاثا)" + "\n" + "\n"
@@ -163,7 +148,7 @@ public class MorAzkar extends AppCompatActivity {
                 , 3));
 
 
-        morItems.add(new ZekeritemModel(
+        morAzkar.add(new ZekeritemModel(
                 "اللّهُـمَّ إِنِّـي أَصْبَـحْتُ أُشْـهِدُك ، وَأُشْـهِدُ حَمَلَـةَ عَـرْشِـك ، وَمَلَائِكَتَكَ ، وَجَمـيعَ خَلْـقِك ، أَنَّـكَ أَنْـتَ اللهُ لا إلهَ إلاّ أَنْـتَ وَحْـدَكَ لا شَريكَ لَـك ، وَأَنَّ ُ مُحَمّـداً عَبْـدُكَ وَرَسـولُـك" + "\n" +
 
 
@@ -171,7 +156,7 @@ public class MorAzkar extends AppCompatActivity {
                 , 4));
 
 
-        morItems.add(new ZekeritemModel(
+        morAzkar.add(new ZekeritemModel(
 
                 "اللّهـمَّ أَنْتَ رَبِّـي لا إلهَ إلاّ أَنْتَ، خَلَقْتَنـي وَأَنا عَبْـدُك، وَأَنا عَلـى عَهْـدِكَ وَوَعْـدِكَ ما اسْتَـطَعْـت،" +
                         " أَعـوذُ بِكَ مِنْ شَـرِّ ما صَنَـعْت، أَبـوءُ لَـكَ بِنِعْـمَتِـكَ عَلَـيَّ وَأَبـوءُ بِذَنْـبي" +
@@ -184,14 +169,14 @@ public class MorAzkar extends AppCompatActivity {
                 , 3));
 
 
-        morItems.add(new ZekeritemModel(
+        morAzkar.add(new ZekeritemModel(
 
                 "رَضيـتُ بِاللهِ رَبَّـاً وَبِالإسْلامِ ديـناً وَبِمُحَـمَّدٍ صلى الله عليه وسلم نَبِيّـا" + "\n" + "\n" +
 
                         " ( ثلاث مرات )" + "\n" + "\n" + "من قالها حين يصبح وحين يمسى كان حقا على الله أن يرضيه يوم القيامة"
                 , 3));
 
-        morItems.add(new ZekeritemModel(
+        morAzkar.add(new ZekeritemModel(
 
                 "حَسْبِـيَ اللّهُ لا إلهَ إلاّ هُوَ عَلَـيهِ تَوَكَّـلتُ وَهُوَ رَبُّ العَرْشِ العَظـيم"
                         + "\n" + "\n" + "( سبع مرات )" + "\n" + "من قالها حين يصبح وحين يمسي سبع مرات كفاه الله ما اهمه من امر الدنيا والآخرة\n" +
@@ -200,7 +185,7 @@ public class MorAzkar extends AppCompatActivity {
 
                 , 7));
 
-        morItems.add(new ZekeritemModel(
+        morAzkar.add(new ZekeritemModel(
 
 
                 "بِسـمِ اللهِ الذي لا يَضُـرُّ مَعَ اسمِـهِ شَيءٌ في الأرْضِ وَلا في السّمـاءِ وَهـوَ السّمـيعُ العَلـيم " + "\n" + "\n" + " ( ثلاث مرات ) " + "\n" + "\n"
@@ -209,18 +194,18 @@ public class MorAzkar extends AppCompatActivity {
                 , 3));
 
 
-        morItems.add(new ZekeritemModel(
+        morAzkar.add(new ZekeritemModel(
 
                 "(اللهم إنا نعوذ بك من أن نشرك بك شيئا نعلمه ونستغفرك لما لا نعلمه) " + "\n" + "\n" +
                         "(ثلاثا)" ,3));
 
-        morItems.add(new ZekeritemModel("( أعوذ بكلمات الله التامات من شر ما خلق )"+ "\n"+"( ثلاثا )"
+        morAzkar.add(new ZekeritemModel("( أعوذ بكلمات الله التامات من شر ما خلق )"+ "\n"+"( ثلاثا )"
                 ,3  ));
 
 
 
 
-        morItems.add(new ZekeritemModel(
+        morAzkar.add(new ZekeritemModel(
                 "اللَّهُمَّ إِنِّي أَعُوذُ بِكَ مِنْ الْهَمِّ وَالْحَزَنِ، وَأَعُوذُ بِكَ مِنْ الْعَجْزِ وَالْكَسَلِ، وَأَعُوذُ بِكَ مِنْ الْجُبْنِ وَالْبُخْلِ، وَأَعُوذُ بِكَ مِنْ غَلَبَةِ الدَّيْنِ، وَقَهْرِ الرِّجَالِ"  +"\n" +
                         " (ثلاثا)" + "\n" +
 
@@ -229,54 +214,54 @@ public class MorAzkar extends AppCompatActivity {
 
                 , 3));
 
-        morItems.add(new ZekeritemModel("سُبْحـانَ اللهِ وَبِحَمْـدِهِ عَدَدَ خَلْـقِه، وَرِضـا نَفْسِـه، وَزِنَـةَ عَـرْشِـه، وَمِـدادَ كَلِمـاتِـه" +
+        morAzkar.add(new ZekeritemModel("سُبْحـانَ اللهِ وَبِحَمْـدِهِ عَدَدَ خَلْـقِه، وَرِضـا نَفْسِـه، وَزِنَـةَ عَـرْشِـه، وَمِـدادَ كَلِمـاتِـه" +
                         "\n" + "\n" + " ( ثلاث  مرات ) " ,3));
-        morItems.add(new ZekeritemModel(
+        morAzkar.add(new ZekeritemModel(
                         "اللّهُـمَّ عافِـني في بَدَنـي، اللّهُـمَّ عافِـني في سَمْـعي، اللّهُـمَّ عافِـني في بَصَـري " + "\n" + "\n" + "( ثلاث  مرات ) "
 
 
                 , 3));
 
-        morItems.add(new ZekeritemModel(
+        morAzkar.add(new ZekeritemModel(
 
 
                 "أسْتَغْفِرُ اللهَ العَظِيمَ الَّذِي لاَ إلَهَ إلاَّ هُوَ، الحَيُّ القَيُّومُ، وَأتُوبُ إلَيه" + "\n" + "\n" +
                         "( ثلاث مرات )",3));
 
-        morItems.add(new ZekeritemModel(
+        morAzkar.add(new ZekeritemModel(
 
                         "يَا رَبِّ، لَكَ الْحَمْدُ كَمَا يَنْبَغِي لِجَلَالِ وَجْهِكَ، وَلِعَظِيمِ سُلْطَانِكَ" + "\n" + "\n" +
                         "( ثلاث مرات )"
                 , 3));
 
 
-        morItems.add(new ZekeritemModel(
+        morAzkar.add(new ZekeritemModel(
                 "لَا إلَه إلّا اللهُ وَحْدَهُ لَا شَرِيكَ لَهُ، لَهُ الْمُلْكُ وَلَهُ الْحَمْدُ وَهُوَ عَلَى كُلِّ شَيْءِ قَدِير" + "\n" + "\n" +
                         " ( 100 مرة )"
                         + "\n" + "\n" + "كانت له عدل عشر رقاب، وكتبت له مئة حسنة، ومحيت عنه مئة سيئة، وكانت له حرزا من الشيطان"
 
                 , 100));
 
-        morItems.add(new ZekeritemModel(
+        morAzkar.add(new ZekeritemModel(
                 "اللَّهُمَّ صَلِّ وَسَلِّمْ وَبَارِكْ على نَبِيِّنَا مُحمَّد" + "\n" + "\n" +
                         "( عشر مرات )" + "\n" + "\n" + "من صلى علي حين يصبح وحين يمسى أدركته شفاعتي يوم القيامة"
 
                 , 10));
 
 
-        morItems.add(new ZekeritemModel(
+        morAzkar.add(new ZekeritemModel(
 
 
                  "اللَّهُمَّ إِنِّي أَسْأَلُكَ عِلْمًا نَافِعًا، وَرِزْقًا طَيِّبًا، وَعَمَلًا مُتَقَبَّلًا" + "\n" + "\n" +
                         "( ثلاث مرات )"
                 , 3));
 
-        morItems.add(new ZekeritemModel(
+        morAzkar.add(new ZekeritemModel(
                 "سُبْحـانَ اللهِ وَبِحَمْـدِه"+ "\n"+ "\n"+
                         " ( 100 مرة )" + "\n" + "\n" + "من قالها غُفِرَتْ له ذنوبُه ولو كانت مثلَ زبدِ البحرِ"
                 , 100));
 
-        morItems.add(new ZekeritemModel(
+        morAzkar.add(new ZekeritemModel(
                 "اللهم صل على سيدنا محمد عبدك ورسولك النبي الأمي وعلى آله وصحبه وسلم تسليما" +
                         " عدد ما أحاط به علمك وخط به قلمك وأحصاه كتابك " +
                         " وارض اللهم عن ساداتنا أبي بكر وعمر وعثمان وعلي " +
@@ -285,9 +270,5 @@ public class MorAzkar extends AppCompatActivity {
                         " سبحان ربك رب العزة " +
                         "عما يصفون  وسلام على المرسلين " +
                         " والحمد لله رب العالمين\n", 1));
-    }
-
-
-
-}
+    }}
 

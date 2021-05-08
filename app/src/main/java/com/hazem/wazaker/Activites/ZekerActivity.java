@@ -18,8 +18,8 @@ import at.markushi.ui.CircleButton;
 
 public class ZekerActivity extends AppCompatActivity {
 
-    CircleButton buttonplus;
-    TextView textViewplus;
+    CircleButton plusbutton;
+    TextView plus_text;
     List<ZekeritemModel> zekerItems;
     int[] zekerCounts;
 
@@ -34,34 +34,24 @@ public class ZekerActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_zeker);
-
-
-
+        
         int index = getIntent().getIntExtra("index", 0);
         loadData(index);
 
-        // view pager inside recycleview
+
         final ViewPager viewPager = findViewById(R.id.pager);
-        SlidePagerAdapter azadapter = new SlidePagerAdapter(this, zekerItems);
-        viewPager.setAdapter(azadapter);
-        // Ui
+        SlidePagerAdapter azkardapter = new SlidePagerAdapter(this, zekerItems);
+        viewPager.setAdapter(azkardapter);
+
+
         StepperIndicator indicator = findViewById(R.id.STEPP);
         indicator.setViewPager(viewPager);
 
-
-
-        // Copy button
-        Button copybtn =findViewById(R.id.copybtn);
+        Button copybtn = findViewById(R.id.copybtn);
         copybtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 String zeker = zekerItems.get(viewPager.getCurrentItem()).getZeker();
-               /*
-                ClipboardManager clipboard = (ClipboardManager) getSystemService(Context.CLIPBOARD_SERVICE);
-                ClipData clip =  ClipData.newPlainText("Text", zekerItems.get(viewPager.getCurrentItem()));
-                clipboard.setPrimaryClip(clip);
-               */
-
 
                 Intent sendIntent = new Intent();
                 sendIntent.setAction(Intent.ACTION_SEND);
@@ -70,8 +60,6 @@ public class ZekerActivity extends AppCompatActivity {
 
                 Intent shareIntent = Intent.createChooser(sendIntent, null);
                 startActivity(shareIntent);
-
-                //  Toast.makeText(AzkarActivity.this, "تم النسخ", Toast.LENGTH_SHORT).show();
             }
         });
 
@@ -79,43 +67,33 @@ public class ZekerActivity extends AppCompatActivity {
         viewPager.addOnPageChangeListener(new ViewPager.OnPageChangeListener() {
 
             @Override
-            public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {
-
-
-            }
+            public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {}
 
             @Override
-            public void onPageSelected(int position) {
-
-
-            }
+            public void onPageSelected(int position) {}
 
             @Override
             public void onPageScrollStateChanged(int state) {
+
                 String s = String.valueOf((zekerCounts[viewPager.getCurrentItem()]));
-                textViewplus.setText(s);
-                buttonplus.setOnClickListener(new View.OnClickListener() {
+                plus_text.setText(s);
+                plusbutton.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
                         updateScreen(viewPager);
                         autoswap(viewPager,viewPager.getCurrentItem());
-
-
                     }
                 });
             }
         });
 
-        // counter
-        buttonplus = findViewById(R.id.btnp);
-        textViewplus = findViewById(R.id.textViewplus);
-        buttonplus.setOnClickListener(new View.OnClickListener() {
+        plusbutton = findViewById(R.id.btnp);
+        plus_text = findViewById(R.id.textViewplus);
+        plusbutton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 updateScreen(viewPager);
                 autoswap(viewPager,viewPager.getCurrentItem());
-
-
             }
         });
     }
@@ -123,28 +101,23 @@ public class ZekerActivity extends AppCompatActivity {
     private void updateScreen(ViewPager viewPager) {
         zekerCounts[viewPager.getCurrentItem()]++;
         String s = String.valueOf((zekerCounts[viewPager.getCurrentItem()]));
-        textViewplus.setText(s);
+        plus_text.setText(s);
     }
 
 
 
     public void autoswap (ViewPager viewPager,int index ){
 
-        // number of counter now
-        int x =zekerCounts[viewPager.getCurrentItem()];
 
-        // counter of zeker
-        int y =zekerItems.get(index).getCounter();
+        int Current_counts = zekerCounts[viewPager.getCurrentItem()];
+        int Zeker_counts = zekerItems.get(index).getCounter();
 
 
-        if (x==y ){
-            // get current viewpager, then increament it
-            int next = viewPager.getCurrentItem() + 1;
-            // set it to next one
-            viewPager.setCurrentItem(next, true);        }
+        if (Current_counts == Zeker_counts ){
 
-
-
+            int next_page = viewPager.getCurrentItem() + 1;
+            viewPager.setCurrentItem( next_page , true);
+        }
     }}
 
 

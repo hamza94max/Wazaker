@@ -6,16 +6,16 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 import androidx.viewpager.widget.PagerAdapter;
-import com.hazem.wazaker.Models.ZekeritemModel;
+import com.hazem.wazaker.Models.ZekerModel;
 import java.util.List;
 
-public class SlidePagerAdapter extends PagerAdapter {
+public class SlideAzkarAdapter extends PagerAdapter {
 
-    private Context context;
-    public List<ZekeritemModel> mor;
+    private final Context context;
+    public List<ZekerModel> mor;
 
 
-    public SlidePagerAdapter(Context context, List<ZekeritemModel> mor) {
+    public SlideAzkarAdapter(Context context, List<ZekerModel> mor) {
         this.context = context;
         this.mor = mor;}
 
@@ -35,7 +35,7 @@ public class SlidePagerAdapter extends PagerAdapter {
     @Override
     public Object instantiateItem(ViewGroup container, int position) {
 
-        TextView textView=new TextView(context);
+        TextView textView = new TextView(context);
         textView.setText( mor.get(position).getZeker());
         textView.setTextSize(21);
         textView.setTextColor(Color.WHITE);

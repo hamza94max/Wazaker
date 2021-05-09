@@ -8,9 +8,9 @@ import android.widget.TextView;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.viewpager.widget.ViewPager;
 import com.badoualy.stepperindicator.StepperIndicator;
-import com.hazem.wazaker.Adapters.SlidePagerAdapter;
+import com.hazem.wazaker.Adapters.SlideAzkarAdapter;
 import com.hazem.wazaker.Data_sets.ZekerDataSet;
-import com.hazem.wazaker.Models.ZekeritemModel;
+import com.hazem.wazaker.Models.ZekerModel;
 import com.hazem.wazkar.R;
 import java.util.List;
 import at.markushi.ui.CircleButton;
@@ -20,7 +20,7 @@ public class ZekerActivity extends AppCompatActivity {
 
     CircleButton plusbutton;
     TextView plus_text;
-    List<ZekeritemModel> zekerItems;
+    List<ZekerModel> zekerItems;
     int[] zekerCounts;
 
 
@@ -40,7 +40,7 @@ public class ZekerActivity extends AppCompatActivity {
 
 
         final ViewPager viewPager = findViewById(R.id.pager);
-        SlidePagerAdapter azkardapter = new SlidePagerAdapter(this, zekerItems);
+        SlideAzkarAdapter azkardapter = new SlideAzkarAdapter(this, zekerItems);
         viewPager.setAdapter(azkardapter);
 
 

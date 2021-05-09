@@ -9,7 +9,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.viewpager.widget.ViewPager;
 
 import com.badoualy.stepperindicator.StepperIndicator;
-import com.hazem.wazaker.Adapters.SlideFortypagerAdapter;
+import com.hazem.wazaker.Adapters.SlideHadithAdapter;
 import com.hazem.wazaker.Data_sets.FortyDataSet;
 import com.hazem.wazkar.R;
 
@@ -26,7 +26,7 @@ public class FortyActivity extends AppCompatActivity {
                 loaddData(index);
 
             final ViewPager viewPager = findViewById(R.id.vpager);
-            SlideFortypagerAdapter fortyAdapter = new SlideFortypagerAdapter(this, Hadith );
+            SlideHadithAdapter fortyAdapter = new SlideHadithAdapter(this, Hadith );
             viewPager.setAdapter(fortyAdapter);
 
             StepperIndicator indicator = findViewById(R.id.STEPP);

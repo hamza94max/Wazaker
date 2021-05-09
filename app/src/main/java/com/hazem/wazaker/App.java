@@ -4,7 +4,6 @@ import android.app.Application;
 import android.app.NotificationChannel;
 import android.app.NotificationManager;
 import android.os.Build;
-
 import com.hazem.wazkar.R;
 
 public class App extends Application {
@@ -26,9 +25,6 @@ public class App extends Application {
             NotificationManager manager = getSystemService(NotificationManager.class);
 
             manager.createNotificationChannel(Channel1);
-
         }
-
-
     }
 }

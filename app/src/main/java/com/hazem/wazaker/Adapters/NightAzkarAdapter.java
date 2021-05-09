@@ -9,46 +9,45 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.TextView;
+
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
-import com.hazem.wazaker.Models.ZekeritemModel;
+
+import com.hazem.wazaker.Models.ZekerModel;
 import com.hazem.wazkar.R;
+
 import java.util.ArrayList;
+
 import at.markushi.ui.CircleButton;
 
-public class MoringAzkar_Adapter extends RecyclerView.Adapter<MoringAzkar_Adapter.HViewholder> {
+public class NightAzkarAdapter extends RecyclerView.Adapter<NightAzkarAdapter.NViewholder> {
 
 
-    private ArrayList<ZekeritemModel> model = new ArrayList<>();
+    private ArrayList<ZekerModel> models = new ArrayList<>();
 
-
-
-
-
-    public MoringAzkar_Adapter(ArrayList<ZekeritemModel> models, Context context) {
-        this.model = models;
+    public NightAzkarAdapter(ArrayList<ZekerModel> nightItems, Context baseContext) {
+        this.models=nightItems;
     }
+
+    @NonNull
     @Override
-    public HViewholder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+    public NViewholder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         LayoutInflater layoutInflater = LayoutInflater.from(parent.getContext());
         View v = layoutInflater.inflate(R.layout.morr_items, parent, false);
 
-
-        return new HViewholder(v);
+        return new NViewholder(v);
     }
-
-
 
 
     @SuppressLint("SetTextI18n")
     @Override
-    public void onBindViewHolder(@NonNull MoringAzkar_Adapter.HViewholder holder, int position) {
+    public void onBindViewHolder(@NonNull NViewholder holder, int position) {
 
-        holder.zekertext.setText(model.get(position).getZeker());
+        holder.zekertext.setText(models.get(position).getZeker());
         holder.copybtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                String zeker = model.get(position).getZeker();
+                String zeker = models.get(position).getZeker();
 
                 Intent sendIntent = new Intent();
                 sendIntent.setAction(Intent.ACTION_SEND);
@@ -61,10 +60,10 @@ public class MoringAzkar_Adapter extends RecyclerView.Adapter<MoringAzkar_Adapte
         });
 
 
-        final ZekeritemModel item = model.get(position);
+        final ZekerModel item = models.get(position);
         final int[] count = {item.getCurrentCount()};
-        final Boolean[] ch = {item.getChecked()};
-        holder.checkBox.setChecked(ch[0]);
+        final Boolean[] checked = {item.getChecked()};
+        holder.checkBox.setChecked(checked[0]);
         holder.plustext.setText(Integer.toString(count[0]));
 
 
@@ -74,25 +73,27 @@ public class MoringAzkar_Adapter extends RecyclerView.Adapter<MoringAzkar_Adapte
                 count[0]++;
                 item.setCurrentCount(count[0]);
                 holder.plustext.setText(Integer.toString(count[0]));
-                if (count[0] >=model.get(position).getCounter()){
-                    ch[0] =true;
-                    item.setChecked(ch[0]);
-                    holder.checkBox.setChecked(ch[0]);
+                if (count[0] >=models.get(position).getCounter()){
+                    checked[0] =true;
+                    item.setChecked(checked[0]);
+                    holder.checkBox.setChecked(checked[0]);
                 }
-            }});}
+    }});}
+
+
+
 
     @Override
     public int getItemCount() {
-        return model.size();
+        return models.size();
     }
 
-     static class HViewholder extends RecyclerView.ViewHolder {
-      TextView zekertext , plustext;
-      Button copybtn;
-      CircleButton plusbtn;
-      CheckBox checkBox;
-      
-         HViewholder(View itemView) {
+    public class NViewholder extends RecyclerView.ViewHolder {
+        TextView zekertext , plustext;
+        Button copybtn;
+        CircleButton plusbtn;
+        CheckBox checkBox;
+        public NViewholder(@NonNull View itemView) {
             super(itemView);
             zekertext = itemView.findViewById(R.id.zekertext);
             copybtn = itemView.findViewById(R.id.copybtn);

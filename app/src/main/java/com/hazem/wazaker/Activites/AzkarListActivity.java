@@ -5,7 +5,7 @@ import android.os.Bundle;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
-import com.hazem.wazaker.Adapters.AzkarAdapter;
+import com.hazem.wazaker.Adapters.AzkarListAdapter;
 import com.hazem.wazaker.Models.Azkar_model;
 import com.hazem.wazkar.R;
 import java.util.ArrayList;
@@ -56,7 +56,7 @@ import java.util.ArrayList;
             LinearLayoutManager layoutManager = new LinearLayoutManager(this);
             recyclerView.setLayoutManager(layoutManager);
 
-            AzkarAdapter adapter = new AzkarAdapter(Azkar_titles, AzkarListActivity.this);
+            AzkarListAdapter adapter = new AzkarListAdapter(Azkar_titles, AzkarListActivity.this);
             recyclerView.setAdapter(adapter);
             recyclerView.setHasFixedSize(true);
 

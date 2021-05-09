@@ -2,14 +2,14 @@ package com.hazem.wazaker.Models;
 
 import androidx.annotation.NonNull;
 
-public class ZekeritemModel implements CharSequence {
+public class ZekerModel implements CharSequence {
 
     private String zeker ;
     private int counter ;
     private boolean checked;
     private int currentCount = 0;
 
-    public ZekeritemModel(String zeker, int counter) {
+    public ZekerModel(String zeker, int counter) {
         this.zeker = zeker;
         this.counter = counter;
     }

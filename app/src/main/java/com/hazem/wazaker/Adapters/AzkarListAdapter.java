@@ -1,26 +1,28 @@
 package com.hazem.wazaker.Adapters;
 
-
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
+
 import androidx.recyclerview.widget.RecyclerView;
+
 import com.hazem.wazaker.Models.Azkar_model;
-import com.hazem.wazkar.R;
 import com.hazem.wazaker.listeners.ItemListner;
-import java.security.AccessControlContext;
-import java.util.ArrayList;
+import com.hazem.wazkar.R;
+
 import java.util.List;
 
-public class FortyAdapter extends RecyclerView.Adapter<FortyAdapter.Myviewholder> {
+public class AzkarListAdapter extends RecyclerView.Adapter<AzkarListAdapter.ViewHolder> {
+
 
 
     private ItemListner listner;
-    private final List<Azkar_model> fortyList;
+    private final List<Azkar_model> azkar_modelList;
 
-    public FortyAdapter(ArrayList<Azkar_model> fortyList, AccessControlContext context) {
-        this.fortyList=fortyList;
+
+    public AzkarListAdapter(List<Azkar_model> items ) {
+        this.azkar_modelList = items;
     }
 
 
@@ -30,39 +32,38 @@ public class FortyAdapter extends RecyclerView.Adapter<FortyAdapter.Myviewholder
         this.listner = listner;
     }
 
-
-
-
     @Override
-    public Myviewholder onCreateViewHolder(ViewGroup parent, int viewType) {
+    public AzkarListAdapter.ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         LayoutInflater layoutInflater = LayoutInflater.from(parent.getContext());
-        View view = layoutInflater.inflate(R.layout.simple_cell, parent, false);
-        return new Myviewholder(view);
+        View v = layoutInflater.inflate(R.layout.simple_cell, parent, false);
+        return new ViewHolder(v);
     }
 
     @Override
-    public void onBindViewHolder(Myviewholder holder, int position) {
-        Azkar_model p = fortyList.get(position);
-        holder.title.setText(p.getName());
+    public void onBindViewHolder(final ViewHolder holder,  int position) {
+
+        Azkar_model azkarModel = azkar_modelList.get(position);
+        holder.title.setText(azkarModel.getName());
+       
     }
 
     @Override
     public int getItemCount() {
-        return fortyList.size();
+        return azkar_modelList.size();
     }
 
 
-
-    class Myviewholder extends RecyclerView.ViewHolder {
+    class ViewHolder extends RecyclerView.ViewHolder {
         TextView title;
 
-        public Myviewholder(View itemView) {
+        public ViewHolder(View itemView) {
             super(itemView);
             title = itemView.findViewById(R.id.tvTitle);
             itemView.setOnClickListener((e) -> {
                 listner.onItemCLicked(getAdapterPosition());
             });
-
         }
     }
+
 }
+

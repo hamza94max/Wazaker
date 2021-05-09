@@ -1,28 +1,22 @@
 package com.hazem.wazaker.Data_sets;
 
 
-import com.hazem.wazaker.Models.ZekeritemModel;
+import com.hazem.wazaker.Models.ZekerModel;
 
 import java.util.ArrayList;
 import java.util.List;
 
 
-// TODO: 4/18/20 Try to use Model(ZekerItem for ex ) it hold zeker text , and count of times for ex ZekerItem("abc" , 3) this help you to add more features
 public class ZekerDataSet {
 
-
-    public static List<ZekeritemModel> zekeritemList;
-
-
-
-
-    public static List<ZekeritemModel> getZekerList(int index) {
+    public static List<ZekerModel> zekeritemList;
+    public static List<ZekerModel> getZekerList(int index) {
 
         //TODO AZKAR MASJED
         if (index == 0){
             zekeritemList=new ArrayList<>();
 
-            zekeritemList.add(new ZekeritemModel(
+            zekeritemList.add(new ZekerModel(
 
                     "دُعَاءُ الذَّهَابِ إلَى المَسْجِدِ" + "\n" + "\n" +
 
@@ -35,7 +29,7 @@ public class ZekerDataSet {
                     ,1));
 
 
-            zekeritemList.add(new ZekeritemModel(
+            zekeritemList.add(new ZekerModel(
             "دُعَاءُ دُخُولِ المَسْجِدِ" + "\n" + "\n" +
                     "يَبْدَأُ بِرِجْلِهِ اليُمْنَى، وَيَقُولُ:" + "\n" +
                     "أَعوذُ باللهِ العَظيـم وَبِوَجْهِـهِ الكَرِيـم " +
@@ -45,7 +39,7 @@ public class ZekerDataSet {
 
                     , 1));
 
-            zekeritemList.add(new ZekeritemModel(
+            zekeritemList.add(new ZekerModel(
             "دُعَاءُ الخُرُوجِ مِنَ المَسْجِدِ" + "\n" + "\n" +
                     "يَبْدَأُ بِرِجْلِهِ الْيُسْرَى، وَيَقُولُ:" + "\n" +
                     "بِسْـمِ اللَّـهِ وَالصَّلاةُ وَالسَّلامُ عَلَى رَسُولِ اللَّهِ، اللَّهُمَّ إنِّي أَسْأَلُكَ مِنْ فَضْلِكَ، اللَّهُمَّ اعْصِمْنِي مِنَ الشَّيْطَانِ الرَّجِيم. ",1));
@@ -61,18 +55,18 @@ public class ZekerDataSet {
             zekeritemList=new ArrayList<>();
 
 
-            zekeritemList.add(new ZekeritemModel(
+            zekeritemList.add(new ZekerModel(
                     "أَسْـتَغْفِرُ الله، أَسْـتَغْفِرُ الله، أَسْـتَغْفِرُ الله" + "\n" +
                             "اللّهُـمَّ أَنْـتَ السَّلامُ ، وَمِـنْكَ السَّلام ، تَبارَكْتَ يا ذا الجَـلالِ وَالإِكْـرام"
 
 
                     ,1));
-            zekeritemList.add(new ZekeritemModel(
+            zekeritemList.add(new ZekerModel(
                     "لا إلهَ إلاّ اللّهُ وحدَهُ لا شريكَ لهُ، لهُ المُـلْكُ ولهُ الحَمْد، وهوَ على كلّ شَيءٍ قَدير،" +
                             " اللّهُـمَّ لا مانِعَ لِما أَعْطَـيْت، وَلا مُعْطِـيَ لِما مَنَـعْت، " +
                             "وَلا يَنْفَـعُ ذا الجَـدِّ مِنْـكَ الجَـد"
                     ,1));
-            zekeritemList.add(new ZekeritemModel(
+            zekeritemList.add(new ZekerModel(
                     "لا إلهَ إلاّ اللّه, وحدَهُ لا شريكَ لهُ، لهُ الملكُ ولهُ الحَمد، وهوَ على كلّ شيءٍ قدير،" +
                             " لا حَـوْلَ وَلا قـوَّةَ إِلاّ بِاللهِ، لا إلهَ إلاّ اللّـه، وَلا نَعْـبُـدُ إِلاّ إيّـاه," +
                             " لَهُ النِّعْـمَةُ وَلَهُ الفَضْل وَلَهُ الثَّـناءُ الحَـسَن،" +
@@ -82,7 +76,7 @@ public class ZekerDataSet {
 
                     ,1));
 
-            zekeritemList.add(new ZekeritemModel("سُـبْحانَ اللهِ\n" +
+            zekeritemList.add(new ZekerModel("سُـبْحانَ اللهِ\n" +
                     "\n" +
                     "( ثلاثة و ثلاثون مرة )\n" +"\n" +
                     "الحَمْـدُ لله\n" +
@@ -95,7 +89,7 @@ public class ZekerDataSet {
 
 
                     ,99));
-            zekeritemList.add(new ZekeritemModel(
+            zekeritemList.add(new ZekerModel(
                     "بِسْمِ اللهِ الرَّحْمنِ الرَّحِيم" + "\n" +
                             "قُلْ هُوَ ٱللَّهُ أَحَدٌ، ٱللَّهُ ٱلصَّمَدُ، لَمْ يَلِدْ وَلَمْ يُولَدْ، وَلَمْ يَكُن لَّهُۥ كُفُوًا أَحَدٌۢ" + "\n" + "\n" +
                             "بِسْمِ اللهِ الرَّحْمنِ الرَّحِيم" + "\n" +
@@ -106,7 +100,7 @@ public class ZekerDataSet {
 
                             "ثلاث مرات بعد صلاتي الفجر والمغرب. ومرة بعد الصلوات الأخرى "
                     ,9));
-            zekeritemList.add(new ZekeritemModel(
+            zekeritemList.add(new ZekerModel(
                     "أَعُوذُ بِاللهِ مِنْ الشَّيْطَانِ الرَّجِيم" + "\n" +
                             "اللّهُ لاَ إِلَـهَ إِلاَّ هُوَ الْحَيُّ الْقَيُّومُ لاَ تَأْخُذُهُ سِنَةٌ وَلاَ نَوْمٌ لَّهُ مَا فِي السَّمَاوَاتِ وَمَا فِي الأَرْضِ مَن ذَا" +
                             " الَّذِي يَشْفَعُ عِنْدَهُ إِلاَّ بِإِذْنِهِ يَعْلَمُ مَا بَيْنَ أَيْدِيهِمْ وَمَا خَلْفَهُمْ وَلاَ يُحِيطُونَ بِشَيْءٍ مِّنْ عِلْمِهِ إِلاَّ بِمَا شَاء" +
@@ -120,14 +114,14 @@ public class ZekerDataSet {
 
 
 
-            zekeritemList.add(new ZekeritemModel(
+            zekeritemList.add(new ZekerModel(
             "لا إلهَ إلاّ اللّهُ وحْـدَهُ لا شريكَ لهُ، لهُ المُلكُ ولهُ الحَمْد، يُحيـي وَيُمـيتُ وهُوَ على كُلّ شيءٍ قدير" + "\n" + "\n" + "\n" +
                     "عَشْر مَرّات بَعْدَ المَغْرِب وَالصّـبْح"
 
                     , 10));
 
 
-            zekeritemList.add(new ZekeritemModel(
+            zekeritemList.add(new ZekerModel(
             "اللَّهُمَّ أَجِرْنِي مِنْ النَّار"
 
                    +"\n" +"\n" +"\n" +
@@ -143,7 +137,7 @@ public class ZekerDataSet {
         else if (index == 2) {
             zekeritemList=new ArrayList<>();
 
-            zekeritemList.add(new ZekeritemModel(
+            zekeritemList.add(new ZekerModel(
                     "ما يقال عند سماع الأذان" + "\n" +
                             "يَقُولُ مِثْلَ مَا يَقُولُ الـمُؤَذِّنُ إلاَّ فِي حَيَّ عَلَى الصَّلاةِ وَحَيَّ عَلَى الفَلاَح  فَيَقُولُ: لاَ حَوْلَ وَلا قُوَّةَ إلاَّ باللَّهِ"
 
@@ -159,7 +153,7 @@ public class ZekerDataSet {
 
 
                     ,1));
-            zekeritemList.add(new ZekeritemModel(
+            zekeritemList.add(new ZekerModel(
                     "ما يقال بعد سماع الأذان" + "\n" + "\n" +
                             "عَنْ جابرٍ بن عبد الله رضَي اللَّه عنهما" +
                             "أَنَّ رَسُولَ اللَّهِ صَلّى اللهُ عَلَيْهِ وسَلَّم قَالَ : " + "\n" +
@@ -171,7 +165,7 @@ public class ZekerDataSet {
                             "رواه البخاري"
                     ,1));
 
-            zekeritemList.add(new ZekeritemModel(
+            zekeritemList.add(new ZekerModel(
                     "ما يقال بين الأذان والإقامة" + "\n" + "\n" +
                             "ما بين الأذان والإقامة فالدعاء عندئذٍ مرغّب فيه ومستحب " + "\n" + "\n" +
                             "قَالَ رَسُولُ اللَّهِ صَلَّى اللَّهُ عَلَيْهِ وَسَلَّمَ:" + "\n" +
@@ -188,7 +182,7 @@ public class ZekerDataSet {
         else if (index == 3) {
             zekeritemList=new ArrayList<>();
 
-            zekeritemList.add(new ZekeritemModel(
+            zekeritemList.add(new ZekerModel(
                     "الذكر قبل الوضوء :" + "\n" +
                             " بِسْمِ ٱللّٰه"
 
@@ -207,14 +201,14 @@ public class ZekerDataSet {
         else if (index == 4) {
             zekeritemList=new ArrayList<>();
 
-            zekeritemList.add(new ZekeritemModel(
+            zekeritemList.add(new ZekerModel(
                     "رَبَّنَا آتِنَا فِي الدُّنْيَا حَسَنَةً وَفِي الآخِرَةِ حَسَنَةً وَقِنَا عَذَابَ النَّارِ" + "\n" + "\n" +
 
                             "[البقرة - 201]"
 
                     ,1));
 
-            zekeritemList.add(new ZekeritemModel(
+            zekeritemList.add(new ZekerModel(
 
 
                     "رَبَّنَا لاَ تُؤَاخِذْنَا إِن نَّسِينَا أَوْ أَخْطَأْنَا رَبَّنَا وَلاَ تَحْمِلْ عَلَيْنَا إِصْرًا كَمَا حَمَلْتَهُ عَلَى الَّذِينَ مِن قَبْلِنَا رَبَّنَا" +
@@ -222,14 +216,14 @@ public class ZekerDataSet {
                             " [البقرة - 286]"
                     ,1));
 
-            zekeritemList.add(new ZekeritemModel(
+            zekeritemList.add(new ZekerModel(
 
                     "رَبَّنَا لاَ تُزِغْ قُلُوبَنَا بَعْدَ إِذْ هَدَيْتَنَا وَهَبْ لَنَا مِن لَّدُنكَ رَحْمَةً إِنَّكَ أَنتَ الْوَهَّابُ" + "\n" + "\n"
                             + "[آل عمران - 8]"
 
                     ,1));
 
-            zekeritemList.add(new ZekeritemModel(
+            zekeritemList.add(new ZekerModel(
                     "رَبَّنَا إِنَّنَا آمَنَّا فَاغْفِرْ لَنَا ذُنُوبَنَا وَقِنَا عَذَابَ النَّارِ" + "\n" + "\n" +
                             "[آل عمران - 16]"
 
@@ -241,7 +235,7 @@ public class ZekerDataSet {
 
                     ,1));
 
-            zekeritemList.add(new ZekeritemModel(
+            zekeritemList.add(new ZekerModel(
 
                     "رَبَّنَا آمَنَّا بِمَا أَنزَلْتَ وَاتَّبَعْنَا الرَّسُولَ فَاكْتُبْنَا مَعَ الشَّاهِدِينَ" + "\n" + "\n" +
 
@@ -253,7 +247,7 @@ public class ZekerDataSet {
                             "[آل عمران - 147]"
                     ,1));
 
-            zekeritemList.add(new ZekeritemModel(
+            zekeritemList.add(new ZekerModel(
 
                     "رَبَّنَا مَا خَلَقْتَ هَذا بَاطِلاً سُبْحَانَكَ فَقِنَا عَذَابَ النَّارِ رَبَّنَا إِنَّكَ مَن تُدْخِلِ النَّارَ فَقَدْ أَخْزَيْتَهُ وَمَا لِلظَّالِمِينَ مِنْ أَنصَارٍ " +
                             "رَّبَّنَا إِنَّنَا سَمِعْنَا مُنَادِيًا يُنَادِي لِلإِيمَانِ أَنْ آمِنُواْ بِرَبِّكُمْ فَآمَنَّا رَبَّنَا فَاغْفِرْ لَنَا ذُنُوبَنَا وَكَفِّرْ عَنَّا سَيِّئَاتِنَا" +
@@ -262,14 +256,14 @@ public class ZekerDataSet {
                             "[آل عمران -  191-194]"
 
                     ,1));
-            zekeritemList.add(new ZekeritemModel(
+            zekeritemList.add(new ZekerModel(
                     "رَبَّنَا ظَلَمْنَا أَنفُسَنَا وَإِن لَّمْ تَغْفِرْ لَنَا وَتَرْحَمْنَا لَنَكُونَنَّ مِنَ الْخَاسِرِينَ" + "\n" + "\n" +
 
                             "[الأعراف - 23]"
                     ,1));
 
 
-            zekeritemList.add(new ZekeritemModel(
+            zekeritemList.add(new ZekerModel(
 
                     "رَبَّنَا لاَ تَجْعَلْنَا مَعَ الْقَوْمِ الظَّالِمِينَ" + "\n" + "\n" +
 
@@ -281,19 +275,19 @@ public class ZekerDataSet {
                             "[الأعراف - 126]"
                     ,1));
 
-            zekeritemList.add(new ZekeritemModel(
+            zekeritemList.add(new ZekerModel(
                     "حَسْبِيَ اللّهُ لا إِلَـهَ إِلاَّ هُوَ عَلَيْهِ تَوَكَّلْتُ وَهُوَ رَبُّ الْعَرْشِ الْعَظِيمِ" + "\n" + "\n" +
 
                             "[التوبة - 129]"
                     ,1));
 
-            zekeritemList.add(new ZekeritemModel(
+            zekeritemList.add(new ZekerModel(
                     "رَبَّنَا لاَ تَجْعَلْنَا فِتْنَةً لِّلْقَوْمِ الظَّالِمِينَ وَنَجِّنَا بِرَحْمَتِكَ مِنَ الْقَوْمِ الْكَافِرِينَ" + "\n" + "\n" +
 
                             "[يونس - 85-86]"
 
                     ,1));
-            zekeritemList.add(new ZekeritemModel(
+            zekeritemList.add(new ZekerModel(
 
                     "رَبِّ إِنِّي أَعُوذُ بِكَ أَنْ أَسْأَلَكَ مَا لَيْسَ لِي بِهِ عِلْمٌ وَإِلاَّ تَغْفِرْ لِي وَتَرْحَمْنِي أَكُن مِّنَ الْخَاسِرِينَ" + "\n" + "\n" +
 
@@ -301,7 +295,7 @@ public class ZekerDataSet {
                             "[هود - 47]"
 
                     ,1));
-            zekeritemList.add(new ZekeritemModel(
+            zekeritemList.add(new ZekerModel(
                     "رَبِّ اجْعَلْنِي مُقِيمَ الصَّلاَةِ وَمِن ذُرِّيَّتِي رَبَّنَا وَتَقَبَّلْ دُعَاء" + "\n" + "\n" +
 
 
@@ -313,7 +307,7 @@ public class ZekerDataSet {
                             "[إبرهيم - 41]"
 
                     ,1));
-            zekeritemList.add(new ZekeritemModel(
+            zekeritemList.add(new ZekerModel(
                     "رَّبِّ أَدْخِلْنِي مُدْخَلَ صِدْقٍ وَأَخْرِجْنِي مُخْرَجَ صِدْقٍ وَاجْعَل لِّي مِن لَّدُنكَ سُلْطَانًا نَّصِيرًا" + "\n" + "\n" +
 
 
@@ -326,7 +320,7 @@ public class ZekerDataSet {
                             "[الكهف - 10]"
                     ,1));
 
-            zekeritemList.add(new ZekeritemModel(
+            zekeritemList.add(new ZekerModel(
 
                     "رَبِّ اشْرَحْ لِي صَدْرِي وَيَسِّرْ لِي أَمْرِي وَاحْلُلْ عُقْدَةً مِّن لِّسَانِي يَفْقَهُوا قَوْلِي" + "\n" + "\n" +
 
@@ -337,7 +331,7 @@ public class ZekerDataSet {
                             "[طه - 114]"
 
                     ,1));
-            zekeritemList.add(new ZekeritemModel(
+            zekeritemList.add(new ZekerModel(
 
                     "لا إِلَهَ إِلا أَنتَ سُبْحَانَكَ إِنِّي كُنتُ مِنَ الظَّالِمِينَ" + "\n" + "\n" +
 
@@ -350,7 +344,7 @@ public class ZekerDataSet {
                             "[الأنبياء - 89]"
 
                     ,1));
-            zekeritemList.add(new ZekeritemModel(
+            zekeritemList.add(new ZekerModel(
                     "رَّبِّ أَعُوذُ بِكَ مِنْ هَمَزَاتِ الشَّيَاطِينِ وَأَعُوذُ بِكَ رَبِّ أَن يَحْضُرُونِ" + "\n" + "\n" +
 
 
@@ -361,7 +355,7 @@ public class ZekerDataSet {
                             "[المؤمنون - 109]"
 
                     ,1));
-            zekeritemList.add(new ZekeritemModel(
+            zekeritemList.add(new ZekerModel(
 
                     "رَّبِّ اغْفِرْ وَارْحَمْ وَأَنتَ خَيْرُ الرَّاحِمِينَ" + "\n" + "\n" +
 
@@ -373,7 +367,7 @@ public class ZekerDataSet {
         else if (index == 5) {
             zekeritemList=new ArrayList<>();
 
-            zekeritemList.add(new ZekeritemModel(
+            zekeritemList.add(new ZekerModel(
 
                     "سيد الاستغفار" + "\n" +
                             "اللَّهُمَّ أنَْتَ رَبيِّ لَا إلِهََ إلَِّا أنَتَ، خَلَقْتنَيِ وَأنََا عَبدُْكَ،" +
@@ -382,7 +376,7 @@ public class ZekerDataSet {
 
                             "رواه البخاري"
                     ,1));
-            zekeritemList.add(new ZekeritemModel(
+            zekeritemList.add(new ZekerModel(
 
                     "رَبِّ اغْفِرْ لِي خَطِيئَتِي وَجَهْلِي وَإِسْرَافِي فِي أَمْرِي كُلِّهِ وَمَا أَنْتَ أَعْلَمُ بِهِ مِنِّي، " +
                             "اللَّهُمَّ اغْفِرْ لِي خَطَايَايَ وَعَمْدِي وَجَهْلِي وَهَزْلِي، وَكُلُّ ذَلِكَ عِنْدِي،" +
@@ -392,7 +386,7 @@ public class ZekerDataSet {
 
                     ,1));
 
-            zekeritemList.add(new ZekeritemModel(
+            zekeritemList.add(new ZekerModel(
 
                     "اللَّهُمَّ إِنِّي ظَلَمْتُ نَفْسِي ظُلْمًا كَثِيرًا،" +
                             " وَلَا يَغْفِرُ الذُّنُوبَ إِلَّا أَنْتَ، فَاغْفِرْ لِي مَغْفِرَةً مِنْ عِنْدِكَ " +
@@ -400,14 +394,14 @@ public class ZekerDataSet {
                             "رواه البخاري ومسلم"
 
                     ,1));
-            zekeritemList.add(new ZekeritemModel(
+            zekeritemList.add(new ZekerModel(
 
                     "اللَّهُمَّ إِنِّي أَعُوذُ بِكَ مِنَ الْهَمِّ وَالْحَزَنِ وَالْعَجْزِ وَالْكَسَلِ وَالْجُبْنِ وَالْبُخْلِ وَضَلَعِ الدَّيْنِ وَغَلَبَةِ الرِّجَالِ" + "\n" + "\n" +
 
                             "رواه البخاري "
 
                     ,1));
-            zekeritemList.add(new ZekeritemModel(
+            zekeritemList.add(new ZekerModel(
 
                     "اللَّهُمَّ إنِِّي أَعُوذُ بكَِ مِنَ الْبُخْلِ،" +
                             " وَأَعُوذُ بكَِ مِنَ الْجُبْنِ،" +
@@ -418,7 +412,7 @@ public class ZekerDataSet {
                             "رواه البخاري"
 
                     ,1));
-            zekeritemList.add(new ZekeritemModel(
+            zekeritemList.add(new ZekerModel(
 
                     "اللَّهُمَّ إِنِّي أَعُوذُ بِكَ مِنَ الْكَسَلِ وَالْهَرَمِ وَالْمَأْثَمِ وَالْمَغْرَمِ،" +
                             " وَمِنْ فِتْنَةِ الْقَبْرِ وَعَذَابِ الْقَبْرِ، وَمِنْ فِتْنَةِ النَّارِ وَعَذَابِ النَّارِ،" +
@@ -434,7 +428,7 @@ public class ZekerDataSet {
 
 
                     ,1));
-            zekeritemList.add(new ZekeritemModel(
+            zekeritemList.add(new ZekerModel(
 
                     "اللَّهُمَّ إِنِّي أَعُوذُ بِكَ مِنْ شَرِّ مَا عَمِلْتُ وَمِنْ شَرِّ مَا لَمْ أَعْمَلْ" + "\n" + "\n" +
 
@@ -442,7 +436,7 @@ public class ZekerDataSet {
                             "رواه مسلم"
 
                     ,1));
-            zekeritemList.add(new ZekeritemModel(
+            zekeritemList.add(new ZekerModel(
 
                     "اللَّهُمَّ رَبَّ السَّمَوَاتِ وَرَبَّ الْأَرْضِ وَرَبَّ الْعَرْشِ الْعَظِيمِ، رَبَّنَا وَرَبَّ كُلِّ شَيْءٍ، فَالِقَ الْحَبِّ وَالنَّوَى" +
                             " وَمُنْزِلَ التَّوْرَاةِ وَالْإِنْجِيلِ وَالْفُرْقَانِ، أَعُوذُ بِكَ مِنْ شَرِّ كُلِّ شَيْءٍ أَنْتَ آخِذٌ بِنَاصِيَتهِِ،" +
@@ -454,7 +448,7 @@ public class ZekerDataSet {
                     ,1));
 
 
-            zekeritemList.add(new ZekeritemModel(
+            zekeritemList.add(new ZekerModel(
                     "اللَّهُمَّ أَصْلِحْ لِي دِينِي الَّذِي هُوَ عِصْمَةُ أَمْرِي، وَأَصْلِحْ لِي دُنْيَايَ الَّتِي فِيهَا مَعَاشِي، " +
                             "وَأَصْلِحْ لِي آخِرَتِي الَّتِي فِيهَا مَعَادِي وَاجْعَلِ الْحَيَاةَ زِيَادَةً لِي فِي كُلِّ خَيْرٍ، " +
                             "وَاجْعَلِ الْمَوْتَ رَاحَةً لِي مِنْ كُلِّ شَرٍّ" + "\n" + "\n" +
@@ -463,7 +457,7 @@ public class ZekerDataSet {
                             "رواه مسلم"
 
                     ,1));
-            zekeritemList.add(new ZekeritemModel(
+            zekeritemList.add(new ZekerModel(
 
                     "اللَّهُمَّ إِنِّي أَسْأَلُكَ الْهُدَى وَالتُّقَى وَالْعَفَافَ وَالْغِنَي" + "\n" + "\n" +
 
@@ -471,7 +465,7 @@ public class ZekerDataSet {
                             "رواه مسلم"
                     ,1));
 
-            zekeritemList.add(new ZekeritemModel(
+            zekeritemList.add(new ZekerModel(
 
                     "اللَّهُمَّ إِنِّي أَعُوذُ بِكَ مِنْ زَوَالِ نِعْمَتِكَ وَتَحَوُّلِ عَافِيَتِكَ وَفُجَاءَةِ نِقْمَتِكَ وَجَمِيعِ سَخَطِكَ" + "\n" + "\n" +
 
@@ -479,20 +473,20 @@ public class ZekerDataSet {
                             "رواه مسلم"
 
                     ,1));
-            zekeritemList.add(new ZekeritemModel(
+            zekeritemList.add(new ZekerModel(
                     "اللَّهُمَّ مُصَرِّفَ الْقُلُوبِ صَرِّفْ قُلُوبَنَا عَلَى طَاعَتِكَ" + "\n" + "\n" +
 
                             "رواه مسلم"
 
                     ,1));
-            zekeritemList.add(new ZekeritemModel(
+            zekeritemList.add(new ZekerModel(
                     "اللَّهُمَّ إِنِّي أَعُوذُ بِرِضَاكَ مِنْ سَخَطِكَ، وَبِمُعَافَاتِكَ مِنْ عُقُوبَتِكَ، وَأَعُوذُ بِكَ مِنْكَ،" +
                             " لَا أُحْصِي ثَنَاءً عَلَيْكَ، أَنْتَ كَمَا أَثْنَيْتَ عَلَى نَفْسِكَ" + "\n" + "\n" +
 
 
                             "رواه مسلم"
                     ,1));
-            zekeritemList.add(new ZekeritemModel(
+            zekeritemList.add(new ZekerModel(
 
                     "اللَّهُمَّ إِنِّي أَعُوذُ بِكَ مِنْ جَهْدِ الْبَلَاءِ وَدَرَكِ الشَّقَاءِ وَسُوءِ الْقَضَاءِ وَشَمَاتَةِ الْأَعْدَاءِ" + "\n" + "\n" +
 
@@ -500,7 +494,7 @@ public class ZekerDataSet {
 
 
                     ,1));
-            zekeritemList.add(new ZekeritemModel(
+            zekeritemList.add(new ZekerModel(
 
 
                     "اللَّهُمَّ اجْعَلْ لِي فِي قَلْبِي نُورًا، وَفِي لِسَانِي نُورًا، وَفِي سَمْعِي نُورًا،" +
@@ -511,7 +505,7 @@ public class ZekerDataSet {
 
                             "رواه البخاري  ومسلم"
                     ,1));
-            zekeritemList.add(new ZekeritemModel(
+            zekeritemList.add(new ZekerModel(
 
                     "اللَّهُمَّ إِنِّي أَسْأَلُكَ مِنَ الْخَيْرِ كُلِّهِ عَاجِلِهِ وَآجِلِهِ مَا عَلِمْتُ مِنْهُ وَمَا لَمْ أَعْلَم،ْ" +
                             " وَأَعُوذُ بِكَ مِنَ الشَّرِّ كُلِّهِ عَاجِلِهِ وَآجِلِهِ مَا عَلِمْتُ مِنْهُ وَمَا لَمْ أَعْلَمْ، اللَّهُمَّ إِنِّي أَسْأَلُكَ مِنْ خَيْرِ مَا سَأَلَكَ عَبْدُكَ وَنَبِيُّكَ،" +
@@ -521,7 +515,7 @@ public class ZekerDataSet {
                             "رواه ابن ماجه (3846) بإسناد صحيح عن عائشة"
 
                     ,1));
-            zekeritemList.add(new ZekeritemModel(
+            zekeritemList.add(new ZekerModel(
 
                     "اللَّهُمَّ إِنِّي أَسْأَلُكَ العَفْوَ وَالْعَافِيَةَ فِي الدُّنْيَا وَالْآخِرَةِ،" +
                             " اللَّهُمَّ إِنِّي أَسْأَلُكَ الْعَفْوَ وَالْعَافِيَةَ فِي دِينِي وَدُنْيَايَ وَأَهْلِي وَمَالِي، اللَّهُمَّ اسْتُرْ عَوْرَاتِي وَآمِنْ رَوْعَاتِي،" +
@@ -530,7 +524,7 @@ public class ZekerDataSet {
                             "رواه أبو داود (5074) وغيره بإسناد صحيح عن ابن عمر"
 
                     ,1));
-            zekeritemList.add(new ZekeritemModel(
+            zekeritemList.add(new ZekerModel(
 
                     "اللَّهُمَّ عَالِمَ الْغَيْبِ وَالشَّهَادَةِ، فَاطِرَ السَّمَوَاتِ وَالْأَرْضِ، رَبَّ كُلِّ شَيْءٍ وَمَلِيكَهُ، أَشْهَدُ أَنْ لَا إِلَهَ إِلَّا أَنْتَ، أَعُوذُ" +
                             " بِكَ مِنْ شَرِّ نَفْسِي وَشَرِّ الشَّيْطَانِ وَشِرْكِهِ " + "\n" + "\n" +
@@ -538,7 +532,7 @@ public class ZekerDataSet {
 
                             "رواه الترمذي (3392) وغيره بإسناد صحيح عن أبي هريرة"
                     ,1));
-            zekeritemList.add(new ZekeritemModel(
+            zekeritemList.add(new ZekerModel(
 
                             "اللَّهُمَّ إِنِّي أَسْأَلُكَ الثَّبَاتَ فِي الأَمْرِ، وَالْعَزِيمَةَ عَلَى الرُّشْدِ،" +
                             " وَأَسْأَلُكَ مُوجِبَاتِ رَحْمَتكَِ، وَعَزَائمَِ مَغْفِرَتكَِ، وَأسَْألَكَُ شُكْرَ نعِْمَتكَِ، وَحُسْنَ عِباَدَتكَِ، وَأسَْألَكَُ قَلْبًا سَلِيمًا، وَلِسَانًا صَادِقًا، " +
@@ -547,13 +541,13 @@ public class ZekerDataSet {
 
                             "رواه الطبراني في الكبير (7135) عن شداد بن أوس"
                     ,1));
-            zekeritemList.add(new ZekeritemModel(
+            zekeritemList.add(new ZekerModel(
 
                     "اللَّهُمَّ اكْفِنِي بِحَلَالِكَ عَنْ حَرَامِكَ وَأَغْنِنِي بِفَضْلِكَ عَمَّنْ سِوَاكَ" + "\n" + "\n" +
                             "رواه الترمذي (3563) بإسناد حسن عن علي."
 
                     ,1));
-            zekeritemList.add(new ZekeritemModel(
+            zekeritemList.add(new ZekerModel(
 
                     "اللَّهُمَّ عَافِنِي فِي بَدَنِي، اللَّهُمَّ عَافِنِي فِي سَمْعِي، اللَّهُمَّ عَافِنِي فِي بَصَرِي،" +
                             " لَا إلَِهَ إلَِّا أَنْتَ، اللَّهُمَّ إنِِّي أَعُوذُ بِكَ مِنَ الْكُفْرِ وَالْفَقْرِ، اللَّهُمَّ إنِِّي أَعُوذُ بِكَ مِنْ عَذَابِ الْقَبْرِ، لَا إِلَهَ إِلَّا أَنْتَ. " + "\n" + "\n" +
@@ -562,7 +556,7 @@ public class ZekerDataSet {
 
                     ,1));
 
-            zekeritemList.add(new ZekeritemModel(
+            zekeritemList.add(new ZekerModel(
                     "رَبِّ أَعِنِّي وَلَا تُعِنْ عَلَيَّ، وَانْصُرْنِي وَلَا تَنْصُرْ عَلَيَّ، وَامْكُرْ لِي وَلا تَمْكُرْ عَلَيَّ، وَاهْدِنِي وَيَسِّرِ الْهُدَى لِي، وَانْصُرْنِي عَلَى مَنْ بَغَى عَلَيَّ، رَبِّ اجْعَلْنِي لَكَ شَكَّارًا،" +
                             " لَكَ ذَكَّارًا، لَكَ رَهَّابًا، لَكَ مِطْوَاعًا، لَكَ مُخْبِتًا إِلَيْكَ أَوَّاهًا مُنِيبًا، رَبِّ تَقَبَّلْ تَوْبَتِي وَاغْسِلْ حَوْبَتِي " +
                             "وَأَجِبْ دَعْوَتِي وَثَبِّتْ حُجَّتِي وَسَدِّدْ لِسَانِي وَاهْدِ قَلْبِي وَاسْلُلْ سَخِيمَةَ صَدْرِي" + "\n" + "\n" +
@@ -570,7 +564,7 @@ public class ZekerDataSet {
                             "رواه الترمذي (3551) وغيره بإسناد صحيح عن ابن عباس"
 
                     ,1));
-            zekeritemList.add(new ZekeritemModel(
+            zekeritemList.add(new ZekerModel(
 
 
                     "اللَّهُمَّ صَلِّ عَلَى مُحَمَّدٍ وَعَلَى آلِ مُحَمَّدٍ كَمَا صَلَّيْتَ عَلَى إِبْرَاهِيمَ وعَلَى آلِ إِبْرَاهِيمَ، إِنَّكَ حَمِيدٌ مَجِيدٌ، " +
@@ -582,25 +576,25 @@ public class ZekerDataSet {
         else if (index == 6) {
             zekeritemList=new ArrayList<>();
 
-            zekeritemList.add(new ZekeritemModel(
+            zekeritemList.add(new ZekerModel(
 
                     "الذكر عند الطعام والشراب" + "\n" +
                             "بِسْمِ اللهِ" + "\n" +
                             "فإنْ نسي في أَوَّلِهِ، فَليَقُلْ:" + "\n" +
                             "بِسْمِ اللَّه أَوَّلَهُ وَآخِرَهُ."
                     ,1));
-            zekeritemList.add(new ZekeritemModel(
+            zekeritemList.add(new ZekerModel(
                     "الذكر عند الفراغ من الطعام والشراب" + "\n" + "\n" +
                             "الْحَمْدُ للهِ الَّذِي أَطْعَمَنِي هَذَا, وَرَزَقَنِيهِ مِنْ غَيْرِ حَوْلٍ مِّنِّي وَلاَ قُوَّة" + "\n" +
                             "الْحَمْدُ لِلَّهِ كَثِيرًا طَيِّبًا مُبَارَكًا فِيهِ غَيْرَ مَكْفِيٍّ وَلَا مُوَدَّعٍ وَلَا مُسْتَغْنًى عَنْهُ رَبَّنَا"
                     ,1));
-            zekeritemList.add(new ZekeritemModel(
+            zekeritemList.add(new ZekerModel(
                     "هدى النبى فى الشرب" + "\n" + "\n" +
                             "كَانَ صَلَّى اللهُ عَلَيْهِ وَسَلَّمَ يَشْرَبُ فِي ثَلاَثَةِ أَنْفَاسٍ، إِذَا " +
                             "أَدْنَى الإِنَاءَ إِلَى فَمِهِ سَمَّى اللهَ تَعَالَى, وَإِذَا أَخَّرَهُ حَمِدَ اللهَ تَعَالَى، يَفْعَلُ ذَلِكَ ثَلاَثَ مَرَّاتٍ"
 
                     ,1));
-            zekeritemList.add(new ZekeritemModel(
+            zekeritemList.add(new ZekerModel(
                     "أذكار الضيف" + "\n" + "\n" +
                             "أَفْطَرَ عِنْدَكُمُ الصَّائِمُونَ ، وَأَكَلَ طَعَامَكُمُ الأَبْرَارُ ، وَصَلَّتْ عَلَيْكُمُ الْمَلائِكَةُ",1));
 
@@ -614,7 +608,7 @@ public class ZekerDataSet {
         else if (index == 7) {
             zekeritemList=new ArrayList<>();
 
-            zekeritemList.add(new ZekeritemModel(
+            zekeritemList.add(new ZekerModel(
                     "أذكار الدخول إلى المنزل" + "\n" + "\n" +
                             "بِسْـمِ اللهِ وَلَجْنـا، وَبِسْـمِ اللهِ خَـرَجْنـا، وَعَلـى رَبِّنـا تَوَكّلْـنا"
 
@@ -630,32 +624,32 @@ public class ZekerDataSet {
         else if (index == 8) {
             zekeritemList=new ArrayList<>();
 
-            zekeritemList.add(new ZekeritemModel(
+            zekeritemList.add(new ZekerModel(
 
                             "بِاسْمِكَ رَبِّـي وَضَعْـتُ جَنْـبي ، وَبِكَ أَرْفَعُـه، فَإِن أَمْسَـكْتَ نَفْسـي فارْحَـمْها ،" +
                             " وَإِنْ أَرْسَلْتَـها فاحْفَظْـها بِمـا تَحْفَـظُ بِه عِبـادَكَ الصّـالِحـين"
                     ,1));
 
-            zekeritemList.add(new ZekeritemModel(
+            zekeritemList.add(new ZekerModel(
 
                             "اللّهُـمَّ إِنَّـكَ خَلَـقْتَ نَفْسـي وَأَنْـتَ تَوَفّـاهـا لَكَ ممَـاتـها وَمَحْـياها ،" +
                             " إِنْ أَحْيَيْـتَها فاحْفَظْـها ، وَإِنْ أَمَتَّـها فَاغْفِـرْ لَـها ." +
                             " اللّهُـمَّ إِنَّـي أَسْـأَلُـكَ العـافِـيَة"
                     ,1));
 
-            zekeritemList.add(new ZekeritemModel(
+            zekeritemList.add(new ZekerModel(
                             "يجمع كفيه ثم ينفث فيهما والقراءة فيهما قل هو الله أحد قل أعوذ برب الفلق وقل أعوذ برب الناس ومسح ما" +
                             " استطاع من الجسد يبدأ بهما على رأسه ووجه وما أقبل من جسده"
 
                     ,1));
 
-            zekeritemList.add(new ZekeritemModel(
+            zekeritemList.add(new ZekerModel(
                             "الـحَمْدُ للهِ الَّذي أَطْـعَمَنا وَسَقـانا، وَكَفـانا، وَآوانا، فَكَـمْ مِمَّـنْ لا كـافِيَ لَـهُ وَلا مُـؤْوي"
 
 
                     ,1));
 
-            zekeritemList.add(new ZekeritemModel(
+            zekeritemList.add(new ZekerModel(
                             "آية الكرسى:" + "\n" + "\n" +
                             " أَعُوذُ بِاللهِ مِنْ الشَّيْطَانِ الرَّجِيم" + "\n" +
                             "اللّهُ لاَ إِلَـهَ إِلاَّ هُوَ الْحَيُّ الْقَيُّومُ لاَ تَأْخُذُهُ سِنَةٌ وَلاَ نَوْمٌ لَّهُ مَا فِي السَّمَاوَاتِ وَمَا فِي الأَرْضِ مَن ذَا" +
@@ -665,7 +659,7 @@ public class ZekerDataSet {
                             " [البقرة 255] " + "\n" + "\n" + "أجير من الجن حتى يصبح"
 
                     ,1));
-            zekeritemList.add(new ZekeritemModel(
+            zekeritemList.add(new ZekerModel(
                     "أذكار الأحلام" + "\n" + "\n" +
                     "عن أبي قتادة رضي الله عنه قال قال رسول الله صلى الله عليه وسلم" +
                     "الرؤيا الصالحة وفي رواية الرؤيا الحسنة من الله، " + "\n" +
@@ -679,7 +673,7 @@ public class ZekerDataSet {
         else if (index == 9) {
             zekeritemList=new ArrayList<>();
 
-            zekeritemList.add(new ZekeritemModel(
+            zekeritemList.add(new ZekerModel(
                             "الحَمْـدُ لِلّهِ الّذي أَحْـيانا بَعْـدَ ما أَماتَـنا وَإليه النُّـشور"
 
                             + "\n"+ "\n"+ "\n"+
@@ -688,7 +682,7 @@ public class ZekerDataSet {
 
                     ,1));
 
-            zekeritemList.add(new ZekeritemModel(
+            zekeritemList.add(new ZekerModel(
                             "لا إلهَ إلاّ اللّهُ وَحْـدَهُ لا شَـريكَ له، لهُ المُلـكُ ولهُ الحَمـد،" +
                             " وهوَ على كلّ شيءٍ قدير، سُـبْحانَ اللهِ، والحمْـدُ لله ،" +
                             " ولا إلهَ إلاّ اللهُ واللهُ أكبَر، وَلا حَولَ وَلا قوّة" +
@@ -700,85 +694,85 @@ public class ZekerDataSet {
         else if (index == 10) {
 
             zekeritemList=new ArrayList<>();
-            zekeritemList.add(new ZekeritemModel("سُبْحَانَ اللَّهِ.\n" +
+            zekeritemList.add(new ZekerModel("سُبْحَانَ اللَّهِ.\n" +
                     "\n" +
                     "مائة مرة.\n" +
                     "يكتب له ألف حسنة أو يحط عنه ألف خطيئة."
 ,100));
-            zekeritemList.add(new ZekeritemModel(
+            zekeritemList.add(new ZekerModel(
                     "سُبْحَانَ اللَّهِ وَبِحَمْدِهِ.\n" +
                             "\n" +
                             "مائة مرة.\n" +
                             "حُطَّتْ خَطَايَاهُ وَإِنْ كَانَتْ مِثْلَ زَبَدِ الْبَحْرِ. لَمْ يَأْتِ أَحَدٌ يَوْمَ الْقِيَامَةِ بِأَفْضَلَ مِمَّا جَاءَ بِهِ إِلَّا أَحَدٌ قَالَ مِثْلَ مَا قَالَ أَوْ زَادَ عَلَيْهِ."
 ,100));
-            zekeritemList.add(new ZekeritemModel(
+            zekeritemList.add(new ZekerModel(
                     "سُبْحَانَ اللَّهِ وَالْحَمْدُ لِلَّهِ.\n" +
                             "\n" +
                             "مائة مرة.\n" +
                             "تَمْلَآَنِ مَا بَيْنَ السَّمَاوَاتِ وَالْأَرْضِ."
 ,100));
-            zekeritemList.add(new ZekeritemModel(
+            zekeritemList.add(new ZekerModel(
                     "سُبْحَانَ اللهِ العَظِيمِ وَبِحَمْدِهِ.\n" +
                             "\n" +
                             "مائة مرة.\n" +
                             "غرست له نخلة في الجنة (أى عدد)"
 ,100));
-            zekeritemList.add(new ZekeritemModel(
+            zekeritemList.add(new ZekerModel(
                     "سُبْحَانَ اللَّهِ وَبِحَمْدِهِ, سُبْحَانَ اللَّهِ الْعَظِيمِ.\n" +
                             "\n" +
                             "مائة مرة.\n" +
                             "ثقيلتان في الميزان حبيبتان إلى الرحمن (أى عدد)"
 
 ,100));
-            zekeritemList.add(new ZekeritemModel(
+            zekeritemList.add(new ZekerModel(
                     "لَا إلَه إلّا اللهُ وَحْدَهُ لَا شَرِيكَ لَهُ, لَهُ الْمُلْكُ وَلَهُ الْحَمْدُ وَهُوَ عَلَى كُلُّ شَيْءِ قَدِيرِ.\n" +
                             "\n" +
                             "مائة مرة.\n" +
                             "كانت له عدل عشر رقاب, وكتبت له مئة حسنة, ومحيت عنه مئة سيئة, وكانت له حرزا من الشيطان"
 ,100));
-            zekeritemList.add(new ZekeritemModel(
+            zekeritemList.add(new ZekerModel(
                     "لا حَوْلَ وَلا قُوَّةَ إِلا بِاللَّهِ.\n" +
                             "\n" +
                             "مائة مرة.\n" +
                             "كنز من كنوز الجنة (أى عدد)"
 ,100));
-            zekeritemList.add(new ZekeritemModel(
+            zekeritemList.add(new ZekerModel(
                     "الْحَمْدُ للّهِ رَبِّ الْعَالَمِينَ.\n" +
                             "\n" +
                             "مائة مرة.\n" +
                             "تملأ ميزان العبد بالحسنات"
 ,100));
-            zekeritemList.add(new ZekeritemModel(
+            zekeritemList.add(new ZekerModel(
                     "الْلَّهُم صَلِّ وَسَلِم وَبَارِك عَلَى سَيِّدِنَا مُحَمَّد.\n" +
                             "\n" +
                             "مائة مرة.\n" +
                             "من صلى على حين يصبح وحين يمسى ادركته شفاعتى يوم القيامة"
           ,100));
-            zekeritemList.add(new ZekeritemModel(
+            zekeritemList.add(new ZekerModel(
                     "أستغفر الله\n" +
                             "\n" +
                             "مائة مرة.\n" +
                             "لفعل الرسول صلى الله عليه وسلم"
 ,100));
-            zekeritemList.add(new ZekeritemModel(
+            zekeritemList.add(new ZekerModel(
                     "سُبْحَانَ الْلَّهِ, وَالْحَمْدُ لِلَّهِ, وَلَا إِلَهَ إِلَّا الْلَّهُ, وَالْلَّهُ أَكْبَر\n" +
                             "\n" +
                             "مائة مرة.\n" +
                             "أنهن أحب الكلام الى الله, ومكفرات للذنوب, وغرس الجنة, وجنة لقائلهن من النار, وأحب الى النبي عليه السلام مما طلعت عليه الشمس, والْبَاقِيَاتُ الْصَّالِحَات"
 ,100));
-            zekeritemList.add(new ZekeritemModel(
+            zekeritemList.add(new ZekerModel(
                     "لَا إِلَهَ إِلَّا اللَّهُ\n" +
                             "\n" +
                             "مائة مرة.\n" +
                             "أفضل الذكر لا إله إلاّ الله"
 ,100));
-            zekeritemList.add(new ZekeritemModel(
+            zekeritemList.add(new ZekerModel(
                     "الْلَّهُ أَكْبَرُ\n" +
                             "\n" +
                             "مائة مرة.\n" +
                             "من قال الله أكبر كتبت له عشرون حسنة وحطت عنه عشرون سيئة. الله أكبر من كل شيء"
 ,100));
-            zekeritemList.add(new ZekeritemModel(
+            zekeritemList.add(new ZekerModel(
                     "اللَّهُمَّ صَلِّ عَلَى مُحَمَّدٍ وَعَلَى آلِ مُحَمَّدٍ كَمَا صَلَّيْتَ عَلَى إِبْرَاهِيمَ , وَعَلَى آلِ إِبْرَاهِيمَ إِنَّكَ حَمِيدٌ مَجِيدٌ , اللَّهُمَّ بَارِكْ عَلَى مُحَمَّدٍ وَعَلَى آلِ مُحَمَّدٍ كَمَا بَارَكْتَ عَلَى إِبْرَاهِيمَ وَعَلَى آلِ إِبْرَاهِيمَ إِنَّكَ حَمِيدٌ مَجِيدٌ\n" +
                             "\n" +
                             "مائة مرة.\n" +
@@ -792,7 +786,7 @@ public class ZekerDataSet {
         else if (index == 11) {
 
             zekeritemList=new ArrayList<>();
-           zekeritemList.add(new ZekeritemModel(
+           zekeritemList.add(new ZekerModel(
                    "( دعاء السفر )"+"\n" +"\n" +
 
                    "الله أكبر الله أكبر الله أكبر، " +"\n" +
@@ -813,41 +807,41 @@ public class ZekerDataSet {
         else if (index == 12) {
             zekeritemList=new ArrayList<>();
 
-            zekeritemList.add(new ZekeritemModel(
+            zekeritemList.add(new ZekerModel(
 
                     "اللَّهُمَّ ارْحَمْنِي بالقُرْءَانِ وَاجْعَلهُ لِي إِمَاماً وَنُوراً وَهُدًى وَرَحْمَةً " +
                             "\n" + "\n" + "\n" +
                             "اللَّهُمَّ ذَكِّرْنِي مِنْهُ مَانَسِيتُ وَعَلِّمْنِي مِنْهُ مَاجَهِلْتُ وَارْزُقْنِي تِلاَوَتَهُ آنَاءَ اللَّيْلِ وَأَطْرَافَ النَّهَارِ وَاجْعَلْهُ لِي حُجَّةً يَارَبَّ العَالَمِينَ "
                     ,1));
-            zekeritemList.add(new ZekeritemModel(
+            zekeritemList.add(new ZekerModel(
 
 
                     "اللَّهُمَّ أَصْلِحْ لِي دِينِي الَّذِي هُوَ عِصْمَةُ أَمْرِي، وَأَصْلِحْ لِي دُنْيَايَ الَّتِي فِيهَا مَعَاشِي،" +
                             " وَأَصْلِحْ لِي آخِرَتِي الَّتِي فِيهَا مَعَادِي، وَاجْعَلِ الحَيَاةَ زِيَادَةً لِي فِي كُلِّ خَيْرٍ وَاجْعَلِ المَوْتَ رَاحَةً لِي مِنْ كُلِّ شَرٍّ"
 
                     ,1));
-            zekeritemList.add(new ZekeritemModel(
+            zekeritemList.add(new ZekerModel(
                     "اللَّهُمَّ اجْعَلْ خَيْرَ عُمْرِي آخِرَهُ وَخَيْرَ عَمَلِي خَوَاتِمَهُ وَخَيْرَ أَيَّامِي يَوْمَ أَلْقَاكَ فِيهِ" + "\n" + "\n" +
 
                             "اللَّهُمَّ إِنِّي أَسْأَلُكَ عِيشَةً هَنِيَّةً وَمِيتَةً سَوِيَّةً وَمَرَدًّا غَيْرَ مُخْزٍ وَلاَ فَاضِحٍ"
 
                     ,1));
-            zekeritemList.add(new ZekeritemModel(
+            zekeritemList.add(new ZekerModel(
                     "اللَّهُمَّ إِنِّي أَسْأَلُكَ خَيْرَ المَسْأَلةِ وَخَيْرَ الدُّعَاءِ وَخَيْرَ النَّجَاحِ وَخَيْرَ العِلْمِ وَخَيْرَ العَمَلِ وَخَيْرَ الثَّوَابِ وَخَيْرَ الحَيَاةِ " +
                             "وَخيْرَ المَمَاتِ وَثَبِّتْنِي وَثَقِّلْ مَوَازِينِي وَحَقِّقْ إِيمَانِي وَارْفَعْ دَرَجَتِي وَتَقَبَّلْ صَلاَتِي وَاغْفِرْ خَطِيئَاتِي وَأَسْأَلُكَ العُلَا مِنَ الجَنَّةِ"
 
                     ,1));
 
-            zekeritemList.add(new ZekeritemModel(
+            zekeritemList.add(new ZekerModel(
                     "اللَّهُمَّ إِنِّي أَسْأَلُكَ مُوجِبَاتِ رَحْمَتِكَ وَعَزَائِمِ مَغْفِرَتِكَ وَالسَّلاَمَةَ مِنْ كُلِّ إِثْمٍ وَالغَنِيمَةَ مِنْ كُلِّ بِرٍّ وَالفَوْزَ بِالجَنَّةِ وَالنَّجَاةَ مِنَ النَّارِ"
 
                     ,1));
-            zekeritemList.add(new ZekeritemModel(
+            zekeritemList.add(new ZekerModel(
 
                     "اللَّهُمَّ أَحْسِنْ عَاقِبَتَنَا فِي الأُمُورِ كُلِّهَا، وَأجِرْنَا مِنْ خِزْيِ الدُّنْيَا وَعَذَابِ الآخِرَةِ"
 
                     ,1));
-            zekeritemList.add(new ZekeritemModel(
+            zekeritemList.add(new ZekerModel(
                     "اللَّهُمَّ اقْسِمْ لَنَا مِنْ خَشْيَتِكَ مَاتَحُولُ بِهِ بَيْنَنَا" +
                             " وَبَيْنَ مَعْصِيَتِكَ وَمِنْ طَاعَتِكَ مَاتُبَلِّغُنَا بِهَا جَنَّتَكَ وَمِنَ اليَقِينِ مَاتُهَوِّنُ بِهِ عَلَيْنَا مَصَائِبَ الدُّنْيَا " +
                             "وَمَتِّعْنَا بِأَسْمَاعِنَا وَأَبْصَارِنَا وَقُوَّتِنَا مَاأَحْيَيْتَنَا" +
@@ -857,12 +851,12 @@ public class ZekerDataSet {
 
                     ,1));
 
-            zekeritemList.add(new ZekeritemModel(
+            zekeritemList.add(new ZekerModel(
 
                     "اللَّهُمَّ لَا تَدَعْ لَنَا ذَنْبًا إِلَّا غَفَرْتَهُ وَلَا هَمَّا إِلَّا فَرَّجْتَهُ وَلَا دَيْنًا إِلَّا قَضَيْتَهُ وَلَا حَاجَةً مِنْ حَوَائِجِ الدُّنْيَا وَالآخِرَة" +
                             " إِلَّا قَضَيْتَهَا يَاأَرْحَمَ الرَّاحِمِينَ"
                     ,1));
-            zekeritemList.add(new ZekeritemModel(
+            zekeritemList.add(new ZekerModel(
 
                     "رَبَّنَا آتِنَا فِي الدُّنْيَا حَسَنَةً وَفِي الآخِرَةِ حَسَنَةً وَقِنَا عَذَابَ النَّارِ " +
                             "وَصَلَّى اللهُ عَلَى سَيِّدِنَا وَنَبِيِّنَا مُحَمَّدٍ وَعَلَى آلِهِ" +
@@ -876,14 +870,14 @@ public class ZekerDataSet {
         else if (index == 13) {
             zekeritemList=new ArrayList<>();
 
-            zekeritemList.add(new ZekeritemModel(
+            zekeritemList.add(new ZekerModel(
                     "معنى الدعاء" + "\n" + "\n" +
                             "الدعاء هو أن يطلبَ الداعي ما ينفعُه وما يكشف ضُرَّه؛ وحقيقته إظهار الافتقار إلى الله، والتبرؤ من الحول والقوة، " +
                             "وهو سمةُ العبوديةِ، واستشعارُ الذلةِ البشرية، وفيه معنى الثناءِ على الله عز وجل، وإضافةِ الجود والكرم إليه"
 
                     ,1));
 
-            zekeritemList.add(new ZekeritemModel(
+            zekeritemList.add(new ZekerModel(
 
                     "الدعاءُ طاعةٌ لله، وامتثال لأمره" + "\n" + "\n" +
                             "قال تعالى: وَقَالَ رَبُّكُمُ ادْعُونِي أَسْتَجِبْ لَكُمْ إِنَّ الَّذِينَ يَسْتَكْبِرُونَ عَنْ عِبَادَتِي سَيَدْخُلُونَ جَهَنَّمَ دَاخِرِينَ" + "\n" + "\n" +
@@ -892,7 +886,7 @@ public class ZekerDataSet {
 
                     ,1));
 
-            zekeritemList.add(new ZekeritemModel(
+            zekeritemList.add(new ZekerModel(
                     "الدعاء عبادة" + "\n" + "\n" +
                             "قال صَلَّى اللَّهُ عَلَيْهِ وَسَلَّمَ : " + "\n" +
                             "الدُّعَاءُ هُوَ الْعِبَادَةُ" + "\n" + "\n" +
@@ -900,7 +894,7 @@ public class ZekerDataSet {
 
                     ,1));
 
-            zekeritemList.add(new ZekeritemModel(
+            zekeritemList.add(new ZekerModel(
 
                     "الدعاء أكرم شيء على الله تعالى" + "\n" + "\n" +
                             "قال صَلَّى اللَّهُ عَلَيْهِ وَسَلَّمَ : " + "\n" +
@@ -908,7 +902,7 @@ public class ZekerDataSet {
                             " [رواه أحمد والبخاري، وابن ماجة، والترمذي والحاكم وصححه، ووافقه الذهبي]"
 
                     ,1));
-            zekeritemList.add(new ZekeritemModel(
+            zekeritemList.add(new ZekerModel(
 
                     "الدعاء سبب لدفع غضب الله" + "\n" + "\n" +
                             "قال صَلَّى اللَّهُ عَلَيْهِ وَسَلَّمَ: " + "\n" +
@@ -920,7 +914,7 @@ public class ZekerDataSet {
 
 
 
-            zekeritemList.add(new ZekeritemModel(
+            zekeritemList.add(new ZekerModel(
 
                     "الدعاء سلامة من العجز، ودليل على الكَياسة" + "\n" + "\n" +
                             "قال صَلَّى اللَّهُ عَلَيْهِ وَسَلَّمَ:" + "\n" +
@@ -928,7 +922,7 @@ public class ZekerDataSet {
                             "[رواه ابن حبان وصححه الألباني]"
 
                     ,1));
-            zekeritemList.add(new ZekeritemModel(
+            zekeritemList.add(new ZekerModel(
 
                     "الدعاء سبب لرفع البلاء" + "\n" + "\n" +
                             "قال صَلَّى اللَّهُ عَلَيْهِ وَسَلَّمَ: " + "\n" +
@@ -939,7 +933,7 @@ public class ZekerDataSet {
                             " [رواه الترمذي وحسنه الألباني ]"
 
                     ,1));
-            zekeritemList.add(new ZekeritemModel(
+            zekeritemList.add(new ZekerModel(
 
                     "الداعي في معيةُ الله" + "\n" + "\n" +
                             "قال رَسُولُ اللَّهِ صَلَّى اللَّهُ عَلَيْهِ وَسَلَّمَ: " + "\n" +
@@ -948,7 +942,7 @@ public class ZekerDataSet {
 
 
                     ,1));
-            zekeritemList.add(new ZekeritemModel(
+            zekeritemList.add(new ZekerModel(
 
                     "فضل الدعاء في السجود" + "\n" + "\n" +
                             "قال صَلَّى اللَّهُ عَلَيْهِ وَسَلَّمَ:" + "\n" +
@@ -956,7 +950,7 @@ public class ZekerDataSet {
                             " [رواه مسلم]"
 
                     ,1));
-            zekeritemList.add(new ZekeritemModel(
+            zekeritemList.add(new ZekerModel(
 
                     "فضل الدعاء بالليل" + "\n" + "\n" +
                             "قال صَلَّى اللَّهُ عَلَيْهِ وَسَلَّمَ: " + "\n" +
@@ -965,7 +959,7 @@ public class ZekerDataSet {
 
                     ,1));
 
-            zekeritemList.add(new ZekeritemModel(
+            zekeritemList.add(new ZekerModel(
                     "فضل الدعاء للمسلمين بظهر الغيب" + "\n" + "\n" +
                             "قال صَلَّى اللَّهُ عَلَيْهِ وَسَلَّمَ:" + "\n" +
                             " مَا مِنْ عَبْدٍ مُسْلِمٍ يَدْعُو لِأَخِيهِ بِظَهْرِ الْغَيْبِ إِلَّا قَالَ الْمَلَكُ : وَلَكَ بِمِثْلٍ" + "\n" + "\n" +
@@ -980,7 +974,7 @@ public class ZekerDataSet {
         else  if (index ==14){
             zekeritemList=new ArrayList<>();
 
-            zekeritemList.add(new ZekeritemModel(
+            zekeritemList.add(new ZekerModel(
 
                     "قال تعالى: ﴿ الَّذِينَ آَتَيْنَاهُمُ الْكِتَابَ يَتْلُونَهُ حَقَّ تِلَاوَتِهِ أُولَئِكَ يُؤْمِنُونَ بِهِ" +
                             " وَمَنْ يَكْفُرْ بِهِ فَأُولَئِكَ هُمُ الْخَاسِرُونَ ﴾ [سورة البقرة: 121].\n"
@@ -988,27 +982,27 @@ public class ZekerDataSet {
                             "وقال سبحانه: ﴿ إِنَّمَا الْمُؤْمِنُونَ الَّذِينَ إِذَا ذُكِرَ اللَّهُ وَجِلَتْ قُلُوبُهُمْ وَإِذَا تُلِيَتْ عَلَيْهِمْ آَيَاتُهُ زَادَتْهُمْ إِيمَانًا وَعَلَى رَبِّهِمْ يَتَوَكَّلُونَ ﴾ [الأنفال: 2].\n"
 
 ,2));
-            zekeritemList.add(new ZekeritemModel(
+            zekeritemList.add(new ZekerModel(
                     "وقال سبحانه: ﴿ أَقِمِ الصَّلَاةَ لِدُلُوكِ الشَّمْسِ إِلَى غَسَقِ اللَّيْلِ وَقُرْآَنَ الْفَجْرِ إِنَّ قُرْآَنَ الْفَجْرِ كَانَ مَشْهُودًا * وَمِنَ اللَّيْلِ فَتَهَجَّدْ بِهِ نَافِلَةً لَكَ عَسَى أَنْ يَبْعَثَكَ رَبُّكَ مَقَامًا مَحْمُودًا ﴾ [الإسراء: 78، 79].\n" +
                             "\n" +"\n" +"\n" +
                     "روى الترمذي من حديث عبدالله بن مسعود رضي الله عنه أن رسول الله - صلى الله عليه وسلم - قال: «من قرأ حرفًا من كتاب الله فله به حسنة، والحسنة بعشر أمثالها، لا أقول: ألم حرف بل ألف حرف ولام حرف وميم حرف»\n" +
                             "\n",2));
 
-            zekeritemList.add(new ZekeritemModel(
+            zekeritemList.add(new ZekerModel(
 
                     "وروى الشيخان من حديث أبي موسى الأشعري رضي الله عنه أن رسول الله - صلى الله عليه وسلم - قال: «مثل المؤمن الذي يقرأ القرآن مثل الأترجة ريحها طيب وطعمها طيب، ومثل المؤمن الذي لا يقرأ القرآن كمثل التمرة لا ريح لها وطعمها حلو، ومثل المنافق الذي يقرأ القرآن مثل الريحانة ريحها طيب وطعمها مر، مثل المنافق الذي لا يقرأ القرآن كمثل الحنظلة ليس لها ريح وطعمها مر»\n" +
                             "\n"
 
 
                     ,1));
-            zekeritemList.add(new ZekeritemModel(
+            zekeritemList.add(new ZekerModel(
                     "وروى مسلم من حدث أبي أمامة الباهلي رضي الله عنه أن رسول الله - صلى الله عليه وسلم - قال: «اقرؤوا القرآن فإنه يأتي يوم القيامة شفيعًا لأصحابه»\n" +
                             "\n" ,1));
-            zekeritemList.add(new ZekeritemModel(
+            zekeritemList.add(new ZekerModel(
                     "وروى الإمام مسلم أيضًا من حديث النواس بن سمعان رضي الله عنه أن رسول الله - صلى الله عليه وسلم - قال: «يؤتى يوم القيامة بالقرآن وأهله الذين كانوا يعملون به في الدنيا، تقدمه سورة البقرة وآل عمران تحاجان عن صاحبهما»\n" +
                             "\n" ,1));
 
-            zekeritemList.add(new ZekeritemModel(
+            zekeritemList.add(new ZekerModel(
                     "وروى البخاري من حديث عثمان بن عفان رضي الله عنه أن رسول الله - صلى الله عليه وسلم - قال: «خيركم من تعلم القرآن وعلمه»\n" +
                             "\n" +"\n" +"\n" +
 
@@ -1017,7 +1011,7 @@ public class ZekerDataSet {
 
 
                     ,2));
-            zekeritemList.add(new ZekeritemModel(
+            zekeritemList.add(new ZekerModel(
                     "وروى مسلم من حديث أبي هريرة رضي الله عنه أن رسول الله - صلى الله عليه وسلم - قال: «وما اجتمع قوم في بيت من بيوت الله يتلون كتاب الله ويتدارسونه بينهم، إلا نزلت عليهم السكينة وغشيتهم الرحمة، وحفتهم الملائكة وذكرهم الله فيمن عنده»\n" +
                             "\n"+"\n"+"\n"+
 "روى أبو داود من حديث عبدالله بن عمرو بن العاص رضي الله عنهما أن رسول الله - صلى الله عليه وسلم - قال: «يقال لصاحب القرآن: اقرأ وارتق ورتل كما كنت ترتل في الدنيا، فإن منزلك عند آخر آية تقرؤها»\n" +
@@ -1035,7 +1029,7 @@ public class ZekerDataSet {
         else if (index == 15) {
             zekeritemList=new ArrayList<>();
 
-            zekeritemList.add(new ZekeritemModel(
+            zekeritemList.add(new ZekerModel(
 
                     "إنَّ من أفضل الأعمال الصالحة اليسيرة التي تقرب المسلم إلى ربه جل وعلا الذكرُ" + "\n" + "\n" +
 
@@ -1046,7 +1040,7 @@ public class ZekerDataSet {
                             "\n" + "وقال تعالى : يَا أَيُّهَا الَّذِينَ آمَنُوا اذْكُرُوا اللَّهَ ذِكْراً كَثِيراً" + "\n"
 
                     ,1));
-            zekeritemList.add(new ZekeritemModel(
+            zekeritemList.add(new ZekerModel(
 
                     "وقال تعالى : وَاذْكُر رَّبَّكَ كَثِيرًا وَسَبِّحْ بِالْعَشِيِّ وَالْإِبْكَارِ" + "\n" + "\n" +
 
@@ -1056,7 +1050,7 @@ public class ZekerDataSet {
                             "فَإِذَا قَضَيْتُم مَّنَاسِكَكُمْ فَاذْكُرُوا اللَّهَ كَذِكْرِكُمْ آبَاءَكُمْ أَوْ أَشَدَّ ذِكْرًا"
 
                     ,1));
-            zekeritemList.add(new ZekeritemModel(
+            zekeritemList.add(new ZekerModel(
                     "أحاديث صحيحة عن رسول الله صَلَّى اللَّهُ عَلَيْهِ وَسَلَّمَ، نذكر ما تيسر منها" + "\n" + "\n" +
 
                             " قال رَسُولُ اللَّهِ صَلَّى اللَّهُ عَلَيْهِ وَسَلَّمَ:" + "\n" +
@@ -1067,7 +1061,7 @@ public class ZekerDataSet {
 
 
                     ,1));
-            zekeritemList.add(new ZekeritemModel(
+            zekeritemList.add(new ZekerModel(
                     " قال رَسُولُ اللَّهِ صَلَّى اللَّهُ عَلَيْهِ وَسَلَّمَ:" + "\n" + "\n" +
                             " \"ألا أنبئكم بخير أعمالكم " +
                             "و أزكاها عند مليككم و أرفعها في درجاتكم و خير لكم من أنفاق الذهب و الورق" +
@@ -1076,7 +1070,7 @@ public class ZekerDataSet {
                             " \" قالو بلى " + "\n" +
                             " قال : (ذكر الله تعالى)"
                     ,1));
-            zekeritemList.add(new ZekeritemModel(
+            zekeritemList.add(new ZekerModel(
                     "و قال رَسُولُ اللَّهِ صَلَّى اللَّهُ عَلَيْهِ وَسَلَّمَ:" + "\n" +
                             " يقول الله تعالى :" + "\n" + "\n" +
                             " أنا عند ظن عبدي بي ," +
@@ -1085,7 +1079,7 @@ public class ZekerDataSet {
                             " ان اتاني يمشي أتيته هرولة"
                     ,1));
 
-            zekeritemList.add(new ZekeritemModel(
+            zekeritemList.add(new ZekerModel(
 
                     " قال رَسُولُ اللَّهِ صَلَّى اللَّهُ عَلَيْهِ وَسَلَّمَ:" + "\n" + "\n" +
                             " \"ما جلس قوم مجلسا لم يذكروا الله فيه " +
@@ -1101,7 +1095,7 @@ public class ZekerDataSet {
         else if (index==16){
             zekeritemList=new ArrayList<>();
 
-            zekeritemList.add(new ZekeritemModel(
+            zekeritemList.add(new ZekerModel(
 
                     "الرُّقية الشرعية من القرآن الكريم" + "\n" + "\n" +
 
@@ -1111,21 +1105,21 @@ public class ZekerDataSet {
                             "[الفاتحة: 1-7]"
 
                     ,1));
-            zekeritemList.add(new ZekeritemModel(
+            zekeritemList.add(new ZekerModel(
                     " الم ﴿1﴾ ذَلِكَ الْكِتَابُ لَا رَيْبَ فِيهِ هُدًى لِلْمُتَّقِينَ ﴿2﴾" +
                             " الَّذِينَ يُؤْمِنُونَ بِالْغَيْبِ وَيُقِيمُونَ الصَّلَاةَ وَمِمَّا رَزَقْنَاهُمْ يُنْفِقُونَ ﴿3﴾" +
                             " وَالَّذِينَ يُؤْمِنُونَ بِمَا أُنْزِلَ إِلَيْكَ وَمَا أُنْزِلَ مِنْ قَبْلِكَ وَبِالْآَخِرَةِ هُمْ يُوقِنُونَ ﴿4﴾ " +
                             "أُولَئِكَ عَلَى هُدًى مِنْ رَبِّهِمْ وَأُولَئِكَ هُمُ الْمُفْلِحُونَ ﴿5﴾" + "\n" + "\n" +
                             " [البقرة: 1-5]"
                     ,1));
-            zekeritemList.add(new ZekeritemModel(
+            zekeritemList.add(new ZekerModel(
                     " اللّهُ لاَ إِلَـهَ إِلاَّ هُوَ الْحَيُّ الْقَيُّومُ لاَ تَأْخُذُهُ سِنَةٌ وَلاَ نَوْمٌ لَّهُ مَا فِي السَّمَاوَاتِ وَمَا فِي الأَرْضِ مَن ذَا الَّذِي يَشْفَعُ عِنْدَهُ إِلاَّ بِإِذْنِه" +
                             "ِ يَعْلَمُ مَا بَيْنَ أَيْدِيهِمْ وَمَا خَلْفَهُمْ وَلاَ يُحِيطُونَ بِشَيْءٍ مِّنْ عِلْمِهِ إِلاَّ بِمَا شَاء" +
                             " وَسِعَ كُرْسِيُّهُ السَّمَاوَاتِ وَالأَرْضَ وَلاَ يَؤُودُهُ حِفْظُهُمَا وَهُوَ الْعَلِيُّ الْعَظِيمُ" + "\n" + "\n" +
                             "[آية الكرسى - البقرة 255]"
                     ,1));
 
-            zekeritemList.add(new ZekeritemModel(
+            zekeritemList.add(new ZekerModel(
 
 
                     " لِلَّهِ مَا فِي السَّمَاوَاتِ وَمَا فِي الْأَرْضِ " +
@@ -1140,7 +1134,7 @@ public class ZekerDataSet {
 
                     ,1));
 
-            zekeritemList.add(new ZekeritemModel(
+            zekeritemList.add(new ZekerModel(
 
                     " قُلْ يَا أَيُّهَا الْكَافِرُونَ ﴿1﴾ لَا أَعْبُدُ مَا تَعْبُدُونَ ﴿2﴾ " +
                             "وَلَا أَنْتُمْ عَابِدُونَ مَا أَعْبُدُ ﴿3﴾ وَلَا أَنَا عَابِدٌ مَا عَبَدْتُمْ " +
@@ -1149,20 +1143,20 @@ public class ZekerDataSet {
                             " [الكافرون]"
 
                     ,1));
-            zekeritemList.add(new ZekeritemModel(
+            zekeritemList.add(new ZekerModel(
                     " قُلْ هُوَ اللَّهُ أَحَدٌ ﴿1﴾ اللَّهُ الصَّمَدُ ﴿2﴾ لَمْ يَلِدْ وَلَمْ يُولَدْ ﴿3﴾ وَلَمْ يَكُنْ لَهُ كُفُوًا أَحَدٌ ﴿4﴾" + "\n" + "\n" +
                             " [الإخلاص]"
 
 
                     ,1));
-            zekeritemList.add(new ZekeritemModel(
+            zekeritemList.add(new ZekerModel(
                     " قُلْ أَعُوذُ بِرَبِّ الْفَلَقِ ﴿1﴾ مِنْ شَرِّ مَا خَلَقَ ﴿2﴾ وَمِنْ شَرِّ غَاسِقٍ إِذَا وَقَبَ ﴿3﴾ " +
                             "وَمِنْ شَرِّ النَّفَّاثَاتِ فِي الْعُقَدِ ﴿4﴾" +
                             " وَمِنْ شَرِّ حَاسِدٍ إِذَا حَسَدَ ﴿5﴾" + "\n" + "\n" +
                             "[الفلق]"
 
                     ,1));
-            zekeritemList.add(new ZekeritemModel(
+            zekeritemList.add(new ZekerModel(
                     " قُلْ أَعُوذُ بِرَبِّ النَّاسِ ﴿1﴾ مَلِكِ النَّاسِ ﴿2﴾ إِلَهِ النَّاسِ ﴿3﴾ مِنْ شَرِّ الْوَسْوَاسِ الْخَنَّاسِ ﴿4﴾" +
                             " الَّذِي يُوَسْوِسُ فِي صُدُورِ النَّاسِ ﴿5﴾" +
                             " مِنَ الْجِنَّةِ وَالنَّاسِ ﴿6﴾" + "\n" + "\n" +
@@ -1175,7 +1169,7 @@ public class ZekerDataSet {
         }
         else {
             zekeritemList=new ArrayList<>();
-            zekeritemList.add(new ZekeritemModel("اللَّهُمَّ، اغْفِرْ له وَارْحَمْهُ، وَاعْفُ عنْه وَعَافِهِ، وَأَكْرِمْ نُزُلَهُ،" +
+            zekeritemList.add(new ZekerModel("اللَّهُمَّ، اغْفِرْ له وَارْحَمْهُ، وَاعْفُ عنْه وَعَافِهِ، وَأَكْرِمْ نُزُلَهُ،" +
                     " وَوَسِّعْ مُدْخَلَهُ، وَاغْسِلْهُ بمَاءٍ وَثَلْجٍ وَبَرَدٍ" +
                     "، وَنَقِّهِ مِنَ الخَطَايَا كما يُنَقَّى الثَّوْبُ الأبْيَضُ مِنَ الدَّنَسِ، " +
                     "وَأَبْدِلْهُ دَارًا خَيْرًا مِن دَارِهِ،" +
@@ -1184,43 +1178,41 @@ public class ZekerDataSet {
                     " وَقِهِ فِتْنَةَ القَبْرِ" +
                     " وَعَذَابَ النَّارِ\n" ,1));
 
-            zekeritemList.add(new ZekeritemModel("اللَّهمَّ اغْفِرْ لحيِّنا وميِّتِنا وشاهدنا وغائِبنا" +
+            zekeritemList.add(new ZekerModel("اللَّهمَّ اغْفِرْ لحيِّنا وميِّتِنا وشاهدنا وغائِبنا" +
                     " وصَغيرنا وَكبيرنا وذَكرِنا وأُنثانا اللَّهمَّ مَنْ أحييتَه مِنَّا فأحيِه علَى الإسلام" +
                     "ِ ومن تَوَفَّيتَه مِنَّا فتَوفَّهُ علَى الإيمانِ اللَّهمَّ لا تحرمنا أجرَه ولا تُضلَّنا بعدَه\n" ,1));
 
-            zekeritemList.add(new ZekeritemModel("اللَّهمَّ إنَّ فلانَ بنَ فلانٍ في ذِمَّتِك وحبلِ جِوارِك فَقِهِ من فتنةِ القبرِ وعذابِ النَّار" +
+            zekeritemList.add(new ZekerModel("اللَّهمَّ إنَّ فلانَ بنَ فلانٍ في ذِمَّتِك وحبلِ جِوارِك فَقِهِ من فتنةِ القبرِ وعذابِ النَّار" +
                     "ِ وأنتَ أهلُ الوفاءِ" +
                     " والحقِّ فاغفر لَه وارحمه" +
                     "ُ إنَّكَ أنتَ الغفورُ الرَّحيمُ\n" ,1));
 
 
-            zekeritemList.add(new ZekeritemModel("اللهم أنت ربه، وأنت خلقته، وأنت هديته للإسلام، وأنت قبضت روحه، وأنت أعلم بسره وعلانيته، جئنا شفعاء فاغفر له\n" +
+            zekeritemList.add(new ZekerModel("اللهم أنت ربه، وأنت خلقته، وأنت هديته للإسلام، وأنت قبضت روحه، وأنت أعلم بسره وعلانيته، جئنا شفعاء فاغفر له\n" +
                     "\n" +"اللهمّ أبدله داراً خيراً من داره، وأهلاً خيراً من أهله، وأدخله الجنّة، وأعذه من عذاب القبر، ومن عذاب النّار. اللهمّ عامله بما أنت أهله، ولا تعامله بما هو أهله. اللهمّ اجزه عن الإحسان إحساناً، وعن الإساءة عفواً وغفراناً.\n" +
                     "\n"
                    ,1));
 
-            zekeritemList.add(new ZekeritemModel("اللهمّ إن كان محسناً فزد من حسناته، وإن كان مسيئاً فتجاوز عن سيّئاته. اللهمّ أدخله الجنّة من غير مناقشة حساب، ولا سابقة عذاب. اللهمّ آنسه في وحدته، وفي وحشته، وفي غربته. اللهمّ أنزله منزلاً مباركاً، وأنت خير المنزلين. اللهمّ أنزله منازل الصدّيقين، والشّهداء، والصّالحين، وحسُن أولئك رفيقاً.\n" +
+            zekeritemList.add(new ZekerModel("اللهمّ إن كان محسناً فزد من حسناته، وإن كان مسيئاً فتجاوز عن سيّئاته. اللهمّ أدخله الجنّة من غير مناقشة حساب، ولا سابقة عذاب. اللهمّ آنسه في وحدته، وفي وحشته، وفي غربته. اللهمّ أنزله منزلاً مباركاً، وأنت خير المنزلين. اللهمّ أنزله منازل الصدّيقين، والشّهداء، والصّالحين، وحسُن أولئك رفيقاً.\n" +
                     "\n" ,1));
 
-            zekeritemList.add(new ZekeritemModel("اللهمّ اجعل قبره روضةً من رياض الجنّة، ولا تجعله حفرةً من حفر النّار. اللهمّ افسح له في قبره مدّ بصره، وافرش قبره من فراش الجنّة. اللهمّ أعذه من عذاب القبر، وجفاف ِالأرض عن جنبيها. اللهمّ املأ قبره بالرّضا، والنّور، والفسحة، والسّرور. اللهمّ إنّه في ذمّتك وحبل جوارك، فقِهِ فتنة القبر، وعذاب النّار، وأنت أهل الوفاء والحقّ، فاغفر له وارحمه، إنّك أنت الغفور الرّحيم.\n" +
+            zekeritemList.add(new ZekerModel("اللهمّ اجعل قبره روضةً من رياض الجنّة، ولا تجعله حفرةً من حفر النّار. اللهمّ افسح له في قبره مدّ بصره، وافرش قبره من فراش الجنّة. اللهمّ أعذه من عذاب القبر، وجفاف ِالأرض عن جنبيها. اللهمّ املأ قبره بالرّضا، والنّور، والفسحة، والسّرور. اللهمّ إنّه في ذمّتك وحبل جوارك، فقِهِ فتنة القبر، وعذاب النّار، وأنت أهل الوفاء والحقّ، فاغفر له وارحمه، إنّك أنت الغفور الرّحيم.\n" +
                     "\n" ,1));
 
-            zekeritemList.add(new ZekeritemModel("اللهمّ إنّه عبدك وابن عبدك، خرج من الدّنيا، وسعتها، ومحبوبها، وأحبّائه فيها، إلى ظلمة القبر، وما هو لاقيه. اللهمّ إنّه كان يشهد أنّك لا إله إلّا أنت، وأنّ محمّداً عبدك ورسولك، وأنت أعلم به. اللهمّ إنّا نتوسّل بك إليك، ونقسم بك عليك أن ترحمه ولا تعذّبه، وأن تثبّته عند السّؤال.\n" +
+            zekeritemList.add(new ZekerModel("اللهمّ إنّه عبدك وابن عبدك، خرج من الدّنيا، وسعتها، ومحبوبها، وأحبّائه فيها، إلى ظلمة القبر، وما هو لاقيه. اللهمّ إنّه كان يشهد أنّك لا إله إلّا أنت، وأنّ محمّداً عبدك ورسولك، وأنت أعلم به. اللهمّ إنّا نتوسّل بك إليك، ونقسم بك عليك أن ترحمه ولا تعذّبه، وأن تثبّته عند السّؤال.\n" +
                     "\n" ,1));
-            zekeritemList.add(new ZekeritemModel("اللهمّ آته برحمتك ورضاك، وقهِ فتنة القبر وعذابه، وآته برحمتك الأمن من عذابك حتّى تبعثه إلى جنّتك يا أرحم الرّاحمين. اللهمّ انقله من مواطن الدّود، وضيق اللّحود، إلى جنّات الخلود. اللهمّ احمه تحت الأرض، واستره يوم العرض، ولا تخزه يوم يبعثون \"يوم لا ينفع مالٌ ولا بنون إلّا من أتى الله بقلبٍ سليم\".\n" +
-                    "\n" ,1));
-
-
-            zekeritemList.add(new ZekeritemModel("اللهمّ أسكنه فسيح الجنان، واغفر له يا رحمن، وارحمه يا رحيم، وتجاوز عمّا تعلم يا عليم. اللهمّ اعف عنه، فإنّك القائل \"ويعفو عن كثير\". اللهمّ إنّه جاء ببابك، وأناخ بجنابك، فَجُد عليه بعفوك، وإكرامك، وجود إحسانك. اللهمّ إنّ رحمتك وسعت كلّ شيء، فارحمه رحمةً تطمئنّ بها نفسه، وتقرّ بها عينه.\n" +
+            zekeritemList.add(new ZekerModel("اللهمّ آته برحمتك ورضاك، وقهِ فتنة القبر وعذابه، وآته برحمتك الأمن من عذابك حتّى تبعثه إلى جنّتك يا أرحم الرّاحمين. اللهمّ انقله من مواطن الدّود، وضيق اللّحود، إلى جنّات الخلود. اللهمّ احمه تحت الأرض، واستره يوم العرض، ولا تخزه يوم يبعثون \"يوم لا ينفع مالٌ ولا بنون إلّا من أتى الله بقلبٍ سليم\".\n" +
                     "\n" ,1));
 
-            zekeritemList.add(new ZekeritemModel("اللهمّ أنزل على أهله الصّبر والسّلوان، وارضهم بقضائك. اللهمّ ثبّتهم على القول الثّابت في الحياة الدّنيا، وفي الآخرة، ويوم يقوم الأشهاد.\n" +
+
+            zekeritemList.add(new ZekerModel("اللهمّ أسكنه فسيح الجنان، واغفر له يا رحمن، وارحمه يا رحيم، وتجاوز عمّا تعلم يا عليم. اللهمّ اعف عنه، فإنّك القائل \"ويعفو عن كثير\". اللهمّ إنّه جاء ببابك، وأناخ بجنابك، فَجُد عليه بعفوك، وإكرامك، وجود إحسانك. اللهمّ إنّ رحمتك وسعت كلّ شيء، فارحمه رحمةً تطمئنّ بها نفسه، وتقرّ بها عينه.\n" +
+                    "\n" ,1));
+
+            zekeritemList.add(new ZekerModel("اللهمّ أنزل على أهله الصّبر والسّلوان، وارضهم بقضائك. اللهمّ ثبّتهم على القول الثّابت في الحياة الدّنيا، وفي الآخرة، ويوم يقوم الأشهاد.\n" +
                     "\n" +"اللَّهُمَّ افسح له في قبره مدّ بصره، وافرش قبره من فراش الجنّة. اللهمّ صلّ وسلّم وبارك على سيّدنا محمّد، وعلى آله وصحبه وسلّم إلى يوم الدّين\n"
                     ,1));
 
-
             return zekeritemList;
-
         }
     }
 

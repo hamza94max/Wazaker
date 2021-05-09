@@ -7,8 +7,8 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.hazem.wazaker.Adapters.NightAdapter;
-import com.hazem.wazaker.Models.ZekeritemModel;
+import com.hazem.wazaker.Adapters.NightAzkarAdapter;
+import com.hazem.wazaker.Models.ZekerModel;
 import com.hazem.wazkar.R;
 
 import java.util.ArrayList;
@@ -16,7 +16,7 @@ import java.util.ArrayList;
 public class NightAzkar extends AppCompatActivity {
 
     Button copybtn;
-    ArrayList<ZekeritemModel> NightAzkar;
+    ArrayList<ZekerModel> NightAzkar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,7 +32,7 @@ public class NightAzkar extends AppCompatActivity {
 
         LinearLayoutManager layoutManager = new LinearLayoutManager(this);
         recyclerView.setLayoutManager(layoutManager);
-        NightAdapter adapter = new NightAdapter(NightAzkar,getBaseContext());
+        NightAzkarAdapter adapter = new NightAzkarAdapter(NightAzkar,getBaseContext());
         recyclerView.setLayoutManager(layoutManager);
         recyclerView.setAdapter(adapter);
         recyclerView.setHasFixedSize(true);
@@ -43,7 +43,7 @@ public class NightAzkar extends AppCompatActivity {
     private void loadNightdata(){
         NightAzkar = new ArrayList<>();
 
-        NightAzkar.add(new ZekeritemModel(
+        NightAzkar.add(new ZekerModel(
 
                 "أَعُوذُ بِالله السَّمِيعِ العَلِيِمِ مِنَ الشّيطَانِ الرّجِيمِ (بِسْمِ اللهِ الرَّحْمـَنِ الرَّحِيمِ , " +
                         "الْحَمْدُ للهِ رَبِّ الْعَالَمِينَ" +
@@ -56,7 +56,7 @@ public class NightAzkar extends AppCompatActivity {
                         " (الفاتحة)",1));
 
 
-        NightAzkar.add(new ZekeritemModel(
+        NightAzkar.add(new ZekerModel(
                         "(بِسْمِ اللّهِ الرَّحْمـنِ الرَّحِيمِ , الـم , ذَلِكَ الْكِتَابُ لاَ رَيْبَ فِيهِ هُدًى لِّلْمُتَّقِينَ ," +
                         " الَّذِينَ يُؤْمِنُونَ بِالْغَيْبِ " +"\n" +
                         "وَيُقِيمُونَ الصَّلاةَ " +
@@ -73,7 +73,7 @@ public class NightAzkar extends AppCompatActivity {
                 ,1));
 
 
-        NightAzkar.add(new ZekeritemModel(
+        NightAzkar.add(new ZekerModel(
                 " بِسْمِ اللهِ الرَّحْمـَنِ الرَّحِيمِ" + "\n" +
                         " {اللّهُ لاَ إِلَـهَ إِلاَّ هُوَ الْحَيُّ الْقَيُّومُ لاَ تَأْخُذُهُ سِنَةٌ وَلاَ نَوْمٌ" +
                         " لَّهُ مَا فِي السَّمَاوَاتِ وَمَا فِي الأَرْضِ مَن ذَا الَّذِي يَشْفَعُ عِنْدَهُ إِلاَّ بِإِذْنِهِ يَعْلَمُ مَا بَيْنَ أَيْدِيهِمْ" +
@@ -85,7 +85,7 @@ public class NightAzkar extends AppCompatActivity {
 
                 ,1));
 
-        NightAzkar.add(new ZekeritemModel(
+        NightAzkar.add(new ZekerModel(
                 " ( آمَنَ الرَّسُولُ بِمَا أُنْزِلَ إِلَيْهِ مِنْ رَبِّهِ وَالْمُؤْمِنُونَ ۚ" +
                         " كُلٌّ آمَنَ بِاللَّهِ وَمَلَائِكَتِهِ وَكُتُبِهِ وَرُسُلِهِ لَا نُفَرِّقُ بَيْنَ أَحَدٍ مِنْ رُسُلِهِ " +
                         "ۚ وَقَالُوا سَمِعْنَا وَأَطَعْنَا ۖ غُفْرَانَكَ رَبَّنَا وَإِلَيْكَ الْمَصِيرُ" +
@@ -99,20 +99,20 @@ public class NightAzkar extends AppCompatActivity {
                         "( مرة واحدة )"
                 ,1));
 
-        NightAzkar.add(new ZekeritemModel(
+        NightAzkar.add(new ZekerModel(
                 "بسم الله الرحمن الرحيم" + "\n" + "\n" +
                         " قُلْ هُوَ اللَّهُ أَحَدِ،اللَّهُ الصَّمَدُِ،لَمْ يَلِدْ وَلَمْ يُولَدِْ، وَلَمْ يَكُن لَّهُ كُفُواً أَحَد" + "\n" + "\n" + "\n" + "( ثلاث مرات )" +
                         "\n",3));
 
 
-        NightAzkar.add(new ZekeritemModel(
+        NightAzkar.add(new ZekerModel(
 
 
                 "بسم الله الرحمن الرحيم" + "\n" + "\n" + "قُلْ أَعُوذُ بِرَبِّ الْفَلَق، مِن شَرِّ مَا خَلَقَِ، وَمِن شَرِّ غَاسِقٍ إِذَا وَقَبَ، وَمِن شَرِّ النَّفَّاثَاتِ فِي الْعُقَدِ،" +
                         " وَمِن شَرِّ حَاسِدٍ إِذَا حَسَدَ" +
                         "\n" + "\n" + " ( ثلاث مرات ) ",3));
 
-        NightAzkar.add(new ZekeritemModel(
+        NightAzkar.add(new ZekerModel(
 
 
                 "بسم الله الرحمن الرحيم" + "\n" + "\n" +
@@ -124,12 +124,12 @@ public class NightAzkar extends AppCompatActivity {
 
 
                 ,3));
-        NightAzkar.add(new ZekeritemModel(
+        NightAzkar.add(new ZekerModel(
 
                  "اللّهُـمَّ بِكَ أَمْسَـينا وَبِكَ أَصْـبَحْنا، وَبِكَ نَحْـيا وَبِكَ نَمُـوتُ وَإِلَـيْكَ الْمَصِيرُ.\n" +"\n" +"( ثلاث مرات )" ,3));
 
 
-        NightAzkar.add(new ZekeritemModel(
+        NightAzkar.add(new ZekerModel(
 
                         "أَمْسَيْنَا عَلَى فِطْرَةِ الإسْلاَم" +
                         "ِ، وَعَلَى كَلِمَةِ الإِخْلاَصِ، وَعَلَى دِينِ نَبِيِّنَا مُحَمَّدٍ صَلَّى اللهُ عَلَيْهِ وَسَلَّمَ، " +
@@ -137,14 +137,14 @@ public class NightAzkar extends AppCompatActivity {
                         "( ثلاث مرات )"
 
                 ,3));
-        NightAzkar.add(new ZekeritemModel(
+        NightAzkar.add(new ZekerModel(
                 "أَمْسَيْـنا وَأَمْسـى المـلكُ لله وَالحَمدُ لله، لا إلهَ إلاّ اللّهُ وَحدَهُ لا شَريكَ لهُ، لهُ المُـلكُ ولهُ الحَمْـد، وهُوَ على كلّ شَيءٍ قدير،" +
                         " رَبِّ أسْـأَلُـكَ خَـيرَ ما في هـذهِ اللَّـيْلَةِ وَخَـيرَ ما بَعْـدَهـا، وَأَعـوذُ بِكَ مِنْ شَـرِّ ما في هـذهِ اللَّـيْلةِ وَشَرِّ ما بَعْـدَهـا،" +
                         " رَبِّ أَعـوذُ بِكَ مِنَ الْكَسَـلِ وَسـوءِ الْكِـبَر، رَبِّ أَعـوذُ بِكَ مِنْ عَـذابٍ في النّـارِ وَعَـذابٍ في القَـبْر" + "\n" + "\n" +
                         "( مرة واحدة )"
 
                 ,1));
-        NightAzkar.add(new ZekeritemModel(
+        NightAzkar.add(new ZekerModel(
                 "اللّهُـمَّ ما أَمسى بي مِـنْ نِعْـمَةٍ أَو بِأَحَـدٍ مِـنْ خَلْـقِك، فَمِـنْكَ وَحْـدَكَ لا شريكَ لَـك، فَلَـكَ الْحَمْـدُ وَلَـكَ الشُّكْـر"
                         + "\n"  + "\n" + "\n"+"( ثلاث مرات )"
 
@@ -153,7 +153,7 @@ public class NightAzkar extends AppCompatActivity {
 
 
                 ,3));
-        NightAzkar.add(new ZekeritemModel(
+        NightAzkar.add(new ZekerModel(
                 "اللّهُـمَّ إِنِّـي أَمسيتُ أُشْـهِدُك " +
                         "، وَأُشْـهِدُ حَمَلَـةَ عَـرْشِـك، وَمَلَائِكَتَكَ، وَجَمـيعَ خَلْـقِك،" +
                         " أَنَّـكَ أَنْـتَ اللهُ لا إلهَ إلاّ أَنْـتَ وَحْـدَكَ لا شَريكَ لَـك، وَأَنَّ ُ مُحَمّـداً عَبْـدُكَ وَرَسـولُـك" + "\n" + "\n" +
@@ -162,7 +162,7 @@ public class NightAzkar extends AppCompatActivity {
 
                 ,4));
 
-        NightAzkar.add(new ZekeritemModel(
+        NightAzkar.add(new ZekerModel(
                 "رَضيـتُ بِاللهِ رَبَّـاً وَبِالإسْلامِ ديـناً وَبِمُحَـمَّدٍ صلى الله عليه وسلم نَبِيّـا" + "\n" + "\n" +
                         "ً( ثلاث مرات )" +
                         "\n" + "\n" + "من قالها حين يصبح وحين يمسى كان حقا على الله أن يرضيه يوم القيامة"
@@ -173,7 +173,7 @@ public class NightAzkar extends AppCompatActivity {
                 ,3));
 
 
-        NightAzkar.add(new ZekeritemModel(
+        NightAzkar.add(new ZekerModel(
                 "اللّهـمَّ أَنْتَ رَبِّـي لا إلهَ إلاّ أَنْتَ، خَلَقْتَنـي وَأَنا عَبْـدُك، وَأَنا عَلـى عَهْـدِكَ وَوَعْـدِكَ ما اسْتَـطَعْـت، أَعـوذُ بِكَ مِنْ شَـرِّ ما صَنَـعْت،" +
                         " أَبـوءُ لَـكَ بِنِعْـمَتِـكَ عَلَـيَّ وَأَبـوءُ بِذَنْـبي فَاغْفـِرْ لي فَإِنَّـهُ لا يَغْـفِرُ الذُّنـوبَ إِلاّ أَنْتَ" + "\n"+
                         "(ثلاثا)"
@@ -184,13 +184,13 @@ public class NightAzkar extends AppCompatActivity {
                 ,3));
 
 
-        NightAzkar.add(new ZekeritemModel(
+        NightAzkar.add(new ZekerModel(
 
 
                 "سُبْحـانَ اللهِ وَبِحَمْـدِهِ عَدَدَ خَلْـقِه ، وَرِضـا نَفْسِـه ، وَزِنَـةَ عَـرْشِـه ، وَمِـدادَ كَلِمـاتِـه" + "\n" +"\n" +
                         "( ثلاث مرات )" ,3));
 
-        NightAzkar.add(new ZekeritemModel(
+        NightAzkar.add(new ZekerModel(
                         "اللّهُـمَّ عافِـني في بَدَنـي ، اللّهُـمَّ عافِـني في سَمْـعي ، اللّهُـمَّ عافِـني في بَصَـريَ" +
                         "\n" +"\n" +
                         "( ثلاث مرات )"
@@ -201,7 +201,7 @@ public class NightAzkar extends AppCompatActivity {
                 , 3));
 
 
-        NightAzkar.add(new ZekeritemModel(
+        NightAzkar.add(new ZekerModel(
                 "اللّهُـمَّ إِنِّـي أسْـأَلُـكَ العَـفْوَ وَالعـافِـيةَ في الدُّنْـيا وَالآخِـرَة، " +
                         "اللّهُـمَّ إِنِّـي أسْـأَلُـكَ العَـفْوَ وَالعـافِـيةَ في ديني وَدُنْـيايَ وَأهْـلي وَمالـي،" +
                         " اللّهُـمَّ اسْتُـرْ عـوْراتي وَآمِـنْ رَوْعاتـي، " +
@@ -211,26 +211,26 @@ public class NightAzkar extends AppCompatActivity {
                 ,1));
 
 
-        NightAzkar.add(new ZekeritemModel(
+        NightAzkar.add(new ZekerModel(
                 "بِسـمِ اللهِ الذي لا يَضُـرُّ مَعَ اسمِـهِ شَيءٌ في الأرْضِ وَلا في السّمـاءِ وَهـوَ السّمـيعُ العَلـيم" + "\n" + "\n" +
                         "( ثلاث مرات )"+"\n" +"\"من قالها ثلاثا اذا اصبح وثلاثا اذا امسى لم يضره شيئ - رواه ابن ماجه\"",3));
 
 
 
 
-        NightAzkar.add(new ZekeritemModel(
+        NightAzkar.add(new ZekerModel(
                 "اللّهُـمَّ إِنّـي أَعـوذُ بِكَ مِنَ الْكُـفر، وَالفَـقْر، وَأَعـوذُ بِكَ مِنْ عَذابِ القَـبْر، لا إلهَ إلاّ أَنْـتَ" + "\n" + "\n" +
                         "( ثلاث مرات )"
 
                       ,3));
-        NightAzkar.add(new ZekeritemModel(
+        NightAzkar.add(new ZekerModel(
                         "يَا حَيُّ يَا قيُّومُ بِرَحْمَتِكَ أسْتَغِيثُ أصْلِحْ لِي شَأنِي كُلَّهُ وَلاَ تَكِلْنِي إلَى نَفْسِي طَـرْفَةَ عَيْنٍ" + "\n" + "\n" +
                         "( ثلاث مرات )"
 
                 ,3));
 
 
-        NightAzkar.add(new ZekeritemModel(
+        NightAzkar.add(new ZekerModel(
                 "حَسْبِـيَ اللّهُ لا إلهَ إلاّ هُوَ عَلَـيهِ تَوَكَّـلتُ وَهُوَ رَبُّ العَرْشِ العَظـيم"
                         + "\n" + "\n" + "( سبع مرات )" +  "\n" + "من قالها كفاه الله ما أهمه من أمر الدنيا والأخرة "
 
@@ -238,7 +238,7 @@ public class NightAzkar extends AppCompatActivity {
                 ,7));
 
 
-        NightAzkar.add(new ZekeritemModel(
+        NightAzkar.add(new ZekerModel(
                 "رَضيـتُ بِاللهِ رَبَّـاً وَبِالإسْلامِ ديـناً وَبِمُحَـمَّدٍ صلى الله عليه وسلم نَبِيّـاً" + "\n" + "\n" + "( ثلاث مرات )"
 
 
@@ -246,7 +246,7 @@ public class NightAzkar extends AppCompatActivity {
 
                 ,3));
 
-        NightAzkar.add(new ZekeritemModel(
+        NightAzkar.add(new ZekerModel(
 
                 "اللَّهُمَّ إِنِّي أَعُوذُ بِكَ مِنْ الْهَمِّ وَالْحَزَنِ، وَأَعُوذُ بِكَ مِنْ الْعَجْزِ وَالْكَسَلِ، وَأَعُوذُ بِكَ مِنْ الْجُبْنِ وَالْبُخْلِ، وَأَعُوذُ بِكَ مِنْ غَلَبَةِ الدَّيْنِ، وَقَهْرِ الرِّجَالِ" +"\n" +"\n" +
                         " (ثلاثا)"+"\n" +
@@ -257,7 +257,7 @@ public class NightAzkar extends AppCompatActivity {
                 ,3));
 
 
-        NightAzkar.add(new ZekeritemModel(
+        NightAzkar.add(new ZekerModel(
                 "اللَّهُمَّ أَنْتَ رَبِّي لا إِلَهَ إِلا أَنْتَ، عَلَيْكَ تَوَكَّلْتُ،" +
                         " وَأَنْتَ رَبُّ الْعَرْشِ الْعَظِيمِ، مَا شَاءَ اللَّهُ كَانَ، وَمَا لَمْ يَشَأْ لَمْ يَكُنْ،" +
                         " وَلا حَوْلَ وَلا قُوَّةَ إِلا بِاللَّهِ الْعَلِيِّ الْعَظِيمِ، " +
@@ -268,17 +268,17 @@ public class NightAzkar extends AppCompatActivity {
 
                 ,1));
 
-        NightAzkar.add(new ZekeritemModel(
+        NightAzkar.add(new ZekerModel(
 
                 "لَا إلَه إلّا اللهُ وَحْدَهُ لَا شَرِيكَ لَهُ، لَهُ الْمُلْكُ وَلَهُ الْحَمْدُ وَهُوَ عَلَى كُلِّ شَيْءِ قَدِير" + "\n" + "\n" +
                         " ( 100 مرة )"
                         + "\n" + "\n" + "كانت له عدل عشر رقاب، وكتبت له مئة حسنة، ومحيت عنه مئة سيئة، وكانت له حرزا من الشيطان"
                 ,100));
-        NightAzkar.add(new ZekeritemModel(
+        NightAzkar.add(new ZekerModel(
 
                 "اللَّهُمَّ صَلِّ وَسَلِّمْ وَبَارِكْ على نَبِيِّنَا مُحمَّد" + "\n" + "\n" +
                         "( عشر مرات )" + "\n" + "\n" + "من صلى علي حين يصبح وحين يمسى أدركته شفاعتي يوم القيامة",10));
-        NightAzkar.add(new ZekeritemModel(
+        NightAzkar.add(new ZekerModel(
 
 
                 "\n" + "اللَّهُمَّ إِنِّي أَسْأَلُكَ عِلْمًا نَافِعًا، وَرِزْقًا طَيِّبًا، وَعَمَلًا مُتَقَبَّلًا" + "\n" + "\n" +
@@ -286,24 +286,24 @@ public class NightAzkar extends AppCompatActivity {
                 ,3));
 
 
-        NightAzkar.add(new ZekeritemModel(
+        NightAzkar.add(new ZekerModel(
                 "\n" + "سُبْحـانَ اللهِ وَبِحَمْـدِه" + "\n" +
                         " ( 100 مرة )" + "\n" + "\n" + "من قالها غُفِرَتْ له ذنوبُه ولو كانت مثلَ زبدِ البحرِ"
 
                 ,100));
-        NightAzkar.add(new ZekeritemModel(
+        NightAzkar.add(new ZekerModel(
                 "(اللهم صل على سيدنا محمد عبدك ورسولك النبي الأمي وعلى آله وصحبه وسلم تسليما عدد ما أحاط به علمك وخط به قلمك وأحصاه كتابك , وارض اللهم عن ساداتنا أبي بكر وعمر وعثمان وعلي , وعن الصحابة أجمعين , وعن التابعين وتابعيهم بإحسان إلى يوم الدين) " +"\n" +
                         "(سبحان ربك رب العزة عما يصفون , وسلام على المرسلين , والحمد لله رب العالمين)\n"
 
                 ,1));
-        NightAzkar.add(new ZekeritemModel(
+        NightAzkar.add(new ZekerModel(
                 "ورد الرابطة"+ "\n" + "\n" +
                         "\"قُلِ اللَّهُمَّ مَّالِكَ المُلْكِ تُؤْتِي المُلْكَ مَنْ تَشَاءُ وَتَنْزِعُ المُلْكَ مِمَّنَ تَشَاءُ وَتُعِزُّ مَنْ تَشَاءُ وَتُذِلُّ مَنْ تَشَاءُ بِيَدِكَ الخَيْرُ إِنَّكَ عَلَى كُلِّ شَيْءٍ قَدِيرٍ* تُولِجُ اللَّيْلَ فِي النَّهَارِ وَتُولِجُ النَّهَارَ فِي اللَّيْلَ وَتُخْرِجُ الحَيَّ مِنَ المَيِّتِ وَتُخْرِجُ المَيِّتُ مِنَ الحَيِّ وَتَرْزُقُ مَنْ تَشَاءُ بِغَيْرِ حِسَابٍ \"" +
                         "\n" +"\n" +
                         "اللهم هذا إقبال ليلك ، وإدبار نهارك ، وأصوات دعاتك ، فاغفر لي\""
                 ,1));
 
-        NightAzkar.add(new ZekeritemModel(
+        NightAzkar.add(new ZekerModel(
                 "ثم يستحضر صور من يعرف من إخوانه في ذهنه ويستشعر الصلة الروحية بينه وبين من لم يعرفه منهم. ثم يدعو لهم بمثل هذا الدعاء:\n" +"\n"  +
                         "\" اللهم إنك تعلم أن هذه القلوب قد اجتمعت على محبتك والتقت على طاعتك، وتوحدت على دعوتك" +
                         "، وتعاهدت على نصرة شريعتك فوثق الله رابطتها" +

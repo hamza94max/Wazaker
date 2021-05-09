@@ -5,7 +5,7 @@ import android.os.Bundle;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.hazem.wazaker.Adapters.FortyAdapter;
+import com.hazem.wazaker.Adapters.FortyListAdapter;
 import com.hazem.wazaker.Models.Azkar_model;
 import com.hazem.wazkar.R;
 import java.util.ArrayList;
@@ -71,7 +71,7 @@ public class FortyListActivity extends AppCompatActivity {
 
         RecyclerView Hadith_recycle = findViewById(R.id.rvHadith);
 
-        FortyAdapter fortyAdapter = new FortyAdapter( (ArrayList<Azkar_model>) Hadith_list, getContext());
+        FortyListAdapter fortyAdapter = new FortyListAdapter( (ArrayList<Azkar_model>) Hadith_list, getContext());
 
         Hadith_recycle.setAdapter(fortyAdapter);
         Hadith_recycle.setHasFixedSize(true);

@@ -20,7 +20,7 @@ public class FortyActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_forty2);
+        setContentView(R.layout.activity_forty);
 
             int index = getIntent().getIntExtra("index", 0);
                 loaddData(index);
@@ -32,7 +32,7 @@ public class FortyActivity extends AppCompatActivity {
             StepperIndicator indicator = findViewById(R.id.STEPP);
             indicator.setViewPager(viewPager);
 
-            Button copybtn =findViewById(R.id.copybtn);
+            Button copybtn = findViewById(R.id.copybtn);
             copybtn.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {

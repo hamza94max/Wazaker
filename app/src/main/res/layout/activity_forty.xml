@@ -3,23 +3,46 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
+    android:background="@drawable/bak"
     android:layout_height="match_parent"
-    tools:context="com.hazem.wazaker.Activites.FortyListActivity"
-    android:background="@drawable/back"
-    android:layoutDirection="ltr"
+    tools:context="com.hazem.wazaker.Activites.FortyActivity">
 
-    >
+    <com.badoualy.stepperindicator.StepperIndicator
+        android:id="@+id/STEPP"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:stpi_animDuration="252"
+        app:stpi_circleRadius="3.5dp"
+        app:stpi_lineMargin="5dp"
+        app:stpi_lineStrokeWidth="2.2dp"
+        app:stpi_showDoneIcon="false" />
 
-
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/rvHadith"
-        android:layout_width="0dp"
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/vpager"
+        android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:orientation="vertical"
-        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        android:keepScreenOn="true"
+        android:layoutDirection="rtl"
+        android:padding="15dp"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="MissingConstraints,UnusedAttribute" />
+
+    <Button
+        android:id="@+id/copybtn"
+        android:layout_width="40dp"
+        android:layout_height="45dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        android:layoutDirection="ltr"
+        android:background="@drawable/copy_24dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.171"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.952"
+        tools:ignore="MissingConstraints" />
 </androidx.constraintlayout.widget.ConstraintLayout>

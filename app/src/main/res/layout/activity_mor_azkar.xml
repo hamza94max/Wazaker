@@ -4,12 +4,12 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:padding="0.5dp"
-    tools:context="com.hazem.wazaker.Activites.Morning_Azkar">
+    tools:context="com.hazem.wazaker.Activites.MorningAzkar">
 
 
     <androidx.recyclerview.widget.RecyclerView
         android:layout_marginTop="0.5dp"
-        android:id="@+id/morrec"
+        android:id="@+id/morrecyclerview"
         android:padding="5dp"
         android:background="#6fc1a5"
         android:layout_width="match_parent"

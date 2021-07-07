@@ -10,8 +10,8 @@ android {
         minSdkVersion 14
         //noinspection OldTargetApi,ExpiredTargetSdkVersion
         targetSdkVersion 29
-        versionCode 11
-        versionName "10.1"
+        versionCode 12
+        versionName "10.2"
         vectorDrawables.useSupportLibrary = true
         setProperty("archivesBaseName", "hQiblaDirection")
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
@@ -19,7 +19,7 @@ android {
     buildTypes {
         applicationVariants.all { variant ->
             variant.outputs.each { output ->
-                def date = new Date();
+                def date = new Date()
                 def formattedDate = date.format('yyyyMMddHHmmss')
                 def apkFileName = archivesBaseName + "-" + formattedDate + ".apk"
                 output.outputFileName = apkFileName
@@ -66,8 +66,8 @@ dependencies {
     implementation 'com.google.firebase:firebase-messaging:17.3.4'
  */
 
-    // prayertimes library 
-    implementation 'com.batoulapps.adhan:adhan:1.2.0'
+    // prayertimes library
+   // implementation 'com.batoulapps.adhan:adhan:1.2.0'
     testImplementation 'junit:junit:4.13'
     androidTestImplementation 'androidx.test:runner:1.3.0'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'

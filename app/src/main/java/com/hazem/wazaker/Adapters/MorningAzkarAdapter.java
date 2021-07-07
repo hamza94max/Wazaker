@@ -9,40 +9,36 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.TextView;
+
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
+
 import com.hazem.wazaker.Models.ZekerModel;
 import com.hazem.wazkar.R;
+
 import java.util.ArrayList;
+
 import at.markushi.ui.CircleButton;
 
-public class MoringAzkarAdapter extends RecyclerView.Adapter<MoringAzkarAdapter.HViewholder> {
-
+public class MorningAzkarAdapter extends RecyclerView.Adapter<MorningAzkarAdapter.HViewholder> {
 
     private ArrayList<ZekerModel> model = new ArrayList<>();
 
-
-
-
-
-    public MoringAzkarAdapter(ArrayList<ZekerModel> models, Context context) {
+    public MorningAzkarAdapter(ArrayList<ZekerModel> models, Context baseContext) {
         this.model = models;
     }
+
     @Override
     public HViewholder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+
         LayoutInflater layoutInflater = LayoutInflater.from(parent.getContext());
         View v = layoutInflater.inflate(R.layout.morr_items, parent, false);
-
-
         return new HViewholder(v);
     }
 
-
-
-
     @SuppressLint("SetTextI18n")
     @Override
-    public void onBindViewHolder(@NonNull MoringAzkarAdapter.HViewholder holder, int position) {
+    public void onBindViewHolder(@NonNull MorningAzkarAdapter.HViewholder holder, int position) {
 
         holder.zekertext.setText(model.get(position).getZeker());
         holder.copybtn.setOnClickListener(new View.OnClickListener() {
@@ -60,13 +56,11 @@ public class MoringAzkarAdapter extends RecyclerView.Adapter<MoringAzkarAdapter.
             }
         });
 
-
         final ZekerModel item = model.get(position);
         final int[] count = {item.getCurrentCount()};
         final Boolean[] ch = {item.getChecked()};
         holder.checkBox.setChecked(ch[0]);
         holder.plustext.setText(Integer.toString(count[0]));
-
 
         holder.plusbtn.setOnClickListener(new View.OnClickListener() {
             @Override

@@ -1,47 +1,19 @@
-package com.hazem.wazaker.Activites;
+package com.hazem.wazaker.Data_sets;
 
-import android.os.Bundle;
-import android.widget.Button;
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.recyclerview.widget.LinearLayoutManager;
-import androidx.recyclerview.widget.RecyclerView;
-import com.hazem.wazaker.Adapters.MoringAzkarAdapter;
 import com.hazem.wazaker.Models.ZekerModel;
-import com.hazem.wazkar.R;
+
 import java.util.ArrayList;
+import java.util.List;
 
+public class MorningAzkarDataset {
 
-public class Morning_Azkar extends AppCompatActivity {
+   public static List<ZekerModel> morAzkar;
 
-       Button copybtn;
-       ArrayList<ZekerModel> morAzkar;
+   public static List<ZekerModel> getMorningAzkar(){
 
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_mor_azkar);
+      morAzkar = new ArrayList<>();
 
-        RecyclerView recyclerView = findViewById(R.id.morrec);
-
-        copybtn = findViewById(R.id.copybtn);
-
-
-        loaddata();
-
-
-        LinearLayoutManager layoutManager = new LinearLayoutManager(this);
-        recyclerView.setLayoutManager(layoutManager);
-        MoringAzkarAdapter adapter = new MoringAzkarAdapter( morAzkar , getBaseContext());
-        recyclerView.setLayoutManager(layoutManager);
-        recyclerView.setAdapter(adapter);
-    }
-
-    private void loaddata(){
-        morAzkar = new ArrayList<>();
-
-        morAzkar.add(new ZekerModel(
-
-
+      morAzkar.add(new ZekerModel(
                 "أَعُوذُ بِالله السَّمِيعِ العَلِيِمِ مِنَ الشّيطَانِ الرّجِيمِ (بِسْمِ اللهِ الرَّحْمـَنِ الرَّحِيمِ , " +
                         "الْحَمْدُ للهِ رَبِّ الْعَالَمِينَ" +
                         " , الرَّحْمـنِ الرَّحِيمِ" +
@@ -52,22 +24,20 @@ public class Morning_Azkar extends AppCompatActivity {
                         " وَلاَ الضَّالِّينَ)" + "\n" + "\n" +
                         " (الفاتحة)",1));
 
-
-        morAzkar.add(new ZekerModel(
+      morAzkar.add(new ZekerModel(
                          "(بِسْمِ اللّهِ الرَّحْمـنِ الرَّحِيمِ , الـم , ذَلِكَ الْكِتَابُ لاَ رَيْبَ فِيهِ هُدًى لِّلْمُتَّقِينَ ," +
-                        " الَّذِينَ يُؤْمِنُونَ بِالْغَيْبِ " +
-                        "وَيُقِيمُونَ الصَّلاةَ " +
-                        "وَمِمَّا رَزَقْنَاهُمْ يُنفِقُونَ ," +
-                        " والَّذِينَ يُؤْمِنُونَ بِمَا أُنزِلَ إِلَيْك" +
-                        "َ وَمَا أُنزِلَ مِن قَبْلِكَ " +
-                        "وَبِالآخِرَةِ هُمْ يُوقِنُونَ ," +
-                        " أُوْلَـئِكَ عَلَى هُدًى مِّن" +
-                        " رَّبِّهِمْ " +
-                        "وَأُوْلَـئِكَ هُمُ الْمُفْلِحُونَ)" + "\n" + "\n" +
-                        " (البقرة:1-5)."
+                                 " الَّذِينَ يُؤْمِنُونَ بِالْغَيْبِ " +
+                                 "وَيُقِيمُونَ الصَّلاةَ " +
+                                 "وَمِمَّا رَزَقْنَاهُمْ يُنفِقُونَ ," +
+                                 " والَّذِينَ يُؤْمِنُونَ بِمَا أُنزِلَ إِلَيْك" +
+                                 "َ وَمَا أُنزِلَ مِن قَبْلِكَ " +
+                                 "وَبِالآخِرَةِ هُمْ يُوقِنُونَ ," +
+                                 " أُوْلَـئِكَ عَلَى هُدًى مِّن" +
+                                 " رَّبِّهِمْ " +
+                                 "وَأُوْلَـئِكَ هُمُ الْمُفْلِحُونَ)" + "\n" + "\n" +
+                                 " (البقرة:1-5)."
 
-                , 1));
-
+                                 , 1));
 
         morAzkar.add(new ZekerModel(
 
@@ -80,8 +50,7 @@ public class Morning_Azkar extends AppCompatActivity {
                         "ومن قالها حين يمسى أجير من الجن حتى" + "\n" +
                         " يصبح"
 
-                , 1));
-
+                        , 1));
 
         morAzkar.add(new ZekerModel(
                 " ( آمَنَ الرَّسُولُ بِمَا أُنْزِلَ إِلَيْهِ مِنْ رَبِّهِ وَالْمُؤْمِنُونَ ۚ" +
@@ -95,8 +64,7 @@ public class Morning_Azkar extends AppCompatActivity {
                         "وَارْحَمْنَا أَنْتَ مَوْلَانَا فَانْصُرْنَا عَلَى الْقَوْمِ الْكَافِرِين )" + "\n" + "\n" +
                         " [البقرة 285 – 286]" + "\n" + "\n" +
                         "( مرة واحدة )"
-                , 1));
-
+                        , 1));
 
         morAzkar.add(new ZekerModel(
                 "بسم الله الرحمن الرحيم" + "\n" + "\n" +
@@ -108,29 +76,22 @@ public class Morning_Azkar extends AppCompatActivity {
                         "\n" + "\n" + " ( ثلاث مرات ) ", 3));
 
         morAzkar.add(new ZekerModel(
-
-
                 "بسم الله الرحمن الرحيم" + "\n" + "\n" +
 
                         "قُلْ أَعُوذُ بِرَبِّ النَّاسِ (1) مَلِكِ النَّاسِ (2) إِلَهِ النَّاسِ (3) مِنْ شَرِّ الْوَسْوَاسِ الْخَنَّاسِ (4) الَّذِي يُوَسْوِسُ فِي صُدُورِ النَّاسِ (5) مِنَ الْجِنَّةِ وَالنَّاسِ (6)\n" +
                         "\n" +
                         "( ثلاث مرات )"  + "\n" + "من قالها حين يصبح وحين يمسى كفته من كل شيء (الإخلاص والمعوذتين)\n" +
                         "\n"
-
-
-                , 3));
+                        , 3));
 
         morAzkar.add(new ZekerModel(
                 "أصبحنا وأصبح الملك لله ، والحمد لله لا شريك له ، لا إله إلا هو وإليه النشور " + "\n" + "\n" +
                         "(ثلاثا)",3));
 
-
-
         morAzkar.add(new ZekerModel("أَصْبَـحْـنا عَلَى فِطْرَةِ الإسْلاَمِ" +
-                        "، وَعَلَى كَلِمَةِ الإِخْلاَصِ، وَعَلَى دِينِ نَبِيِّنَا مُحَمَّدٍ صَلَّى اللهُ عَلَيْهِ وَسَلَّم" +
-                        "َ، وَعَلَى مِلَّةِ أَبِينَا إبْرَاهِيمَ حَنِيفاً مُسْلِماً وَمَا كَانَ مِنَ المُشْرِكِينَ"
-                        + "\n" + "\n" + " ( ثلاثا )", 3));
-
+                                            "، وَعَلَى كَلِمَةِ الإِخْلاَصِ، وَعَلَى دِينِ نَبِيِّنَا مُحَمَّدٍ صَلَّى اللهُ عَلَيْهِ وَسَلَّم" +
+                                            "َ، وَعَلَى مِلَّةِ أَبِينَا إبْرَاهِيمَ حَنِيفاً مُسْلِماً وَمَا كَانَ مِنَ المُشْرِكِينَ"
+                                            + "\n" + "\n" + " ( ثلاثا )", 3));
 
         morAzkar.add(new ZekerModel(
 
@@ -140,21 +101,17 @@ public class Morning_Azkar extends AppCompatActivity {
         morAzkar.add(new ZekerModel(
 
                         "اللّهُـمَّ ما أَصْبَـَحَ بي مِـنْ نِعْـمَةٍ أَو بِأَحَـدٍ مِـنْ خَلْـقِك، فَمِـنْكَ وَحْـدَكَ لا شريكَ لَـك، فَلَـكَ الْحَمْـدُ وَلَـكَ الشُّكْـر  "
-                        + "\n" + " (ثلاثا)" + "\n" + "\n"
-                        + "من قرأها حين يصبح فقد أدى شكر يومه ومن قرأها حين يمسي فقد ادى شكر ليلته - رواه ابو داوود\n" +
-                        "\n"
-
-
-                , 3));
-
+                                + "\n" + " (ثلاثا)" + "\n" + "\n"
+                                + "من قرأها حين يصبح فقد أدى شكر يومه ومن قرأها حين يمسي فقد ادى شكر ليلته - رواه ابو داوود\n" +
+                                "\n"
+                                , 3));
 
         morAzkar.add(new ZekerModel(
                 "اللّهُـمَّ إِنِّـي أَصْبَـحْتُ أُشْـهِدُك ، وَأُشْـهِدُ حَمَلَـةَ عَـرْشِـك ، وَمَلَائِكَتَكَ ، وَجَمـيعَ خَلْـقِك ، أَنَّـكَ أَنْـتَ اللهُ لا إلهَ إلاّ أَنْـتَ وَحْـدَكَ لا شَريكَ لَـك ، وَأَنَّ ُ مُحَمّـداً عَبْـدُكَ وَرَسـولُـك" + "\n" +
 
 
                         "\n" + "\n" + "من قال حين يصبح او يمسي اربع مرات اعتقه الله من النار- رواه ابو داوود"
-                , 4));
-
+                        , 4));
 
         morAzkar.add(new ZekerModel(
 
@@ -166,15 +123,14 @@ public class Morning_Azkar extends AppCompatActivity {
                         + "\n" + "\n" + "\n" + "من قالها موقنا بها حين يمسى ومات من ليلته دخل الجنة وكذلك حين يصبح"
 
 
-                , 3));
-
+                        , 3));
 
         morAzkar.add(new ZekerModel(
 
                 "رَضيـتُ بِاللهِ رَبَّـاً وَبِالإسْلامِ ديـناً وَبِمُحَـمَّدٍ صلى الله عليه وسلم نَبِيّـا" + "\n" + "\n" +
 
                         " ( ثلاث مرات )" + "\n" + "\n" + "من قالها حين يصبح وحين يمسى كان حقا على الله أن يرضيه يوم القيامة"
-                , 3));
+                        , 3));
 
         morAzkar.add(new ZekerModel(
 
@@ -183,7 +139,7 @@ public class Morning_Azkar extends AppCompatActivity {
                         "\n"
 
 
-                , 7));
+                        , 7));
 
         morAzkar.add(new ZekerModel(
 
@@ -191,8 +147,7 @@ public class Morning_Azkar extends AppCompatActivity {
                 "بِسـمِ اللهِ الذي لا يَضُـرُّ مَعَ اسمِـهِ شَيءٌ في الأرْضِ وَلا في السّمـاءِ وَهـوَ السّمـيعُ العَلـيم " + "\n" + "\n" + " ( ثلاث مرات ) " + "\n" + "\n"
                         + "من قالها ثلاثا اذا اصبح وثلاثا اذا امسى لم يضره شيئ - رواه ابن ماجه"
 
-                , 3));
-
+                        , 3));
 
         morAzkar.add(new ZekerModel(
 
@@ -200,10 +155,7 @@ public class Morning_Azkar extends AppCompatActivity {
                         "(ثلاثا)" ,3));
 
         morAzkar.add(new ZekerModel("( أعوذ بكلمات الله التامات من شر ما خلق )"+ "\n"+"( ثلاثا )"
-                ,3  ));
-
-
-
+                                            ,3  ));
 
         morAzkar.add(new ZekerModel(
                 "اللَّهُمَّ إِنِّي أَعُوذُ بِكَ مِنْ الْهَمِّ وَالْحَزَنِ، وَأَعُوذُ بِكَ مِنْ الْعَجْزِ وَالْكَسَلِ، وَأَعُوذُ بِكَ مِنْ الْجُبْنِ وَالْبُخْلِ، وَأَعُوذُ بِكَ مِنْ غَلَبَةِ الدَّيْنِ، وَقَهْرِ الرِّجَالِ"  +"\n" +
@@ -212,18 +164,17 @@ public class Morning_Azkar extends AppCompatActivity {
                         "إذا قُلْتَهُ أَذْهَبَ اللهُ تعالى هَمَّكَ وقَضَى عنك دَيْنَكَ"
 
 
-                , 3));
+                        , 3));
 
         morAzkar.add(new ZekerModel("سُبْحـانَ اللهِ وَبِحَمْـدِهِ عَدَدَ خَلْـقِه، وَرِضـا نَفْسِـه، وَزِنَـةَ عَـرْشِـه، وَمِـدادَ كَلِمـاتِـه" +
-                        "\n" + "\n" + " ( ثلاث  مرات ) " ,3));
+                                            "\n" + "\n" + " ( ثلاث  مرات ) " ,3));
         morAzkar.add(new ZekerModel(
                         "اللّهُـمَّ عافِـني في بَدَنـي، اللّهُـمَّ عافِـني في سَمْـعي، اللّهُـمَّ عافِـني في بَصَـري " + "\n" + "\n" + "( ثلاث  مرات ) "
 
 
-                , 3));
+                                , 3));
 
         morAzkar.add(new ZekerModel(
-
 
                 "أسْتَغْفِرُ اللهَ العَظِيمَ الَّذِي لاَ إلَهَ إلاَّ هُوَ، الحَيُّ القَيُّومُ، وَأتُوبُ إلَيه" + "\n" + "\n" +
                         "( ثلاث مرات )",3));
@@ -231,35 +182,33 @@ public class Morning_Azkar extends AppCompatActivity {
         morAzkar.add(new ZekerModel(
 
                         "يَا رَبِّ، لَكَ الْحَمْدُ كَمَا يَنْبَغِي لِجَلَالِ وَجْهِكَ، وَلِعَظِيمِ سُلْطَانِكَ" + "\n" + "\n" +
-                        "( ثلاث مرات )"
-                , 3));
-
+                                "( ثلاث مرات )"
+                                , 3));
 
         morAzkar.add(new ZekerModel(
                 "لَا إلَه إلّا اللهُ وَحْدَهُ لَا شَرِيكَ لَهُ، لَهُ الْمُلْكُ وَلَهُ الْحَمْدُ وَهُوَ عَلَى كُلِّ شَيْءِ قَدِير" + "\n" + "\n" +
                         " ( 100 مرة )"
                         + "\n" + "\n" + "كانت له عدل عشر رقاب، وكتبت له مئة حسنة، ومحيت عنه مئة سيئة، وكانت له حرزا من الشيطان"
 
-                , 100));
+                        , 100));
 
         morAzkar.add(new ZekerModel(
                 "اللَّهُمَّ صَلِّ وَسَلِّمْ وَبَارِكْ على نَبِيِّنَا مُحمَّد" + "\n" + "\n" +
                         "( عشر مرات )" + "\n" + "\n" + "من صلى علي حين يصبح وحين يمسى أدركته شفاعتي يوم القيامة"
 
-                , 10));
-
+                        , 10));
 
         morAzkar.add(new ZekerModel(
 
 
                  "اللَّهُمَّ إِنِّي أَسْأَلُكَ عِلْمًا نَافِعًا، وَرِزْقًا طَيِّبًا، وَعَمَلًا مُتَقَبَّلًا" + "\n" + "\n" +
-                        "( ثلاث مرات )"
-                , 3));
+                         "( ثلاث مرات )"
+                         , 3));
 
         morAzkar.add(new ZekerModel(
                 "سُبْحـانَ اللهِ وَبِحَمْـدِه"+ "\n"+ "\n"+
                         " ( 100 مرة )" + "\n" + "\n" + "من قالها غُفِرَتْ له ذنوبُه ولو كانت مثلَ زبدِ البحرِ"
-                , 100));
+                        , 100));
 
         morAzkar.add(new ZekerModel(
                 "اللهم صل على سيدنا محمد عبدك ورسولك النبي الأمي وعلى آله وصحبه وسلم تسليما" +
@@ -270,5 +219,6 @@ public class Morning_Azkar extends AppCompatActivity {
                         " سبحان ربك رب العزة " +
                         "عما يصفون  وسلام على المرسلين " +
                         " والحمد لله رب العالمين\n", 1));
-    }}
 
+        return morAzkar ;
+ }}

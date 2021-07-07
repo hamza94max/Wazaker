@@ -4,9 +4,9 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
-
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.hazem.wazaker.Activites.AzkarListActivity;
 import com.hazem.wazaker.Models.Azkar_model;
 import com.hazem.wazaker.listeners.ItemListner;
 import com.hazem.wazkar.R;
@@ -21,7 +21,7 @@ public class AzkarListAdapter extends RecyclerView.Adapter<AzkarListAdapter.View
     private final List<Azkar_model> azkar_modelList;
 
 
-    public AzkarListAdapter(List<Azkar_model> items ) {
+    public AzkarListAdapter(List<Azkar_model> items, AzkarListActivity azkarListActivity) {
         this.azkar_modelList = items;
     }
 

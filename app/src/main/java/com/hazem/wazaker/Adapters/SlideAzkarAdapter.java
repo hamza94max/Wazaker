@@ -24,13 +24,8 @@ public class SlideAzkarAdapter extends PagerAdapter {
         return mor.size();
     }
 
-
     @Override
-    public boolean isViewFromObject(View view, Object object) {
-        return view==object;
-    }
-
-
+    public boolean isViewFromObject(View view, Object object) { return view == object; }
 
     @Override
     public Object instantiateItem(ViewGroup container, int position) {
@@ -41,9 +36,7 @@ public class SlideAzkarAdapter extends PagerAdapter {
         textView.setTextColor(Color.WHITE);
         container.addView(textView,0);
 
-
         return textView;
-
     }
     @Override
     public void destroyItem( ViewGroup container, int position,  Object object) {

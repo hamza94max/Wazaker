@@ -70,6 +70,7 @@
 
     <Button
         android:id="@+id/copybtn"
+        android:onClick="copyZekerbtn"
         android:layout_width="40dp"
         android:layout_height="45dp"
         android:layout_marginStart="8dp"

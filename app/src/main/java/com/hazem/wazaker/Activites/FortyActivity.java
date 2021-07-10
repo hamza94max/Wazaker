@@ -14,8 +14,9 @@ import com.hazem.wazaker.Data_sets.FortyDataSet;
 import com.hazem.wazkar.R;
 
 public class FortyActivity extends AppCompatActivity {
+
      String[] Hadith;
-     int[] Hadith_counts;
+     int[] Hadithcount;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -47,12 +48,11 @@ public class FortyActivity extends AppCompatActivity {
                     startActivity(shareIntent);
                 }
             });
-            }
+    }
 
-
-        private void loaddData( int index) {
+        private void loaddData(int index) {
             Hadith = FortyDataSet.getFortyList(index);
-            Hadith_counts = new int[Hadith.length];
+            Hadithcount = new int[Hadith.length];
         }
     }
 

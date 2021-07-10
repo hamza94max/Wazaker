@@ -12,7 +12,7 @@
 
 
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/rvHadith"
+        android:id="@+id/hadithrecycler"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:orientation="vertical"

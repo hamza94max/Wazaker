@@ -6,7 +6,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 import androidx.recyclerview.widget.RecyclerView;
-import com.hazem.wazaker.Models.Azkar_model;
+import com.hazem.wazaker.Models.AzkarModel;
 import com.hazem.wazkar.R;
 import com.hazem.wazaker.listeners.ItemListner;
 import java.security.AccessControlContext;
@@ -17,9 +17,9 @@ public class FortyListAdapter extends RecyclerView.Adapter<FortyListAdapter.Myvi
 
 
     private ItemListner listner;
-    private final List<Azkar_model> fortyList;
+    private final List<AzkarModel> fortyList;
 
-    public FortyListAdapter(ArrayList<Azkar_model> fortyList, AccessControlContext context) {
+    public FortyListAdapter(ArrayList<AzkarModel> fortyList, AccessControlContext context) {
         this.fortyList=fortyList;
     }
 
@@ -42,7 +42,7 @@ public class FortyListAdapter extends RecyclerView.Adapter<FortyListAdapter.Myvi
 
     @Override
     public void onBindViewHolder(Myviewholder holder, int position) {
-        Azkar_model p = fortyList.get(position);
+        AzkarModel p = fortyList.get(position);
         holder.title.setText(p.getName());
     }
 

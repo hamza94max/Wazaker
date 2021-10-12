@@ -18,4 +18,12 @@
     <string name="maghrib">المغرب</string>
     <string name="isha">العشاء</string>
     <string name="_00_00">00:00</string>
+
+    <string name="eveningAzkar">أذكار المساء</string>
+    <string name="Morningazkar">أذكار الصباح</string>
+    <string name="FortyHadith">الأربعون النووية</string>
+    <string name="AzkarandDoaa">الأذكار و الأدعية</string>
+    <string name="qibla">القبلة </string>
+    <string name="shareapp">مشاركة التطبيق </string>
+    <string name="totalzeker"> المجموع الكلي : </string>
 </resources>

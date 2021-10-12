@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:background="@drawable/bak"
     android:layout_height="match_parent"
-    tools:context="com.hazem.wazaker.Activites.FortyActivity">
+    tools:context="com.hazem.wazaker.Activites.FortyHadithActivity">
 
     <com.badoualy.stepperindicator.StepperIndicator
         android:id="@+id/STEPP"

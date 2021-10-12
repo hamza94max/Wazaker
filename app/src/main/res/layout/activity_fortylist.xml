@@ -4,12 +4,10 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.hazem.wazaker.Activites.FortyListActivity"
+    tools:context="com.hazem.wazaker.Activites.FortyHadithListActivity"
     android:background="@drawable/back"
     android:layoutDirection="ltr"
-
     >
-
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/hadithrecycler"

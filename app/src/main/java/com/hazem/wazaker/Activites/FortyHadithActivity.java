@@ -13,7 +13,7 @@ import com.hazem.wazaker.Adapters.SlideHadithAdapter;
 import com.hazem.wazaker.Data_sets.FortyDataSet;
 import com.hazem.wazkar.R;
 
-public class FortyActivity extends AppCompatActivity {
+public class FortyHadithActivity extends AppCompatActivity {
 
      String[] Hadith;
      int[] Hadithcount;

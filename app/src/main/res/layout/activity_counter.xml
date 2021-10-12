@@ -8,7 +8,7 @@
     android:id="@+id/counterscreen"
     android:background="@drawable/bak"
     android:onClick="setTotalscreen"
-    tools:context="com.hazem.wazaker.Activites.Counter">
+    tools:context="com.hazem.wazaker.Activites.CounterActivity">
 
     <TextView
         android:id="@+id/totaltext"

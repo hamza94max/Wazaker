@@ -9,14 +9,13 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.hazem.wazaker.Adapters.AzkarListAdapter;
 import com.hazem.wazaker.Data_sets.AzkarListDataset;
-import com.hazem.wazaker.Models.AzkarModel;
+import com.hazem.wazaker.Models.AzkarListModel;
 import com.hazem.wazkar.R;
 
 import java.util.ArrayList;
 
-
-    public class AzkarListActivity extends AppCompatActivity {
-     private ArrayList<AzkarModel> AzkarList;
+public class AzkarListActivity extends AppCompatActivity {
+     private ArrayList<AzkarListModel> AzkarList;
 
         @Override
         protected void onCreate(Bundle savedInstanceState) {
@@ -28,7 +27,7 @@ import java.util.ArrayList;
     }
         private void initAzkarListData() {
 
-            AzkarList = (ArrayList<AzkarModel>) AzkarListDataset.getAzkarList();
+            AzkarList = (ArrayList<AzkarListModel>) AzkarListDataset.getAzkarList();
             setAdapter(); }
 
         private void setAdapter(){

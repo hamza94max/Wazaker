@@ -22,17 +22,18 @@ public class MorningAzkar extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_mor_azkar);
 
-        loadMorningAzkar();
+        LoadMorningAzkar();
 
         RecyclerView recyclerView = findViewById(R.id.morrecyclerview);
         LinearLayoutManager layoutManager = new LinearLayoutManager(this);
         recyclerView.setLayoutManager(layoutManager);
+
         MorningAzkarAdapter adapter = new MorningAzkarAdapter(morningAzkar,getBaseContext());
         recyclerView.setLayoutManager(layoutManager);
         recyclerView.setAdapter(adapter);
     }
 
-    private void loadMorningAzkar(){
+    private void LoadMorningAzkar(){
         morningAzkar = (ArrayList<ZekerModel>) MorningAzkarDataset.getMorningAzkar();
     }
 }

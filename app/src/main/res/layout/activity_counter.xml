@@ -16,25 +16,25 @@
         android:layout_height="wrap_content"
         android:layout_above="@+id/countertext"
         android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
         android:layout_alignParentTop="true"
         android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginStart="25dp"
         android:layout_marginTop="98dp"
         android:layout_marginEnd="25dp"
-        android:layout_marginStart="25dp"
+        android:layout_marginRight="52dp"
         android:layout_marginBottom="7dp"
-        android:text="المجموع الكلي: 0 "
+        android:text="@string/_0"
         android:textColor="#fff"
         android:textSize="20sp"
-        android:textStyle="bold"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentRight="true"
-        android:layout_marginRight="52dp" />
+        android:textStyle="bold" />
 
     <TextView
         android:id="@+id/countertext"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="0"
+        android:text="@string/zero"
         android:gravity="center"
         android:textColor="#fff"
         android:textSize="85sp"
@@ -51,8 +51,7 @@
         android:orientation="horizontal"
         android:layout_below="@+id/countertext"
         android:layout_marginTop="130dp"
-        android:layout_centerHorizontal="true"
-        >
+        android:layout_centerHorizontal="true">
 
         <Button
             android:id="@+id/reset"
@@ -63,6 +62,7 @@
             android:text="@string/reset"
             android:textColor="#fff"
             android:textSize="30sp"
-            />
+            tools:ignore="UsingOnClickInXml" />
+
     </LinearLayout>
 </RelativeLayout>

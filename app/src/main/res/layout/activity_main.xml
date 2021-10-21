@@ -6,7 +6,8 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layoutDirection="ltr"
     android:background="@drawable/bak"
-    tools:context="com.hazem.wazaker.Activites.MainActivity">
+    tools:context="com.hazem.wazaker.Activites.MainActivity"
+    tools:ignore="UnusedAttribute">
 
     <ScrollView
         android:layout_marginTop="7dp"
@@ -14,12 +15,18 @@
         android:layout_height="match_parent"
         tools:ignore="MissingConstraints">
 
+      <RelativeLayout
+          android:layout_width="match_parent"
+          android:layout_height="match_parent"
+          tools:ignore="ScrollViewSize">
+
         <GridLayout
+            android:id="@+id/grid_layout"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
             android:layout_margin="20dp"
-            android:paddingBottom="15dp"
+            android:padding="7dp"
             android:alignmentMode="alignMargins"
             android:columnCount="2"
             android:rowCount="4"
@@ -36,25 +43,26 @@
                 app:cardCornerRadius="8dp"
                 app:cardElevation="8dp"
                 android:onClick="eveningAzkar"
-                tools:ignore="UnusedAttribute">
+                tools:ignore="UnusedAttribute,UsingOnClickInXml">
 
                 <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_vertical|center_horizontal"
                     android:gravity="center"
-                    android:orientation="vertical">
+                    android:orientation="vertical"
+                    tools:ignore="UseCompoundDrawables">
 
                     <ImageView
                         android:layout_width="30dp"
                         android:layout_height="30dp"
                         android:src="@drawable/for_clear_all_black_24dp"
-                        tools:ignore="VectorDrawableCompat" />
+                        tools:ignore="ContentDescription,VectorDrawableCompat" />
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="أذكار المساء"
+                        android:text="@string/eveningAzkar"
                         android:textSize="15sp"
                         android:textColor="@color/black"
                         android:layout_marginTop="10dp"
@@ -76,25 +84,27 @@
                 android:layout_margin="8dp"
                 app:cardCornerRadius="8dp"
                 app:cardElevation="8dp"
-                >
+                tools:ignore="UsingOnClickInXml"
+                tools:targetApi="lollipop">
 
                 <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_vertical|center_horizontal"
                     android:gravity="center"
-                    android:orientation="vertical">
+                    android:orientation="vertical"
+                    tools:ignore="UseCompoundDrawables">
 
                     <ImageView
                         android:layout_width="30dp"
                         android:layout_height="30dp"
                         android:src="@drawable/for_clear_all_black_24dp"
-                        tools:ignore="VectorDrawableCompat" />
+                        tools:ignore="ContentDescription,VectorDrawableCompat" />
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="أذكار الصباح"
+                        android:text="@string/Morningazkar"
                         android:textColor="@color/black"
                         android:layout_marginTop="10dp"
                         android:textAlignment="center"
@@ -106,7 +116,7 @@
             </androidx.cardview.widget.CardView>
 
             <androidx.cardview.widget.CardView
-                android:onClick="fortyHadith"
+                android:onClick="openFortyHadithActivity"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:id="@+id/forty"
@@ -116,24 +126,26 @@
                 android:layout_margin="8dp"
                 app:cardCornerRadius="8dp"
                 app:cardElevation="8dp"
-                >
+                tools:ignore="UsingOnClickInXml"
+                tools:targetApi="lollipop">
 
                 <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_vertical|center_horizontal"
                     android:gravity="center"
-                    android:orientation="vertical">
+                    android:orientation="vertical"
+                    tools:ignore="UseCompoundDrawables">
 
                     <ImageView
                         android:layout_width="30dp"
                         android:layout_height="30dp"
                         android:src="@drawable/ic_azkar"
-                        tools:ignore="VectorDrawableCompat" />
+                        tools:ignore="ContentDescription,VectorDrawableCompat" />
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="الأربعون النووية"
+                        android:text="@string/FortyHadith"
                         android:textColor="@color/black"
                         android:layout_marginTop="10dp"
                         android:textAlignment="center"
@@ -145,7 +157,7 @@
             </androidx.cardview.widget.CardView>
 
             <androidx.cardview.widget.CardView
-                android:onClick="azkarandDoaa"
+                android:onClick="openAzkarActivity"
                 android:layout_width="wrap_content"
                 android:layout_height="100dp"
                 android:id="@+id/azkar"
@@ -155,25 +167,26 @@
                 android:layout_margin="8dp"
                 app:cardCornerRadius="8dp"
                 app:cardElevation="8dp"
-                tools:ignore="GridLayout">
+                tools:ignore="GridLayout,UnusedAttribute,UsingOnClickInXml">
 
                 <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_vertical|center_horizontal"
                     android:gravity="center"
-                    android:orientation="vertical">
+                    android:orientation="vertical"
+                    tools:ignore="UseCompoundDrawables">
 
                     <ImageView
                         android:layout_width="30dp"
                         android:layout_height="30dp"
                         android:src="@drawable/mm"
-                        tools:ignore="VectorDrawableCompat" />
+                        tools:ignore="ContentDescription,VectorDrawableCompat" />
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="الأذكار و الأدعية"
+                        android:text="@string/AzkarandDoaa"
                         android:textColor="@color/black"
                         android:textSize="15sp"
                         android:layout_marginTop="10dp"
@@ -195,27 +208,29 @@
                 app:cardCornerRadius="8dp"
                 app:cardElevation="8dp"
                 android:layout_gravity="fill"
-                >
+                tools:ignore="UsingOnClickInXml"
+                tools:targetApi="lollipop">
 
                 <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_vertical|center_horizontal"
                     android:gravity="center"
-                    android:orientation="vertical">
+                    android:orientation="vertical"
+                    tools:ignore="UseCompoundDrawables">
 
                     <ImageView
                         android:layout_width="30dp"
                         android:layout_height="30dp"
                         android:src="@drawable/co"
-                        tools:ignore="VectorDrawableCompat" />
+                        tools:ignore="ContentDescription,VectorDrawableCompat" />
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="10dp"
                         android:textColor="@color/black"
-                        android:text="القبلة"
+                        android:text="@string/qibla"
                         android:textSize="15sp"
                         android:textAlignment="center"
                         android:textStyle="bold"
@@ -225,7 +240,7 @@
             </androidx.cardview.widget.CardView>
 
             <androidx.cardview.widget.CardView
-                android:onClick="goCounter"
+                android:onClick="openCounterActivity"
                 android:layout_gravity="fill"
                 android:layout_width="wrap_content"
                 android:layout_height="100dp"
@@ -235,28 +250,29 @@
                 android:layout_margin="8dp"
                 app:cardCornerRadius="8dp"
                 app:cardElevation="8dp"
-                >
+                tools:ignore="UsingOnClickInXml"
+                tools:targetApi="lollipop">
 
                 <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_vertical|center_horizontal"
                     android:gravity="center"
-                    android:orientation="vertical">
+                    android:orientation="vertical"
+                    tools:ignore="UseCompoundDrawables">
 
                     <ImageView
-
                         android:layout_width="30dp"
                         android:layout_height="30dp"
                         android:src="@drawable/ic_counter"
-                        tools:ignore="VectorDrawableCompat" />
+                        tools:ignore="ContentDescription,VectorDrawableCompat" />
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="10dp"
                         android:textColor="@color/black"
-                        android:text="العداد"
+                        android:text="@string/counter"
                         android:textSize="15sp"
                         android:textAlignment="center"
                         android:textStyle="bold"
@@ -266,7 +282,7 @@
             </androidx.cardview.widget.CardView>
 
             <androidx.cardview.widget.CardView
-                android:onClick="share"
+                android:onClick="shareApp"
                 android:layout_width="wrap_content"
                 android:layout_height="100dp"
                 android:id="@+id/share"
@@ -276,29 +292,29 @@
                 app:cardCornerRadius="8dp"
                 app:cardElevation="8dp"
                 android:layout_gravity="fill"
-                >
+                tools:ignore="UnusedAttribute,UsingOnClickInXml">
 
                 <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_vertical|center_horizontal"
                     android:gravity="center"
-                    android:orientation="vertical">
+                    android:orientation="vertical"
+                    tools:ignore="UseCompoundDrawables">
 
                     <ImageView
                         android:layout_width="30dp"
                         android:layout_height="30dp"
                         android:src="@drawable/ic_share_black_24dp"
-                        tools:ignore="VectorDrawableCompat" />
+                        tools:ignore="ContentDescription,VectorDrawableCompat" />
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="10dp"
                         android:textSize="15sp"
-                        android:text="مشاركة التطبيق"
+                        android:text="@string/shareapp"
                         android:textColor="@color/black"
-
                         android:textAlignment="center"
                         android:textStyle="bold"
                         android:layout_gravity="center_horizontal" />
@@ -306,5 +322,19 @@
 
             </androidx.cardview.widget.CardView>
         </GridLayout>
+
+          <TextView
+              android:id="@+id/Totalzekertext"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:layout_below="@+id/grid_layout"
+              android:layout_marginTop="21dp"
+              android:padding="7dp"
+              android:text="@string/totalzeker"
+              android:textColor="@color/white"
+              android:textSize="20sp"
+              android:textStyle="bold" />
+
+      </RelativeLayout>
     </ScrollView>
 </androidx.constraintlayout.widget.ConstraintLayout>

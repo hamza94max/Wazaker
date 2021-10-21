@@ -1,6 +1,5 @@
 <resources>
     <string name="app_name">وذكر</string>
-    <string name="arba3en">الاربعون النوويه</string>
     <string name="counter">العداد</string>
     <string name="azkar">الأذكار</string>
     <string name="reset">إعادة</string>
@@ -19,11 +18,17 @@
     <string name="isha">العشاء</string>
     <string name="_00_00">00:00</string>
 
+    // names of main cards
     <string name="eveningAzkar">أذكار المساء</string>
     <string name="Morningazkar">أذكار الصباح</string>
     <string name="FortyHadith">الأربعون النووية</string>
     <string name="AzkarandDoaa">الأذكار و الأدعية</string>
     <string name="qibla">القبلة </string>
     <string name="shareapp">مشاركة التطبيق </string>
+
+    // counter activity
     <string name="totalzeker"> المجموع الكلي : </string>
+    <string name="TotalDeleted"> تم مسح المجموع الكلي </string>
+    <string name="_0">المجموع الكلي: 0</string>
+    <string name="zero">0</string>
 </resources>

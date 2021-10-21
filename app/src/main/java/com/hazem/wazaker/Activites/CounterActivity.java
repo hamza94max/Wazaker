@@ -1,6 +1,7 @@
 package com.hazem.wazaker.Activites;
 
 import android.annotation.SuppressLint;
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.graphics.Color;
 import android.os.Bundle;
@@ -17,15 +18,10 @@ import com.hazem.wazkar.R;
 
 import java.util.Random;
 
-public class Counter extends AppCompatActivity {
+public class CounterActivity extends AppCompatActivity {
 
-    int counter = 0;
-    int zekercounts = 0;
-    int totalCounts;
-
-    TextView totalcountstext;
-    TextView countstext;
-
+    int totalCounts , counter = 0 , zekercounts = 0;
+    TextView totalcountstext, countstext;
 
     public static final String MY_PREFS_NAME = "MyPrefsFile";
     SharedPreferences prefs;
@@ -42,14 +38,30 @@ public class Counter extends AppCompatActivity {
         setSharedPreferences();
         zekercounts = sharedPreferences.getInt("zekercounts",zekercounts);
 
-       }
+    }
+
+    @Override
+    public void onBackPressed() {
+        sendTotalzekerCountstoMainActivity();
+    }
+
+    public void sendTotalzekerCountstoMainActivity(){
+        Intent intent = new Intent();
+        intent.putExtra("totalzekercount", zekercounts);
+        setResult(RESULT_OK, intent);
+        finish();
+    }
+
+    @SuppressLint("SetTextI18n")
+    public void setTotalzekerCountstext(int Totalzekercounts){
+        totalcountstext.setText(getString(R.string.totalzeker) + " " +Totalzekercounts);
+    }
 
     @SuppressLint("SetTextI18n")
     public void setSharedPreferences(){
         sharedPreferences = getSharedPreferences(MY_PREFS_NAME,MODE_PRIVATE);
         totalCounts = sharedPreferences.getInt("zekercounts",zekercounts);
-        String s = String.valueOf(totalCounts);
-        totalcountstext.setText( "المجموع الكلي : " + s);
+        setTotalzekerCountstext(totalCounts);
     }
 
     @SuppressLint("SetTextI18n")
@@ -57,17 +69,16 @@ public class Counter extends AppCompatActivity {
         counter++;
         zekercounts++;
         countstext.setText(Integer.toString(counter));
-        String Total_counts = String.valueOf(zekercounts);
-        totalcountstext.setText( "المجموع الكلي : " + Total_counts);
+        setTotalzekerCountstext(zekercounts);
 
         prefs = getSharedPreferences(MY_PREFS_NAME, MODE_PRIVATE);
         SharedPreferences.Editor editor = prefs.edit();
         editor.putInt("zekercounts", zekercounts);
         editor.apply();
 
-        int currentColor = Color.WHITE;   //this is activity level variable
-        if(counter % 33 == 0){
-            currentColor = getRandomColor();//implement getRandomColor() method
+        int currentColor;
+            if(counter % 33 == 0){
+            currentColor = getRandomColor();
             countstext.setTextColor(currentColor);
         }
     }
@@ -77,7 +88,6 @@ public class Counter extends AppCompatActivity {
         counter = 0;
         countstext.setText(Integer.toString(counter));
         countstext.setTextColor(Color.WHITE);
-        totalcountstext.setText("المجموع الكلي : " +zekercounts);
     }
 
     private int getRandomColor() {
@@ -99,15 +109,14 @@ public class Counter extends AppCompatActivity {
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         int id = item.getItemId();
-        switch (id) {
-            case R.id.delete:
-                zekercounts = 0;
-                totalCounts = 0;
-                String s = String.valueOf(zekercounts);
-                totalcountstext.setText("المجموع الكلي : " +s);
-                Toast.makeText(this, "تم مسح المجموع الكلي", Toast.LENGTH_SHORT).show();
-                return true;
+            if (id == R.id.delete) {
+            zekercounts = 0; totalCounts = 0;
+            setTotalzekerCountstext(zekercounts);
+            Toast.makeText(this, getString(R.string.TotalDeleted), Toast.LENGTH_SHORT).show();
+            return true;
         }
         return (super.onOptionsItemSelected(item));
     }
+
+
 }

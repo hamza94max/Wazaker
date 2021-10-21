@@ -1,11 +1,14 @@
 package com.hazem.wazaker.Activites;
 
+import android.annotation.SuppressLint;
 import android.app.AlarmManager;
 import android.app.PendingIntent;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Build;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -18,38 +21,77 @@ import com.hazem.wazkar.R;
 
 import java.util.Calendar;
 
-
 public class MainActivity extends AppCompatActivity  {
 
+    TextView totalzekertext;
 
+    @SuppressLint("SetTextI18n")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        totalzekertext = findViewById(R.id.Totalzekertext);
+
         addNotification();
 
+        getDatafromSharedpreference();
+
+    }
+
+    private void getDatafromSharedpreference() {
+        SharedPreferences prefs = getSharedPreferences("prefName", MODE_PRIVATE);
+        int totalzekerCounts = prefs.getInt("totalCounts", 0);
+        setTotalzekertext(totalzekerCounts);
+    }
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+
+        if (requestCode == 1) {
+            if (resultCode == RESULT_OK) {
+                int Totalzekercounts = data.getIntExtra("totalzekercount",0);
+                setSharedperference(Totalzekercounts);
+                setTotalzekertext(Totalzekercounts);
+            }
+        }
+    }
+
+    private void setSharedperference(int totalzekercounts) {
+        SharedPreferences.Editor editor = getSharedPreferences("prefName", MODE_PRIVATE).edit();
+        editor.putInt("totalCounts", totalzekercounts);
+        editor.apply();
+    }
+
+    @SuppressLint("SetTextI18n")
+    public void setTotalzekertext(int Totalzekercounts){
+        totalzekertext.setText(getString(R.string.totalzeker) + " " +Totalzekercounts);
+    }
+
+    public void openCounterActivity(View view) {
+        Intent intent = new Intent(this, CounterActivity.class);
+        //noinspection deprecation
+        startActivityForResult(intent, 1);
     }
 
     public void eveningAzkar(View view) {
-        Intent intent = new Intent(getBaseContext(), EveningAzkar.class);
-        startActivity(intent);
+       openActivity(EveningAzkar.class);
     }
 
     public void morningAzkar(View view) {
-        Intent intent = new Intent(getBaseContext(), MorningAzkar.class);
-        startActivity(intent);
+      openActivity(MorningAzkar.class);
     }
 
-    public void fortyHadith(View view) {
-        Intent intent = new Intent(getBaseContext(), FortyListActivity.class);
-        startActivity(intent);
+    public void openFortyHadithActivity(View view) {
+       openActivity(FortyHadithListActivity.class);
     }
 
-    public void azkarandDoaa(View view) {
-        Intent intent = new Intent(getBaseContext(), AzkarListActivity.class);
-        startActivity(intent);
+    public void openAzkarActivity(View view) { openActivity(AzkarListActivity.class); }
 
+    public void openActivity (Class activity){
+        Intent intent = new Intent(getBaseContext(), activity);
+        startActivity(intent);
     }
 
     public void qibla(View view) {
@@ -64,12 +106,7 @@ public class MainActivity extends AppCompatActivity  {
         startActivity(intent);
     }
 
-    public void goCounter(View view) {
-        Intent intent =new Intent(getBaseContext(), Counter.class);
-        startActivity(intent);
-    }
-
-    public void share(View view) {
+    public void shareApp(View view) {
         try {
             Intent shareIntent = new Intent(Intent.ACTION_SEND);
             shareIntent.setType("text/plain");
@@ -78,20 +115,21 @@ public class MainActivity extends AppCompatActivity  {
             shareIntent.putExtra(Intent.EXTRA_TEXT, shareMessage);
             startActivity(Intent.createChooser(shareIntent, "choose one"));
         } catch(Exception e) {
-            Toast.makeText(getBaseContext(), "خلل في مشاركة التطبيق، المرجو الإعادة", Toast.LENGTH_SHORT);
+            Toast.makeText(getBaseContext(), "خلل في مشاركة التطبيق، المرجو الإعادة", Toast.LENGTH_SHORT).show();
         }
     }
 
     private void addNotification(){
-
         Intent intent = new Intent(this, NotificationReceiver.class);
-        PendingIntent pendingIntent = PendingIntent.getBroadcast(this, 1, intent, PendingIntent.FLAG_UPDATE_CURRENT);
+        @SuppressLint("UnspecifiedImmutableFlag")
+        PendingIntent pendingIntent = PendingIntent.getBroadcast
+                (this, 1, intent, PendingIntent.FLAG_UPDATE_CURRENT);
         AlarmManager alarmManager = (AlarmManager) getSystemService(ALARM_SERVICE);
         Calendar calendar = Calendar.getInstance();
-        builder(alarmManager,pendingIntent,calendar);
+        setbuilder(alarmManager,pendingIntent,calendar);
     }
 
-    private void builder(AlarmManager alarmManager ,PendingIntent pendingIntent, Calendar calendar){
+    private void setbuilder(AlarmManager alarmManager ,PendingIntent pendingIntent, Calendar calendar){
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
             alarmManager.setAndAllowWhileIdle(AlarmManager.RTC_WAKEUP, calendar.getTimeInMillis(), pendingIntent);
         } else if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT) {

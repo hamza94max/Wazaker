@@ -9,31 +9,31 @@ import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
-import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.databinding.DataBindingUtil;
 
+import com.hazem.wazaker.FuncationClasses.RandomColor;
 import com.hazem.wazkar.R;
-
-import java.util.Random;
+import com.hazem.wazkar.databinding.ActivityCounterBinding;
 
 public class CounterActivity extends AppCompatActivity {
 
-    int totalCounts , counter = 0 , zekercounts = 0;
-    TextView totalcountstext, countstext;
+    int totalCounts, counter = 0, zekercounts = 0;
 
     public static final String MY_PREFS_NAME = "MyPrefsFile";
     SharedPreferences prefs;
     SharedPreferences sharedPreferences;
+
+    ActivityCounterBinding binding;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_counter);
 
-        countstext = findViewById(R.id.countertext);
-        totalcountstext = findViewById(R.id.totaltext);
+        binding = DataBindingUtil.setContentView(this, R.layout.activity_counter);
 
         setSharedPreferences();
         zekercounts = sharedPreferences.getInt("zekercounts",zekercounts);
@@ -54,7 +54,7 @@ public class CounterActivity extends AppCompatActivity {
 
     @SuppressLint("SetTextI18n")
     public void setTotalzekerCountstext(int Totalzekercounts){
-        totalcountstext.setText(getString(R.string.totalzeker) + " " +Totalzekercounts);
+        binding.totalCountstextview.setText(getString(R.string.totalzeker) + " " +Totalzekercounts);
     }
 
     @SuppressLint("SetTextI18n")
@@ -68,7 +68,7 @@ public class CounterActivity extends AppCompatActivity {
     public void setTotalscreen(View view) {
         counter++;
         zekercounts++;
-        countstext.setText(Integer.toString(counter));
+        binding.countertextview.setText(Integer.toString(counter));
         setTotalzekerCountstext(zekercounts);
 
         prefs = getSharedPreferences(MY_PREFS_NAME, MODE_PRIVATE);
@@ -79,23 +79,20 @@ public class CounterActivity extends AppCompatActivity {
         int currentColor;
             if(counter % 33 == 0){
             currentColor = getRandomColor();
-            countstext.setTextColor(currentColor);
+            binding.countertextview.setTextColor(currentColor);
         }
     }
 
     @SuppressLint("SetTextI18n")
     public void resetbutton(View view) {
         counter = 0;
-        countstext.setText(Integer.toString(counter));
-        countstext.setTextColor(Color.WHITE);
+        binding.countertextview.setText(Integer.toString(counter));
+        binding.countertextview.setTextColor(Color.WHITE);
     }
 
-    private int getRandomColor() {
-        Random randomcolor = new Random();
+    private static int getRandomColor() {
         int[] colors = {Color.WHITE,Color.BLACK,Color.YELLOW};
-        int color = randomcolor.nextInt(colors.length);
-
-        return colors[color];
+        return RandomColor.getRandomColor(colors);
     }
 
     @Override
@@ -117,6 +114,5 @@ public class CounterActivity extends AppCompatActivity {
         }
         return (super.onOptionsItemSelected(item));
     }
-
 
 }

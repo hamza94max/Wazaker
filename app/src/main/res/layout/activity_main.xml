@@ -1,340 +1,372 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:layoutDirection="ltr"
-    android:background="@drawable/bak"
-    tools:context="com.hazem.wazaker.Activites.MainActivity"
-    tools:ignore="UnusedAttribute">
+    xmlns:app="http://schemas.android.com/apk/res-auto">
 
-    <ScrollView
-        android:layout_marginTop="7dp"
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:ignore="MissingConstraints">
+        android:background="@drawable/bak"
+        android:layoutDirection="ltr"
+        tools:context="com.hazem.wazaker.Activites.MainActivity.MainActivity"
+        tools:ignore="UnusedAttribute">
 
-      <RelativeLayout
-          android:layout_width="match_parent"
-          android:layout_height="match_parent"
-          tools:ignore="ScrollViewSize">
-
-        <GridLayout
-            android:id="@+id/grid_layout"
+        <ScrollView
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center_horizontal"
-            android:layout_margin="20dp"
-            android:padding="7dp"
-            android:alignmentMode="alignMargins"
-            android:columnCount="2"
-            android:rowCount="4"
-            tools:ignore="ScrollViewSize">
+            android:layout_height="match_parent"
+            android:layout_marginTop="7dp"
+            tools:ignore="MissingConstraints">
 
-            <androidx.cardview.widget.CardView
-                android:layout_width="wrap_content"
-                android:layout_height="85dp"
-                android:id="@+id/eveningazkar"
-                android:layout_gravity="fill"
-                android:layout_rowWeight="1"
-                android:layout_columnWeight="1"
-                android:layout_margin="8dp"
-                app:cardCornerRadius="8dp"
-                app:cardElevation="8dp"
-                android:onClick="eveningAzkar"
-                tools:ignore="UnusedAttribute,UsingOnClickInXml">
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                tools:ignore="ScrollViewSize">
 
-                <LinearLayout
-                    android:layout_width="wrap_content"
+                <GridLayout
+                    android:id="@+id/grid_layout"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_gravity="center_vertical|center_horizontal"
-                    android:gravity="center"
-                    android:orientation="vertical"
-                    tools:ignore="UseCompoundDrawables">
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginEnd="20dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginBottom="20dp"
+                    android:alignmentMode="alignMargins"
+                    android:columnCount="2"
+                    android:padding="7dp"
+                    android:rowCount="4"
+                    tools:ignore="ScrollViewSize">
 
-                    <ImageView
-                        android:layout_width="30dp"
-                        android:layout_height="30dp"
-                        android:src="@drawable/for_clear_all_black_24dp"
-                        tools:ignore="ContentDescription,VectorDrawableCompat" />
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/eveningazkar"
+                        android:layout_width="wrap_content"
+                        android:layout_height="85dp"
+                        android:layout_rowWeight="1"
+                        android:layout_columnWeight="1"
+                        android:layout_gravity="fill"
+                        android:layout_margin="8dp"
+                        android:onClick="openeveningAzkarActivity"
+                        app:cardCornerRadius="8dp"
+                        app:cardElevation="8dp"
+                        tools:ignore="UnusedAttribute,UsingOnClickInXml">
 
-                    <TextView
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical|center_horizontal"
+                            android:gravity="center"
+                            android:orientation="vertical"
+                            tools:ignore="UseCompoundDrawables">
+
+                            <ImageView
+                                android:layout_width="30dp"
+                                android:layout_height="30dp"
+                                android:src="@drawable/for_clear_all_black_24dp"
+                                tools:ignore="ContentDescription,VectorDrawableCompat" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="10dp"
+                                android:gravity="center_horizontal"
+                                android:text="@string/eveningAzkar"
+                                android:textAlignment="center"
+                                android:textColor="@color/black"
+                                android:textSize="15sp"
+                                android:textStyle="bold" />
+                        </LinearLayout>
+
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/moringazkar"
+                        android:layout_width="wrap_content"
+                        android:layout_height="85dp"
+                        android:layout_rowWeight="1"
+                        android:layout_columnWeight="1"
+                        android:layout_gravity="fill"
+                        android:layout_margin="8dp"
+                        android:onClick="openMorningAzkarActivity"
+                        app:cardCornerRadius="8dp"
+                        app:cardElevation="8dp"
+                        tools:ignore="UsingOnClickInXml"
+                        tools:targetApi="lollipop">
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical|center_horizontal"
+                            android:gravity="center"
+                            android:orientation="vertical"
+                            tools:ignore="UseCompoundDrawables">
+
+                            <ImageView
+                                android:layout_width="30dp"
+                                android:layout_height="30dp"
+                                android:src="@drawable/for_clear_all_black_24dp"
+                                tools:ignore="ContentDescription,VectorDrawableCompat" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_horizontal"
+                                android:layout_marginTop="10dp"
+                                android:text="@string/Morningazkar"
+                                android:textAlignment="center"
+                                android:textColor="@color/black"
+                                android:textSize="15sp"
+                                android:textStyle="bold" />
+                        </LinearLayout>
+
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/forty"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="@string/eveningAzkar"
-                        android:textSize="15sp"
-                        android:textColor="@color/black"
-                        android:layout_marginTop="10dp"
-                        android:textAlignment="center"
-                        android:textStyle="bold"
-                        android:gravity="center_horizontal" />
-                </LinearLayout>
+                        android:layout_rowWeight="1"
+                        android:layout_columnWeight="1"
+                        android:layout_gravity="fill"
+                        android:layout_margin="8dp"
+                        android:onClick="openFortyHadithActivity"
+                        app:cardCornerRadius="8dp"
+                        app:cardElevation="8dp"
+                        tools:ignore="UsingOnClickInXml"
+                        tools:targetApi="lollipop">
 
-            </androidx.cardview.widget.CardView>
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical|center_horizontal"
+                            android:gravity="center"
+                            android:orientation="vertical"
+                            tools:ignore="UseCompoundDrawables">
 
-            <androidx.cardview.widget.CardView
-                android:onClick="morningAzkar"
-                android:layout_width="wrap_content"
-                android:layout_height="85dp"
-                android:id="@+id/moringazkar"
-                android:layout_gravity="fill"
-                android:layout_rowWeight="1"
-                android:layout_columnWeight="1"
-                android:layout_margin="8dp"
-                app:cardCornerRadius="8dp"
-                app:cardElevation="8dp"
-                tools:ignore="UsingOnClickInXml"
-                tools:targetApi="lollipop">
+                            <ImageView
+                                android:layout_width="30dp"
+                                android:layout_height="30dp"
+                                android:src="@drawable/ic_azkar"
+                                tools:ignore="ContentDescription,VectorDrawableCompat" />
 
-                <LinearLayout
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_horizontal"
+                                android:layout_marginTop="10dp"
+                                android:text="@string/FortyHadith"
+                                android:textAlignment="center"
+                                android:textColor="@color/black"
+                                android:textSize="15sp"
+                                android:textStyle="bold" />
+                        </LinearLayout>
+
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/azkar"
+                        android:layout_width="wrap_content"
+                        android:layout_height="100dp"
+                        android:layout_rowWeight="1"
+                        android:layout_columnWeight="1"
+                        android:layout_gravity="fill"
+                        android:layout_margin="8dp"
+                        android:onClick="openAzkarActivity"
+                        app:cardCornerRadius="8dp"
+                        app:cardElevation="8dp"
+                        tools:ignore="GridLayout,UnusedAttribute,UsingOnClickInXml">
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical|center_horizontal"
+                            android:gravity="center"
+                            android:orientation="vertical"
+                            tools:ignore="UseCompoundDrawables">
+
+                            <ImageView
+                                android:layout_width="30dp"
+                                android:layout_height="30dp"
+                                android:src="@drawable/mm"
+                                tools:ignore="ContentDescription,VectorDrawableCompat" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_horizontal"
+                                android:layout_marginTop="10dp"
+                                android:text="@string/AzkarandDoaa"
+                                android:textAlignment="center"
+                                android:textColor="@color/black"
+                                android:textSize="15sp"
+                                android:textStyle="bold" />
+                        </LinearLayout>
+
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/qibla"
+                        android:layout_width="wrap_content"
+                        android:layout_height="100dp"
+                        android:layout_rowWeight="1"
+                        android:layout_columnWeight="1"
+                        android:layout_gravity="fill"
+                        android:layout_margin="8dp"
+                        android:onClick="openQiblaActivity"
+                        app:cardCornerRadius="8dp"
+                        app:cardElevation="8dp"
+                        tools:ignore="UsingOnClickInXml"
+                        tools:targetApi="lollipop">
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical|center_horizontal"
+                            android:gravity="center"
+                            android:orientation="vertical"
+                            tools:ignore="UseCompoundDrawables">
+
+                            <ImageView
+                                android:layout_width="30dp"
+                                android:layout_height="30dp"
+                                android:src="@drawable/co"
+                                tools:ignore="ContentDescription,VectorDrawableCompat" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_horizontal"
+                                android:layout_marginTop="10dp"
+                                android:text="@string/qibla"
+                                android:textAlignment="center"
+                                android:textColor="@color/black"
+                                android:textSize="15sp"
+                                android:textStyle="bold" />
+                        </LinearLayout>
+
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/counter"
+                        android:layout_width="wrap_content"
+                        android:layout_height="100dp"
+                        android:layout_rowWeight="1"
+                        android:layout_columnWeight="1"
+                        android:layout_gravity="fill"
+                        android:layout_margin="8dp"
+                        android:onClick="openCounterActivity"
+                        app:cardCornerRadius="8dp"
+                        app:cardElevation="8dp"
+                        tools:ignore="UsingOnClickInXml"
+                        tools:targetApi="lollipop">
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical|center_horizontal"
+                            android:gravity="center"
+                            android:orientation="vertical"
+                            tools:ignore="UseCompoundDrawables">
+
+                            <ImageView
+                                android:layout_width="30dp"
+                                android:layout_height="30dp"
+                                android:src="@drawable/ic_counter"
+                                tools:ignore="ContentDescription,VectorDrawableCompat" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_horizontal"
+                                android:layout_marginTop="10dp"
+                                android:text="@string/counter"
+                                android:textAlignment="center"
+                                android:textColor="@color/black"
+                                android:textSize="15sp"
+                                android:textStyle="bold" />
+                        </LinearLayout>
+
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/share"
+                        android:layout_width="wrap_content"
+                        android:layout_height="100dp"
+                        android:layout_rowWeight="1"
+                        android:layout_columnWeight="1"
+                        android:layout_gravity="fill"
+                        android:layout_margin="8dp"
+                        android:onClick="shareApp"
+                        app:cardCornerRadius="8dp"
+                        app:cardElevation="8dp"
+                        tools:ignore="UnusedAttribute,UsingOnClickInXml">
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical|center_horizontal"
+                            android:gravity="center"
+                            android:orientation="vertical"
+                            tools:ignore="UseCompoundDrawables">
+
+                            <ImageView
+                                android:layout_width="30dp"
+                                android:layout_height="30dp"
+                                android:src="@drawable/ic_share_black_24dp"
+                                tools:ignore="ContentDescription,VectorDrawableCompat" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_horizontal"
+                                android:layout_marginTop="10dp"
+                                android:text="@string/shareapp"
+                                android:textAlignment="center"
+                                android:textColor="@color/black"
+                                android:textSize="15sp"
+                                android:textStyle="bold" />
+                        </LinearLayout>
+
+                    </androidx.cardview.widget.CardView>
+                </GridLayout>
+
+                <TextView
+                    android:id="@+id/Totalzekertext"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_gravity="center_vertical|center_horizontal"
-                    android:gravity="center"
-                    android:orientation="vertical"
-                    tools:ignore="UseCompoundDrawables">
+                    android:layout_below="@+id/grid_layout"
+                    android:layout_alignEnd="@+id/grid_layout"
+                    android:layout_alignRight="@+id/grid_layout"
+                    android:layout_marginTop="21dp"
+                    android:layout_marginEnd="0dp"
+                    android:layout_marginRight="0dp"
+                    android:padding="14dp"
+                    android:text="@string/totalzeker"
+                    android:textColor="@color/white"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
 
-                    <ImageView
-                        android:layout_width="30dp"
-                        android:layout_height="30dp"
-                        android:src="@drawable/for_clear_all_black_24dp"
-                        tools:ignore="ContentDescription,VectorDrawableCompat" />
 
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="@string/Morningazkar"
-                        android:textColor="@color/black"
-                        android:layout_marginTop="10dp"
-                        android:textAlignment="center"
-                        android:textSize="15sp"
-                        android:textStyle="bold"
-                        android:layout_gravity="center_horizontal" />
-                </LinearLayout>
+                <!--                <ImageButton-->
+                <!--                    android:id="@+id/refresh"-->
+                <!--                    android:layout_width="wrap_content"-->
+                <!--                    android:layout_height="wrap_content"-->
+                <!--                    android:layout_alignParentBottom="true"-->
+                <!--                    android:layout_marginRight="169dp"-->
+                <!--                    android:layout_marginBottom="11dp"-->
+                <!--                    android:layout_toLeftOf="@+id/Totalzekertext"-->
+                <!--                    android:padding="7dp"-->
+                <!--                    android:onClick="refershTotalzekercounts"-->
+                <!--                    app:srcCompat="@drawable/ic_baseline_refresh_24"-->
+                <!--                    android:layout_toStartOf="@+id/Totalzekertext"-->
+                <!--                    android:layout_marginEnd="169dp" />-->
 
-            </androidx.cardview.widget.CardView>
-
-            <androidx.cardview.widget.CardView
-                android:onClick="openFortyHadithActivity"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/forty"
-                android:layout_gravity="fill"
-                android:layout_rowWeight="1"
-                android:layout_columnWeight="1"
-                android:layout_margin="8dp"
-                app:cardCornerRadius="8dp"
-                app:cardElevation="8dp"
-                tools:ignore="UsingOnClickInXml"
-                tools:targetApi="lollipop">
-
-                <LinearLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center_vertical|center_horizontal"
-                    android:gravity="center"
-                    android:orientation="vertical"
-                    tools:ignore="UseCompoundDrawables">
-
-                    <ImageView
-                        android:layout_width="30dp"
-                        android:layout_height="30dp"
-                        android:src="@drawable/ic_azkar"
-                        tools:ignore="ContentDescription,VectorDrawableCompat" />
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="@string/FortyHadith"
-                        android:textColor="@color/black"
-                        android:layout_marginTop="10dp"
-                        android:textAlignment="center"
-                        android:textSize="15sp"
-                        android:textStyle="bold"
-                        android:layout_gravity="center_horizontal" />
-                </LinearLayout>
-
-            </androidx.cardview.widget.CardView>
-
-            <androidx.cardview.widget.CardView
-                android:onClick="openAzkarActivity"
-                android:layout_width="wrap_content"
-                android:layout_height="100dp"
-                android:id="@+id/azkar"
-                android:layout_gravity="fill"
-                android:layout_rowWeight="1"
-                android:layout_columnWeight="1"
-                android:layout_margin="8dp"
-                app:cardCornerRadius="8dp"
-                app:cardElevation="8dp"
-                tools:ignore="GridLayout,UnusedAttribute,UsingOnClickInXml">
-
-                <LinearLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center_vertical|center_horizontal"
-                    android:gravity="center"
-                    android:orientation="vertical"
-                    tools:ignore="UseCompoundDrawables">
-
-                    <ImageView
-                        android:layout_width="30dp"
-                        android:layout_height="30dp"
-                        android:src="@drawable/mm"
-                        tools:ignore="ContentDescription,VectorDrawableCompat" />
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="@string/AzkarandDoaa"
-                        android:textColor="@color/black"
-                        android:textSize="15sp"
-                        android:layout_marginTop="10dp"
-                        android:textAlignment="center"
-                        android:textStyle="bold"
-                        android:layout_gravity="center_horizontal" />
-                </LinearLayout>
-
-            </androidx.cardview.widget.CardView>
-
-            <androidx.cardview.widget.CardView
-                android:onClick="qibla"
-                android:layout_width="wrap_content"
-                android:layout_height="100dp"
-                android:id="@+id/qibla"
-                android:layout_rowWeight="1"
-                android:layout_columnWeight="1"
-                android:layout_margin="8dp"
-                app:cardCornerRadius="8dp"
-                app:cardElevation="8dp"
-                android:layout_gravity="fill"
-                tools:ignore="UsingOnClickInXml"
-                tools:targetApi="lollipop">
-
-                <LinearLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center_vertical|center_horizontal"
-                    android:gravity="center"
-                    android:orientation="vertical"
-                    tools:ignore="UseCompoundDrawables">
-
-                    <ImageView
-                        android:layout_width="30dp"
-                        android:layout_height="30dp"
-                        android:src="@drawable/co"
-                        tools:ignore="ContentDescription,VectorDrawableCompat" />
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="10dp"
-                        android:textColor="@color/black"
-                        android:text="@string/qibla"
-                        android:textSize="15sp"
-                        android:textAlignment="center"
-                        android:textStyle="bold"
-                        android:layout_gravity="center_horizontal" />
-                </LinearLayout>
-
-            </androidx.cardview.widget.CardView>
-
-            <androidx.cardview.widget.CardView
-                android:onClick="openCounterActivity"
-                android:layout_gravity="fill"
-                android:layout_width="wrap_content"
-                android:layout_height="100dp"
-                android:id="@+id/counter"
-                android:layout_rowWeight="1"
-                android:layout_columnWeight="1"
-                android:layout_margin="8dp"
-                app:cardCornerRadius="8dp"
-                app:cardElevation="8dp"
-                tools:ignore="UsingOnClickInXml"
-                tools:targetApi="lollipop">
-
-                <LinearLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center_vertical|center_horizontal"
-                    android:gravity="center"
-                    android:orientation="vertical"
-                    tools:ignore="UseCompoundDrawables">
-
-                    <ImageView
-                        android:layout_width="30dp"
-                        android:layout_height="30dp"
-                        android:src="@drawable/ic_counter"
-                        tools:ignore="ContentDescription,VectorDrawableCompat" />
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="10dp"
-                        android:textColor="@color/black"
-                        android:text="@string/counter"
-                        android:textSize="15sp"
-                        android:textAlignment="center"
-                        android:textStyle="bold"
-                        android:layout_gravity="center_horizontal" />
-                </LinearLayout>
-
-            </androidx.cardview.widget.CardView>
-
-            <androidx.cardview.widget.CardView
-                android:onClick="shareApp"
-                android:layout_width="wrap_content"
-                android:layout_height="100dp"
-                android:id="@+id/share"
-                android:layout_rowWeight="1"
-                android:layout_columnWeight="1"
-                android:layout_margin="8dp"
-                app:cardCornerRadius="8dp"
-                app:cardElevation="8dp"
-                android:layout_gravity="fill"
-                tools:ignore="UnusedAttribute,UsingOnClickInXml">
-
-                <LinearLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center_vertical|center_horizontal"
-                    android:gravity="center"
-                    android:orientation="vertical"
-                    tools:ignore="UseCompoundDrawables">
-
-                    <ImageView
-                        android:layout_width="30dp"
-                        android:layout_height="30dp"
-                        android:src="@drawable/ic_share_black_24dp"
-                        tools:ignore="ContentDescription,VectorDrawableCompat" />
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="10dp"
-                        android:textSize="15sp"
-                        android:text="@string/shareapp"
-                        android:textColor="@color/black"
-                        android:textAlignment="center"
-                        android:textStyle="bold"
-                        android:layout_gravity="center_horizontal" />
-                </LinearLayout>
-
-            </androidx.cardview.widget.CardView>
-        </GridLayout>
-
-          <TextView
-              android:id="@+id/Totalzekertext"
-              android:layout_width="match_parent"
-              android:layout_height="wrap_content"
-              android:layout_below="@+id/grid_layout"
-              android:layout_marginTop="21dp"
-              android:padding="7dp"
-              android:text="@string/totalzeker"
-              android:textColor="@color/white"
-              android:textSize="20sp"
-              android:textStyle="bold" />
-
-      </RelativeLayout>
-    </ScrollView>
-</androidx.constraintlayout.widget.ConstraintLayout>
+            </RelativeLayout>
+        </ScrollView>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

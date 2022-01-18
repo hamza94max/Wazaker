@@ -28,7 +28,8 @@ public class AzkarListActivity extends AppCompatActivity {
         private void initAzkarListData() {
 
             AzkarList = (ArrayList<AzkarListModel>) AzkarListDataset.getAzkarList();
-            setAdapter(); }
+            setAdapter();
+        }
 
         private void setAdapter(){
             RecyclerView recyclerView = findViewById(R.id.AzkarListRecycler);

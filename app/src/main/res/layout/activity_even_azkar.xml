@@ -2,20 +2,21 @@
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
 
-    <data></data>
+    <data>
+
+    </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:padding="0.5dp"
-        tools:context="com.hazem.wazaker.Activites.MorningAzkarActivity">
+        tools:context="com.hazem.wazaker.Activites.EveningAzkarActivity">
 
 
         <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/morRecyclerview"
+            android:id="@+id/eveningrecycler"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_marginTop="0.5dp"
+            android:layout_marginTop="1dp"
             android:background="@color/lightGreen"
             android:padding="5dp" />
     </androidx.constraintlayout.widget.ConstraintLayout>

@@ -5,30 +5,32 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
-import android.widget.ImageView;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.databinding.DataBindingUtil;
 
+import com.hazem.wazaker.Activites.MainActivity.MainActivity;
 import com.hazem.wazkar.R;
+import com.hazem.wazkar.databinding.ActivitySplashScreenBinding;
 
-public class SplashScreen extends AppCompatActivity {
+public class SplashScreenActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_splash_screen);
 
-        ImageView img = findViewById(R.id.img);
+        ActivitySplashScreenBinding binding = DataBindingUtil.setContentView(this, R.layout.activity_splash_screen);
 
         Animation animation = AnimationUtils.loadAnimation(this, R.anim.splashtransition);
-        img.startAnimation(animation);
+        binding.img.startAnimation(animation);
 
         Handler handler = new Handler();
         handler.postDelayed(() -> {
             Intent intent = new Intent(getBaseContext(), MainActivity.class);
             startActivity(intent);
             finish();
-        }, 2100);
+        }, 500);
 
     }
 }

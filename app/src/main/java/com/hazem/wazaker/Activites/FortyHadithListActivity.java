@@ -6,17 +6,19 @@ import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.recyclerview.widget.RecyclerView;
 
 import com.hazem.wazaker.Adapters.FortyListAdapter;
 import com.hazem.wazaker.Data_sets.FortyListDataset;
 import com.hazem.wazaker.Models.AzkarListModel;
 import com.hazem.wazkar.R;
+import com.hazem.wazkar.databinding.ActivityFortylistBinding;
 
 import java.util.ArrayList;
 import java.util.List;
 
 public class FortyHadithListActivity extends AppCompatActivity {
+
+    ActivityFortylistBinding binding;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,12 +30,9 @@ public class FortyHadithListActivity extends AppCompatActivity {
 
     private void LoadFortyHadithData() {
         List<AzkarListModel> hadithlist = FortyListDataset.getFortylist();
+        FortyListAdapter fortyAdapter = new FortyListAdapter((ArrayList<AzkarListModel>) hadithlist, getContext());
 
-        RecyclerView Hadithrecycler = findViewById(R.id.hadithrecycler);
-
-        FortyListAdapter fortyAdapter = new FortyListAdapter( (ArrayList<AzkarListModel>) hadithlist, getContext());
-
-        Hadithrecycler.setAdapter(fortyAdapter);
+        binding.hadithrecycler.setAdapter(fortyAdapter);
 
         fortyAdapter.setListner(itemf -> {
             int index = (int) itemf;
@@ -41,4 +40,5 @@ public class FortyHadithListActivity extends AppCompatActivity {
             forty.putExtra("index", index);
             startActivity(forty);
         });
-    }}
+    }
+}

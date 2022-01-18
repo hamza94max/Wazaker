@@ -2,57 +2,56 @@ package com.hazem.wazaker.Activites;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.view.View;
-import android.widget.Button;
 
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.viewpager.widget.ViewPager;
 
 import com.badoualy.stepperindicator.StepperIndicator;
 import com.hazem.wazaker.Adapters.SlideHadithAdapter;
 import com.hazem.wazaker.Data_sets.FortyDataSet;
 import com.hazem.wazkar.R;
+import com.hazem.wazkar.databinding.ActivityFortyBinding;
 
 public class FortyHadithActivity extends AppCompatActivity {
 
-     String[] Hadith;
-     int[] Hadithcount;
+    String[] Hadiths;
+    int[] Hadithcount;
+
+    ActivityFortyBinding binding;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_forty);
 
-            int index = getIntent().getIntExtra("index", 0);
-                loaddData(index);
+        int index = getIntent().getIntExtra("index", 0);
+        LoadData(index);
 
-            final ViewPager viewPager = findViewById(R.id.vpager);
-            SlideHadithAdapter fortyAdapter = new SlideHadithAdapter(this, Hadith );
-            viewPager.setAdapter(fortyAdapter);
+        setAdapter();
 
-            StepperIndicator indicator = findViewById(R.id.STEPP);
-            indicator.setViewPager(viewPager);
+        StepperIndicator indicator = findViewById(R.id.STEPP);
+        indicator.setViewPager(binding.viewpager);
 
-            Button copybtn = findViewById(R.id.copybtn);
-            copybtn.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    String item = Hadith[viewPager.getCurrentItem()];
+        binding.copybtn.setOnClickListener(v -> {
+            String item = Hadiths[binding.viewpager.getCurrentItem()];
 
-                    Intent sendIntent = new Intent();
-                    sendIntent.setAction(Intent.ACTION_SEND);
-                    sendIntent.putExtra(Intent.EXTRA_TEXT, item);
-                    sendIntent.setType("text/plain");
+            Intent sendIntent = new Intent();
+            sendIntent.setAction(Intent.ACTION_SEND);
+            sendIntent.putExtra(Intent.EXTRA_TEXT, item);
+            sendIntent.setType("text/plain");
 
-                    Intent shareIntent = Intent.createChooser(sendIntent, null);
-                    startActivity(shareIntent);
-                }
-            });
+            Intent shareIntent = Intent.createChooser(sendIntent, null);
+            startActivity(shareIntent);
+        });
     }
 
-        private void loaddData(int index) {
-            Hadith = FortyDataSet.getFortyList(index);
-            Hadithcount = new int[Hadith.length];
-        }
+    private void LoadData(int index) {
+        Hadiths = FortyDataSet.getFortyList(index);
+        Hadithcount = new int[Hadiths.length];
     }
+
+    private void setAdapter() {
+        SlideHadithAdapter fortyAdapter = new SlideHadithAdapter(this, Hadiths);
+        binding.viewpager.setAdapter(fortyAdapter);
+    }
+}
 

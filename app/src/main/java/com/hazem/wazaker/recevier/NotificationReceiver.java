@@ -1,6 +1,7 @@
 package com.hazem.wazaker.recevier;
 
 
+import android.annotation.SuppressLint;
 import android.app.Notification;
 import android.app.PendingIntent;
 import android.content.BroadcastReceiver;
@@ -12,8 +13,7 @@ import android.net.Uri;
 import androidx.core.app.NotificationCompat;
 import androidx.core.app.NotificationManagerCompat;
 
-
-import com.hazem.wazaker.Activites.MainActivity;
+import com.hazem.wazaker.Activites.MainActivity.MainActivity;
 import com.hazem.wazaker.Data_sets.NotificationDataset;
 import com.hazem.wazkar.R;
 
@@ -26,7 +26,9 @@ public class NotificationReceiver extends BroadcastReceiver {
 
 
         Intent intent = new Intent(context, MainActivity.class);
-        PendingIntent pendingIntent = PendingIntent.getActivity(context, 1, intent, PendingIntent.FLAG_UPDATE_CURRENT);
+        @SuppressLint("UnspecifiedImmutableFlag")
+        PendingIntent pendingIntent =
+                PendingIntent.getActivity(context, 1, intent, PendingIntent.FLAG_UPDATE_CURRENT);
 
 
         NotificationCompat.Builder builder = new NotificationCompat.Builder(context, context.getString(R.string.notifiaction_id));

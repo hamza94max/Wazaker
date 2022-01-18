@@ -4,6 +4,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
+
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.hazem.wazaker.Activites.AzkarListActivity;
@@ -16,17 +17,12 @@ import java.util.List;
 public class AzkarListAdapter extends RecyclerView.Adapter<AzkarListAdapter.ViewHolder> {
 
 
-
     private ItemListner listner;
     private final List<AzkarListModel> azkar_modelList;
-
 
     public AzkarListAdapter(List<AzkarListModel> items, AzkarListActivity azkarListActivity) {
         this.azkar_modelList = items;
     }
-
-
-
 
     public void setListner(ItemListner listner) {
         this.listner = listner;
@@ -51,7 +47,6 @@ public class AzkarListAdapter extends RecyclerView.Adapter<AzkarListAdapter.View
     public int getItemCount() {
         return azkar_modelList.size();
     }
-
 
     class ViewHolder extends RecyclerView.ViewHolder {
         TextView title;

@@ -28,8 +28,6 @@ public class ZekerActivity extends AppCompatActivity {
 
     ViewPager viewPager;
 
-
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -46,9 +44,6 @@ public class ZekerActivity extends AppCompatActivity {
 
         StepperIndicator indicator = findViewById(R.id.STEPP);
         indicator.setViewPager(viewPager);
-
-
-
 
         viewPager.addOnPageChangeListener(new ViewPager.OnPageChangeListener() {
 

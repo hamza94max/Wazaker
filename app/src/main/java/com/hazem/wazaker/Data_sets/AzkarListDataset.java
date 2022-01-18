@@ -12,6 +12,7 @@ public class AzkarListDataset {
     public static List<AzkarListModel> getAzkarList() {
 
         azkarList = new ArrayList<>();
+
         azkarList.add(new AzkarListModel("أذكار المسجد"));
         azkarList.add(new AzkarListModel("أذكار بعد الصلاة "));
         azkarList.add(new AzkarListModel("أذكار الأذان "));

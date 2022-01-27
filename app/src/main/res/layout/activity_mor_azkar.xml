@@ -8,7 +8,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:padding="0.5dp"
-        tools:context="com.hazem.wazaker.Activites.MorningAzkarActivity">
+        tools:context="com.hamza.Wazaker.Activites.MorningAzkarActivity">
 
 
         <androidx.recyclerview.widget.RecyclerView

@@ -11,7 +11,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="@drawable/bak"
-        tools:context="com.hazem.wazaker.Activites.FortyHadithActivity">
+        tools:context="com.hamza.Wazaker.Activites.FortyHadithActivity">
 
         <com.badoualy.stepperindicator.StepperIndicator
             android:id="@+id/STEPP"

@@ -13,7 +13,7 @@
         android:id="@+id/counterscreen"
         android:background="@drawable/bak"
         android:onClick="setTotalscreen"
-        tools:context="com.hazem.wazaker.Activites.CounterActivity.CounterActivity"
+        tools:context="com.hamza.Wazaker.Activites.CounterActivity.CounterActivity"
         tools:ignore="UsingOnClickInXml">
 
         <TextView

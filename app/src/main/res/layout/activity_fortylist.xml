@@ -12,7 +12,7 @@
         android:layout_height="match_parent"
         android:background="@drawable/back"
         android:layoutDirection="ltr"
-        tools:context="com.hazem.wazaker.Activites.FortyHadithListActivity">
+        tools:context="com.hamza.Wazaker.Activites.FortyHadithListActivity">
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/hadithrecycler"

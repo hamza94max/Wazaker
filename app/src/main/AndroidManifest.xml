@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    package="com.hazem.wazkar">
+    package="com.hamza.wazkar">
 
-    <uses-permission android:name="android.permission.WAKE_LOCK" />
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
-    <uses-permission android:name="android.permission.INTERNET" />
-    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" tools:ignore="ScopedStorage" />
+    <uses-permission
+        android:name="android.permission.WRITE_EXTERNAL_STORAGE"
+        tools:ignore="ScopedStorage" />
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
 
     <application
-        android:name="com.hazem.wazaker.App"
+        android:name="com.hamza.Wazaker.App"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher_foreground"
         android:label="@string/app_name"
@@ -21,12 +21,12 @@
         tools:ignore="AllowBackup">
 
         <receiver
-            android:name="com.hazem.wazaker.recevier.NotificationReceiver"
+            android:name="com.hamza.Wazaker.recevier.NotificationReceiver"
             android:enabled="true"
             android:exported="false" />
 
         <activity
-            android:name="com.hazem.wazaker.Activites.SplashScreenActivity"
+            android:name="com.hamza.Wazaker.Activites.SplashScreenActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -36,18 +36,18 @@
             </intent-filter>
         </activity>
 
-        <activity android:name="com.hazem.wazaker.Activites.FortyHadithListActivity" />
+        <activity android:name="com.hamza.Wazaker.Activites.FortyHadithListActivity" />
         <activity android:name="com.hassanjamil.hqibla.CompassActivity" />
 
-        <activity android:name="com.hazem.wazaker.Activites.MainActivity.MainActivity" />
+        <activity android:name="com.hamza.Wazaker.Activites.MainActivity.MainActivity" />
         <activity
-            android:name="com.hazem.wazaker.Activites.AzkarListActivity"
+            android:name="com.hamza.Wazaker.Activites.AzkarListActivity"
             tools:ignore="InnerclassSeparator" />
-        <activity android:name="com.hazem.wazaker.Activites.CounterActivity.CounterActivity" />
-        <activity android:name="com.hazem.wazaker.Activites.FortyHadithActivity" />
-        <activity android:name="com.hazem.wazaker.Activites.ZekerActivity" />
-        <activity android:name="com.hazem.wazaker.Activites.MorningAzkarActivity" />
-        <activity android:name="com.hazem.wazaker.Activites.EveningAzkarActivity" />
+        <activity android:name="com.hamza.Wazaker.Activites.CounterActivity.CounterActivity" />
+        <activity android:name="com.hamza.Wazaker.Activites.FortyHadithActivity" />
+        <activity android:name="com.hamza.Wazaker.Activites.ZekerActivity" />
+        <activity android:name="com.hamza.Wazaker.Activites.MorningAzkarActivity" />
+        <activity android:name="com.hamza.Wazaker.Activites.EveningAzkarActivity" />
     </application>
 
 </manifest>

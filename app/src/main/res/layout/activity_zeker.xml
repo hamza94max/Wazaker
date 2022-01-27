@@ -7,7 +7,7 @@
     android:layout_height="match_parent"
     android:layoutDirection="ltr"
     android:background="@drawable/bak"
-    tools:context="com.hazem.wazaker.Activites.ZekerActivity">
+    tools:context="com.hamza.Wazaker.Activites.ZekerActivity">
 
     <com.badoualy.stepperindicator.StepperIndicator
         android:id="@+id/STEPP"

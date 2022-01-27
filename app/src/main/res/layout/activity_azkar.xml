@@ -7,7 +7,7 @@
     android:layout_height="match_parent"
     android:background="@drawable/back"
     android:layoutDirection="ltr"
-    tools:context="com.hazem.wazaker.Activites.AzkarListActivity">
+    tools:context="com.hamza.Wazaker.Activites.AzkarListActivity">
 
 
     <androidx.recyclerview.widget.RecyclerView

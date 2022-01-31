@@ -9,9 +9,9 @@ import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.databinding.DataBindingUtil;
+import androidx.work.ExistingWorkPolicy;
 import androidx.work.OneTimeWorkRequest;
 import androidx.work.WorkManager;
-import androidx.work.WorkRequest;
 
 import com.badoualy.stepperindicator.BuildConfig;
 import com.hamza.Wazaker.Activites.AzkarListActivity;
@@ -56,13 +56,13 @@ public class MainActivity extends AppCompatActivity {
     /**
      * display notification every 8 hours
      */
+    @SuppressLint("EnqueueWork")
     private void fireWorkerTodisplayNotification() {
-        WorkRequest WorkRequest =
-                new OneTimeWorkRequest.Builder(NotificationWorker.class)
-                        .setInitialDelay(8, TimeUnit.HOURS)
-                        .build();
 
-        workManager.enqueue(WorkRequest);
+        OneTimeWorkRequest WorkRequest = new OneTimeWorkRequest.Builder(NotificationWorker.class)
+                .setInitialDelay(8, TimeUnit.HOURS)
+                .build();
+        workManager.beginUniqueWork("Worker", ExistingWorkPolicy.KEEP, WorkRequest);
     }
 
     @SuppressLint("SetTextI18n")

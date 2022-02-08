@@ -1,4 +1,4 @@
-package com.hamza.Wazaker.Activites.CounterActivity;
+package com.hamza.Wazaker.Activites;
 
 import android.annotation.SuppressLint;
 import android.content.SharedPreferences;
@@ -13,7 +13,7 @@ import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.databinding.DataBindingUtil;
 
-import com.hamza.Wazaker.Activites.CounterActivity.FuncationClasses.RandomColor;
+import com.hamza.Wazaker.Utills.RandomColor;
 import com.hamza.wazkar.R;
 import com.hamza.wazkar.databinding.ActivityCounterBinding;
 

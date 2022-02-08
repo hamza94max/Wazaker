@@ -1,4 +1,4 @@
-package com.hamza.Wazaker.Activites.MainActivity;
+package com.hamza.Wazaker.Utills;
 
 import static android.content.Context.ALARM_SERVICE;
 

@@ -6,6 +6,7 @@ import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.databinding.DataBindingUtil;
 
 import com.hamza.Wazaker.Adapters.FortyListAdapter;
 import com.hamza.Wazaker.Data_sets.FortyListDataset;
@@ -25,10 +26,12 @@ public class FortyHadithListActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_fortylist);
 
-        LoadFortyHadithData();
+        binding = DataBindingUtil.setContentView(this, R.layout.activity_fortylist);
+
+        getFortyHadithData();
     }
 
-    private void LoadFortyHadithData() {
+    private void getFortyHadithData() {
         List<AzkarListModel> hadithlist = FortyListDataset.getFortylist();
         FortyListAdapter fortyAdapter = new FortyListAdapter((ArrayList<AzkarListModel>) hadithlist, getContext());
 

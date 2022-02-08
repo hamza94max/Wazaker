@@ -9,8 +9,8 @@ android {
         minSdkVersion 14
         //noinspection OldTargetApi,ExpiredTargetSdkVersion
         targetSdkVersion 30
-        versionCode 13
-        versionName "8.2"
+        versionCode 1
+        versionName "1.0.1"
         vectorDrawables.useSupportLibrary = true
         setProperty("archivesBaseName", "hQiblaDirection")
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"

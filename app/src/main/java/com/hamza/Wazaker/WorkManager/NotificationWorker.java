@@ -7,7 +7,7 @@ import androidx.annotation.NonNull;
 import androidx.work.Worker;
 import androidx.work.WorkerParameters;
 
-import com.hamza.Wazaker.Activites.MainActivity.Notifications;
+import com.hamza.Wazaker.Utills.Notifications;
 
 public class NotificationWorker extends Worker {
 

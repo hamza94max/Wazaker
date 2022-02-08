@@ -3,6 +3,7 @@ package com.hamza.Wazaker.Activites;
 import android.os.Bundle;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.databinding.DataBindingUtil;
 import androidx.recyclerview.widget.LinearLayoutManager;
 
 import com.hamza.Wazaker.Adapters.NightAzkarAdapter;
@@ -23,7 +24,9 @@ public class EveningAzkarActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_even_azkar);
 
-        loadEveningdata();
+        binding = DataBindingUtil.setContentView(this, R.layout.activity_even_azkar);
+
+        getEveningdata();
 
         LinearLayoutManager layoutManager = new LinearLayoutManager(this);
         binding.eveningrecycler.setLayoutManager(layoutManager);
@@ -33,7 +36,7 @@ public class EveningAzkarActivity extends AppCompatActivity {
         binding.eveningrecycler.setHasFixedSize(true);
     }
 
-    private void loadEveningdata(){
+    private void getEveningdata() {
         eveningAzkar = (ArrayList<ZekerModel>) EveningAzkarDataset.getEveningAzkar();
-     }
+    }
 }

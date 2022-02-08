@@ -9,7 +9,6 @@ import android.view.animation.AnimationUtils;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.databinding.DataBindingUtil;
 
-import com.hamza.Wazaker.Activites.MainActivity.MainActivity;
 import com.hamza.wazkar.R;
 import com.hamza.wazkar.databinding.ActivitySplashScreenBinding;
 

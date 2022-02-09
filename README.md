@@ -1,12 +1,12 @@
 # Wazkar
-Android  application to help Muslims read the azkar of morning and evening
-and Awesome Notification every day,The FourtyNawawi's Ahaadeeth.
+Android application to help the Muslims to read the azkar of morning and evening, awesome Notification every day,The FourtyNawawi's Ahaadeeth,
+Counter to count the number of zeker, qibla direction and many other azkar and doaa.
 
 
-Links: [Google play](https://play.google.com/store/apps/details?id=com.hazem.wazkar&fbclid=IwAR0wDrXd54G57f1eWCfTsEbZ5USVnzTcT351nrn4pcDg9d4rbqcyQbAGHNs)
+You can download the app from here :  [Google play](https://play.google.com/store/apps/details?id=com.hamza.wazkar)
 
 Resources : 
-[Qibla](https://github.com/hassaanjamil/hj-android-lib-qibla-direction)
+[Qibla direction library](https://github.com/hassaanjamil/hj-android-lib-qibla-direction)
 
 
 
@@ -32,7 +32,6 @@ Resources :
 <img src = "https://user-images.githubusercontent.com/54688005/92637476-2ae99e80-f2d9-11ea-9110-26de80449abc.png" width = 35%>
   <img width ="5%"/> 
   
-  
   <img src = "https://user-images.githubusercontent.com/54688005/92637929-d09d0d80-f2d9-11ea-9bdf-6962f71ecc89.png" width = 35%>
 </div>
 
@@ -40,5 +39,5 @@ Resources :
 
 
 # Contributors 
-- Author: [hamza](https://github.com/hamza94max/Wazkar)
+- Author: [hamza](https://github.com/hamza94max)
 - Maintainer: [Mo3ta](https://github.com/MahmoudMabrok)

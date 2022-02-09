@@ -39,11 +39,11 @@
         <activity android:name="com.hamza.Wazaker.Activites.FortyHadithListActivity" />
         <activity android:name="com.hassanjamil.hqibla.CompassActivity" />
 
-        <activity android:name="com.hamza.Wazaker.Activites.MainActivity.MainActivity" />
+        <activity android:name="com.hamza.Wazaker.Activites.MainActivity" />
         <activity
             android:name="com.hamza.Wazaker.Activites.AzkarListActivity"
             tools:ignore="InnerclassSeparator" />
-        <activity android:name="com.hamza.Wazaker.Activites.CounterActivity.CounterActivity" />
+        <activity android:name="com.hamza.Wazaker.Activites.CounterActivity" />
         <activity android:name="com.hamza.Wazaker.Activites.FortyHadithActivity" />
         <activity android:name="com.hamza.Wazaker.Activites.ZekerActivity" />
         <activity android:name="com.hamza.Wazaker.Activites.MorningAzkarActivity" />

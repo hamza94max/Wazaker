@@ -1,4 +1,4 @@
-package com.hamza.Wazaker.Activites.MainActivity;
+package com.hamza.Wazaker.Activites;
 
 import android.annotation.SuppressLint;
 import android.content.Intent;
@@ -9,16 +9,11 @@ import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.databinding.DataBindingUtil;
-import androidx.work.ExistingWorkPolicy;
-import androidx.work.OneTimeWorkRequest;
+import androidx.work.ExistingPeriodicWorkPolicy;
+import androidx.work.PeriodicWorkRequest;
 import androidx.work.WorkManager;
 
 import com.badoualy.stepperindicator.BuildConfig;
-import com.hamza.Wazaker.Activites.AzkarListActivity;
-import com.hamza.Wazaker.Activites.CounterActivity.CounterActivity;
-import com.hamza.Wazaker.Activites.EveningAzkarActivity;
-import com.hamza.Wazaker.Activites.FortyHadithListActivity;
-import com.hamza.Wazaker.Activites.MorningAzkarActivity;
 import com.hamza.Wazaker.WorkManager.NotificationWorker;
 import com.hamza.wazkar.R;
 import com.hamza.wazkar.databinding.ActivityMainBinding;
@@ -59,10 +54,10 @@ public class MainActivity extends AppCompatActivity {
     @SuppressLint("EnqueueWork")
     private void fireWorkerTodisplayNotification() {
 
-        OneTimeWorkRequest WorkRequest = new OneTimeWorkRequest.Builder(NotificationWorker.class)
+        PeriodicWorkRequest WorkRequest = new PeriodicWorkRequest.Builder(NotificationWorker.class, 8, TimeUnit.HOURS)
                 .setInitialDelay(8, TimeUnit.HOURS)
                 .build();
-        workManager.beginUniqueWork("Worker", ExistingWorkPolicy.KEEP, WorkRequest);
+        workManager.enqueueUniquePeriodicWork("worker", ExistingPeriodicWorkPolicy.KEEP, WorkRequest);
     }
 
     @SuppressLint("SetTextI18n")
@@ -126,6 +121,4 @@ public class MainActivity extends AppCompatActivity {
             Toast.makeText(getBaseContext(), "خلل في مشاركة التطبيق، المرجو الإعادة", Toast.LENGTH_SHORT).show();
         }
     }
-
-
 }

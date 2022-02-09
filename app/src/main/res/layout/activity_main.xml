@@ -12,7 +12,7 @@
         android:layout_height="match_parent"
         android:background="@drawable/bak"
         android:layoutDirection="ltr"
-        tools:context="com.hamza.Wazaker.Activites.MainActivity.MainActivity"
+        tools:context="com.hamza.Wazaker.Activites.MainActivity"
         tools:ignore="UnusedAttribute">
 
         <ScrollView

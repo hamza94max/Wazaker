@@ -26,7 +26,7 @@ public class MorningAzkarActivity extends AppCompatActivity {
 
         binding = DataBindingUtil.setContentView(this, R.layout.activity_mor_azkar);
 
-        LoadMorningAzkar();
+        getMorningAzkar();
 
         LinearLayoutManager layoutManager = new LinearLayoutManager(this);
         binding.morRecyclerview.setLayoutManager(layoutManager);
@@ -36,7 +36,7 @@ public class MorningAzkarActivity extends AppCompatActivity {
         binding.morRecyclerview.setAdapter(adapter);
     }
 
-    private void LoadMorningAzkar(){
+    private void getMorningAzkar() {
         morningAzkar = (ArrayList<ZekerModel>) MorningAzkarDataset.getMorningAzkar();
     }
 }

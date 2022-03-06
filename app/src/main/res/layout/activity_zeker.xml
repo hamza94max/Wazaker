@@ -6,8 +6,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:layoutDirection="ltr"
-    android:background="@drawable/bak"
-    tools:context="com.hamza.Wazaker.Activites.ZekerActivity">
+    tools:context="com.hamza.Wazaker.ui.Activites.ZekerActivity"
+    tools:targetApi="jelly_bean_mr1">
 
     <com.badoualy.stepperindicator.StepperIndicator
         android:id="@+id/STEPP"

@@ -1,0 +1,120 @@
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layoutDirection="rtl"
+
+    tools:context="com.hamza.Wazaker.ui.Fragments.MainFragment">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <View
+            android:id="@+id/morningAzkarbtn"
+            android:layout_width="303dp"
+            android:layout_height="87.26dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="28dp"
+            android:layout_marginLeft="28dp"
+            android:background="@drawable/morning_btn">
+
+            <TextView
+                android:id="@+id/text"
+                android:layout_width="101dp"
+                android:layout_height="100dp"
+                android:layout_marginStart="202dp"
+                android:layout_marginLeft="202dp"
+                android:layout_marginTop="59dp"
+                android:gravity="top"
+                android:lineSpacingExtra="72sp"
+                android:text="@string/Morningazkar"
+                android:textAppearance="@style/morning_style"
+                android:translationY="-36.2sp" />
+
+
+        </View>
+
+        <Button
+            android:id="@+id/eveningAzkarbtn"
+            android:layout_width="303dp"
+            android:layout_height="87.26dp"
+            android:layout_below="@+id/morningAzkarbtn"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="14dp"
+            android:background="@drawable/blue_btn"
+            android:text="@string/eveningAzkar"
+            android:textColor="@color/white"
+            android:textSize="22sp" />
+
+        <Button
+            android:id="@+id/azkars_btn"
+            android:layout_width="303dp"
+            android:layout_height="87.26dp"
+            android:layout_below="@id/eveningAzkarbtn"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="14dp"
+            android:background="@drawable/blue_btn"
+            android:text="@string/AzkarandDoaa"
+            android:textColor="@color/white"
+            android:textSize="22sp" />
+
+        <Button
+            android:id="@+id/fortyHadithbtn"
+            android:layout_width="303dp"
+            android:layout_height="87.26dp"
+            android:layout_below="@id/azkars_btn"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="14dp"
+            android:background="@drawable/blue_btn"
+            android:text="@string/FortyHadith"
+            android:textColor="@color/white"
+            android:textSize="22sp" />
+
+        <Button
+            android:id="@+id/qibla_btn"
+            android:layout_width="303dp"
+            android:layout_height="87.26dp"
+            android:layout_below="@id/fortyHadithbtn"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="14dp"
+            android:background="@drawable/blue_btn"
+            android:text="@string/qibla"
+            android:textColor="@color/white"
+            android:textSize="22sp" />
+
+        <Button
+            android:id="@+id/counter_btn"
+            android:layout_width="303dp"
+            android:layout_height="87.26dp"
+            android:layout_below="@id/qibla_btn"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="14dp"
+            android:background="@drawable/blue_btn"
+            android:text="@string/counter"
+            android:textColor="@color/white"
+            android:textSize="22sp" />
+
+
+        <Button
+            android:id="@+id/totalZekercounts"
+            android:layout_width="205dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/counter_btn"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="25dp"
+            android:background="@drawable/blue_btn"
+            android:padding="14dp"
+            android:text="@string/totalzeker"
+            android:textColor="@color/white"
+            android:textSize="19sp"
+            android:textStyle="bold"
+            tools:ignore="MissingConstraints,NotSibling" />
+
+
+    </RelativeLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

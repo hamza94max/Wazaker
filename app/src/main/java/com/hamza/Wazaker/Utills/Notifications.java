@@ -9,7 +9,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.os.Build;
 
-import com.hamza.Wazaker.recevier.NotificationReceiver;
+import com.hamza.Wazaker.Worker.recevier.NotificationReceiver;
 
 import java.util.Calendar;
 

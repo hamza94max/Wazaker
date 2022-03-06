@@ -10,8 +10,7 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@drawable/bak"
-        tools:context="com.hamza.Wazaker.Activites.FortyHadithActivity">
+        tools:context="com.hamza.Wazaker.ui.Activites.FortyHadithActivity">
 
         <com.badoualy.stepperindicator.StepperIndicator
             android:id="@+id/STEPP"

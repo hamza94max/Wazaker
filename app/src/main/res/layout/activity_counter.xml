@@ -11,9 +11,8 @@
         android:layout_height="match_parent"
         android:orientation="vertical"
         android:id="@+id/counterscreen"
-        android:background="@drawable/bak"
         android:onClick="setTotalscreen"
-        tools:context="com.hamza.Wazaker.Activites.CounterActivity"
+        tools:context="com.hamza.Wazaker.ui.Activites.CounterActivity"
         tools:ignore="UsingOnClickInXml">
 
         <TextView

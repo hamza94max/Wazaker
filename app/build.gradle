@@ -34,6 +34,11 @@ android {
         targetCompatibility = 1.8
     }
 
+    viewBinding {
+        enabled = true
+    }
+
+
     buildFeatures{
         //noinspection DataBindingWithoutKapt
         dataBinding = true
@@ -68,6 +73,7 @@ dependencies {
     implementation("androidx.navigation:navigation-fragment-ktx:2.4.1")
     implementation("androidx.navigation:navigation-ui-ktx:2.4.1")
 
+    implementation 'androidx.fragment:fragment-ktx:1.4.1'
     // Worker
     implementation("androidx.work:work-runtime:2.7.1")
 

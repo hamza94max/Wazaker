@@ -3,7 +3,6 @@ package com.hamza.Wazaker.ui.Activites;
 import android.os.Bundle;
 
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.databinding.DataBindingUtil;
 import androidx.recyclerview.widget.LinearLayoutManager;
 
 import com.hamza.Wazaker.Data.Data_sets.EveningAzkarDataset;
@@ -24,7 +23,7 @@ public class EveningAzkarActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_even_azkar);
 
-        binding = DataBindingUtil.setContentView(this, R.layout.activity_even_azkar);
+        //binding = DataBindingUtil.setContentView(this, R.layout.activity_even_azkar);
 
         getEveningdata();
 

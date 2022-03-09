@@ -1,23 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
-<layout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools">
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.hamza.Wazaker.ui.Activites.EveningAzkarActivity">
 
-    <data>
 
-    </data>
-
-    <androidx.constraintlayout.widget.ConstraintLayout
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/eveningrecycler"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context="com.hamza.Wazaker.ui.Activites.EveningAzkarActivity">
-
-
-        <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/eveningrecycler"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_marginTop="1dp"
+        android:layout_marginTop="1dp"
             android:background="@color/lightGreen"
             android:padding="5dp" />
-    </androidx.constraintlayout.widget.ConstraintLayout>
-</layout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+

@@ -2,45 +2,30 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:layoutDirection="rtl"
-
-    tools:context="com.hamza.Wazaker.ui.Fragments.MainFragment">
+    android:layoutDirection="ltr"
+    tools:context="com.hamza.Wazaker.ui.Fragments.MainFragment.MainFragment"
+    tools:ignore="UnusedAttribute">
 
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-        <View
+        <Button
             android:id="@+id/morningAzkarbtn"
             android:layout_width="303dp"
-            android:layout_height="87.26dp"
-            android:layout_alignParentStart="true"
-            android:layout_alignParentLeft="true"
-            android:layout_centerVertical="true"
+            android:layout_height="@dimen/btn_height"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="25dp"
             android:layout_marginStart="28dp"
             android:layout_marginLeft="28dp"
-            android:background="@drawable/morning_btn">
-
-            <TextView
-                android:id="@+id/text"
-                android:layout_width="101dp"
-                android:layout_height="100dp"
-                android:layout_marginStart="202dp"
-                android:layout_marginLeft="202dp"
-                android:layout_marginTop="59dp"
-                android:gravity="top"
-                android:lineSpacingExtra="72sp"
-                android:text="@string/Morningazkar"
-                android:textAppearance="@style/morning_style"
-                android:translationY="-36.2sp" />
-
-
-        </View>
+            android:background="@drawable/blue_btn"
+            android:text="@string/Morningazkar"
+            android:textAppearance="@style/morning_style" />
 
         <Button
             android:id="@+id/eveningAzkarbtn"
             android:layout_width="303dp"
-            android:layout_height="87.26dp"
+            android:layout_height="@dimen/btn_height"
             android:layout_below="@+id/morningAzkarbtn"
             android:layout_centerHorizontal="true"
             android:layout_marginTop="14dp"
@@ -52,7 +37,7 @@
         <Button
             android:id="@+id/azkars_btn"
             android:layout_width="303dp"
-            android:layout_height="87.26dp"
+            android:layout_height="@dimen/btn_height"
             android:layout_below="@id/eveningAzkarbtn"
             android:layout_centerHorizontal="true"
             android:layout_marginTop="14dp"
@@ -64,7 +49,7 @@
         <Button
             android:id="@+id/fortyHadithbtn"
             android:layout_width="303dp"
-            android:layout_height="87.26dp"
+            android:layout_height="@dimen/btn_height"
             android:layout_below="@id/azkars_btn"
             android:layout_centerHorizontal="true"
             android:layout_marginTop="14dp"
@@ -76,7 +61,7 @@
         <Button
             android:id="@+id/qibla_btn"
             android:layout_width="303dp"
-            android:layout_height="87.26dp"
+            android:layout_height="@dimen/btn_height"
             android:layout_below="@id/fortyHadithbtn"
             android:layout_centerHorizontal="true"
             android:layout_marginTop="14dp"
@@ -88,7 +73,7 @@
         <Button
             android:id="@+id/counter_btn"
             android:layout_width="303dp"
-            android:layout_height="87.26dp"
+            android:layout_height="@dimen/btn_height"
             android:layout_below="@id/qibla_btn"
             android:layout_centerHorizontal="true"
             android:layout_marginTop="14dp"

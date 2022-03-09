@@ -43,7 +43,6 @@
         <activity
             android:name="com.hamza.Wazaker.ui.Activites.AzkarListActivity"
             tools:ignore="InnerclassSeparator" />
-        <activity android:name="com.hamza.Wazaker.ui.Activites.CounterActivity" />
         <activity android:name="com.hamza.Wazaker.ui.Activites.FortyHadithActivity" />
         <activity android:name="com.hamza.Wazaker.ui.Activites.ZekerActivity" />
         <activity android:name="com.hamza.Wazaker.ui.Activites.MorningAzkarActivity" />

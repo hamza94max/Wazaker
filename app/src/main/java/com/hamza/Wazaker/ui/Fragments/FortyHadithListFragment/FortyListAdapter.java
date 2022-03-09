@@ -1,4 +1,4 @@
-package com.hamza.Wazaker.ui.Adapters;
+package com.hamza.Wazaker.ui.Fragments.FortyHadithListFragment;
 
 
 import android.view.LayoutInflater;
@@ -12,7 +12,6 @@ import com.hamza.Wazaker.Data.Models.AzkarListModel;
 import com.hamza.Wazaker.ui.listeners.ItemListner;
 import com.hamza.wazkar.R;
 
-import java.security.AccessControlContext;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -22,19 +21,13 @@ public class FortyListAdapter extends RecyclerView.Adapter<FortyListAdapter.Myvi
     private ItemListner listner;
     private final List<AzkarListModel> fortyList;
 
-    public FortyListAdapter(ArrayList<AzkarListModel> fortyList, AccessControlContext context) {
-        this.fortyList=fortyList;
+    public FortyListAdapter(ArrayList<AzkarListModel> fortyList) {
+        this.fortyList = fortyList;
     }
-
-
-
 
     public void setListner(ItemListner listner) {
         this.listner = listner;
     }
-
-
-
 
     @Override
     public Myviewholder onCreateViewHolder(ViewGroup parent, int viewType) {
@@ -53,8 +46,6 @@ public class FortyListAdapter extends RecyclerView.Adapter<FortyListAdapter.Myvi
     public int getItemCount() {
         return fortyList.size();
     }
-
-
 
     class Myviewholder extends RecyclerView.ViewHolder {
         TextView title;

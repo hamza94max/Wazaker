@@ -10,7 +10,7 @@ class MainActivity : AppCompatActivity() {
 
 
     private val workManager = WorkManager.getInstance(this.application)
-    
+
     private var _binding: ActivityMainBinding? = null
     private val binding get() = _binding!!
 

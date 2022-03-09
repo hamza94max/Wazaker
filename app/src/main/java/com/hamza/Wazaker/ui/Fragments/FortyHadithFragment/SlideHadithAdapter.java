@@ -1,4 +1,4 @@
-package com.hamza.Wazaker.ui.Adapters;
+package com.hamza.Wazaker.ui.Fragments.FortyHadithFragment;
 
 import android.annotation.SuppressLint;
 import android.content.Context;
@@ -29,12 +29,10 @@ public class SlideHadithAdapter extends PagerAdapter {
         return Hadiths.length;
     }
 
-
     @Override
     public boolean isViewFromObject(@NonNull View view, @NonNull Object object) {
-        return view==object;
+        return view == object;
     }
-
 
     @RequiresApi(api = Build.VERSION_CODES.O)
     @SuppressLint("ResourceAsColor")
@@ -45,6 +43,7 @@ public class SlideHadithAdapter extends PagerAdapter {
         textView.setText(Hadiths[position]);
         textView.setTextSize(21);
         textView.setTextColor(Color.WHITE);
+        textView.setPadding(7, 7, 7, 7);
 
         TextViewCompat.setAutoSizeTextTypeUniformWithConfiguration(textView,
                 20, 22, 1,

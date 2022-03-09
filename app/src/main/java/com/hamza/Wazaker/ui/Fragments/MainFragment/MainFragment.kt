@@ -48,6 +48,13 @@ class MainFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
 
+
+        binding.fortyHadithbtn.setOnClickListener {
+            val action = MainFragmentDirections.actionMainFragmentToFortyHadithListFragment()
+            findNavController().navigate(action)
+        }
+
+
         binding.counterBtn.setOnClickListener {
             val action = MainFragmentDirections.actionMainFragmentToCounterFragment()
             findNavController().navigate(action)
@@ -59,13 +66,13 @@ class MainFragment : Fragment() {
 
     }
 
-    fun getTotalZekerCountsfromSharedPreferences() {
+    private fun getTotalZekerCountsfromSharedPreferences() {
         totalcounts = sharedPreferences!!.getInt("zekertotalcounts", 0)
         setTotalzekerCountstext()
     }
 
     @SuppressLint("SetTextI18n")
-    fun setTotalzekerCountstext() {
+    private fun setTotalzekerCountstext() {
         binding.totalZekercounts.text = getString(R.string.totalzeker) + "  " + totalcounts
     }
 

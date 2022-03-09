@@ -18,6 +18,13 @@
             app:exitAnim="@anim/slide_out_left"
             app:popEnterAnim="@anim/slide_in_left"
             app:popExitAnim="@anim/slide_out_right" />
+        <action
+            android:id="@+id/action_mainFragment_to_fortyHadithListFragment"
+            app:destination="@id/fortyHadithListFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
 
     </fragment>
 
@@ -26,4 +33,30 @@
         android:name="com.hamza.Wazaker.ui.Fragments.CounterFragment.CounterFragment"
         android:label="fragment_counter"
         tools:layout="@layout/fragment_counter" />
+
+    <fragment
+        android:id="@+id/fortyHadithListFragment"
+        android:name="com.hamza.Wazaker.ui.Fragments.FortyHadithListFragment.FortyHadithListFragment"
+        android:label="fragment_forty_hadith_list"
+        tools:layout="@layout/fragment_forty_hadith_list">
+        <action
+            android:id="@+id/action_fortyHadithListFragment_to_fortyHadithFragment"
+            app:destination="@id/fortyHadithFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+
+    </fragment>
+    <fragment
+        android:id="@+id/fortyHadithFragment"
+        android:name="com.hamza.Wazaker.ui.Fragments.FortyHadithFragment.FortyHadithFragment"
+        android:label="fragment_forty_hadith"
+        tools:layout="@layout/fragment_forty_hadith">
+        <argument
+            android:name="intent"
+            app:argType="integer" />
+
+    </fragment>
+
 </navigation>

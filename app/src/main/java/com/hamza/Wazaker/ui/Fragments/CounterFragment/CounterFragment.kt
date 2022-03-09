@@ -78,6 +78,12 @@ class CounterFragment : Fragment() {
         }
     }
 
+
+    override fun onCreate(savedInstanceState: Bundle?) {
+        setHasOptionsMenu(true)
+        super.onCreate(savedInstanceState)
+    }
+
     override fun onCreateOptionsMenu(menu: Menu, inflater: MenuInflater) {
         inflater.inflate(R.menu.counter_menu, menu)
         super.onCreateOptionsMenu(menu, inflater)

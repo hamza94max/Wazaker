@@ -12,15 +12,40 @@
         tools:layout="@layout/fragment_main">
 
         <action
-            android:id="@+id/action_mainFragment_to_counterFragment"
-            app:destination="@id/counterFragment"
+            android:id="@+id/action_mainFragment_to_morningAzkarFragment"
+            app:destination="@id/morningAzkarFragment"
             app:enterAnim="@anim/slide_in_right"
             app:exitAnim="@anim/slide_out_left"
             app:popEnterAnim="@anim/slide_in_left"
             app:popExitAnim="@anim/slide_out_right" />
+
+        <action
+            android:id="@+id/action_mainFragment_to_eveningAzkarFragment"
+            app:destination="@id/eveningAzkarFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+
+        <action
+            android:id="@+id/action_mainFragment_to_azkarFragment"
+            app:destination="@id/azkarFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+
         <action
             android:id="@+id/action_mainFragment_to_fortyHadithListFragment"
             app:destination="@id/fortyHadithListFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+
+        <action
+            android:id="@+id/action_mainFragment_to_counterFragment"
+            app:destination="@id/counterFragment"
             app:enterAnim="@anim/slide_in_right"
             app:exitAnim="@anim/slide_out_left"
             app:popEnterAnim="@anim/slide_in_left"
@@ -58,5 +83,23 @@
             app:argType="integer" />
 
     </fragment>
+
+    <fragment
+        android:id="@+id/morningAzkarFragment"
+        android:name="com.hamza.Wazaker.ui.Fragments.MorningAzkarFragment.MorningAzkarFragment"
+        android:label="fragment_morning_azkar"
+        tools:layout="@layout/fragment_morning_azkar" />
+
+    <fragment
+        android:id="@+id/eveningAzkarFragment"
+        android:name="com.hamza.Wazaker.ui.Fragments.EveningAzkarFragment.EveningAzkarFragment"
+        android:label="fragment_evening_azkar"
+        tools:layout="@layout/fragment_evening_azkar" />
+
+    <fragment
+        android:id="@+id/azkarFragment"
+        android:name="com.hamza.Wazaker.ui.Fragments.AzkarFragment.AzkarFragment"
+        android:label="fragment_azkar"
+        tools:layout="@layout/fragment_azkar" />
 
 </navigation>

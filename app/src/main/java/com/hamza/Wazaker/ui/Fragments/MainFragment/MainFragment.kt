@@ -49,6 +49,21 @@ class MainFragment : Fragment() {
 
 
 
+        binding.morningAzkarbtn.setOnClickListener {
+            val action = MainFragmentDirections.actionMainFragmentToMorningAzkarFragment()
+            findNavController().navigate(action)
+        }
+
+        binding.eveningAzkarbtn.setOnClickListener {
+            val action = MainFragmentDirections.actionMainFragmentToEveningAzkarFragment()
+            findNavController().navigate(action)
+        }
+
+        binding.azkarsBtn.setOnClickListener {
+            val action = MainFragmentDirections.actionMainFragmentToAzkarFragment()
+            findNavController().navigate(action)
+        }
+
         binding.fortyHadithbtn.setOnClickListener {
             val action = MainFragmentDirections.actionMainFragmentToFortyHadithListFragment()
             findNavController().navigate(action)

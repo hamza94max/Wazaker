@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/newproblemFragment">
+
+    <fragment
+        android:id="@+id/newproblemFragment"
+        android:name="simpleQuiz.Fragments.NewProblemFragment"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_new_problem">
+        <action
+            android:id="@+id/action_NewProblemFragment_to_rightFragment"
+            app:destination="@id/rightanswerFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+        <action
+            android:id="@+id/action_homeFragment_to_wrongAnswerFragment"
+            app:destination="@id/wrongAnswerFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/rightanswerFragment"
+        android:name="simpleQuiz.Fragments.RightAnswerFragment"
+        android:label="fragment_rightanswer"
+        tools:layout="@layout/fragment_right_answer">
+        <action
+            android:id="@+id/action_rightanswerFragment_to_newproblemFragment"
+            app:destination="@id/newproblemFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/wrongAnswerFragment"
+        android:name="simpleQuiz.Fragments.WrongAnswerFragment"
+        android:label="WrongAnswerFragment"
+        tools:layout="@layout/fragment_wrong_answer">
+        <action
+            android:id="@+id/action_wrongAnswerFragment_to_seeAnswerFragment"
+            app:destination="@id/seeAnswerFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+        <argument
+            android:name="result"
+            app:argType="integer" />
+        <action
+            android:id="@+id/action_wrongAnswerFragment_to_newproblemFragment"
+            app:destination="@id/newproblemFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/seeAnswerFragment"
+        android:name="simpleQuiz.Fragments.SeeAnswerFragment"
+        android:label="SeeAnswerFragment"
+        tools:layout="@layout/fragment_see_answer">
+        <argument
+            android:name="result"
+            app:argType="integer" />
+        <action
+            android:id="@+id/action_seeAnswerFragment_to_newproblemFragment"
+            app:destination="@id/newproblemFragment" />
+    </fragment>
+</navigation>

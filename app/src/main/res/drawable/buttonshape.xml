@@ -1,27 +1,21 @@
-<?xml version="1.0" encoding="utf-8"?>
-<shape xmlns:android="http://schemas.android.com/apk/res/android">
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:width="203dp"
+    android:height="54dp"
+    android:viewportWidth="203"
+    android:viewportHeight="54"
+    tools:ignore="VectorRaster">
 
-    <gradient
-        android:angle="45"
-        android:centerX="35%"
-        android:gradientRadius="14dp"
-        android:startColor="#388b76"
-        android:endColor="#388b76"
+    <group>
 
-        android:type="linear"
+        <clip-path
+            android:pathData="M11 0H192C198.075 0 203 4.92487 203 11V43C203 49.0751 198.075 54 192 54H11C4.92487 54 0 49.0751 0 43V11C0 4.92487 4.92487 0 11 0Z"
+            tools:ignore="VectorRaster" />
 
+        <path
+            android:fillColor="#FFFFFF"
+            android:pathData="M0 0V54H203V0" />
 
-        />
+    </group>
 
-
-    <padding
-        android:bottom="5dp"
-        android:left="5dp"
-        android:right="5dp"
-        android:top="5dp" />
-    <size
-        android:width="270dp"
-        android:height="60dp"
-        />
-
-</shape>
+</vector>

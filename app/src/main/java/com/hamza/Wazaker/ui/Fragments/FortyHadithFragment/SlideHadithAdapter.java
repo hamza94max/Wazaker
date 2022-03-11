@@ -1,16 +1,13 @@
 package com.hamza.Wazaker.ui.Fragments.FortyHadithFragment;
 
-import android.annotation.SuppressLint;
 import android.content.Context;
 import android.graphics.Color;
-import android.os.Build;
 import android.util.TypedValue;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
-import androidx.annotation.RequiresApi;
 import androidx.core.widget.TextViewCompat;
 import androidx.viewpager.widget.PagerAdapter;
 
@@ -19,9 +16,9 @@ public class SlideHadithAdapter extends PagerAdapter {
     private final Context context;
     public String[] Hadiths;
 
-    public SlideHadithAdapter(Context context, String[] ff) {
+    public SlideHadithAdapter(Context context, String[] hadiths) {
         this.context = context;
-        this.Hadiths = ff;
+        this.Hadiths = hadiths;
     }
 
     @Override
@@ -34,8 +31,6 @@ public class SlideHadithAdapter extends PagerAdapter {
         return view == object;
     }
 
-    @RequiresApi(api = Build.VERSION_CODES.O)
-    @SuppressLint("ResourceAsColor")
     @Override
     public Object instantiateItem(ViewGroup container, int position) {
 
@@ -53,6 +48,7 @@ public class SlideHadithAdapter extends PagerAdapter {
 
         return textView;
     }
+
     @Override
     public void destroyItem( ViewGroup container, int position,  Object object) {
         container.removeView((View)object);

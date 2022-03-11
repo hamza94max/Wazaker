@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name"> Simple Quiz </string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="add_new_problem"> Add new problem </string>
+
+
+    <string name="submit_answer"> Submit answer </string>
+    <string name="right_answer"> Right answer </string>
+    <string name="new_problem"> New Problem </string>
+    <string name="wrong_answer">Wrong answer</string>
+    <string name="see_answer">See answer</string>
+    <string name="try_again">Try again</string>
+</resources>

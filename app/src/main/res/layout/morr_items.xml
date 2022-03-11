@@ -9,24 +9,25 @@
     android:padding="15dp"
     android:layout_marginTop="15dp"
     android:elevation="12dp"
-        android:layout_height="wrap_content"
-        tools:ignore="UnusedAttribute">
+    android:layout_height="wrap_content"
+    tools:ignore="UnusedAttribute">
 
-      <androidx.constraintlayout.widget.ConstraintLayout
-          android:id="@+id/con"
-          android:padding="10dp"
-          android:layout_width="match_parent"
-          android:layout_height="match_parent">
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/con"
+        android:padding="10dp"
+        android:background="@color/blue"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
 
 
-          <TextView
+        <TextView
               android:id="@+id/zekertext"
               android:layout_width="wrap_content"
               android:layout_height="wrap_content"
               android:fontFamily="sans-serif-condensed-medium"
-              android:padding="5dp"
-              android:textColor="#fff"
-              android:textSize="19sp"
+            android:padding="5dp"
+            android:textColor="@color/white"
+            android:textSize="19sp"
               tools:ignore="MissingConstraints"
               tools:layout_editor_absoluteX="10dp"
               tools:layout_editor_absoluteY="10dp"
@@ -38,7 +39,6 @@
               />
 
           <at.markushi.ui.CircleButton
-
               android:id="@+id/pluss"
               android:layout_width="55dp"
               android:layout_height="55dp"
@@ -65,7 +65,7 @@
               android:layoutDirection="ltr"
               android:padding="5dp"
               android:text="0"
-              android:textColor="#fff"
+              android:textColor="@color/white"
               android:textSize="40sp"
               app:layout_constraintEnd_toStartOf="@+id/pluss"
               app:layout_constraintTop_toBottomOf="@+id/zekertext"
@@ -90,8 +90,7 @@
               tools:ignore="MissingConstraints" />
 
           <CheckBox
-
-              android:id="@+id/checkk"
+              android:id="@+id/checkbox"
               android:layout_width="40dp"
               android:layout_height="40dp"
               android:layout_marginEnd="8dp"

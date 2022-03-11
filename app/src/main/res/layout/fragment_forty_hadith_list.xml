@@ -4,11 +4,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:layout_marginTop="21dp"
-    android:paddingHorizontal="14dp"
-
-    app:cardCornerRadius="15dp"
+    app:cardCornerRadius="16dp"
     tools:context="com.hamza.Wazaker.ui.Fragments.FortyHadithListFragment.FortyHadithListFragment">
-
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/hadithrecycler"
@@ -16,6 +13,7 @@
         android:layout_height="match_parent"
         android:background="@color/blue"
         android:orientation="vertical"
+        android:layout_marginHorizontal="5dp"
         android:padding="7dp"
         app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
         app:layout_constraintBottom_toBottomOf="parent"

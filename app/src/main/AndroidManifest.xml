@@ -39,12 +39,7 @@
         <activity android:name="com.hassanjamil.hqibla.CompassActivity" />
 
         <activity android:name="com.hamza.Wazaker.ui.MainActivity.MainActivity" />
-        <activity
-            android:name="com.hamza.Wazaker.ui.Activites.AzkarListActivity"
-            tools:ignore="InnerclassSeparator" />
         <activity android:name="com.hamza.Wazaker.ui.Activites.ZekerActivity" />
-        <activity android:name="com.hamza.Wazaker.ui.Activites.MorningAzkarActivity" />
-        <activity android:name="com.hamza.Wazaker.ui.Activites.EveningAzkarActivity" />
     </application>
 
 </manifest>

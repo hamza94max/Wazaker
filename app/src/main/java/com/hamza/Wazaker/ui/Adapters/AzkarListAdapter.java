@@ -8,7 +8,6 @@ import android.widget.TextView;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.hamza.Wazaker.Data.Models.AzkarListModel;
-import com.hamza.Wazaker.ui.Activites.AzkarListActivity;
 import com.hamza.Wazaker.ui.listeners.ItemListner;
 import com.hamza.wazkar.R;
 
@@ -20,7 +19,7 @@ public class AzkarListAdapter extends RecyclerView.Adapter<AzkarListAdapter.View
     private ItemListner listner;
     private final List<AzkarListModel> azkar_modelList;
 
-    public AzkarListAdapter(List<AzkarListModel> items, AzkarListActivity azkarListActivity) {
+    public AzkarListAdapter(List<AzkarListModel> items) {
         this.azkar_modelList = items;
     }
 
@@ -30,8 +29,10 @@ public class AzkarListAdapter extends RecyclerView.Adapter<AzkarListAdapter.View
 
     @Override
     public AzkarListAdapter.ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
+
         LayoutInflater layoutInflater = LayoutInflater.from(parent.getContext());
         View v = layoutInflater.inflate(R.layout.simple_cell, parent, false);
+
         return new ViewHolder(v);
     }
 

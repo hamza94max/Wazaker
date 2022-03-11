@@ -1,4 +1,4 @@
-package com.hamza.Wazaker.ui.Adapters;
+package com.hamza.Wazaker.ui.Fragments.MorningAzkarFragment;
 
 import android.annotation.SuppressLint;
 import android.content.Context;
@@ -38,22 +38,19 @@ public class MorningAzkarAdapter extends RecyclerView.Adapter<MorningAzkarAdapte
 
     @SuppressLint("SetTextI18n")
     @Override
-    public void onBindViewHolder(@NonNull MorningAzkarAdapter.HViewholder holder, int position) {
+    public void onBindViewHolder(@NonNull MorningAzkarAdapter.HViewholder holder, @SuppressLint("RecyclerView") int position) {
 
         holder.zekertext.setText(model.get(position).getZeker());
-        holder.copybtn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                String zeker = model.get(position).getZeker();
+        holder.copybtn.setOnClickListener(v -> {
+            String zeker = model.get(position).getZeker();
 
-                Intent sendIntent = new Intent();
-                sendIntent.setAction(Intent.ACTION_SEND);
-                sendIntent.putExtra(Intent.EXTRA_TEXT, zeker);
-                sendIntent.setType("text/plain");
+            Intent sendIntent = new Intent();
+            sendIntent.setAction(Intent.ACTION_SEND);
+            sendIntent.putExtra(Intent.EXTRA_TEXT, zeker);
+            sendIntent.setType("text/plain");
 
-                Intent shareIntent = Intent.createChooser(sendIntent, null);
-                v.getContext().startActivity(shareIntent);
-            }
+            Intent shareIntent = Intent.createChooser(sendIntent, null);
+            v.getContext().startActivity(shareIntent);
         });
 
         final ZekerModel item = model.get(position);
@@ -91,8 +88,8 @@ public class MorningAzkarAdapter extends RecyclerView.Adapter<MorningAzkarAdapte
             zekertext = itemView.findViewById(R.id.zekertext);
             copybtn = itemView.findViewById(R.id.copybtn);
             plusbtn = itemView.findViewById(R.id.pluss);
-            plustext = itemView.findViewById(R.id.plustext);
-            checkBox = itemView.findViewById(R.id.checkk);
+             plustext = itemView.findViewById(R.id.plustext);
+             checkBox = itemView.findViewById(R.id.checkbox);
         }
     }
 }

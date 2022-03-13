@@ -20,6 +20,6 @@
 
     </style>
 
-    <dimen name="btn_height">47dp</dimen>
+    <dimen name="btn_height">70dp</dimen>
 
 </resources>

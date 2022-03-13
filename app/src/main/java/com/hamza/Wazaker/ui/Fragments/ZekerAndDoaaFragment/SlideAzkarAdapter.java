@@ -1,56 +1,49 @@
-package com.hamza.Wazaker.ui.Fragments.FortyHadithFragment;
+package com.hamza.Wazaker.ui.Fragments.ZekerAndDoaaFragment;
 
 import android.content.Context;
 import android.graphics.Color;
-import android.util.TypedValue;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
-import androidx.annotation.NonNull;
-import androidx.core.widget.TextViewCompat;
 import androidx.viewpager.widget.PagerAdapter;
 
-public class SlideHadithAdapter extends PagerAdapter {
+import com.hamza.Wazaker.Data.Models.ZekerModel;
+
+import java.util.List;
+
+public class SlideAzkarAdapter extends PagerAdapter {
 
     private final Context context;
-    public String[] Hadiths;
+    public List<ZekerModel> mor;
 
-    public SlideHadithAdapter(Context context, String[] hadiths) {
+
+    public SlideAzkarAdapter(Context context, List<ZekerModel> mor) {
         this.context = context;
-        this.Hadiths = hadiths;
-    }
+        this.mor = mor;}
 
     @Override
     public int getCount() {
-        return Hadiths.length;
+        return mor.size();
     }
 
     @Override
-    public boolean isViewFromObject(@NonNull View view, @NonNull Object object) {
-        return view == object;
-    }
+    public boolean isViewFromObject(View view, Object object) { return view == object; }
 
     @Override
     public Object instantiateItem(ViewGroup container, int position) {
 
         TextView textView = new TextView(context);
-        textView.setText(Hadiths[position]);
+        textView.setText( mor.get(position).getZeker());
         textView.setTextSize(21);
         textView.setTextColor(Color.WHITE);
-        textView.setPadding(7, 7, 7, 7);
-
-        TextViewCompat.setAutoSizeTextTypeUniformWithConfiguration(textView,
-                20, 22, 1,
-                TypedValue.COMPLEX_UNIT_SP);
-
         container.addView(textView,0);
 
         return textView;
     }
-
     @Override
     public void destroyItem( ViewGroup container, int position,  Object object) {
         container.removeView((View)object);
     }
+
 }

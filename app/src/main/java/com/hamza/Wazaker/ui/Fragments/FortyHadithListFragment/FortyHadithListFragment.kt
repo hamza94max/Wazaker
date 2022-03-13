@@ -6,7 +6,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
-import com.hamza.Wazaker.Data.Data_sets.FortyListDataset
+import com.hamza.Wazaker.Data.DataSets.FortyListDataset
 import com.hamza.Wazaker.Data.Models.AzkarListModel
 import com.hamza.Wazaker.ui.listeners.ItemListner
 import com.hamza.wazkar.databinding.FragmentFortyHadithListBinding

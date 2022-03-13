@@ -6,7 +6,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.hamza.Wazaker.Data.Data_sets.EveningAzkarDataset
+import com.hamza.Wazaker.Data.DataSets.EveningAzkarDataset
 import com.hamza.Wazaker.Data.Models.ZekerModel
 import com.hamza.wazkar.databinding.FragmentEveningAzkarBinding
 import java.util.*

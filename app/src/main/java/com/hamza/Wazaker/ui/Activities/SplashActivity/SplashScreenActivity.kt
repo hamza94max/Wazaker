@@ -1,4 +1,4 @@
-package com.hamza.Wazaker.ui.SplashActivity
+package com.hamza.Wazaker.ui.Activities.SplashActivity
 
 import android.annotation.SuppressLint
 import android.content.Intent
@@ -6,7 +6,7 @@ import android.os.Bundle
 import android.os.Handler
 import android.view.animation.AnimationUtils
 import androidx.appcompat.app.AppCompatActivity
-import com.hamza.Wazaker.ui.MainActivity.MainActivity
+import com.hamza.Wazaker.ui.Activities.MainActivity.MainActivity
 import com.hamza.wazkar.R
 import com.hamza.wazkar.databinding.ActivitySplashScreenBinding
 

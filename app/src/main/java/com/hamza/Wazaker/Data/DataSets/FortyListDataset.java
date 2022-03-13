@@ -1,4 +1,4 @@
-package com.hamza.Wazaker.Data.Data_sets;
+package com.hamza.Wazaker.Data.DataSets;
 
 import com.hamza.Wazaker.Data.Models.AzkarListModel;
 

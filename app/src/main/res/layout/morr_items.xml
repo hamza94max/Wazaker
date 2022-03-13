@@ -21,22 +21,22 @@
 
 
         <TextView
-              android:id="@+id/zekertext"
-              android:layout_width="wrap_content"
-              android:layout_height="wrap_content"
-              android:fontFamily="sans-serif-condensed-medium"
+            android:id="@+id/zekertext"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif-condensed-medium"
             android:padding="5dp"
             android:textColor="@color/white"
             android:textSize="19sp"
-              tools:ignore="MissingConstraints"
-              tools:layout_editor_absoluteX="10dp"
-              tools:layout_editor_absoluteY="10dp"
-              app:autoSizeTextType="uniform"
-              app:autoSizeMinTextSize="18sp"
-              app:autoSizeMaxTextSize="20sp"
-              app:autoSizeStepGranularity="1sp"
+            app:autoSizeMaxTextSize="20sp"
+            app:autoSizeMinTextSize="18sp"
+            app:autoSizeStepGranularity="1sp"
+            app:autoSizeTextType="uniform"
+            tools:ignore="MissingConstraints"
+            tools:layout_editor_absoluteX="10dp"
+            tools:layout_editor_absoluteY="10dp"
 
-              />
+            />
 
           <at.markushi.ui.CircleButton
               android:id="@+id/pluss"

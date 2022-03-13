@@ -13,8 +13,8 @@ import android.net.Uri;
 import androidx.core.app.NotificationCompat;
 import androidx.core.app.NotificationManagerCompat;
 
-import com.hamza.Wazaker.Data.Data_sets.NotificationDataset;
-import com.hamza.Wazaker.ui.MainActivity.MainActivity;
+import com.hamza.Wazaker.Data.DataSets.NotificationDataset;
+import com.hamza.Wazaker.ui.Activities.MainActivity.MainActivity;
 import com.hamza.wazkar.R;
 
 

@@ -6,7 +6,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.hamza.Wazaker.Data.Data_sets.MorningAzkarDataset
+import com.hamza.Wazaker.Data.DataSets.MorningAzkarDataset
 import com.hamza.Wazaker.Data.Models.ZekerModel
 import com.hamza.wazkar.databinding.FragmentMorningAzkarBinding
 import java.util.*
@@ -36,10 +36,8 @@ class MorningAzkarFragment : Fragment() {
 
         val adapter =
             MorningAzkarAdapter(
-                MorningAzkarDataset.getMorningAzkar() as ArrayList<ZekerModel>?,
-                context
+                MorningAzkarDataset.getMorningAzkar() as ArrayList<ZekerModel>?
             )
-        binding.morRecyclerview.layoutManager = layoutManager
         binding.morRecyclerview.adapter = adapter
 
     }

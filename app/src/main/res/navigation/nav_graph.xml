@@ -98,8 +98,23 @@
 
     <fragment
         android:id="@+id/azkarFragment"
-        android:name="com.hamza.Wazaker.ui.Fragments.AzkarFragment.AzkarFragment"
+        android:name="com.hamza.Wazaker.ui.Fragments.AzkarListFragment.AzkarListFragment"
         android:label="fragment_azkar"
-        tools:layout="@layout/fragment_azkar" />
+        tools:layout="@layout/fragment_azkar">
+        <action
+            android:id="@+id/action_azkarFragment_to_zekerAndDoaaFragment"
+            app:destination="@id/zekerAndDoaaFragment" />
+
+    </fragment>
+    <fragment
+        android:id="@+id/zekerAndDoaaFragment"
+        android:name="com.hamza.Wazaker.ui.Fragments.ZekerAndDoaaFragment.ZekerAndDoaaFragment"
+        android:label="fragment_zeker_and_doaa"
+        tools:layout="@layout/fragment_zeker_and_doaa">
+
+        <argument
+            android:name="zekerintent"
+            app:argType="integer" />
+    </fragment>
 
 </navigation>

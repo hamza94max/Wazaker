@@ -1,4 +1,4 @@
-package com.hamza.Wazaker.ui.Adapters;
+package com.hamza.Wazaker.ui.Fragments.AzkarListFragment;
 
 import android.view.LayoutInflater;
 import android.view.View;

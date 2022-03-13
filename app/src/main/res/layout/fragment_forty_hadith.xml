@@ -1,59 +1,17 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layoutDirection="ltr"
-    android:padding="10dp"
+    android:padding="7dp"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+
     tools:context="com.hamza.Wazaker.ui.Fragments.FortyHadithFragment.FortyHadithFragment">
 
-    <androidx.cardview.widget.CardView
-
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/fortyHadithList"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        app:cardCornerRadius="21dp">
-
-        <RelativeLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:background="@color/blue"
-
-
-            >
-
-            <androidx.viewpager.widget.ViewPager
-                android:id="@+id/viewpager"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_marginTop="21dp"
-                android:keepScreenOn="true"
-                android:layoutDirection="rtl"
-                android:padding="16dp"
-                app:layout_constraintStart_toStartOf="parent"
-                tools:ignore="MissingConstraints,UnusedAttribute" />
-
-            <Button
-                android:id="@+id/copybtn"
-                android:layout_width="40dp"
-                android:layout_height="45dp"
-                android:layout_alignParentStart="true"
-                android:layout_alignParentLeft="true"
-                android:layout_alignParentBottom="true"
-                android:layout_marginStart="15dp"
-                android:layout_marginLeft="15dp"
-                android:layout_marginEnd="15dp"
-                android:layout_marginBottom="50dp"
-                android:background="@drawable/copy_24dp"
-                android:layoutDirection="ltr"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.171"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.952"
-                tools:ignore="MissingConstraints" />
-
-        </RelativeLayout>
-    </androidx.cardview.widget.CardView>
+        android:layout_marginTop="7dp"
+        android:padding="7dp"
+        tools:listitem="@layout/forty_item" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -5,6 +5,7 @@
 
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.SCHEDULE_EXACT_ALARM" />
     <uses-permission
         android:name="android.permission.WRITE_EXTERNAL_STORAGE"
         tools:ignore="ScopedStorage" />
@@ -26,7 +27,7 @@
             android:exported="false" />
 
         <activity
-            android:name="com.hamza.Wazaker.ui.SplashActivity.SplashScreenActivity"
+            android:name="com.hamza.Wazaker.ui.Activities.SplashActivity.SplashScreenActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -38,8 +39,7 @@
 
         <activity android:name="com.hassanjamil.hqibla.CompassActivity" />
 
-        <activity android:name="com.hamza.Wazaker.ui.MainActivity.MainActivity" />
-        <activity android:name="com.hamza.Wazaker.ui.Activites.ZekerActivity" />
+        <activity android:name="com.hamza.Wazaker.ui.Activities.MainActivity.MainActivity" />
     </application>
 
 </manifest>

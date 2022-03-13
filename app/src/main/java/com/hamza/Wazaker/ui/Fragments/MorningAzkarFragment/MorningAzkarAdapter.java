@@ -1,7 +1,6 @@
 package com.hamza.Wazaker.ui.Fragments.MorningAzkarFragment;
 
 import android.annotation.SuppressLint;
-import android.content.Context;
 import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -22,9 +21,9 @@ import at.markushi.ui.CircleButton;
 
 public class MorningAzkarAdapter extends RecyclerView.Adapter<MorningAzkarAdapter.HViewholder> {
 
-    private ArrayList<ZekerModel> model = new ArrayList<>();
+    private final ArrayList<ZekerModel> model;
 
-    public MorningAzkarAdapter(ArrayList<ZekerModel> models, Context baseContext) {
+    public MorningAzkarAdapter(ArrayList<ZekerModel> models) {
         this.model = models;
     }
 
@@ -59,18 +58,17 @@ public class MorningAzkarAdapter extends RecyclerView.Adapter<MorningAzkarAdapte
         holder.checkBox.setChecked(ch[0]);
         holder.plustext.setText(Integer.toString(count[0]));
 
-        holder.plusbtn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                count[0]++;
-                item.setCurrentCount(count[0]);
-                holder.plustext.setText(Integer.toString(count[0]));
-                if (count[0] >=model.get(position).getCounter()){
-                    ch[0] =true;
-                    item.setChecked(ch[0]);
-                    holder.checkBox.setChecked(ch[0]);
-                }
-            }});}
+        holder.plusbtn.setOnClickListener(v -> {
+            count[0]++;
+            item.setCurrentCount(count[0]);
+            holder.plustext.setText(Integer.toString(count[0]));
+            if (count[0] >= model.get(position).getCounter()) {
+                ch[0] = true;
+                item.setChecked(ch[0]);
+                holder.checkBox.setChecked(ch[0]);
+            }
+        });
+    }
 
     @Override
     public int getItemCount() {

@@ -1,17 +1,17 @@
-package com.hamza.Wazaker.ui.Fragments.AzkarFragment
+package com.hamza.Wazaker.ui.Fragments.AzkarListFragment
 
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.hamza.Wazaker.Data.Data_sets.AzkarListDataset
-import com.hamza.Wazaker.ui.Adapters.AzkarListAdapter
+import com.hamza.Wazaker.Data.DataSets.AzkarListDataset
 import com.hamza.Wazaker.ui.listeners.ItemListner
 import com.hamza.wazkar.databinding.FragmentAzkarBinding
 
-class AzkarFragment : Fragment() {
+class AzkarListFragment : Fragment() {
 
     var _binding: FragmentAzkarBinding? = null
     val binding get() = _binding!!
@@ -36,14 +36,19 @@ class AzkarFragment : Fragment() {
     private fun setAdapter() {
         val layoutManager = LinearLayoutManager(context)
         binding.AzkarListRecycler.layoutManager = layoutManager
-        val azkarListAdapter = AzkarListAdapter(AzkarListDataset.getAzkarList())
+
+        val azkarListAdapter =
+            AzkarListAdapter(
+                AzkarListDataset.getAzkarList()
+            )
         binding.AzkarListRecycler.adapter = azkarListAdapter
+
         azkarListAdapter.setListner(object : ItemListner {
             override fun onItemCLicked(item: Any?) {
-//                val index = e as Int
-//                val zeker = Intent(context, ZekerActivity::class.java)
-//                zeker.putExtra("index", index)
-//                startActivity(zeker)
+
+                val action =
+                    AzkarListFragmentDirections.actionAzkarFragmentToZekerAndDoaaFragment(item as Int)
+                findNavController().navigate(action)
             }
         })
     }

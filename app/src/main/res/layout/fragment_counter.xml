@@ -1,0 +1,65 @@
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_marginTop="14dp"
+    android:layout_height="match_parent"
+    android:background="@color/blue"
+    tools:context="com.hamza.Wazaker.ui.Fragments.CounterFragment.CounterFragment">
+
+    <RelativeLayout
+        android:id="@+id/counterscreen"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/totalCountstextview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="80dp"
+            android:padding="25dp"
+            android:text="@string/_0"
+            android:textColor="@color/white"
+            android:textSize="21sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/countertextview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:gravity="center"
+            android:text="@string/zero"
+            android:textColor="#fff"
+            android:textSize="85sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="RelativeOverlap" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/countertextview"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="130dp"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/resetbtn"
+                android:layout_width="203dp"
+                android:layout_height="54dp"
+                android:background="@drawable/buttonshape"
+                android:text="@string/reset"
+                android:textColor="@color/black"
+                android:textSize="30sp"
+                tools:ignore="UsingOnClickInXml" />
+
+        </LinearLayout>
+    </RelativeLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

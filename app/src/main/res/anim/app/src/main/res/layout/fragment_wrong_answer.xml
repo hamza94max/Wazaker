@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".Fragments.WrongAnswerFragment">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/wrongMark"
+                android:layout_width="150dp"
+                android:layout_height="140dp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="100dp"
+                android:contentDescription="@string/right_answer"
+                android:padding="7dp"
+                android:src="@drawable/wrong" />
+
+            <TextView
+                android:id="@+id/wronganswerTextview"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/wrongMark"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="5dp"
+                android:lines="1"
+                android:padding="7dp"
+                android:text="@string/wrong_answer"
+                android:textColor="@color/black"
+                android:textSize="25sp"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/seeAnswerbtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/wronganswerTextview"
+                android:layout_alignParentStart="true"
+                android:layout_marginHorizontal="20dp"
+                android:layout_marginStart="50dp"
+                android:layout_marginTop="15dp"
+                android:background="@drawable/btnbackground"
+                android:gravity="center"
+                android:padding="18dp"
+                android:text="@string/see_answer" />
+
+            <Button
+                android:id="@+id/tryagainbtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/wronganswerTextview"
+                android:layout_alignParentEnd="true"
+                android:layout_marginHorizontal="10dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginEnd="50dp"
+                android:background="@drawable/btnbackground"
+                android:gravity="center"
+                android:padding="18dp"
+                android:text="@string/try_again" />
+
+        </RelativeLayout>
+    </FrameLayout>
+</layout>

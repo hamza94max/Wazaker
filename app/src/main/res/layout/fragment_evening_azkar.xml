@@ -1,0 +1,16 @@
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.hamza.Wazaker.ui.Fragments.EveningAzkarFragment.EveningAzkarFragment">
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/eveningrecycler"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="7dp"
+        android:padding="7dp" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

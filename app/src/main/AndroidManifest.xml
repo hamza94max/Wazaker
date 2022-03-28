@@ -5,6 +5,7 @@
 
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.SCHEDULE_EXACT_ALARM" />
     <uses-permission
         android:name="android.permission.WRITE_EXTERNAL_STORAGE"
         tools:ignore="ScopedStorage" />
@@ -21,12 +22,12 @@
         tools:ignore="AllowBackup">
 
         <receiver
-            android:name="com.hamza.Wazaker.recevier.NotificationReceiver"
+            android:name="com.hamza.Wazaker.Worker.recevier.NotificationReceiver"
             android:enabled="true"
             android:exported="false" />
 
         <activity
-            android:name="com.hamza.Wazaker.Activites.SplashScreenActivity"
+            android:name="com.hamza.Wazaker.ui.Activities.SplashActivity.SplashScreenActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -36,18 +37,9 @@
             </intent-filter>
         </activity>
 
-        <activity android:name="com.hamza.Wazaker.Activites.FortyHadithListActivity" />
         <activity android:name="com.hassanjamil.hqibla.CompassActivity" />
 
-        <activity android:name="com.hamza.Wazaker.Activites.MainActivity" />
-        <activity
-            android:name="com.hamza.Wazaker.Activites.AzkarListActivity"
-            tools:ignore="InnerclassSeparator" />
-        <activity android:name="com.hamza.Wazaker.Activites.CounterActivity" />
-        <activity android:name="com.hamza.Wazaker.Activites.FortyHadithActivity" />
-        <activity android:name="com.hamza.Wazaker.Activites.ZekerActivity" />
-        <activity android:name="com.hamza.Wazaker.Activites.MorningAzkarActivity" />
-        <activity android:name="com.hamza.Wazaker.Activites.EveningAzkarActivity" />
+        <activity android:name="com.hamza.Wazaker.ui.Activities.MainActivity.MainActivity" />
     </application>
 
 </manifest>

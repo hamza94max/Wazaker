@@ -35,6 +35,8 @@ Counter to count the number of zeker, qibla direction and many others azkar and 
 # Tools && Langauages
 - java + Kotlin 
 - Navigation Components
+- WorkManager
+- Push Notifications 
 - Qibla Library : [Qibla direction library](https://github.com/hassaanjamil/hj-android-lib-qibla-direction) 
 - SharedPreferences
 - Dark theme 

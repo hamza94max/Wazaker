@@ -45,7 +45,7 @@ Counter to count the number of zeker, qibla direction and many others azkar and 
 
 
 ## How to install and run the project
-You can download the app from here : [Google play](https://play.google.com/store/apps/details?id=com.hamza.wazkar) 
+You can download the app from here : [Google play](https://play.google.com/store/apps/details?id=com.islamic.wazkar) 
 (Currently there is an issue with google play, You can download the apk from release ) 
 
 

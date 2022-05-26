@@ -31,9 +31,10 @@
     <string name="TotalDeleted"> تم مسح المجموع الكلي </string>
     <string name="_0">المجموع الكلي: 0</string>
     <string name="zero">0</string>
-    <string name="wazaker_splash">وذكر</string>
+    <string name="wazaker_splash">وَذَكِّرَْ</string>
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="delete_allCounts">مسح المجموع الكلي</string>
+    <string name="enable_dark_mode">تفعيل الوضع المظلم</string>
 </resources>

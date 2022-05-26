@@ -1,11 +1,10 @@
 <resources>
 
-    <!-- Base application theme. -->
+    <!-- Light application theme. -->
     <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
         <!-- Customize your theme here. -->
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
-        <item name="colorAccent">@color/colorAccent</item>
     </style>
 
     <style name="morning_style">
@@ -21,5 +20,7 @@
     </style>
 
     <dimen name="btn_height">70dp</dimen>
+
+    <bool name="isDarkmodeOn">false</bool>
 
 </resources>

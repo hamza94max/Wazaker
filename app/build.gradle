@@ -9,12 +9,12 @@ android {
     compileSdkVersion 31
 
     defaultConfig {
-        applicationId "com.hamza.wazkar"
+        applicationId "com.islamic.wazkar"
         minSdkVersion 16
         //noinspection OldTargetApi,ExpiredTargetSdkVersion
         targetSdkVersion 31
-        versionCode 15
-        versionName "1.0.1"
+        versionCode 16
+        versionName "1.2.1"
         setProperty("archivesBaseName", "hQiblaDirection")
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
@@ -37,12 +37,6 @@ android {
     viewBinding {
         enabled = true
     }
-
-
-    buildFeatures{
-        //noinspection DataBindingWithoutKapt
-        dataBinding = true
-    }
 }
 
 dependencies {
@@ -52,8 +46,6 @@ dependencies {
     implementation 'com.github.chenupt.android:springindicator:1.0.2@aar'
 
     implementation 'com.github.markushi:circlebutton:1.1'
-
-    implementation 'com.github.badoualy:stepper-indicator:1.0.7'
 
     //noinspection GradleCompatible
     implementation "com.android.support:support-compat:30.0.0"
@@ -76,6 +68,11 @@ dependencies {
     implementation 'androidx.fragment:fragment-ktx:1.4.1'
     // Worker
     implementation("androidx.work:work-runtime:2.7.1")
+
+
+    // switch
+    implementation 'com.github.zcweng:switch-button:0.0.3@aar'
+
 
     testImplementation 'junit:junit:4.13.2'
     androidTestImplementation 'androidx.test:runner:1.4.0'

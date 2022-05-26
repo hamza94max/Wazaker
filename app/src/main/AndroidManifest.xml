@@ -1,33 +1,29 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    package="com.hamza.wazkar">
+    package="com.islamic.wazkar">
 
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
     <uses-permission android:name="android.permission.SCHEDULE_EXACT_ALARM" />
-    <uses-permission
-        android:name="android.permission.WRITE_EXTERNAL_STORAGE"
-        tools:ignore="ScopedStorage" />
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
 
     <application
-        android:name="com.hamza.Wazaker.App"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher_foreground"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
-        android:supportsRtl="true"
+        android:supportsRtl="false"
         android:theme="@style/AppTheme"
         tools:ignore="AllowBackup">
 
         <receiver
-            android:name="com.hamza.Wazaker.Worker.recevier.NotificationReceiver"
+            android:name="com.islamic.Wazaker.ui.NotificationRecevier.NotificationReceiver"
             android:enabled="true"
             android:exported="false" />
 
         <activity
-            android:name="com.hamza.Wazaker.ui.Activities.SplashActivity.SplashScreenActivity"
+            android:name="com.islamic.Wazaker.ui.Activities.SplashActivity.SplashScreenActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -39,7 +35,7 @@
 
         <activity android:name="com.hassanjamil.hqibla.CompassActivity" />
 
-        <activity android:name="com.hamza.Wazaker.ui.Activities.MainActivity.MainActivity" />
+        <activity android:name="com.islamic.Wazaker.ui.Activities.MainActivity.MainActivity" />
     </application>
 
 </manifest>

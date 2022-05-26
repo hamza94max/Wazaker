@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:layout_marginTop="7dp"
@@ -14,7 +15,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="@color/blue"
-        android:padding="14dp">
+        android:padding="7dp">
 
         <TextView
             android:id="@+id/hadithText"
@@ -24,15 +25,36 @@
             android:textColor="@color/white"
             android:textSize="20sp" />
 
+        <Button
+            android:id="@+id/copybtn"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_below="@id/hadithText"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:layout_marginStart="15dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginBottom="8dp"
+            android:background="@drawable/copy_24dp"
+            android:layoutDirection="ltr"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintHorizontal_bias="0.396"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="1.0"
+            tools:ignore="UnusedAttribute" />
+
         <View
             android:id="@+id/line_1"
-            android:layout_width="303.12dp"
+            android:layout_width="wrap_content"
             android:layout_height="7dp"
-            android:layout_below="@id/hadithText"
+            android:layout_below="@id/copybtn"
+            android:layout_alignParentStart="true"
             android:layout_alignParentLeft="true"
-            android:layout_marginLeft="29dp"
-            android:layout_marginTop="24dp"
-            android:background="@drawable/line_1" />
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="14dp"
+            android:background="@drawable/line_1"
+            android:paddingBottom="7dp" />
 
     </RelativeLayout>
 </androidx.cardview.widget.CardView>

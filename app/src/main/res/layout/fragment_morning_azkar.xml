@@ -2,14 +2,13 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:padding="7dp"
-    tools:context="com.hamza.Wazaker.ui.Fragments.MorningAzkarFragment.MorningAzkarFragment">
+    tools:context="com.islamic.Wazaker.ui.Fragments.MorningAzkarFragment.MorningAzkarFragment">
+
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/morRecyclerview"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_marginTop="7dp"
-        android:padding="7dp" />
+        android:padding="2dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

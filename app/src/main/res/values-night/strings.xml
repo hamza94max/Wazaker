@@ -1,0 +1,40 @@
+<resources>
+    <string name="app_name">وذكر</string>
+    <string name="counter">السبحة </string>
+    <string name="azkar">الأذكار</string>
+    <string name="reset">إعادة</string>
+    <string name="notification_title"> وذكر </string>
+    <string name="notifiaction_id">وذكر</string>
+
+
+    <string name="menu_prayertimes">أوقات الصلاة</string>
+
+    <string name="city">المدينة</string>
+    <string name="madina">المدينة</string>
+    <string name="fajr">الفجر</string>
+    <string name="dohr">الظهر</string>
+    <string name="asr">العصر</string>
+    <string name="maghrib">المغرب</string>
+    <string name="isha">العشاء</string>
+    <string name="_00_00">00:00</string>
+
+    // names of main buttons
+    <string name="eveningAzkar">أذكار المساء</string>
+    <string name="Morningazkar">أذكار الصباح</string>
+    <string name="FortyHadith">الأربعون النووية</string>
+    <string name="AzkarandDoaa">أدعية وأذكار</string>
+    <string name="qibla">القبلة </string>
+    <string name="shareapp">مشاركة التطبيق </string>
+
+    // counter activity
+    <string name="totalzeker"> المجموع الكلي : </string>
+    <string name="TotalDeleted"> تم مسح المجموع الكلي </string>
+    <string name="_0">المجموع الكلي: 0</string>
+    <string name="zero">0</string>
+    <string name="wazaker_splash">وَذَكِّرْ</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="delete_allCounts">مسح المجموع الكلي</string>
+    <string name="enable_dark_mode">تفعيل الوضع المظلم</string>
+</resources>

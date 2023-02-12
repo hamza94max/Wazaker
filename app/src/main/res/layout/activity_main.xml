@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layoutDirection="ltr"
     android:layout_height="match_parent"
-    tools:context="com.islamic.Wazaker.ui.Activities.MainActivity.MainActivity">
+    tools:context="com.islamey.haamzaa.WAZAKER.ui.MainActivity">
 
     <androidx.fragment.app.FragmentContainerView
         android:layout_marginTop="15dp"

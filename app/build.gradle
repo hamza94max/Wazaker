@@ -9,12 +9,12 @@ android {
     compileSdkVersion 31
 
     defaultConfig {
-        applicationId "com.islamic.wazkar"
+        applicationId "com.islamey.wazkar"
         minSdkVersion 16
         //noinspection OldTargetApi,ExpiredTargetSdkVersion
         targetSdkVersion 31
-        versionCode 16
-        versionName "1.2.1"
+        versionCode 1
+        versionName "1.0.0"
         setProperty("archivesBaseName", "hQiblaDirection")
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }

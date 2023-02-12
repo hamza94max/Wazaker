@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    package="com.islamic.wazkar">
+    package="com.islamey.wazkar">
 
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
@@ -18,12 +18,12 @@
         tools:ignore="AllowBackup">
 
         <receiver
-            android:name="com.islamic.Wazaker.ui.NotificationRecevier.NotificationReceiver"
+            android:name="com.islamey.haamzaa.WAZAKER.ui.NotificationReceiver"
             android:enabled="true"
             android:exported="false" />
 
         <activity
-            android:name="com.islamic.Wazaker.ui.Activities.SplashActivity.SplashScreenActivity"
+            android:name="com.islamey.haamzaa.WAZAKER.ui.SplashScreenActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -35,7 +35,7 @@
 
         <activity android:name="com.hassanjamil.hqibla.CompassActivity" />
 
-        <activity android:name="com.islamic.Wazaker.ui.Activities.MainActivity.MainActivity" />
+        <activity android:name="com.islamey.haamzaa.WAZAKER.ui.MainActivity" />
     </application>
 
 </manifest>

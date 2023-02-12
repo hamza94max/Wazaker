@@ -2,7 +2,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.islamic.Wazaker.ui.Fragments.EveningAzkarFragment.EveningAzkarFragment">
+    tools:context="com.islamey.haamzaa.WAZAKER.ui.EveningAzkarFragment.EveningAzkarFragment">
 
 
     <androidx.recyclerview.widget.RecyclerView

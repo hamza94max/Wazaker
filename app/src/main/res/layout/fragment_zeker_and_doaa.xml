@@ -4,7 +4,7 @@
     android:layout_height="match_parent"
     android:layout_marginTop="14dp"
     android:paddingHorizontal="7dp"
-    tools:context="com.islamey.haamzaa.WAZAKER.ui.ZekerAndDoaaFragment.ZekerAndDoaaFragment">
+    tools:context="com.islamey.hamza.wazaker.ui.ZekerAndDoaaFragment.ZekerAndDoaaFragment">
 
 
     <androidx.recyclerview.widget.RecyclerView

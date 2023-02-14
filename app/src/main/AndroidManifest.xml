@@ -18,12 +18,12 @@
         tools:ignore="AllowBackup">
 
         <receiver
-            android:name="com.islamey.haamzaa.WAZAKER.ui.NotificationReceiver"
+            android:name="com.islamey.hamza.wazaker.ui.NotificationReceiver"
             android:enabled="true"
             android:exported="false" />
 
         <activity
-            android:name="com.islamey.haamzaa.WAZAKER.ui.SplashScreenActivity"
+            android:name="com.islamey.hamza.wazaker.ui.SplashScreenActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -35,7 +35,7 @@
 
         <activity android:name="com.hassanjamil.hqibla.CompassActivity" />
 
-        <activity android:name="com.islamey.haamzaa.WAZAKER.ui.MainActivity" />
+        <activity android:name="com.islamey.hamza.wazaker.ui.MainActivity" />
     </application>
 
 </manifest>

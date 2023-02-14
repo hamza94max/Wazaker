@@ -5,7 +5,7 @@
     android:layoutDirection="ltr"
     android:layout_height="match_parent"
     android:background="@color/blue"
-    tools:context="com.islamey.haamzaa.WAZAKER.ui.CounterFragment.CounterFragment">
+    tools:context="com.islamey.hamza.wazaker.ui.CounterFragment.CounterFragment">
 
     <RelativeLayout
         android:id="@+id/counterscreen"

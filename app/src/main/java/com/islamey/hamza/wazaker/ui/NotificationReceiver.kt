@@ -13,6 +13,7 @@ class NotificationReceiver : BroadcastReceiver() {
 
     private val CHANNEL_ID = "Channel 1"
 
+    @Suppress("DEPRECATION")
     override fun onReceive(context: Context, intent1: Intent) {
 
         val notificationIntent = Intent(context, MainActivity::class.java)

@@ -37,7 +37,7 @@ class AzkarListFragment : Fragment() {
         binding.AzkarListRecycler.layoutManager = layoutManager
 
         val azkarListAdapter =
-            AzkarListAdapter(AzkarListDataset.getAzkarList(context!!))
+            AzkarListAdapter(AzkarListDataset.getAzkarList(requireContext()))
 
         binding.AzkarListRecycler.adapter = azkarListAdapter
 

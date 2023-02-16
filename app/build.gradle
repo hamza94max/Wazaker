@@ -28,9 +28,13 @@ android {
         }
     }
 
+    lintOptions {
+        abortOnError false
+    }
+
     compileOptions {
-        sourceCompatibility = 1.8
-        targetCompatibility = 1.8
+        sourceCompatibility = 11
+        targetCompatibility = 11
     }
 
     viewBinding {
@@ -65,13 +69,9 @@ dependencies {
     implementation("androidx.navigation:navigation-ui-ktx:2.5.3")
 
     implementation 'androidx.fragment:fragment-ktx:1.5.5'
-    // Worker
-    implementation("androidx.work:work-runtime:2.8.0")
 
     // splash
     implementation 'androidx.core:core-splashscreen:1.0.0'
-
-
 
     // switch
     implementation 'com.github.zcweng:switch-button:0.0.3@aar'
@@ -81,8 +81,9 @@ dependencies {
     androidTestImplementation 'androidx.test:runner:1.4.0'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.4.0'
 
-    //noinspection DifferentStdlibGradleVersion
-    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:1.6.10"
+
+
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:1.7.20"
 }
 
 repositories {

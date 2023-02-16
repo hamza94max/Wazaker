@@ -6,6 +6,7 @@ import android.view.Menu
 import android.view.MenuItem
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.app.AppCompatDelegate
+import androidx.core.splashscreen.SplashScreen.Companion.installSplashScreen
 import com.islamey.hamza.wazaker.utils.Notifications.setupNotification
 import com.islamey.wazkar.R
 import com.islamey.wazkar.databinding.ActivityMainBinding
@@ -18,8 +19,8 @@ class MainActivity : AppCompatActivity() {
 
     @SuppressLint("SetTextI18n", "CommitPrefEdits")
     override fun onCreate(savedInstanceState: Bundle?) {
+        installSplashScreen()
         super.onCreate(savedInstanceState)
-
         _binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
@@ -34,7 +35,7 @@ class MainActivity : AppCompatActivity() {
         itemSwitch.setActionView(R.layout.switch_layout)
 
         val switchButton =
-            menu.findItem(R.id.switch_action_bar).actionView.findViewById(R.id.Main_switch) as SwitchButton
+            menu.findItem(R.id.switch_action_bar).actionView?.findViewById(R.id.Main_switch) as SwitchButton
 
         switchButton.setOnCheckedChangeListener { _, isChecked ->
             if (isChecked) AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES)

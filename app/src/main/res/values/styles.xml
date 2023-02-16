@@ -7,6 +7,15 @@
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
     </style>
 
+
+    <!--    splash Screen-->
+
+    <style name="Theme.App.Starting" parent="Theme.SplashScreen">
+        <item name="windowSplashScreenAnimatedIcon">@drawable/splash</item>
+        <item name="postSplashScreenTheme">@style/AppTheme</item>
+        <item name="windowSplashScreenAnimationDuration">2200</item>
+    </style>
+
     <style name="morning_style">
 
         <item name="android:textSize">

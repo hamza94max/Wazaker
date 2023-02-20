@@ -7,9 +7,9 @@
 
     <fragment
         android:id="@+id/mainFragment"
-        android:name="com.hamza.Wazaker.ui.Fragments.MainFragment.MainFragment"
+        android:name="com.islamey.hamza.wazaker.ui.HomeFragment.HomeFragment"
         android:label="fragment_main"
-        tools:layout="@layout/fragment_main">
+        tools:layout="@layout/fragment_home">
 
         <action
             android:id="@+id/action_mainFragment_to_morningAzkarFragment"
@@ -55,13 +55,13 @@
 
     <fragment
         android:id="@+id/counterFragment"
-        android:name="com.hamza.Wazaker.ui.Fragments.CounterFragment.CounterFragment"
+        android:name="com.islamey.hamza.wazaker.ui.CounterFragment.CounterFragment"
         android:label="fragment_counter"
         tools:layout="@layout/fragment_counter" />
 
     <fragment
         android:id="@+id/fortyHadithListFragment"
-        android:name="com.hamza.Wazaker.ui.Fragments.FortyHadithListFragment.FortyHadithListFragment"
+        android:name="com.islamey.hamza.wazaker.ui.FortyHadithListFragment.FortyHadithListFragment"
         android:label="fragment_forty_hadith_list"
         tools:layout="@layout/fragment_forty_hadith_list">
         <action
@@ -75,7 +75,7 @@
     </fragment>
     <fragment
         android:id="@+id/fortyHadithFragment"
-        android:name="com.hamza.Wazaker.ui.Fragments.FortyHadithFragment.FortyHadithFragment"
+        android:name="com.islamey.hamza.wazaker.ui.FortyHadithFragment.FortyHadithFragment"
         android:label="fragment_forty_hadith"
         tools:layout="@layout/fragment_forty_hadith">
         <argument
@@ -86,19 +86,19 @@
 
     <fragment
         android:id="@+id/morningAzkarFragment"
-        android:name="com.hamza.Wazaker.ui.Fragments.MorningAzkarFragment.MorningAzkarFragment"
+        android:name="com.islamey.hamza.wazaker.ui.MorningAzkarFragment.MorningAzkarFragment"
         android:label="fragment_morning_azkar"
         tools:layout="@layout/fragment_morning_azkar" />
 
     <fragment
         android:id="@+id/eveningAzkarFragment"
-        android:name="com.hamza.Wazaker.ui.Fragments.EveningAzkarFragment.EveningAzkarFragment"
+        android:name="com.islamey.hamza.wazaker.ui.EveningAzkarFragment.EveningAzkarFragment"
         android:label="fragment_evening_azkar"
         tools:layout="@layout/fragment_evening_azkar" />
 
     <fragment
         android:id="@+id/azkarFragment"
-        android:name="com.hamza.Wazaker.ui.Fragments.AzkarListFragment.AzkarListFragment"
+        android:name="com.islamey.hamza.wazaker.ui.AzkarListFragment.AzkarListFragment"
         android:label="fragment_azkar"
         tools:layout="@layout/fragment_azkar">
         <action
@@ -108,7 +108,7 @@
     </fragment>
     <fragment
         android:id="@+id/zekerAndDoaaFragment"
-        android:name="com.hamza.Wazaker.ui.Fragments.ZekerAndDoaaFragment.ZekerAndDoaaFragment"
+        android:name="com.islamey.hamza.wazaker.ui.ZekerAndDoaaFragment.ZekerAndDoaaFragment"
         android:label="fragment_zeker_and_doaa"
         tools:layout="@layout/fragment_zeker_and_doaa">
 

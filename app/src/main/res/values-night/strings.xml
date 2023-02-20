@@ -1,0 +1,58 @@
+<resources>
+    <string name="app_name">وذكر</string>
+    <string name="counter">السبحة </string>
+    <string name="azkar">الأذكار</string>
+    <string name="reset">إعادة</string>
+    <string name="notification_title"> وذكر </string>
+    <string name="notifiaction_id">وذكر</string>
+
+
+    <string name="menu_prayertimes">أوقات الصلاة</string>
+
+    <string name="city">المدينة</string>
+    <string name="madina">المدينة</string>
+    <string name="fajr">الفجر</string>
+    <string name="dohr">الظهر</string>
+    <string name="asr">العصر</string>
+    <string name="maghrib">المغرب</string>
+    <string name="isha">العشاء</string>
+    <string name="_00_00">00:00</string>
+
+    // names of main buttons
+    <string name="eveningAzkar">أذكار المساء</string>
+    <string name="Morningazkar">أذكار الصباح</string>
+    <string name="FortyHadith">الأربعون النووية</string>
+    <string name="AzkarandDoaa">أدعية وأذكار</string>
+    <string name="qibla">القبلة </string>
+    <string name="shareapp">مشاركة التطبيق </string>
+
+    // counter activity
+    <string name="totalzeker"> المجموع الكلي : </string>
+    <string name="TotalDeleted"> تم مسح المجموع الكلي </string>
+    <string name="_0">المجموع الكلي: 0</string>
+    <string name="zero">0</string>
+    <string name="wazaker_splash">وَذَكِّرْ</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="delete_allCounts">مسح المجموع الكلي</string>
+    <string name="enable_dark_mode">تفعيل الوضع المظلم</string>
+    <string name="majed_azkar">أذكار المسجد</string>
+    <string name="after_salah_azkar">\"أذكار بعد الصلاة \"</string>
+    <string name="azan_azkar">\"أذكار الأذان \"</string>
+    <string name="wodoa_azkar">أذكار الوضوء</string>
+    <string name="qurany_doaa">الأدعيـة القرآنية</string>
+    <string name="naboya_doaa">\"الأدعية النبوية \"</string>
+    <string name="food_azkar">أذكار الطعام</string>
+    <string name="house_azkar">أذكار المنزل</string>
+    <string name="sleep_azkar">أذكار النوم</string>
+    <string name="wakeup_azkar">أذكار الإستيقاظ من النوم</string>
+    <string name="great_azkar">أذكار عظيمة</string>
+    <string name="traveling_doaa">دعاء السفر</string>
+    <string name="quran_completed_doaa">دعاء ختم القرآن الكريم</string>
+    <string name="doaa_fdel">فضل الدعاء</string>
+    <string name="quran_reading_fadl">فضل تلاوة القرآن الكريم</string>
+    <string name="azkar_fadl">فضل الأذكار</string>
+    <string name="roqia">الرقية الشرعية</string>
+    <string name="dead_doaa">أدعية للمتوفّي</string>
+</resources>

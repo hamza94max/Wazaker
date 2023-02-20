@@ -16,22 +16,21 @@
         android:layout_height="75dp"
         android:layout_marginTop="20dp"
         android:background="@drawable/forty_bg"
-        android:fontFamily="casual"
         android:gravity="center"
+        android:fontFamily="@font/ibm_plex_sans_medium"
         android:textColor="@color/black"
         android:textSize="21sp"
         android:textStyle="bold"
+        app:autoSizeMaxTextSize="22sp"
+        app:autoSizeMinTextSize="20sp"
+        app:autoSizeStepGranularity="1sp"
+        app:autoSizeTextType="uniform"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         tools:ignore="MissingConstraints"
-        tools:text="azkar"
-        app:autoSizeTextType="uniform"
-        app:autoSizeMinTextSize="20sp"
-        app:autoSizeMaxTextSize="22sp"
-        app:autoSizeStepGranularity="1sp"
 
-        />
+        tools:text="azkar" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

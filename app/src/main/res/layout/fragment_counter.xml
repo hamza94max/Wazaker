@@ -2,10 +2,10 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_marginTop="14dp"
+    android:layoutDirection="ltr"
     android:layout_height="match_parent"
     android:background="@color/blue"
-    tools:context="com.hamza.Wazaker.ui.Fragments.CounterFragment.CounterFragment">
+    tools:context="com.islamey.hamza.wazaker.ui.CounterFragment.CounterFragment">
 
     <RelativeLayout
         android:id="@+id/counterscreen"
@@ -19,7 +19,7 @@
             android:layout_alignParentTop="true"
             android:layout_alignParentEnd="true"
             android:layout_alignParentRight="true"
-            android:layout_marginTop="80dp"
+            android:layout_marginTop="16dp"
             android:padding="25dp"
             android:text="@string/_0"
             android:textColor="@color/white"
@@ -30,8 +30,7 @@
             android:id="@+id/countertextview"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_centerHorizontal="true"
-            android:layout_centerVertical="true"
+            android:layout_centerInParent="true"
             android:gravity="center"
             android:text="@string/zero"
             android:textColor="#fff"

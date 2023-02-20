@@ -1,11 +1,19 @@
 <resources>
 
-    <!-- Base application theme. -->
+    <!-- Light application theme. -->
     <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
         <!-- Customize your theme here. -->
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
-        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+
+    <!--    splash Screen-->
+
+    <style name="Theme.App.Starting" parent="Theme.SplashScreen">
+        <item name="windowSplashScreenAnimatedIcon">@drawable/splash</item>
+        <item name="postSplashScreenTheme">@style/AppTheme</item>
+        <item name="windowSplashScreenAnimationDuration">2200</item>
     </style>
 
     <style name="morning_style">
@@ -20,6 +28,8 @@
 
     </style>
 
-    <dimen name="btn_height">47dp</dimen>
+    <dimen name="btn_height">70dp</dimen>
+
+    <bool name="isDarkmodeOn">false</bool>
 
 </resources>

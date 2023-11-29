@@ -16,17 +16,18 @@
 
         <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="wrap_content">
 
             <Button
                 android:id="@+id/morningAzkarbtn"
                 android:layout_width="303dp"
                 android:layout_height="@dimen/btn_height"
                 android:layout_centerHorizontal="true"
-                android:layout_marginTop="25dp"
                 android:layout_marginStart="28dp"
                 android:layout_marginLeft="28dp"
+                android:layout_marginTop="16dp"
                 android:background="@drawable/blue_btn"
+                android:fontFamily="@font/tajawal_medium"
                 android:text="@string/Morningazkar"
                 android:textAppearance="@style/morning_style" />
 
@@ -38,6 +39,7 @@
                 android:layout_centerHorizontal="true"
                 android:layout_marginTop="14dp"
                 android:background="@drawable/blue_btn"
+                android:fontFamily="@font/tajawal_medium"
                 android:text="@string/eveningAzkar"
                 android:textColor="@color/white"
                 android:textSize="22sp" />
@@ -50,6 +52,7 @@
                 android:layout_centerHorizontal="true"
                 android:layout_marginTop="14dp"
                 android:background="@drawable/blue_btn"
+                android:fontFamily="@font/tajawal_medium"
                 android:text="@string/AzkarandDoaa"
                 android:textColor="@color/white"
                 android:textSize="22sp" />
@@ -61,6 +64,7 @@
                 android:layout_below="@id/azkars_btn"
                 android:layout_centerHorizontal="true"
                 android:layout_marginTop="14dp"
+                android:fontFamily="@font/tajawal_medium"
                 android:background="@drawable/blue_btn"
                 android:text="@string/FortyHadith"
                 android:textColor="@color/white"
@@ -75,6 +79,7 @@
                 android:layout_marginTop="14dp"
                 android:background="@drawable/blue_btn"
                 android:text="@string/qibla"
+                android:fontFamily="@font/tajawal_medium"
                 android:textColor="@color/white"
                 android:textSize="22sp" />
 
@@ -87,6 +92,7 @@
                 android:layout_marginTop="14dp"
                 android:background="@drawable/blue_btn"
                 android:text="@string/counter"
+                android:fontFamily="@font/tajawal_medium"
                 android:textColor="@color/white"
                 android:textSize="22sp" />
 
@@ -105,6 +111,7 @@
         android:text="@string/totalzeker"
         android:textColor="@color/white"
         android:textSize="19sp"
+        android:fontFamily="@font/tajawal_medium"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

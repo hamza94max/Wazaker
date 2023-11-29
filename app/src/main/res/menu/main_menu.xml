@@ -1,9 +1,0 @@
-<menu xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto">
-    <item
-        android:id="@+id/switch_action_bar"
-        android:actionLayout="@layout/switch_layout"
-        android:title=""
-        app:showAsAction="always" />
-
-</menu>

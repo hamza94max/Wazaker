@@ -5,39 +5,32 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
-import androidx.recyclerview.widget.LinearLayoutManager
-import com.islamey.hamza.wazaker.data.DataSets.EveningAzkarDataset
-import com.islamey.hamza.wazaker.data.Models.ZekerModel
+import com.islamey.hamza.wazaker.domain.DataSets.EveningAzkarDataset
 import com.islamey.wazkar.databinding.FragmentEveningAzkarBinding
 
 
 class EveningAzkarFragment : Fragment() {
 
-    private var _binding: FragmentEveningAzkarBinding? = null
-    private val binding get() = _binding!!
+    private lateinit var binding: FragmentEveningAzkarBinding
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        _binding = FragmentEveningAzkarBinding.inflate(layoutInflater, container, false)
+        binding = FragmentEveningAzkarBinding.inflate(layoutInflater, container, false)
         return binding.root
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        val layoutManager = LinearLayoutManager(context)
-        binding.eveningrecycler.layoutManager = layoutManager
+        setUpEveningAzkarRecyclerView()
 
-        val adapter =
-            EveningAzkarAdapter(
-                EveningAzkarDataset.getEveningAzkar() as ArrayList<ZekerModel>?
-            )
+    }
 
-        binding.eveningrecycler.layoutManager = layoutManager
-        binding.eveningrecycler.adapter = adapter
-
-
+    private fun setUpEveningAzkarRecyclerView() {
+        val adapter = EveningAzkarAdapter()
+        binding.eveningRecyclerView.adapter = adapter
+        adapter.differ.submitList(EveningAzkarDataset.getEveningAzkar())
     }
 }

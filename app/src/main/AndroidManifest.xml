@@ -30,7 +30,9 @@
             </intent-filter>
         </activity>
 
-        <activity android:name="com.hassanjamil.hqibla.CompassActivity" />
+        <activity
+            android:name="com.hassanjamil.hqibla.CompassActivity"
+            android:theme="@style/AppTheme" />
 
         <receiver
             android:name="com.islamey.hamza.wazaker.ui.NotificationReceiver"

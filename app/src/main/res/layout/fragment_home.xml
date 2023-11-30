@@ -16,7 +16,11 @@
 
         <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="32dp"
+            android:gravity="center"
+            android:padding="7dp">
 
             <Button
                 android:id="@+id/morningAzkarbtn"
@@ -25,7 +29,7 @@
                 android:layout_centerHorizontal="true"
                 android:layout_marginStart="28dp"
                 android:layout_marginLeft="28dp"
-                android:layout_marginTop="16dp"
+                android:layout_marginTop="8dp"
                 android:background="@drawable/blue_btn"
                 android:fontFamily="@font/tajawal_medium"
                 android:text="@string/Morningazkar"
@@ -58,38 +62,13 @@
                 android:textSize="22sp" />
 
             <Button
-                android:id="@+id/fortyHadithbtn"
+                android:id="@+id/counter_btn"
                 android:layout_width="303dp"
                 android:layout_height="@dimen/btn_height"
                 android:layout_below="@id/azkars_btn"
                 android:layout_centerHorizontal="true"
                 android:layout_marginTop="14dp"
-                android:fontFamily="@font/tajawal_medium"
-                android:background="@drawable/blue_btn"
-                android:text="@string/FortyHadith"
-                android:textColor="@color/white"
-                android:textSize="22sp" />
-
-            <Button
-                android:id="@+id/qibla_btn"
-                android:layout_width="303dp"
-                android:layout_height="@dimen/btn_height"
-                android:layout_below="@id/fortyHadithbtn"
-                android:layout_centerHorizontal="true"
-                android:layout_marginTop="14dp"
-                android:background="@drawable/blue_btn"
-                android:text="@string/qibla"
-                android:fontFamily="@font/tajawal_medium"
-                android:textColor="@color/white"
-                android:textSize="22sp" />
-
-            <Button
-                android:id="@+id/counter_btn"
-                android:layout_width="303dp"
-                android:layout_height="@dimen/btn_height"
-                android:layout_below="@id/qibla_btn"
-                android:layout_centerHorizontal="true"
-                android:layout_marginTop="14dp"
+                android:layout_marginBottom="16dp"
                 android:background="@drawable/blue_btn"
                 android:text="@string/counter"
                 android:fontFamily="@font/tajawal_medium"
@@ -105,7 +84,7 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/counter_btn"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="14dp"
+        android:layout_marginTop="32dp"
         android:background="@drawable/blue_btn"
         android:padding="7dp"
         android:text="@string/totalzeker"

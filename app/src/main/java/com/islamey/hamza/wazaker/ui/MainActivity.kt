@@ -13,7 +13,9 @@ import com.hassanjamil.hqibla.Constants
 import com.islamey.hamza.wazaker.utils.Notifications.setupNotification
 import com.islamey.wazkar.R
 import com.islamey.wazkar.databinding.ActivityMainBinding
+import dagger.hilt.android.AndroidEntryPoint
 
+@AndroidEntryPoint
 class MainActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityMainBinding

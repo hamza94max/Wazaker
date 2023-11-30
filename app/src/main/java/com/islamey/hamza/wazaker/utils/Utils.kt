@@ -1,6 +1,8 @@
 package com.islamey.hamza.wazaker.utils
 
 import android.content.Context
+import java.time.LocalDate
+import java.time.format.DateTimeFormatter
 
 object Utils {
 
@@ -17,6 +19,13 @@ object Utils {
         val editor = sharedPreferences!!.edit()
         editor.putInt("totalCounts", totalCounts)
         editor.apply()
+    }
+
+
+    fun getCurrentDate(): String {
+        val currentDate = LocalDate.now()
+        val formatter = DateTimeFormatter.ofPattern("dd-MM-yyyy")
+        return currentDate.format(formatter)
     }
 
 

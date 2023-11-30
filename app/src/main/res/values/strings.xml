@@ -38,13 +38,14 @@
     <string name="enable_dark_mode">تفعيل الوضع المظلم</string>
 
 
-    // azkarList
+    <!--  azkarList  -->
+
     <string name="majed_azkar">أذكار المسجد</string>
-    <string name="after_salah_azkar">\"أذكار بعد الصلاة \"</string>
-    <string name="azan_azkar">\"أذكار الأذان \"</string>
+    <string name="after_salah_azkar">أذكار بعد الصلاة</string>
+    <string name="azan_azkar">أذكار الأذان</string>
     <string name="wodoa_azkar">أذكار الوضوء</string>
     <string name="qurany_doaa">الأدعيـة القرآنية</string>
-    <string name="naboya_doaa">\"الأدعية النبوية \"</string>
+    <string name="naboya_doaa">الأدعية النبوية</string>
     <string name="food_azkar">أذكار الطعام</string>
     <string name="house_azkar">أذكار المنزل</string>
     <string name="sleep_azkar">أذكار النوم</string>
@@ -57,6 +58,10 @@
     <string name="azkar_fadl">فضل الأذكار</string>
     <string name="roqia">الرقية الشرعية</string>
     <string name="dead_doaa">أدعية للمتوفّي</string>
+    <string name="home">الصفحة الرئيسية</string>
+    <string name="settings">الإعدادات</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 
 
 </resources>

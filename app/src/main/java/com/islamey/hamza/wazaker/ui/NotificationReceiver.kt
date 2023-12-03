@@ -6,7 +6,7 @@ import android.content.Context
 import android.content.Intent
 import android.os.Build
 import androidx.core.app.NotificationCompat
-import com.islamey.hamza.wazaker.data.DataSets.NotificationDataset
+import com.islamey.hamza.wazaker.domain.DataSets.NotificationDataset
 import com.islamey.wazkar.R
 
 class NotificationReceiver : BroadcastReceiver() {

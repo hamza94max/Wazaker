@@ -7,8 +7,8 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.navArgs
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.islamey.hamza.wazaker.data.DataSets.FortyDataSet
-import com.islamey.hamza.wazaker.data.Models.Hadith
+import com.islamey.hamza.wazaker.domain.DataSets.FortyDataSet
+import com.islamey.hamza.wazaker.domain.Models.Hadith
 import com.islamey.wazkar.databinding.FragmentFortyHadithBinding
 
 class FortyHadithFragment : Fragment() {

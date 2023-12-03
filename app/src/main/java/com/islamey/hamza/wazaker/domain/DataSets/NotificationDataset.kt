@@ -1,4 +1,4 @@
-package com.islamey.hamza.wazaker.data.DataSets
+package com.islamey.hamza.wazaker.domain.DataSets
 
 import java.util.*
 

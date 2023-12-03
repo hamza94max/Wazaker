@@ -8,7 +8,7 @@ import android.widget.TextView;
 
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.islamey.hamza.wazaker.data.Models.AzkarListModel;
+import com.islamey.hamza.wazaker.domain.Models.AzkarListModel;
 import com.islamey.hamza.wazaker.ui.OnItemListener;
 import com.islamey.wazkar.R;
 

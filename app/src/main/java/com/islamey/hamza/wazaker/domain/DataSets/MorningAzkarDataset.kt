@@ -1,6 +1,6 @@
-package com.islamey.hamza.wazaker.data.DataSets
+package com.islamey.hamza.wazaker.domain.DataSets
 
-import com.islamey.hamza.wazaker.data.Models.ZekerModel
+import com.islamey.hamza.wazaker.domain.Models.ZekerModel
 
 object MorningAzkarDataset {
 

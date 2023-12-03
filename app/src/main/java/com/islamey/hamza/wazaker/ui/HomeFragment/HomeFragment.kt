@@ -126,6 +126,9 @@ class HomeFragment : Fragment() {
         }
 
 
+        binding.gregorianDateTextView.text = response.data.gregorian.date
+
+
     }
 
 

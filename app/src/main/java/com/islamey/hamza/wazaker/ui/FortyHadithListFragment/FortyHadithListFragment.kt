@@ -6,8 +6,8 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
-import com.islamey.hamza.wazaker.data.DataSets.FortyListDataset
-import com.islamey.hamza.wazaker.data.Models.AzkarListModel
+import com.islamey.hamza.wazaker.domain.DataSets.FortyListDataset
+import com.islamey.hamza.wazaker.domain.Models.AzkarListModel
 import com.islamey.hamza.wazaker.ui.OnItemListener
 import com.islamey.wazkar.databinding.FragmentFortyHadithListBinding
 

@@ -7,7 +7,7 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.islamey.hamza.wazaker.data.DataSets.AzkarListDataset
+import com.islamey.hamza.wazaker.domain.DataSets.AzkarListDataset
 import com.islamey.hamza.wazaker.ui.OnItemListener
 import com.islamey.wazkar.databinding.FragmentAzkarBinding
 

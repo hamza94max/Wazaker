@@ -7,8 +7,8 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.navArgs
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.islamey.hamza.wazaker.data.DataSets.ZekerDataSet
-import com.islamey.hamza.wazaker.data.Models.AzkarListModel
+import com.islamey.hamza.wazaker.domain.DataSets.ZekerDataSet
+import com.islamey.hamza.wazaker.domain.Models.AzkarListModel
 import com.islamey.wazkar.databinding.FragmentZekerAndDoaaBinding
 
 class ZekerAndDoaaFragment : Fragment() {

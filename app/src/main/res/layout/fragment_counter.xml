@@ -8,7 +8,7 @@
     tools:context="com.islamey.hamza.wazaker.ui.CounterFragment.CounterFragment">
 
     <RelativeLayout
-        android:id="@+id/counterscreen"
+        android:id="@+id/counterScreenLayout"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
@@ -20,7 +20,7 @@
             android:layout_alignParentEnd="true"
             android:layout_alignParentRight="true"
             android:layout_marginTop="16dp"
-            android:padding="25dp"
+            android:padding="21dp"
             android:text="@string/_0"
             android:textColor="@color/white"
             android:textSize="21sp"

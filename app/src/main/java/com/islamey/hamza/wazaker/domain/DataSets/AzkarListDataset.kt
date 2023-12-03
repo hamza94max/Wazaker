@@ -1,7 +1,7 @@
-package com.islamey.hamza.wazaker.data.DataSets
+package com.islamey.hamza.wazaker.domain.DataSets
 
 import android.content.Context
-import com.islamey.hamza.wazaker.data.Models.AzkarListModel
+import com.islamey.hamza.wazaker.domain.Models.AzkarListModel
 import com.islamey.wazkar.R
 
 object AzkarListDataset {

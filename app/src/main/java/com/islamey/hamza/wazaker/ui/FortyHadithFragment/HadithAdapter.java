@@ -11,7 +11,7 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.islamey.hamza.wazaker.data.Models.Hadith;
+import com.islamey.hamza.wazaker.domain.Models.Hadith;
 import com.islamey.wazkar.R;
 
 import java.util.ArrayList;

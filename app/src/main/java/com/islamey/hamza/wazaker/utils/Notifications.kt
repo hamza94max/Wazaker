@@ -14,7 +14,7 @@ object Notifications {
     fun setupNotification(context: Context) {
         val cal = Calendar.getInstance()
         cal.timeInMillis = System.currentTimeMillis()
-        cal[Calendar.HOUR_OF_DAY] = 17
+        cal[Calendar.HOUR_OF_DAY] = 16
         cal[Calendar.MINUTE] = 0
         cal[Calendar.SECOND] = 0
         if (cal.timeInMillis > System.currentTimeMillis()) {

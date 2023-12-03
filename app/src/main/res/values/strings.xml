@@ -62,6 +62,8 @@
     <string name="settings">الإعدادات</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="enable_darkMode">تفعيل الوضع المظلم</string>
+    <string name="contact_us">تواصل معنا</string>
 
 
 </resources>

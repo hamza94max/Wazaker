@@ -28,5 +28,18 @@ object Utils {
         return currentDate.format(formatter)
     }
 
+    fun saveDarkModeState(context: Context, isDark: Boolean) {
+        val sharedPreferences = context.getSharedPreferences("pref", Context.MODE_PRIVATE)
+        val editor = sharedPreferences!!.edit()
+        editor.putBoolean("darkMode", isDark)
+        editor.apply()
+    }
+
+    fun getDarkModeState(context: Context): Boolean {
+        val sharedPreferences = context.getSharedPreferences("pref", Context.MODE_PRIVATE)
+
+        return sharedPreferences.getBoolean("darkMode", false)
+    }
+
 
 }

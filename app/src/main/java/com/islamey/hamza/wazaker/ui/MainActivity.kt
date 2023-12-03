@@ -5,12 +5,14 @@ import android.content.Intent
 import android.os.Bundle
 import android.view.View
 import androidx.appcompat.app.AppCompatActivity
+import androidx.appcompat.app.AppCompatDelegate
 import androidx.core.splashscreen.SplashScreen.Companion.installSplashScreen
 import androidx.navigation.NavController
 import androidx.navigation.fragment.NavHostFragment
 import com.hassanjamil.hqibla.CompassActivity
 import com.hassanjamil.hqibla.Constants
 import com.islamey.hamza.wazaker.utils.Notifications.setupNotification
+import com.islamey.hamza.wazaker.utils.Utils.getDarkModeState
 import com.islamey.wazkar.R
 import com.islamey.wazkar.databinding.ActivityMainBinding
 import dagger.hilt.android.AndroidEntryPoint
@@ -28,11 +30,19 @@ class MainActivity : AppCompatActivity() {
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
+        setDarkModeState()
         setupNotification(this)
 
         setUpBottomViewNavigation()
 
 
+    }
+
+    private fun setDarkModeState() {
+        if (getDarkModeState(this))
+            AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES)
+        else
+            AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO)
     }
 
     private fun setUpBottomViewNavigation() {

@@ -18,7 +18,7 @@ class AzkarListAdapter(private val azkar_modelList: List<AzkarListModel>) :
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
         val layoutInflater = LayoutInflater.from(parent.context)
-        val v = layoutInflater.inflate(R.layout.simple_cell, parent, false)
+        val view = layoutInflater.inflate(R.layout.simple_cell, parent, false)
         return ViewHolder(v)
     }
 

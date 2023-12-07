@@ -21,8 +21,10 @@
 
 
             <androidx.cardview.widget.CardView
+                android:id="@+id/hijriCardView"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:visibility="gone"
                 android:layout_margin="8dp"
                 android:background="@color/lightGreen"
                 app:cardCornerRadius="7dp">
@@ -37,16 +39,16 @@
                         android:id="@+id/hijriDateTextView"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:gravity="center"
                         android:fontFamily="@font/tajawal_medium"
-                        android:text="التاريخ الهجري "
                         android:textSize="16sp" />
 
                     <TextView
                         android:id="@+id/gregorianDateTextView"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:gravity="center"
                         android:fontFamily="@font/tajawal_medium"
-                        android:text="التاريخ الهجري "
                         android:textSize="16sp" />
 
                     <!--                    <TextView-->

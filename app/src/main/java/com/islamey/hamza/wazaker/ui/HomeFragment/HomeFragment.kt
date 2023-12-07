@@ -11,6 +11,8 @@ import androidx.fragment.app.viewModels
 import androidx.lifecycle.lifecycleScope
 import androidx.navigation.fragment.findNavController
 import com.islamey.hamza.wazaker.domain.Models.HijriDateResponse
+import com.islamey.hamza.wazaker.utils.Ext.hide
+import com.islamey.hamza.wazaker.utils.Ext.show
 import com.islamey.hamza.wazaker.utils.Utils.getCurrentDate
 import com.islamey.hamza.wazaker.utils.Utils.getTotalCounts
 import com.islamey.wazkar.R
@@ -90,16 +92,17 @@ class HomeFragment : Fragment() {
             hijriViewModel.hijriDate.collect { state ->
                 when (state) {
                     is DataState.Idle -> {
+                        binding.hijriCardView.hide()
                     }
                     is DataState.Loading -> {
+                        binding.hijriCardView.hide()
                     }
                     is DataState.Success -> {
-                        val hijriDateResponse = state.data
-                        updateUi(hijriDateResponse)
+                        binding.hijriCardView.show()
+                        updateUi(state.data)
                     }
                     is DataState.Error -> {
-                        val errorMessage = state.message
-                        Log.e("hamzaError", errorMessage)
+                        Log.e("hamzaError", state.message)
                     }
                 }
             }

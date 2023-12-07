@@ -1,23 +1,25 @@
 package com.islamey.hamza.wazaker.ui.CounterFragment
 
 import android.annotation.SuppressLint
-import android.graphics.Color
 import android.os.Bundle
 import android.view.*
 import android.widget.Toast
 import androidx.fragment.app.Fragment
+import androidx.fragment.app.viewModels
+import androidx.lifecycle.lifecycleScope
 import com.islamey.hamza.wazaker.utils.RandomColor.getRandomColor
-import com.islamey.hamza.wazaker.utils.Utils.getTotalCounts
-import com.islamey.hamza.wazaker.utils.Utils.saveTotalCountsInSharedPreference
 import com.islamey.wazkar.R
 import com.islamey.wazkar.databinding.FragmentCounterBinding
+import dagger.hilt.android.AndroidEntryPoint
+import kotlinx.coroutines.launch
 
+@AndroidEntryPoint
 class CounterFragment : Fragment() {
 
     private lateinit var binding: FragmentCounterBinding
 
-    private var counts = 0
-    private var totalCounts = 0
+    private val counterViewModel: CounterViewModel by viewModels()
+
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -33,49 +35,34 @@ class CounterFragment : Fragment() {
         initUi()
     }
 
+    @SuppressLint("SetTextI18n")
     private fun initUi() {
 
-        getDataFromSharedPreferences()
+        lifecycleScope.launch {
+            counterViewModel.counts.collect { counts ->
+                binding.countertextview.text = counts.toString()
+                checkCounts(counts)
+            }
+        }
+
+        lifecycleScope.launch {
+            counterViewModel.totalCounts.collect { totalCounts ->
+                binding.totalCountstextview.text =
+                    getString(R.string.totalzeker) + "  " + totalCounts.toString()
+            }
+        }
 
         binding.counterScreenLayout.setOnClickListener {
-            incrementCounter()
+            counterViewModel.incrementCounter()
         }
 
         binding.resetbtn.setOnClickListener {
-            resetCounter()
+            counterViewModel.resetCounter()
         }
     }
 
-    @SuppressLint("SetTextI18n")
-    fun getDataFromSharedPreferences() {
-        totalCounts = context?.let { getTotalCounts(it) }!!
-        setTotalZekerCountsText(totalCounts)
-    }
-
-    @SuppressLint("SetTextI18n")
-    fun setTotalZekerCountsText(TotalZekerCounts: Int) {
-        binding.totalCountstextview.text = getString(R.string.totalzeker) + "  " + TotalZekerCounts
-    }
-
-    private fun incrementCounter() {
-        counts++
-        totalCounts++
-
-        checkCounts(counts)
-        binding.countertextview.text = counts.toString()
-        setTotalZekerCountsText(totalCounts)
-
-        saveTotalCountsInSharedPreference(requireContext(), totalCounts)
-    }
-
-    private fun resetCounter() {
-        counts = 0
-        binding.countertextview.text = counts.toString()
-        binding.countertextview.setTextColor(Color.WHITE)
-    }
-
     private fun checkCounts(counts: Int) {
-        if (counts % 33 == 0) binding.countertextview.setTextColor(getRandomColor())
+        if (counts != 0 && counts % 33 == 0) binding.countertextview.setTextColor(getRandomColor())
     }
 
     override fun onCreateOptionsMenu(menu: Menu, inflater: MenuInflater) {
@@ -87,18 +74,11 @@ class CounterFragment : Fragment() {
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         val id = item.itemId
         if (id == R.id.delete) {
-            resetTotalCounter()
+            counterViewModel.resetTotalCounter()
+            Toast.makeText(requireContext(), R.string.TotalDeleted, Toast.LENGTH_SHORT).show()
             return true
         }
         return super.onOptionsItemSelected(item)
-    }
-
-    private fun resetTotalCounter() {
-        resetCounter()
-        totalCounts = 0
-        setTotalZekerCountsText(totalCounts)
-        saveTotalCountsInSharedPreference(requireContext(), totalCounts)
-        Toast.makeText(context, getString(R.string.TotalDeleted), Toast.LENGTH_SHORT).show()
     }
 
 }

@@ -14,7 +14,7 @@
         android:paddingBottom="100dp">
 
         <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/hadithrecycler"
+            android:id="@+id/hadithListRecyclerView"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:orientation="vertical"
@@ -23,7 +23,7 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            tools:listitem="@layout/simple_cell" />
+            tools:listitem="@layout/forty_list_item" />
 
 
     </LinearLayout>

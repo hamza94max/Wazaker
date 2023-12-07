@@ -49,11 +49,7 @@ class HomeFragment : Fragment() {
 
         initUI()
 
-
-
-
         observeResponse()
-
     }
 
     private fun initUI() {
@@ -94,10 +90,8 @@ class HomeFragment : Fragment() {
             hijriViewModel.hijriDate.collect { state ->
                 when (state) {
                     is DataState.Idle -> {
-                        // Handle idle state
                     }
                     is DataState.Loading -> {
-                        // Handle loading state
                     }
                     is DataState.Success -> {
                         val hijriDateResponse = state.data
@@ -105,7 +99,6 @@ class HomeFragment : Fragment() {
                     }
                     is DataState.Error -> {
                         val errorMessage = state.message
-                        // Handle error state, show error message, etc.
                         Log.e("hamzaError", errorMessage)
                     }
                 }
@@ -118,6 +111,8 @@ class HomeFragment : Fragment() {
         binding.hijriDateTextView.text = buildString {
             append(StringEscapeUtils.unescapeJava(response.data.hijri.weekday.ar))
             append(" ")
+            append(response.data.hijri.day)
+            append(" ")
             append(StringEscapeUtils.unescapeJava(response.data.hijri.month.ar))
             append(" ")
             append(StringEscapeUtils.unescapeJava(response.data.hijri.year))
@@ -125,10 +120,7 @@ class HomeFragment : Fragment() {
             append("هجريا")
         }
 
-
         binding.gregorianDateTextView.text = response.data.gregorian.date
-
-
     }
 
 

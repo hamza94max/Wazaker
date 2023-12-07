@@ -1,4 +1,4 @@
-package com.islamey.hamza.wazaker.ui.AzkarListFragment
+package com.islamey.hamza.wazaker.ui.ZekerAndDoaaFragment
 
 
 import android.annotation.SuppressLint
@@ -8,14 +8,12 @@ import androidx.recyclerview.widget.AsyncListDiffer
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.RecyclerView
 import com.islamey.hamza.wazaker.domain.Models.AzkarListModel
-import com.islamey.hamza.wazaker.ui.OnItemListener
-import com.islamey.wazkar.databinding.SimpleCellBinding
+import com.islamey.hamza.wazaker.utils.Utils.shareText
+import com.islamey.wazkar.databinding.FortyItemBinding
 
-class AzkarListAdapter constructor(
-    private val onItemListener: OnItemListener
-) : RecyclerView.Adapter<AzkarListAdapter.ViewHolder>() {
+class ZekerAndDoaaAdapter : RecyclerView.Adapter<ZekerAndDoaaAdapter.ViewHolder>() {
 
-    inner class ViewHolder(val binding: SimpleCellBinding) :
+    inner class ViewHolder(val binding: FortyItemBinding) :
         RecyclerView.ViewHolder(binding.root)
 
     private val diffCallback = object : DiffUtil.ItemCallback<AzkarListModel>() {
@@ -30,24 +28,25 @@ class AzkarListAdapter constructor(
 
     var differ = AsyncListDiffer(this, diffCallback)
 
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): AzkarListAdapter.ViewHolder {
+    override fun onCreateViewHolder(
+        parent: ViewGroup,
+        viewType: Int
+    ): ZekerAndDoaaAdapter.ViewHolder {
         val view =
-            SimpleCellBinding.inflate(LayoutInflater.from(parent.context), parent, false)
+            FortyItemBinding.inflate(LayoutInflater.from(parent.context), parent, false)
         return ViewHolder(view)
     }
 
     @SuppressLint("SetTextI18n")
-    override fun onBindViewHolder(holder: AzkarListAdapter.ViewHolder, position: Int) {
+    override fun onBindViewHolder(holder: ZekerAndDoaaAdapter.ViewHolder, position: Int) {
 
         val currentItem = differ.currentList[position]
 
-        holder.binding.tvTitle.text = currentItem.name
+        holder.binding.hadithText.text = currentItem.name
 
-
-        holder.itemView.setOnClickListener {
-            onItemListener.onItemCLicked(position)
+        holder.binding.copybtn.setOnClickListener {
+            shareText(holder.itemView.context, currentItem.name)
         }
-
 
     }
 

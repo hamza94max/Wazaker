@@ -1,18 +1,26 @@
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:layout_marginTop="14dp"
-    android:paddingHorizontal="7dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context="com.islamey.hamza.wazaker.ui.ZekerAndDoaaFragment.ZekerAndDoaaFragment">
 
 
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/azkar_and_doaa_rec"
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_marginTop="7dp"
-        android:padding="7dp"
-        tools:listitem="@layout/forty_item" />
+        android:orientation="vertical"
+        android:paddingBottom="120dp">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/azkarAndDoaaRecyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingHorizontal="7dp"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            tools:listitem="@layout/forty_item" />
+
+    </LinearLayout>
+
+
+</androidx.core.widget.NestedScrollView>

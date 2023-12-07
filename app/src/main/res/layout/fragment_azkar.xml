@@ -3,17 +3,16 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:layout_marginTop="14dp"
-    android:paddingHorizontal="5dp"
     tools:context="com.islamey.hamza.wazaker.ui.AzkarListFragment.AzkarListFragment">
 
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/AzkarListRecycler"
+        android:id="@+id/azkarListRecyclerView"
         android:layout_width="match_parent"
-        android:layout_marginTop="7dp"
         android:layout_height="match_parent"
         android:background="@color/blue"
-        android:padding="7dp"
+        android:paddingHorizontal="7dp"
+        android:paddingBottom="120dp"
+        tools:listitem="@layout/simple_cell"
         app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

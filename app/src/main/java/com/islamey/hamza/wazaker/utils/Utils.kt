@@ -1,6 +1,7 @@
 package com.islamey.hamza.wazaker.utils
 
 import android.content.Context
+import android.content.Intent
 import java.time.LocalDate
 import java.time.format.DateTimeFormatter
 
@@ -39,6 +40,17 @@ object Utils {
         val sharedPreferences = context.getSharedPreferences("pref", Context.MODE_PRIVATE)
 
         return sharedPreferences.getBoolean("darkMode", false)
+    }
+
+
+    fun shareText(context: Context, text: String) {
+        val sendIntent = Intent()
+        sendIntent.action = Intent.ACTION_SEND
+        sendIntent.putExtra(Intent.EXTRA_TEXT, text)
+        sendIntent.type = "text/plain"
+
+        val shareIntent = Intent.createChooser(sendIntent, null)
+        context.startActivity(shareIntent)
     }
 
 

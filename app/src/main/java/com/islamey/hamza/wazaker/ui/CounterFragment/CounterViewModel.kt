@@ -6,11 +6,9 @@ import android.content.SharedPreferences
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import dagger.hilt.android.lifecycle.HiltViewModel
-import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.launch
-import kotlinx.coroutines.withContext
 import javax.inject.Inject
 
 @HiltViewModel
@@ -31,40 +29,30 @@ class CounterViewModel @Inject constructor(
     }
 
     fun incrementCounter() {
-        viewModelScope.launch {
-            _counts.value++
-            _totalCounts.value++
-            saveTotalCountsInSharedPreference()
-        }
+        _counts.value++
+        _totalCounts.value++
+        saveTotalCountsInSharedPreference()
     }
 
     fun resetCounter() {
-        viewModelScope.launch {
-            _counts.value = 0
-        }
+        _counts.value = 0
     }
 
     fun resetTotalCounter() {
-        viewModelScope.launch {
-            _totalCounts.value = 0
-            saveTotalCountsInSharedPreference()
-        }
+        _totalCounts.value = 0
+        saveTotalCountsInSharedPreference()
     }
 
-    private suspend fun saveTotalCountsInSharedPreference() {
-        withContext(Dispatchers.IO) {
-            val sharedPref = getSharedPreferences()
-            val editor: SharedPreferences.Editor = sharedPref.edit()
-            editor.putInt("totalCounts", _totalCounts.value)
-            editor.apply()
-        }
+    private fun saveTotalCountsInSharedPreference() {
+        val sharedPref = getSharedPreferences()
+        val editor: SharedPreferences.Editor = sharedPref.edit()
+        editor.putInt("totalCounts", _totalCounts.value)
+        editor.apply()
     }
 
-    private suspend fun getTotalCountsFromSharedPreference(): Int {
-        return withContext(Dispatchers.IO) {
-            val sharedPref = getSharedPreferences()
-            sharedPref.getInt("totalCounts", 0)
-        }
+    private fun getTotalCountsFromSharedPreference(): Int {
+        val sharedPref = getSharedPreferences()
+        return sharedPref.getInt("totalCounts", 0)
     }
 
     private fun getSharedPreferences(): SharedPreferences {

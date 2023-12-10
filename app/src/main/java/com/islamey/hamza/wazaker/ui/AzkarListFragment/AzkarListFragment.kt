@@ -21,7 +21,6 @@ class AzkarListFragment : Fragment(), OnItemListener {
     ): View {
 
         _binding = FragmentAzkarBinding.inflate(layoutInflater, container, false)
-
         return binding.root
     }
 
@@ -37,12 +36,11 @@ class AzkarListFragment : Fragment(), OnItemListener {
 
         binding.azkarListRecyclerView.adapter = adapter
         adapter.differ.submitList(AzkarListDataset.getAzkarList(requireContext()))
-
     }
 
-    override fun onItemCLicked(item: Any?) {
+    override fun onItemCLicked(item: Int) {
         val action =
-            AzkarListFragmentDirections.actionAzkarFragmentToZekerAndDoaaFragment(item as Int)
+            AzkarListFragmentDirections.actionAzkarFragmentToZekerAndDoaaFragment(item)
         findNavController().navigate(action)
     }
 }

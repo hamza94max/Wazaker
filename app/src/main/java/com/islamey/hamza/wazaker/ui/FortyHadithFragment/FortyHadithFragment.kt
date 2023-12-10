@@ -15,8 +15,6 @@ class FortyHadithFragment : Fragment() {
     private var _binding: FragmentFortyHadithBinding? = null
     val binding get() = _binding!!
 
-    lateinit var Hadiths: ArrayList<Hadith>
-
     private val args: FortyHadithFragmentArgs by navArgs()
 
     override fun onCreateView(
@@ -25,7 +23,6 @@ class FortyHadithFragment : Fragment() {
     ): View {
 
         _binding = FragmentFortyHadithBinding.inflate(layoutInflater, container, false)
-
         return binding.root
     }
 

@@ -6,7 +6,6 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Toast
 import androidx.appcompat.app.AppCompatDelegate
 import androidx.fragment.app.Fragment
 import com.islamey.hamza.wazaker.utils.Utils.getDarkModeState
@@ -29,8 +28,6 @@ class SettingsFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         initUi()
-
-
     }
 
     private fun initUi() {
@@ -50,21 +47,15 @@ class SettingsFragment : Fragment() {
             }
         }
 
-
     }
 
     private fun contactUs() {
-        try {
-            startActivity(
-                Intent(
-                    Intent.ACTION_VIEW,
-                    Uri.parse("https://api.whatsapp.com/send?phone=+201065628949&text=")
-                )
+        startActivity(
+            Intent(
+                Intent.ACTION_VIEW,
+                Uri.parse("https://api.whatsapp.com/send?phone=+201065628949&text=")
             )
-        } catch (e: Exception) {
-            Toast.makeText(context, "whatsapp app not install", Toast.LENGTH_LONG).show()
-        }
+        )
     }
-
 
 }

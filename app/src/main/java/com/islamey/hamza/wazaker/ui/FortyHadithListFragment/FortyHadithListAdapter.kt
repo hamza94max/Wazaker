@@ -16,7 +16,13 @@ class FortyHadithListAdapter constructor(
 ) : RecyclerView.Adapter<FortyHadithListAdapter.ViewHolder>() {
 
     inner class ViewHolder(val binding: FortyListItemBinding) :
-        RecyclerView.ViewHolder(binding.root)
+        RecyclerView.ViewHolder(binding.root) {
+        init {
+            itemView.setOnClickListener {
+                onItemListener.onItemCLicked(adapterPosition)
+            }
+        }
+    }
 
     private val diffCallback = object : DiffUtil.ItemCallback<AzkarListModel>() {
         override fun areItemsTheSame(oldItem: AzkarListModel, newItem: AzkarListModel): Boolean {
@@ -28,7 +34,7 @@ class FortyHadithListAdapter constructor(
         }
     }
 
-    var differ = AsyncListDiffer(this, diffCallback)
+    val differ = AsyncListDiffer(this, diffCallback)
 
     override fun onCreateViewHolder(
         parent: ViewGroup,
@@ -45,12 +51,6 @@ class FortyHadithListAdapter constructor(
         val currentItem = differ.currentList[position]
 
         holder.binding.tvTitle.text = currentItem.name
-
-        holder.itemView.setOnClickListener {
-            onItemListener.onItemCLicked(position)
-        }
-
-
     }
 
     override fun getItemCount(): Int {

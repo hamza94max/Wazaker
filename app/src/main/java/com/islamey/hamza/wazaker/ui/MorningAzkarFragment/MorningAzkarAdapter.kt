@@ -1,13 +1,13 @@
 package com.islamey.hamza.wazaker.ui.MorningAzkarFragment
 
 import android.annotation.SuppressLint
-import android.content.Intent
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.AsyncListDiffer
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.RecyclerView
 import com.islamey.hamza.wazaker.domain.Models.ZekerModel
+import com.islamey.hamza.wazaker.utils.Utils.shareText
 import com.islamey.wazkar.databinding.MorningItemBinding
 
 class MorningAzkarAdapter : RecyclerView.Adapter<MorningAzkarAdapter.ViewHolder>() {
@@ -25,7 +25,7 @@ class MorningAzkarAdapter : RecyclerView.Adapter<MorningAzkarAdapter.ViewHolder>
         }
     }
 
-    var differ = AsyncListDiffer(this, diffCallback)
+    val differ = AsyncListDiffer(this, diffCallback)
 
     override fun onCreateViewHolder(
         parent: ViewGroup,
@@ -44,15 +44,8 @@ class MorningAzkarAdapter : RecyclerView.Adapter<MorningAzkarAdapter.ViewHolder>
 
         holder.binding.zekertext.text = currentItem.zeker
         holder.binding.copybtn.setOnClickListener {
-
-            val sendIntent = Intent()
-            sendIntent.action = Intent.ACTION_SEND
-            sendIntent.putExtra(Intent.EXTRA_TEXT, currentItem.zeker)
-            sendIntent.type = "text/plain"
-            val shareIntent = Intent.createChooser(sendIntent, null)
-            it.context.startActivity(shareIntent)
+            shareText(holder.itemView.context, currentItem.zeker)
         }
-
 
         holder.binding.plustext.text = count.toString()
 

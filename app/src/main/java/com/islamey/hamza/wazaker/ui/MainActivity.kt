@@ -1,6 +1,5 @@
 package com.islamey.hamza.wazaker.ui
 
-import android.annotation.SuppressLint
 import android.content.Intent
 import android.os.Bundle
 import android.view.View
@@ -23,7 +22,6 @@ class MainActivity : AppCompatActivity() {
     private lateinit var binding: ActivityMainBinding
     lateinit var navController: NavController
 
-    @SuppressLint("SetTextI18n", "CommitPrefEdits")
     override fun onCreate(savedInstanceState: Bundle?) {
         installSplashScreen()
         super.onCreate(savedInstanceState)
@@ -34,8 +32,6 @@ class MainActivity : AppCompatActivity() {
         setupNotification(this)
 
         setUpBottomViewNavigation()
-
-
     }
 
     private fun setDarkModeState() {
@@ -78,8 +74,7 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
-
-    fun openQiblaActivity() {
+    private fun openQiblaActivity() {
         val intent = Intent(this, CompassActivity::class.java)
         intent.putExtra(Constants.TOOLBAR_BG_COLOR, "#FFFFFF") // Toolbar Background color
         intent.putExtra(Constants.COMPASS_BG_COLOR, "#FFFFFF") // Compass background color

@@ -1,7 +1,5 @@
 package com.islamey.hamza.wazaker.ui.AzkarListFragment
 
-
-import android.annotation.SuppressLint
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.AsyncListDiffer
@@ -16,7 +14,13 @@ class AzkarListAdapter constructor(
 ) : RecyclerView.Adapter<AzkarListAdapter.ViewHolder>() {
 
     inner class ViewHolder(val binding: SimpleCellBinding) :
-        RecyclerView.ViewHolder(binding.root)
+        RecyclerView.ViewHolder(binding.root) {
+        init {
+            itemView.setOnClickListener {
+                onItemListener.onItemCLicked(adapterPosition)
+            }
+        }
+    }
 
     private val diffCallback = object : DiffUtil.ItemCallback<AzkarListModel>() {
         override fun areItemsTheSame(oldItem: AzkarListModel, newItem: AzkarListModel): Boolean {
@@ -28,7 +32,7 @@ class AzkarListAdapter constructor(
         }
     }
 
-    var differ = AsyncListDiffer(this, diffCallback)
+    val differ = AsyncListDiffer(this, diffCallback)
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): AzkarListAdapter.ViewHolder {
         val view =
@@ -36,24 +40,16 @@ class AzkarListAdapter constructor(
         return ViewHolder(view)
     }
 
-    @SuppressLint("SetTextI18n")
     override fun onBindViewHolder(holder: AzkarListAdapter.ViewHolder, position: Int) {
 
         val currentItem = differ.currentList[position]
 
         holder.binding.tvTitle.text = currentItem.name
 
-
-        holder.itemView.setOnClickListener {
-            onItemListener.onItemCLicked(position)
-        }
-
-
     }
 
     override fun getItemCount(): Int {
         return differ.currentList.size
     }
-
 
 }

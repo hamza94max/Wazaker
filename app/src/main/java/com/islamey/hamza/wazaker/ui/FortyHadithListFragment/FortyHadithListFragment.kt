@@ -33,10 +33,10 @@ class FortyHadithListFragment : Fragment(), OnItemListener {
         adapter.differ.submitList(FortyListDataset.getFortylist())
     }
 
-    override fun onItemCLicked(item: Any?) {
+    override fun onItemCLicked(item: Int) {
         val action =
             FortyHadithListFragmentDirections.actionFortyHadithListFragmentToFortyHadithFragment(
-                item as Int
+                item
             )
         findNavController().navigate(action)
     }

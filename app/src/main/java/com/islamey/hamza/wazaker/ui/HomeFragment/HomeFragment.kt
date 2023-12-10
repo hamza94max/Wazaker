@@ -1,24 +1,22 @@
 package com.islamey.hamza.wazaker.ui.HomeFragment
 
-import android.annotation.SuppressLint
 import android.os.Bundle
 import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.core.view.isVisible
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.lifecycleScope
 import androidx.navigation.fragment.findNavController
 import com.islamey.hamza.wazaker.domain.Models.HijriDateResponse
-import com.islamey.hamza.wazaker.utils.Ext.hide
-import com.islamey.hamza.wazaker.utils.Ext.show
 import com.islamey.hamza.wazaker.utils.Utils.getCurrentDate
+import com.islamey.hamza.wazaker.utils.Utils.getFormattedHijriDate
 import com.islamey.hamza.wazaker.utils.Utils.getTotalCounts
 import com.islamey.wazkar.R
 import com.islamey.wazkar.databinding.FragmentHomeBinding
 import dagger.hilt.android.AndroidEntryPoint
-import org.apache.commons.lang3.StringEscapeUtils
 
 @AndroidEntryPoint
 class HomeFragment : Fragment() {
@@ -81,24 +79,22 @@ class HomeFragment : Fragment() {
         setTotalZekerCountsText()
     }
 
-    @SuppressLint("SetTextI18n")
     private fun setTotalZekerCountsText() {
         binding.totalZekercounts.text = getString(R.string.totalzeker) + "  " + totalcounts
     }
-
 
     private fun observeResponse() {
         viewLifecycleOwner.lifecycleScope.launchWhenStarted {
             hijriViewModel.hijriDate.collect { state ->
                 when (state) {
                     is DataState.Idle -> {
-                        binding.hijriCardView.hide()
+                        binding.hijriCardView.isVisible = false
                     }
                     is DataState.Loading -> {
-                        binding.hijriCardView.hide()
+                        binding.hijriCardView.isVisible = false
                     }
                     is DataState.Success -> {
-                        binding.hijriCardView.show()
+                        binding.hijriCardView.isVisible = true
                         updateUi(state.data)
                     }
                     is DataState.Error -> {
@@ -109,20 +105,8 @@ class HomeFragment : Fragment() {
         }
     }
 
-    @SuppressLint("SetTextI18n")
     private fun updateUi(response: HijriDateResponse) {
-        binding.hijriDateTextView.text = buildString {
-            append(StringEscapeUtils.unescapeJava(response.data.hijri.weekday.ar))
-            append(" ")
-            append(response.data.hijri.day)
-            append(" ")
-            append(StringEscapeUtils.unescapeJava(response.data.hijri.month.ar))
-            append(" ")
-            append(StringEscapeUtils.unescapeJava(response.data.hijri.year))
-            append(" ")
-            append("هجريا")
-        }
-
+        binding.hijriDateTextView.text = getFormattedHijriDate(response)
         binding.gregorianDateTextView.text = response.data.gregorian.date
     }
 

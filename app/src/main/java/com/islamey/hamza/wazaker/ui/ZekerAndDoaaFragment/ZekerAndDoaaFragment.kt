@@ -30,7 +30,6 @@ class ZekerAndDoaaFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         setUpAzkarAndDoaaRecyclerView()
-
     }
 
     private fun setUpAzkarAndDoaaRecyclerView() {

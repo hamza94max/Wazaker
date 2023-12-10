@@ -8,7 +8,6 @@ import androidx.fragment.app.Fragment
 import com.islamey.hamza.wazaker.domain.DataSets.EveningAzkarDataset
 import com.islamey.wazkar.databinding.FragmentEveningAzkarBinding
 
-
 class EveningAzkarFragment : Fragment() {
 
     private lateinit var binding: FragmentEveningAzkarBinding
@@ -25,7 +24,6 @@ class EveningAzkarFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         setUpEveningAzkarRecyclerView()
-
     }
 
     private fun setUpEveningAzkarRecyclerView() {

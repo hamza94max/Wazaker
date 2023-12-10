@@ -26,7 +26,7 @@ class ZekerAndDoaaAdapter : RecyclerView.Adapter<ZekerAndDoaaAdapter.ViewHolder>
         }
     }
 
-    var differ = AsyncListDiffer(this, diffCallback)
+    val differ = AsyncListDiffer(this, diffCallback)
 
     override fun onCreateViewHolder(
         parent: ViewGroup,

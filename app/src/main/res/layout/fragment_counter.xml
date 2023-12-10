@@ -1,64 +1,90 @@
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layoutDirection="ltr"
-    android:layout_height="match_parent"
-    android:background="@color/blue"
-    tools:context="com.islamey.hamza.wazaker.ui.CounterFragment.CounterFragment">
+    xmlns:tools="http://schemas.android.com/tools">
 
-    <RelativeLayout
-        android:id="@+id/counterScreenLayout"
+    <data class="CounterBinding">
+
+        <variable
+            name="counterViewModel"
+            type="com.islamey.hamza.wazaker.ui.counterFragment.CounterViewModel" />
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:background="@color/blue"
+        android:layoutDirection="ltr"
+        tools:context="com.islamey.hamza.wazaker.ui.counterFragment.CounterFragment">
 
-        <TextView
-            android:id="@+id/totalCountstextview"
+        <RelativeLayout
+            android:id="@+id/counterScreenLayout"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_alignParentTop="true"
-            android:layout_alignParentEnd="true"
-            android:layout_alignParentRight="true"
-            android:layout_marginTop="16dp"
-            android:padding="21dp"
-            android:text="@string/_0"
-            android:textColor="@color/white"
-            android:textSize="21sp"
-            android:textStyle="bold" />
+            android:layout_height="match_parent"
+            android:onClick="@{() -> counterViewModel.incrementCounter()}">
 
-        <TextView
-            android:id="@+id/countertextview"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_centerInParent="true"
-            android:gravity="center"
-            android:text="@string/zero"
-            android:textColor="#fff"
-            android:textSize="85sp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintRight_toRightOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            tools:ignore="RelativeOverlap" />
+            <TextView
+                android:id="@+id/totalTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginTop="16dp"
+                android:padding="21dp"
+                android:text="@string/totalzeker"
+                android:textColor="@color/white"
+                android:textSize="21sp"
+                android:textStyle="bold" />
 
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/countertextview"
-            android:layout_centerHorizontal="true"
-            android:layout_marginTop="130dp"
-            android:orientation="horizontal">
+            <TextView
+                android:id="@+id/totalCountsTextview"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:layout_toLeftOf="@id/totalTextView"
+                android:gravity="end"
+                android:paddingVertical="21dp"
+                android:text="@{counterViewModel.totalCounts.toString()}"
+                android:textColor="@color/white"
+                android:textSize="21sp"
+                android:textStyle="bold" />
 
-            <Button
-                android:id="@+id/resetbtn"
-                android:layout_width="203dp"
-                android:layout_height="54dp"
-                android:background="@drawable/buttonshape"
-                android:text="@string/reset"
-                android:textColor="@color/black"
-                android:textSize="30sp"
-                tools:ignore="UsingOnClickInXml" />
+            <TextView
+                android:id="@+id/countertextview"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:gravity="center"
+                android:text="@{counterViewModel.counts.toString()}"
+                android:textColor="#fff"
+                android:textSize="85sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:ignore="RelativeOverlap" />
 
-        </LinearLayout>
-    </RelativeLayout>
-</androidx.constraintlayout.widget.ConstraintLayout>
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/countertextview"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="130dp"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/resetbtn"
+                    android:layout_width="203dp"
+                    android:layout_height="54dp"
+                    android:background="@drawable/buttonshape"
+                    android:onClick="@{() -> counterViewModel.resetCounter()}"
+                    android:text="@string/reset"
+                    android:textColor="@color/black"
+                    android:textSize="30sp"
+                    tools:ignore="UsingOnClickInXml" />
+
+            </LinearLayout>
+        </RelativeLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

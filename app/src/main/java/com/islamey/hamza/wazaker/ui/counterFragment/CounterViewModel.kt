@@ -1,4 +1,4 @@
-package com.islamey.hamza.wazaker.ui.CounterFragment
+package com.islamey.hamza.wazaker.ui.counterFragment
 
 import android.app.Application
 import android.content.Context

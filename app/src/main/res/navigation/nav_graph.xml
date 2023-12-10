@@ -17,6 +17,7 @@
             app:enterAnim="@anim/slide_in_right"
             app:exitAnim="@anim/slide_out_left"
             app:popEnterAnim="@anim/slide_in_left"
+            app:launchSingleTop="true"
             app:popExitAnim="@anim/slide_out_right" />
 
         <action
@@ -25,6 +26,7 @@
             app:enterAnim="@anim/slide_in_right"
             app:exitAnim="@anim/slide_out_left"
             app:popEnterAnim="@anim/slide_in_left"
+            app:launchSingleTop="true"
             app:popExitAnim="@anim/slide_out_right" />
 
         <action
@@ -33,6 +35,7 @@
             app:enterAnim="@anim/slide_in_right"
             app:exitAnim="@anim/slide_out_left"
             app:popEnterAnim="@anim/slide_in_left"
+            app:launchSingleTop="true"
             app:popExitAnim="@anim/slide_out_right" />
 
         <action
@@ -41,13 +44,14 @@
             app:enterAnim="@anim/slide_in_right"
             app:exitAnim="@anim/slide_out_left"
             app:popEnterAnim="@anim/slide_in_left"
+            app:launchSingleTop="true"
             app:popExitAnim="@anim/slide_out_right" />
 
     </fragment>
 
     <fragment
         android:id="@+id/counterFragment"
-        android:name="com.islamey.hamza.wazaker.ui.CounterFragment.CounterFragment"
+        android:name="com.islamey.hamza.wazaker.ui.counterFragment.CounterFragment"
         android:label="fragment_counter"
         tools:layout="@layout/fragment_counter" />
 
@@ -62,6 +66,7 @@
             app:enterAnim="@anim/slide_in_right"
             app:exitAnim="@anim/slide_out_left"
             app:popEnterAnim="@anim/slide_in_left"
+            app:launchSingleTop="true"
             app:popExitAnim="@anim/slide_out_right" />
 
     </fragment>

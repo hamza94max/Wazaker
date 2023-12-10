@@ -4,18 +4,12 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.islamey.hamza.wazaker.domain.Models.HijriDateResponse
 import com.islamey.hamza.wazaker.domain.repo.HijriRepo
+import com.islamey.hamza.wazaker.utils.DataState
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.launch
 import javax.inject.Inject
-
-sealed class DataState<out T> {
-    object Idle : DataState<Nothing>()
-    object Loading : DataState<Nothing>()
-    data class Success<T>(val data: T) : DataState<T>()
-    data class Error(val message: String) : DataState<Nothing>()
-}
 
 @HiltViewModel
 class HijriViewModel @Inject constructor(

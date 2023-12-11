@@ -11,6 +11,7 @@ import androidx.fragment.app.viewModels
 import androidx.lifecycle.lifecycleScope
 import androidx.navigation.fragment.findNavController
 import com.islamey.hamza.wazaker.domain.Models.HijriDateResponse
+import com.islamey.hamza.wazaker.utils.DataState
 import com.islamey.hamza.wazaker.utils.Utils.getCurrentDate
 import com.islamey.hamza.wazaker.utils.Utils.getFormattedHijriDate
 import com.islamey.hamza.wazaker.utils.Utils.getTotalCounts

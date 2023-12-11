@@ -1,6 +1,5 @@
 package com.islamey.hamza.wazaker.ui.MorningAzkarFragment
 
-import android.annotation.SuppressLint
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.AsyncListDiffer
@@ -13,7 +12,27 @@ import com.islamey.wazkar.databinding.MorningItemBinding
 class MorningAzkarAdapter : RecyclerView.Adapter<MorningAzkarAdapter.ViewHolder>() {
 
     inner class ViewHolder(val binding: MorningItemBinding) :
-        RecyclerView.ViewHolder(binding.root)
+        RecyclerView.ViewHolder(binding.root) {
+        init {
+            binding.copybtn.setOnClickListener {
+                shareText(itemView.context, differ.currentList[layoutPosition].zeker)
+            }
+        }
+
+        fun bind(currentItem: ZekerModel) {
+            var count = 0
+
+            binding.plustext.text = count.toString()
+
+            binding.plusButton.setOnClickListener {
+                count++
+                binding.plustext.text = count.toString()
+                if (count >= currentItem.counter) {
+                    removeItem(currentItem)
+                }
+            }
+        }
+    }
 
     private val diffCallback = object : DiffUtil.ItemCallback<ZekerModel>() {
         override fun areItemsTheSame(oldItem: ZekerModel, newItem: ZekerModel): Boolean {
@@ -35,27 +54,13 @@ class MorningAzkarAdapter : RecyclerView.Adapter<MorningAzkarAdapter.ViewHolder>
         return ViewHolder(view)
     }
 
-    @SuppressLint("SetTextI18n")
+
     override fun onBindViewHolder(holder: MorningAzkarAdapter.ViewHolder, position: Int) {
 
         val currentItem = differ.currentList[position]
-
-        var count = 0
+        holder.bind(currentItem)
 
         holder.binding.zekertext.text = currentItem.zeker
-        holder.binding.copybtn.setOnClickListener {
-            shareText(holder.itemView.context, currentItem.zeker)
-        }
-
-        holder.binding.plustext.text = count.toString()
-
-        holder.binding.plusButton.setOnClickListener {
-            count++
-            holder.binding.plustext.text = count.toString()
-            if (count >= currentItem.counter) {
-                removeItem(currentItem)
-            }
-        }
 
     }
 

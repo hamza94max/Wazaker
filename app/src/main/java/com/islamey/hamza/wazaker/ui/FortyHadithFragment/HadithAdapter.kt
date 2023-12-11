@@ -1,7 +1,6 @@
 package com.islamey.hamza.wazaker.ui.FortyHadithFragment
 
 
-import android.annotation.SuppressLint
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.AsyncListDiffer
@@ -14,7 +13,13 @@ import com.islamey.wazkar.databinding.FortyItemBinding
 class HadithAdapter : RecyclerView.Adapter<HadithAdapter.ViewHolder>() {
 
     inner class ViewHolder(val binding: FortyItemBinding) :
-        RecyclerView.ViewHolder(binding.root)
+        RecyclerView.ViewHolder(binding.root) {
+        init {
+            binding.copybtn.setOnClickListener {
+                shareText(itemView.context, differ.currentList[layoutPosition].hadith)
+            }
+        }
+    }
 
     private val diffCallback = object : DiffUtil.ItemCallback<Hadith>() {
         override fun areItemsTheSame(oldItem: Hadith, newItem: Hadith): Boolean {
@@ -33,16 +38,11 @@ class HadithAdapter : RecyclerView.Adapter<HadithAdapter.ViewHolder>() {
         return ViewHolder(view)
     }
 
-    @SuppressLint("SetTextI18n")
     override fun onBindViewHolder(holder: HadithAdapter.ViewHolder, position: Int) {
 
         val currentItem = differ.currentList[position]
 
         holder.binding.hadithText.text = currentItem.hadith
-
-        holder.binding.copybtn.setOnClickListener {
-            shareText(holder.itemView.context, currentItem.hadith)
-        }
 
     }
 

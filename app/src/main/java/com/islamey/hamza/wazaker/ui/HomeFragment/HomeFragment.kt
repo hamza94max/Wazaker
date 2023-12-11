@@ -11,13 +11,14 @@ import androidx.fragment.app.viewModels
 import androidx.lifecycle.lifecycleScope
 import androidx.navigation.fragment.findNavController
 import com.islamey.hamza.wazaker.domain.Models.HijriDateResponse
+import com.islamey.hamza.wazaker.ui.counterFragment.CounterViewModel
 import com.islamey.hamza.wazaker.utils.DataState
 import com.islamey.hamza.wazaker.utils.Utils.getCurrentDate
 import com.islamey.hamza.wazaker.utils.Utils.getFormattedHijriDate
-import com.islamey.hamza.wazaker.utils.Utils.getTotalCounts
 import com.islamey.wazkar.R
 import com.islamey.wazkar.databinding.FragmentHomeBinding
 import dagger.hilt.android.AndroidEntryPoint
+import kotlinx.coroutines.launch
 
 @AndroidEntryPoint
 class HomeFragment : Fragment() {
@@ -25,13 +26,7 @@ class HomeFragment : Fragment() {
     private lateinit var binding: FragmentHomeBinding
 
     private val hijriViewModel: HijriViewModel by viewModels()
-
-    private var totalcounts = 0
-
-    override fun onStart() {
-        super.onStart()
-        getTotalZekerCountsFromSharedPreferences()
-    }
+    private val counterViewModel: CounterViewModel by viewModels()
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -75,15 +70,6 @@ class HomeFragment : Fragment() {
         }
     }
 
-    private fun getTotalZekerCountsFromSharedPreferences() {
-        totalcounts = getTotalCounts(requireContext())
-        setTotalZekerCountsText()
-    }
-
-    private fun setTotalZekerCountsText() {
-        binding.totalZekercounts.text = getString(R.string.totalzeker) + "  " + totalcounts
-    }
-
     private fun observeResponse() {
         viewLifecycleOwner.lifecycleScope.launchWhenStarted {
             hijriViewModel.hijriDate.collect { state ->
@@ -104,6 +90,13 @@ class HomeFragment : Fragment() {
                 }
             }
         }
+
+        viewLifecycleOwner.lifecycleScope.launch {
+            counterViewModel.totalCounts.collect { totalCounts ->
+                binding.totalZekercounts.text = getString(R.string.totalzeker) + " " + totalCounts
+            }
+        }
+
     }
 
     private fun updateUi(response: HijriDateResponse) {

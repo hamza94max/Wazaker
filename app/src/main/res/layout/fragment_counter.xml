@@ -32,7 +32,7 @@
                 android:layout_alignParentRight="true"
                 android:layout_marginTop="16dp"
                 android:padding="21dp"
-                android:text="@string/totalzeker"
+                android:text="@string/totalZeker"
                 android:textColor="@color/white"
                 android:textSize="21sp"
                 android:textStyle="bold" />

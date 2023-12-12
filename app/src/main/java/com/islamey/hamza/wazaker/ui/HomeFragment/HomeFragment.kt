@@ -93,7 +93,7 @@ class HomeFragment : Fragment() {
 
         viewLifecycleOwner.lifecycleScope.launch {
             counterViewModel.totalCounts.collect { totalCounts ->
-                binding.totalZekercounts.text = getString(R.string.totalzeker) + " " + totalCounts
+                binding.totalZekercounts.text = getString(R.string.totalzeker, totalCounts)
             }
         }
 

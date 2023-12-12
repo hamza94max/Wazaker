@@ -27,7 +27,7 @@
     <string name="shareapp">مشاركة التطبيق </string>
 
     // counter activity
-    <string name="totalzeker"> المجموع الكلي : </string>
+    <string name="totalzeker">المجموع الكلي: %1$d</string>
     <string name="TotalDeleted"> تم مسح المجموع الكلي </string>
     <string name="_0">المجموع الكلي: 0</string>
     <string name="zero">0</string>

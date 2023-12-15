@@ -49,13 +49,32 @@ The architecture of this application relies and complies with the following poin
 * [View Binding](https://developer.android.com/topic/libraries/view-binding) - more easily write code that interacts with views.
 * [LeakCanary](https://square.github.io/leakcanary) - memory leak detection library for Android.
 * [detekt](https://github.com/detekt/detekt) - Static code analysis for Kotlin.
+=======
+# Tools && Langauages
+- Kotlin 
+- Navigation Components
+- WorkManager
+- Push Notifications 
+- Qibla Library : [Qibla direction library](https://github.com/hassaanjamil/hj-android-lib-qibla-direction) 
+- SharedPreferences
+- Dark theme 
+- Clean Code 
 
 
 
 ## How to install and run the project
 You can download the app from release section 
 
-
 # Contributors 
 - Author: [Hamza](https://github.com/hamza94max)
 - Maintainer: [Mo3ta](https://github.com/MahmoudMabrok)
+
+
+
+
+
+
+
+
+
+

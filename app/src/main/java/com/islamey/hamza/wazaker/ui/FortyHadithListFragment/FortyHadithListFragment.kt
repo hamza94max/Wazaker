@@ -6,13 +6,11 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
-import com.islamey.hamza.wazaker.data.DataSets.FortyListDataset
-import com.islamey.hamza.wazaker.data.Models.AzkarListModel
+import com.islamey.hamza.wazaker.domain.DataSets.FortyListDataset
 import com.islamey.hamza.wazaker.ui.OnItemListener
 import com.islamey.wazkar.databinding.FragmentFortyHadithListBinding
 
-
-class FortyHadithListFragment : Fragment() {
+class FortyHadithListFragment : Fragment(), OnItemListener {
 
     private var _binding: FragmentFortyHadithListBinding? = null
     private val binding get() = _binding!!
@@ -21,33 +19,26 @@ class FortyHadithListFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        // Inflate the layout for this fragment
 
         _binding = FragmentFortyHadithListBinding.inflate(layoutInflater, container, false)
 
-        getFortyHadithData()
+        setUpFortyHadithListRecyclerView()
 
         return binding.root
     }
 
+    private fun setUpFortyHadithListRecyclerView() {
+        val adapter = FortyHadithListAdapter(this)
+        binding.hadithListRecyclerView.adapter = adapter
+        adapter.differ.submitList(FortyListDataset.getFortylist())
+    }
 
-    private fun getFortyHadithData() {
-        val hadithlist = FortyListDataset.getFortylist()
-        val fortyAdapter = FortyListAdapter(
-            hadithlist as ArrayList<AzkarListModel?>
-        )
-        binding.hadithrecycler.adapter = fortyAdapter
-
-        fortyAdapter.setListner(object : OnItemListener {
-            override fun onItemCLicked(item: Any?) {
-                val index = item as Int
-                val action =
-                    FortyHadithListFragmentDirections.actionFortyHadithListFragmentToFortyHadithFragment(
-                        index
-                    )
-                findNavController().navigate(action)
-            }
-        })
+    override fun onItemCLicked(item: Int) {
+        val action =
+            FortyHadithListFragmentDirections.actionFortyHadithListFragmentToFortyHadithFragment(
+                item
+            )
+        findNavController().navigate(action)
     }
 
 }

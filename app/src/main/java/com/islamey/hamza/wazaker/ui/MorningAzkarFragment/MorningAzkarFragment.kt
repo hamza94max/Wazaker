@@ -5,15 +5,16 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
-import androidx.recyclerview.widget.LinearLayoutManager
-import com.islamey.hamza.wazaker.data.DataSets.MorningAzkarDataset
-import com.islamey.hamza.wazaker.data.Models.ZekerModel
+import com.islamey.hamza.wazaker.domain.DataSets.MorningAzkarDataset
 import com.islamey.wazkar.databinding.FragmentMorningAzkarBinding
 
 class MorningAzkarFragment : Fragment() {
 
     private var _binding: FragmentMorningAzkarBinding? = null
     private val binding get() = _binding!!
+
+    var morningAzkarList = MorningAzkarDataset.morningAzkar.toMutableList()
+    lateinit var adapter: MorningAzkarAdapter
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -26,15 +27,17 @@ class MorningAzkarFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        val layoutManager = LinearLayoutManager(context)
-        binding.morRecyclerview.layoutManager = layoutManager
 
-        val adapter =
-            MorningAzkarAdapter(
-                MorningAzkarDataset.morningAzkar as ArrayList<ZekerModel>?
-            )
-        binding.morRecyclerview.adapter = adapter
+        setUpMorningAzkarRecyclerView()
+
 
     }
+
+    private fun setUpMorningAzkarRecyclerView() {
+        val adapter = MorningAzkarAdapter()
+        binding.morRecyclerview.adapter = adapter
+        adapter.differ.submitList(morningAzkarList)
+    }
+
 
 }

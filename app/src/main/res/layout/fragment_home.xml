@@ -8,90 +8,133 @@
     tools:ignore="UnusedAttribute">
 
 
-    <ScrollView
+    <androidx.core.widget.NestedScrollView
         android:id="@+id/scrollView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         tools:ignore="MissingConstraints">
 
-        <RelativeLayout
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="match_parent"
+            android:orientation="vertical">
 
-            <Button
-                android:id="@+id/morningAzkarbtn"
-                android:layout_width="303dp"
-                android:layout_height="@dimen/btn_height"
-                android:layout_centerHorizontal="true"
-                android:layout_marginTop="25dp"
-                android:layout_marginStart="28dp"
-                android:layout_marginLeft="28dp"
-                android:background="@drawable/blue_btn"
-                android:text="@string/Morningazkar"
-                android:textAppearance="@style/morning_style" />
 
-            <Button
-                android:id="@+id/eveningAzkarbtn"
-                android:layout_width="303dp"
-                android:layout_height="@dimen/btn_height"
-                android:layout_below="@+id/morningAzkarbtn"
-                android:layout_centerHorizontal="true"
-                android:layout_marginTop="14dp"
-                android:background="@drawable/blue_btn"
-                android:text="@string/eveningAzkar"
-                android:textColor="@color/white"
-                android:textSize="22sp" />
+            <androidx.cardview.widget.CardView
+                android:id="@+id/hijriCardView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                android:layout_margin="8dp"
+                android:background="@color/lightGreen"
+                app:cardCornerRadius="7dp">
 
-            <Button
-                android:id="@+id/azkars_btn"
-                android:layout_width="303dp"
-                android:layout_height="@dimen/btn_height"
-                android:layout_below="@id/eveningAzkarbtn"
-                android:layout_centerHorizontal="true"
-                android:layout_marginTop="14dp"
-                android:background="@drawable/blue_btn"
-                android:text="@string/AzkarandDoaa"
-                android:textColor="@color/white"
-                android:textSize="22sp" />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="7dp">
 
-            <Button
-                android:id="@+id/fortyHadithbtn"
-                android:layout_width="303dp"
-                android:layout_height="@dimen/btn_height"
-                android:layout_below="@id/azkars_btn"
-                android:layout_centerHorizontal="true"
-                android:layout_marginTop="14dp"
-                android:background="@drawable/blue_btn"
-                android:text="@string/FortyHadith"
-                android:textColor="@color/white"
-                android:textSize="22sp" />
+                    <TextView
+                        android:id="@+id/hijriDateTextView"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:fontFamily="@font/tajawal_medium"
+                        android:textSize="16sp" />
 
-            <Button
-                android:id="@+id/qibla_btn"
-                android:layout_width="303dp"
-                android:layout_height="@dimen/btn_height"
-                android:layout_below="@id/fortyHadithbtn"
-                android:layout_centerHorizontal="true"
-                android:layout_marginTop="14dp"
-                android:background="@drawable/blue_btn"
-                android:text="@string/qibla"
-                android:textColor="@color/white"
-                android:textSize="22sp" />
+                    <TextView
+                        android:id="@+id/gregorianDateTextView"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:fontFamily="@font/tajawal_medium"
+                        android:textSize="16sp" />
 
-            <Button
-                android:id="@+id/counter_btn"
-                android:layout_width="303dp"
-                android:layout_height="@dimen/btn_height"
-                android:layout_below="@id/qibla_btn"
-                android:layout_centerHorizontal="true"
-                android:layout_marginTop="14dp"
-                android:background="@drawable/blue_btn"
-                android:text="@string/counter"
-                android:textColor="@color/white"
-                android:textSize="22sp" />
+                    <!--                    <TextView-->
+                    <!--                        android:id="@+id/ramadanReminderTextView"-->
+                    <!--                        android:layout_width="match_parent"-->
+                    <!--                        android:layout_height="wrap_content"-->
+                    <!--                        android:layout_marginTop="8dp"-->
+                    <!--                        android:fontFamily="@font/tajawal_medium"-->
+                    <!--                        android:text="التاريخ الهجري "-->
+                    <!--                        android:textSize="16sp" />-->
 
-        </RelativeLayout>
-    </ScrollView>
+
+                </LinearLayout>
+
+
+            </androidx.cardview.widget.CardView>
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="32dp"
+                android:gravity="center"
+                android:padding="7dp">
+
+                <Button
+                    android:id="@+id/morningAzkarbtn"
+                    android:layout_width="303dp"
+                    android:layout_height="@dimen/btn_height"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginStart="28dp"
+                    android:layout_marginLeft="28dp"
+                    android:layout_marginTop="8dp"
+                    android:background="@drawable/blue_btn"
+                    android:fontFamily="@font/tajawal_medium"
+                    android:text="@string/Morningazkar"
+                    android:textAppearance="@style/morning_style" />
+
+                <Button
+                    android:id="@+id/eveningAzkarbtn"
+                    android:layout_width="303dp"
+                    android:layout_height="@dimen/btn_height"
+                    android:layout_below="@+id/morningAzkarbtn"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="14dp"
+                    android:background="@drawable/blue_btn"
+                    android:fontFamily="@font/tajawal_medium"
+                    android:text="@string/eveningAzkar"
+                    android:textColor="@color/white"
+                    android:textSize="22sp" />
+
+                <Button
+                    android:id="@+id/azkars_btn"
+                    android:layout_width="303dp"
+                    android:layout_height="@dimen/btn_height"
+                    android:layout_below="@id/eveningAzkarbtn"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="14dp"
+                    android:background="@drawable/blue_btn"
+                    android:fontFamily="@font/tajawal_medium"
+                    android:text="@string/AzkarandDoaa"
+                    android:textColor="@color/white"
+                    android:textSize="22sp" />
+
+                <Button
+                    android:id="@+id/counter_btn"
+                    android:layout_width="303dp"
+                    android:layout_height="@dimen/btn_height"
+                    android:layout_below="@id/azkars_btn"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="14dp"
+                    android:layout_marginBottom="16dp"
+                    android:background="@drawable/blue_btn"
+                    android:fontFamily="@font/tajawal_medium"
+                    android:text="@string/counter"
+                    android:textColor="@color/white"
+                    android:textSize="22sp" />
+
+            </RelativeLayout>
+
+
+        </LinearLayout>
+
+
+    </androidx.core.widget.NestedScrollView>
 
     <Button
         android:id="@+id/totalZekercounts"
@@ -99,12 +142,13 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/counter_btn"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="14dp"
+        android:layout_marginTop="32dp"
         android:background="@drawable/blue_btn"
         android:padding="7dp"
         android:text="@string/totalzeker"
         android:textColor="@color/white"
         android:textSize="19sp"
+        android:fontFamily="@font/tajawal_medium"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

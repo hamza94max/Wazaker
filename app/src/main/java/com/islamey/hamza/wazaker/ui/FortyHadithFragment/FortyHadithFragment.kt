@@ -6,17 +6,14 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.navArgs
-import androidx.recyclerview.widget.LinearLayoutManager
-import com.islamey.hamza.wazaker.data.DataSets.FortyDataSet
-import com.islamey.hamza.wazaker.data.Models.Hadith
+import com.islamey.hamza.wazaker.domain.DataSets.FortyDataSet
+import com.islamey.hamza.wazaker.domain.Models.Hadith
 import com.islamey.wazkar.databinding.FragmentFortyHadithBinding
 
 class FortyHadithFragment : Fragment() {
 
     private var _binding: FragmentFortyHadithBinding? = null
     val binding get() = _binding!!
-
-    lateinit var Hadiths: ArrayList<Hadith>
 
     private val args: FortyHadithFragmentArgs by navArgs()
 
@@ -26,24 +23,19 @@ class FortyHadithFragment : Fragment() {
     ): View {
 
         _binding = FragmentFortyHadithBinding.inflate(layoutInflater, container, false)
-
         return binding.root
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        setAdapter()
+        setUpHadithRecyclerView()
     }
 
-    private fun setAdapter() {
-
-        val adapter =
-            HadithAdapter(FortyDataSet.getFortyHadithList(args.intent) as ArrayList<Hadith>)
-
-        val layoutManager = LinearLayoutManager(context)
-        binding.fortyHadithList.layoutManager = layoutManager
+    private fun setUpHadithRecyclerView() {
+        val adapter = HadithAdapter()
         binding.fortyHadithList.adapter = adapter
+        adapter.differ.submitList(FortyDataSet.getFortyHadithList(args.intent) as ArrayList<Hadith>)
     }
 
 }

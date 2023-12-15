@@ -6,14 +6,13 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
-import androidx.recyclerview.widget.LinearLayoutManager
-import com.islamey.hamza.wazaker.data.DataSets.AzkarListDataset
+import com.islamey.hamza.wazaker.domain.DataSets.AzkarListDataset
 import com.islamey.hamza.wazaker.ui.OnItemListener
 import com.islamey.wazkar.databinding.FragmentAzkarBinding
 
-class AzkarListFragment : Fragment() {
+class AzkarListFragment : Fragment(), OnItemListener {
 
-    var _binding: FragmentAzkarBinding? = null
+    private var _binding: FragmentAzkarBinding? = null
     val binding get() = _binding!!
 
     override fun onCreateView(
@@ -22,32 +21,26 @@ class AzkarListFragment : Fragment() {
     ): View {
 
         _binding = FragmentAzkarBinding.inflate(layoutInflater, container, false)
-
         return binding.root
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        setAdapter()
+        setUpAzkarListRecyclerView()
     }
 
-    private fun setAdapter() {
-        val layoutManager = LinearLayoutManager(context)
-        binding.AzkarListRecycler.layoutManager = layoutManager
+    private fun setUpAzkarListRecyclerView() {
 
-        val azkarListAdapter =
-            AzkarListAdapter(AzkarListDataset.getAzkarList(requireContext()))
+        val adapter = AzkarListAdapter(this)
 
-        binding.AzkarListRecycler.adapter = azkarListAdapter
+        binding.azkarListRecyclerView.adapter = adapter
+        adapter.differ.submitList(AzkarListDataset.getAzkarList(requireContext()))
+    }
 
-        azkarListAdapter.setListner(object : OnItemListener {
-            override fun onItemCLicked(item: Any?) {
-
-                val action =
-                    AzkarListFragmentDirections.actionAzkarFragmentToZekerAndDoaaFragment(item as Int)
-                findNavController().navigate(action)
-            }
-        })
+    override fun onItemCLicked(item: Int) {
+        val action =
+            AzkarListFragmentDirections.actionAzkarFragmentToZekerAndDoaaFragment(item)
+        findNavController().navigate(action)
     }
 }

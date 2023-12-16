@@ -2,15 +2,12 @@
 Islamic application to help the Muslims to read the azkar of morning and evening, awesome Notification every 24 hours, The FourtyNawawi's Ahaadeeth,
 Counter to count the number of zeker, qibla direction and others features like azkar and doaa ..etc.
 
-
 # Screenshots 
 <div>
 
 <img src = "https://github.com/hamza94max/Wazaker/assets/54688005/9197cf92-87fe-44ec-8412-b2a01ecdf163" width = 35%>
   <img width ="5%"/> 
 <img src = "https://github.com/hamza94max/Wazaker/assets/54688005/dbdcaf30-db1b-4fe2-971e-43bff3c53cde" width = 35%>
-</div>
-
 </div>
 
 <div>
@@ -30,15 +27,17 @@ Counter to count the number of zeker, qibla direction and others features like a
 
 
 ## Architecture
+
 The architecture of this application relies and complies with the following points below:
-- __Clean Architecture__,: into 3 layers ui, data, domain
-- __A single-activity architecture__, using the Navigation Components to manage fragment operations.
+- __Clean Architecture__ into 3 layers ui, data, domain
+- __A single-activity architecture__ using the Navigation Components to manage fragment operations.
 - __Pattern Model-View-ViewModel (MVVM)__ which facilitates a separation of development of the graphical user interface.
 - __Android architecture components__ which help to keep the application robust, testable, and maintainable.
 
 ![Capture](https://github.com/hamza94max/Foody/assets/54688005/d2f03de3-fee0-464d-a789-6c268f5d1dc8)
 
 # Languages and Tools
+
 * [Kotlin](https://kotlinlang.org/) - official programming language for Android development .
 * [Hilt](https://developer.android.com/training/dependency-injection/hilt-android) - dependency injection library .
 * [Coroutines](https://kotlinlang.org/docs/reference/coroutines-overview.html) - for asynchronous programming .
@@ -48,8 +47,9 @@ The architecture of this application relies and complies with the following poin
 * [Fragment](https://developer.android.com/guide/components/fragments)
 * [View Binding](https://developer.android.com/topic/libraries/view-binding) - more easily write code that interacts with views.
 * [LeakCanary](https://square.github.io/leakcanary) - memory leak detection library for Android.
-* [detekt](https://github.com/detekt/detekt) - Static code analysis for Kotlin.
-=======
+  * [detekt](https://github.com/detekt/detekt) - static code analysis for Kotlin.
+
+
 # Tools && Langauages
 - Kotlin 
 - Navigation Components
@@ -60,9 +60,7 @@ The architecture of this application relies and complies with the following poin
 - Dark theme 
 - Clean Code 
 
-
-
-## How to install and run the project
+# How to install and run the project
 You can download the app from release section 
 
 # Contributors 

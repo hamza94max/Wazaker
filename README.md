@@ -47,7 +47,7 @@ The architecture of this application relies and complies with the following poin
 * [Fragment](https://developer.android.com/guide/components/fragments)
 * [View Binding](https://developer.android.com/topic/libraries/view-binding) - more easily write code that interacts with views.
 * [LeakCanary](https://square.github.io/leakcanary) - memory leak detection library for Android.
-  * [detekt](https://github.com/detekt/detekt) - static code analysis for Kotlin.
+* [detekt](https://github.com/detekt/detekt) - static code analysis for Kotlin.
 
 
 # Tools && Langauages

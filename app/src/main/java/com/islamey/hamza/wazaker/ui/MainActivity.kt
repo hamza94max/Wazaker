@@ -20,7 +20,13 @@ import dagger.hilt.android.AndroidEntryPoint
 class MainActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityMainBinding
-    lateinit var navController: NavController
+    private val navController: NavController by lazy {
+        val navHostFragment =
+            supportFragmentManager.findFragmentById(R.id.hostFragment) as NavHostFragment
+        navHostFragment.navController
+    }
+
+    private var lastOpenedScreenId = R.id.home_action
 
     override fun onCreate(savedInstanceState: Bundle?) {
         installSplashScreen()
@@ -42,35 +48,44 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun setUpBottomViewNavigation() {
-        val navHostFragment =
-            supportFragmentManager.findFragmentById(R.id.hostFragment) as NavHostFragment
-        navController = navHostFragment.navController
-
         binding.bottomNavigationView.setOnItemSelectedListener { menuItem ->
             when (menuItem.itemId) {
-
                 R.id.home_action -> {
-                    navController.navigate(R.id.homeFragment)
+                    doIfNotCurrent(R.id.home_action){
+                        navController.navigate(R.id.homeFragment)
+                    }
                     true
                 }
 
                 R.id.qibla_action -> {
                     openQiblaActivity()
-                    true
+                    // as we open another activity we should not lose current selection
+                    false
                 }
 
                 R.id.forty_action -> {
-                    navController.navigate(R.id.fortyHadithListFragment)
+                    doIfNotCurrent(R.id.forty_action){
+                        navController.navigate(R.id.fortyHadithListFragment)
+                    }
                     true
                 }
 
                 R.id.settings_action -> {
-                    navController.navigate(R.id.settingsFragment)
+                    doIfNotCurrent(R.id.settings_action){
+                        navController.navigate(R.id.settingsFragment)
+                    }
                     true
                 }
 
                 else -> false
             }
+        }
+    }
+
+    private fun doIfNotCurrent(actionId: Int, action : ()-> Unit) {
+        if (actionId != lastOpenedScreenId){
+            action.invoke()
+            lastOpenedScreenId = actionId
         }
     }
 

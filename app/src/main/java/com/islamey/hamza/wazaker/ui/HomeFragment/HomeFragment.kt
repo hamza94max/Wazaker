@@ -1,5 +1,6 @@
 package com.islamey.hamza.wazaker.ui.HomeFragment
 
+import android.os.Build
 import android.os.Bundle
 import android.util.Log
 import android.view.LayoutInflater
@@ -41,7 +42,9 @@ class HomeFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        hijriViewModel.getHijriDate(getCurrentDate())
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+            hijriViewModel.getHijriDate(getCurrentDate())
+        }
 
         initUI()
 

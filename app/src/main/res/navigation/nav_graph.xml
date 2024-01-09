@@ -118,5 +118,10 @@
         android:name="com.islamey.hamza.wazaker.ui.settings.SettingsFragment"
         android:label="fragment_settings"
         tools:layout="@layout/fragment_settings" />
+    <fragment
+        android:id="@+id/qiblaFragment"
+        android:name="com.islamey.hamza.wazaker.ui.qibla.QiblaFragment"
+        android:label="fragment_qibla"
+        tools:layout="@layout/fragment_qibla" />
 
 </navigation>

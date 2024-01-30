@@ -2,25 +2,25 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
 
     <item
-        android:id="@+id/home_action"
+        android:id="@+id/homeFragment"
         android:icon="@drawable/baseline_home_24"
         android:title="@string/home" />
 
 
     <item
-        android:id="@+id/qibla_action"
+        android:id="@+id/qiblaFragment"
         android:icon="@drawable/baseline_share_location_24"
         android:title="@string/qibla" />
 
 
     <item
-        android:id="@+id/forty_action"
+        android:id="@+id/fortyHadithListFragment"
         android:icon="@drawable/baseline_menu_book_24"
         android:title="@string/FortyHadith" />
 
 
     <item
-        android:id="@+id/settings_action"
+        android:id="@+id/settingsFragment"
         android:icon="@drawable/baseline_settings_24"
         android:title="@string/settings" />
 

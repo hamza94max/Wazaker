@@ -4,15 +4,15 @@ import android.content.Context
 import android.content.Intent
 import com.islamey.hamza.wazaker.domain.Models.HijriDateResponse
 import org.apache.commons.lang3.StringEscapeUtils
-import java.time.LocalDate
-import java.time.format.DateTimeFormatter
+import java.text.SimpleDateFormat
+import java.util.*
 
 object Utils {
 
     fun getCurrentDate(): String {
-        val currentDate = LocalDate.now()
-        val formatter = DateTimeFormatter.ofPattern("dd-MM-yyyy")
-        return currentDate.format(formatter)
+        val currentDate = Date()
+        val dateFormat = SimpleDateFormat("dd-MM-yyyy", Locale.getDefault())
+        return dateFormat.format(currentDate)
     }
 
     fun saveDarkModeState(context: Context, isDark: Boolean) {

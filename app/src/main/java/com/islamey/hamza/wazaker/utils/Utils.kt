@@ -2,21 +2,17 @@ package com.islamey.hamza.wazaker.utils
 
 import android.content.Context
 import android.content.Intent
-import android.os.Build
-import androidx.annotation.RequiresApi
 import com.islamey.hamza.wazaker.domain.Models.HijriDateResponse
 import org.apache.commons.lang3.StringEscapeUtils
-import java.time.LocalDate
-import java.time.format.DateTimeFormatter
+import java.text.SimpleDateFormat
 import java.util.*
 
 object Utils {
 
-    @RequiresApi(Build.VERSION_CODES.O)
     fun getCurrentDate(): String {
-        val currentDate = LocalDate.now()
-        val formatter = DateTimeFormatter.ofPattern("dd-MM-yyyy")
-        return currentDate.format(formatter)
+        val currentDate = Date()
+        val dateFormat = SimpleDateFormat("dd-MM-yyyy", Locale.getDefault())
+        return dateFormat.format(currentDate)
     }
 
     fun saveDarkModeState(context: Context, isDark: Boolean) {

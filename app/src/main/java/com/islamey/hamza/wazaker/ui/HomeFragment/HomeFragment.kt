@@ -1,5 +1,6 @@
 package com.islamey.hamza.wazaker.ui.HomeFragment
 
+import android.annotation.SuppressLint
 import android.os.Bundle
 import android.util.Log
 import android.view.LayoutInflater
@@ -72,6 +73,7 @@ class HomeFragment : Fragment() {
         }
     }
 
+    @SuppressLint("SetTextI18n")
     private fun observeResponse() {
         viewLifecycleOwner.lifecycleScope.launchWhenStarted {
             hijriViewModel.hijriDate.collect { state ->
@@ -95,7 +97,7 @@ class HomeFragment : Fragment() {
 
         viewLifecycleOwner.lifecycleScope.launch {
             counterViewModel.totalCounts.collect { totalCounts ->
-                binding.totalZekercounts.text = getString(R.string.totalzeker, totalCounts)
+                binding.totalZekercounts.text = getString(R.string.totalzeker) + totalCounts
             }
         }
 

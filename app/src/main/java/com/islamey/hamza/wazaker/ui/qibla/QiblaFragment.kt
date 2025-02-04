@@ -6,8 +6,8 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
-import com.hassanjamil.hqibla.CompassActivity
-import com.hassanjamil.hqibla.Constants
+//import com.hassanjamil.hqibla.CompassActivity
+//import com.hassanjamil.hqibla.Constants
 import com.islamey.wazkar.databinding.FragmentQiblaBinding
 import dagger.hilt.android.AndroidEntryPoint
 
@@ -32,10 +32,10 @@ class QiblaFragment : Fragment() {
     }
 
     private fun openQiblaActivity() {
-        val intent = Intent(requireContext(), CompassActivity::class.java)
-        intent.putExtra(Constants.TOOLBAR_BG_COLOR, "#FFFFFF") // Toolbar Background color
-        intent.putExtra(Constants.COMPASS_BG_COLOR, "#FFFFFF") // Compass background color
-        intent.putExtra(Constants.ANGLE_TEXT_COLOR, "#000000") // Angle Text color
-        startActivity(intent)
+//        val intent = Intent(requireContext(), CompassActivity::class.java)
+//        intent.putExtra(Constants.TOOLBAR_BG_COLOR, "#FFFFFF") // Toolbar Background color
+//        intent.putExtra(Constants.COMPASS_BG_COLOR, "#FFFFFF") // Compass background color
+//        intent.putExtra(Constants.ANGLE_TEXT_COLOR, "#000000") // Angle Text color
+//        startActivity(intent)
     }
 }

@@ -6,12 +6,13 @@ plugins {
     id 'dagger.hilt.android.plugin'
 }
 android {
-    compileSdkVersion 33
+    namespace = "com.islamey.wazkar"
+    compileSdk 35
 
     defaultConfig {
         applicationId "com.islamey.wazkar"
-        minSdkVersion 25
-        targetSdkVersion 33
+        minSdk = 25
+        targetSdk = 35
         versionCode 1
         versionName "1.0.0"
         setProperty("archivesBaseName", "hQiblaDirection")
@@ -33,8 +34,8 @@ android {
     }
 
     compileOptions {
-        sourceCompatibility = 11
-        targetCompatibility = 11
+        sourceCompatibility = 17
+        targetCompatibility = 17
     }
 
     buildFeatures {
@@ -61,7 +62,7 @@ dependencies {
     implementation 'androidx.legacy:legacy-support-v4:1.0.0'
 
     // qibla
-    implementation 'com.hassanjamil:qibla:0.2.2'
+    //implementation 'com.hassanjamil:qibla:0.2.2'
 
     // Navigation component
     implementation("androidx.navigation:navigation-fragment-ktx:2.5.3")
@@ -94,8 +95,8 @@ dependencies {
     implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-android:1.6.4'
 
     //hilt
-    implementation "com.google.dagger:hilt-android:2.44"
-    kapt "com.google.dagger:hilt-android-compiler:2.44"
+    implementation "com.google.dagger:hilt-android:2.52"
+    kapt "com.google.dagger:hilt-android-compiler:2.52"
 
 
     testImplementation 'junit:junit:4.13.2'

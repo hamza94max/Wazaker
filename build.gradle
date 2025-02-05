@@ -8,15 +8,15 @@ buildscript {
 
     }
     dependencies {
-        classpath 'com.android.tools.build:gradle:7.4.1'
+        classpath 'com.android.tools.build:gradle:8.6.1'
         classpath 'org.jetbrains.kotlin:kotlin-gradle-plugin:1.8.22'
-        classpath("androidx.navigation:navigation-safe-args-gradle-plugin:2.4.1")
+        classpath("androidx.navigation:navigation-safe-args-gradle-plugin:2.8.6")
     }
 }
 
 plugins {
-    id 'com.google.dagger.hilt.android' version '2.44' apply false
-    id 'org.jetbrains.kotlin.android' version '1.8.0' apply false
+    id 'com.google.dagger.hilt.android' version '2.50' apply false
+    id 'org.jetbrains.kotlin.android' version '1.9.21' apply false
 }
 
 allprojects {
@@ -25,16 +25,16 @@ allprojects {
             url "https://jitpack.io"
         }
         mavenCentral()
-        mavenLocal()
-        maven {
-            url "http://api.tplmaps.com:8081/artifactory/example-repo-local/"
-            allowInsecureProtocol = true
-
-        }
+//        mavenLocal()
+//        maven {
+//            url "http://api.tplmaps.com:8081/artifactory/example-repo-local/"
+//            allowInsecureProtocol = true
+//
+//        }
         google()
     }
 }
 
-task clean(type: Delete) {
+tasks.register('clean', Delete) {
     delete rootProject.buildDir
 }
